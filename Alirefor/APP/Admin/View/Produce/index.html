@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+    <TITLE>立案与文书</TITLE>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="__ROOT__/public/admin/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/public/admin/css/simple-calendar.css">
+    <link rel="stylesheet" href="__ROOT__/public/admin/css/ls.css">
+    <script src="__ROOT__/public/laydate/laydate.js"></script>
+    <script src="__ROOT__/public/admin/js/jquery-2.1.4.js"></script>
+    <script src="__ROOT__/public/admin/js/bootstrap.min.js"></script>
+
+</HEAD>
+<style>
+    .headr_bottom {
+        overflow: hidden;
+        width: 100%;
+        height: 27px;
+        background: #dcedfa;
+        border-bottom: 1px solid #CADAE6;
+    }
+
+    .header_place {
+        float: left;
+        height: 27px;
+        line-height: 26px;
+    }
+    .header_container{
+        overflow: hidden;
+    }
+    body{
+        background-color: #DCEDFA;
+    }
+    .sel{
+        box-sizing: border-box;
+        padding:2%;
+        padding-left:1.5%;
+        border-bottom: 1px solid #CADAE6;
+    }
+    #sel_1{
+        padding:5px;
+        width:140px;
+        margin-left:1%;
+    }
+    .mc{
+        margin-left: 1%;
+    }
+    .sr{
+        padding:5px;
+        margin-left: 1%;
+    }
+    .cx,.cz{
+        color:#fff;
+        background-color: #006DCC;
+        border: none;
+        padding:6px;
+        padding-left:8px;
+        padding-right:8px;
+        cursor:pointer;
+    }
+    .cx{
+        margin-left: 5%;
+    }
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+        padding:0px;
+        padding-left: 13px;
+    }
+    ul li{
+        display:inline-block;
+        margin-right:10px;
+    }
+    ul img{
+        vertical-align: -18%;
+    }
+    table{border-right:1px solid #CCD5DE;border-bottom:1px solid #CCD5DE;width:100%;text-align: center;}
+    table  td{border-left:1px solid #CCD5DE;border-top:1px solid #CCD5DE;}
+    table thead td{background-color: #BDE1FC;}
+    table thead tr,table tbody tr{
+        width:100%;
+        height:40px;
+    }
+
+    table tbody tr:nth-child(odd){
+        background-color: #fff;
+    }
+    table tbody tr:nth-child(even){
+        background-color: #F0F7FC;
+    }
+
+    .jqplot-table-legend{display:none}
+
+</style>
+
+<BODY>
+<div class="gzsysq">
+    <div class="bt_con">
+        <ul class="nav nav-tabs">
+            <li class="active" onclick="money_type(91000001)"><a>金币产出</a></li>
+            <li onclick="money_type(91000002)"><a>钻石产出</a></li>
+            <li onclick="money_type(91000018)"><a>荣誉点产出</a></li>
+            <li onclick="money_type(91000020)"><a>行动力产出</a></li>
+            <li onclick="money_type(91000007)"><a>比武币产出</a></li>
+            <li onclick="money_type(91000021)"><a>军团贡献点产出</a></li>
+            <li onclick="money_type(50000001)"><a>步兵训练点产出</a></li>
+            <li onclick="money_type(50000003)"><a>骑兵训练点产出</a></li>
+            <li onclick="money_type(50000002)"><a>弓兵训练点产出</a></li>
+        </ul>
+    </div>
+</div>
+
+<table  border="0" cellspacing="0" cellpadding="10">
+    <thead>
+    <tr><td colspan="7">
+        <div style="font-size: 12px;float: left"><b>
+            <span>
+                <select style="margin-left: 0px; width: 15%;height: 1.5%" id="clothes">
+                    <option>...选择游戏服务器...</option>
+                    <volist name="clostu" id="vo">
+                      <eq name="vo.db_id" value="$db_id">
+                    <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                         <else/>
+                          <option value="{$vo.db_id}">{$vo.clothes}</option>
+                      </eq>
+                    </volist>
+                </select>
+               角色ID:<input type="text" name="" id="game_user_id"/>
+                从<input placeholder="请输入日期" class="laydate-icon" onclick="laydate()" id="start_time" value="{$Stime}">
+                到<input class="laydate-icon" id="demo" value="{$Etime}">
+                <input type="radio" name="type" value="1" checked="checked">总计
+                <input type="radio" name="type" value="2">时间
+                <input type="button" name="" value="&nbsp;查询&nbsp;" onclick="money_type(1)"/>
+
+         </span>
+        </b></div>
+    </td></tr>
+    </thead>
+    </tbody>
+</table>
+
+<div style="margin-top: 0.1%;width: 50%">
+    <span><b id="sumname">产出金币总数:</b><b style="color:red" id="sum">{$sum}</b></span>
+    <table  border="0" cellspacing="0" cellpadding="10" width="50%">
+        <thead  id="ah">
+        <tr>
+            <td width="15%">产出项目</td>
+            <td width="10%">产出名称</td>
+            <td width="10%">产出数据</td>
+            <td width="10%">产出比例</td>
+        </tr>
+        </thead>
+        <tbody id="ad">
+        <volist name="arr" id="ko">
+            <tr>
+                <td>{$key+1}</td>
+                <td>{$ko.name}</td>
+                <td>{$ko.count}</td>
+                <td>{$ko.num}%</td>
+            </tr>
+        </volist>
+        </tbody>
+
+    </table>
+
+</div>
+<script type="text/javascript">
+    var mtype=91000001;
+    function money_type(a){
+        if(a==1){
+            var num=mtype;
+        }else{
+            num=a;
+            mtype=a;
+        }
+        if(num==91000001){
+            var sumname="产出金币总数";
+        }else if(num==91000002){
+            var sumname="产出钻石总数";
+        }else if(num==91000018){
+            var sumname="产出荣誉点总数";
+        }else if(num==91000020){
+            var sumname="产出行动力总数";
+        }else if(num==91000007){
+            var sumname="产出比武币总数";
+        }else if(num==91000021){
+            var sumname="产出军团贡献点总数";
+        }else if(num==50000001){
+            var sumname="产出步兵训练点总数";
+        }else if(num==50000003){
+            var sumname="产出骑兵训练点总数";
+        }else if(num==50000002){
+            var sumname="产出工兵训练点总数";
+        }
+        $("#sumname").html();
+        $("#sumname").html(sumname);
+        var clothes=$("#clothes").val();
+        var game_user_id=$("#game_user_id").val();
+        var start_time=$("#start_time").val();
+        var end_time=$("#demo").val();
+        var type=$('input:radio:checked').val();
+        var aj = $.ajax( {
+            url:'{:U("Produce/money_type")}',
+            data:{
+                num:num,
+                db_id:clothes,
+                game_user_id:game_user_id,
+                start_time:start_time,
+                end_time:end_time,
+                type:type,
+            },
+            type:'get',
+            cache:false,
+            dataType:'text',
+            success:function(data) {
+                if(data!=null) {
+
+                    if(type==1){
+                        var obj=eval(data);
+                        var arr=new Array();
+                        var sum=0;
+                        var ah='<tr id="ah"><td width="15%">产出项目</td><td width="10%">产出名称</td><td width="10%">产出数据</td><td width="10%">产出比例</td></tr>';
+                        $('#ad').html("");
+                        for(var i=0;i<obj.length;i++){
+                            arr[i]="<tr><td>"+(i+1)+"</td><td>"+obj[i].name+"</td><td>"+obj[i].count+"</td><td>"+obj[i].num+"%</td></tr>"
+                            sum=sum+parseInt(obj[i].count);
+                        }
+                        for (var i = 0; i < obj.length; i++) {
+                            $("#ad").append(arr[i]);
+                        }
+                        $("#sum").html("");
+                        $("#sum").html(sum);
+                        $("#ah").html("");
+                        $("#ah").html(ah);
+                    }else{
+                        var obj=eval(data);
+                        var arr=new Array();
+                        var sum=0;
+                        var ah='<tr id="ah"><td width="15%">日期</td><td width="15%">产出项目</td><td width="10%">产出名称</td><td width="10%">产出数据</td><td width="10%">产出比例</td></tr>';
+                        $('#ad').html("");
+                        for(var i=0;i<obj.length;i++){
+                            arr[i]="<tr><td>"+obj[i].time+"</td><td>"+(i+1)+"</td><td>"+obj[i].name+"</td><td>"+obj[i].count+"</td><td>"+obj[i].num+"%</td></tr>"
+                            sum=sum+parseInt(obj[i].count);
+                        }
+                        for (var i = 0; i < obj.length; i++) {
+                            $("#ad").append(arr[i]);
+                        }
+                        $("#sum").html("");
+                        $("#sum").html(sum);
+                        $("#ah").html("");
+                        $("#ah").html(ah);
+                    }
+                }
+            }
+        })
+    }
+</script>
+<script>
+
+    $('.bt_con ul li').click(function(){
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+    })
+
+    ;!function(){
+        laydate({
+            elem: '#demo'
+        })
+
+    }();
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,1081 @@
+[ 2018-01-15T17:34:28+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0038s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' and db_id=2 ) GROUP BY uid  [ RunTime:0.0048s ]
+NOTIC: [8] Use of undefined constant amount - assumed 'amount' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(amount) AS tp_sum FROM `order` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' and db_id=2 ) LIMIT 1   [ RunTime:0.0044s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-14 00:00:00' and time<='2018-01-14 23:59:59' and db_id=2 ) GROUP BY uid  [ RunTime:0.0028s ]
+NOTIC: [8] Use of undefined constant amount - assumed 'amount' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(amount) AS tp_sum FROM `order` WHERE ( time>='2018-01-14 00:00:00' and time<='2018-01-14 23:59:59' and db_id=2 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-13 00:00:00' and time<='2018-01-13 23:59:59' and db_id=2 ) GROUP BY uid  [ RunTime:0.0027s ]
+NOTIC: [8] Use of undefined constant amount - assumed 'amount' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(amount) AS tp_sum FROM `order` WHERE ( time>='2018-01-13 00:00:00' and time<='2018-01-13 23:59:59' and db_id=2 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-12 00:00:00' and time<='2018-01-12 23:59:59' and db_id=2 ) GROUP BY uid  [ RunTime:0.0027s ]
+NOTIC: [8] Use of undefined constant amount - assumed 'amount' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(amount) AS tp_sum FROM `order` WHERE ( time>='2018-01-12 00:00:00' and time<='2018-01-12 23:59:59' and db_id=2 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-11 00:00:00' and time<='2018-01-11 23:59:59' and db_id=2 ) GROUP BY uid  [ RunTime:0.0027s ]
+NOTIC: [8] Use of undefined constant amount - assumed 'amount' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(amount) AS tp_sum FROM `order` WHERE ( time>='2018-01-11 00:00:00' and time<='2018-01-11 23:59:59' and db_id=2 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-10 00:00:00' and time<='2018-01-10 23:59:59' and db_id=2 ) GROUP BY uid  [ RunTime:0.0026s ]
+NOTIC: [8] Use of undefined constant amount - assumed 'amount' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(amount) AS tp_sum FROM `order` WHERE ( time>='2018-01-10 00:00:00' and time<='2018-01-10 23:59:59' and db_id=2 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-09 00:00:00' and time<='2018-01-09 23:59:59' and db_id=2 ) GROUP BY uid  [ RunTime:0.0023s ]
+NOTIC: [8] Use of undefined constant amount - assumed 'amount' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(amount) AS tp_sum FROM `order` WHERE ( time>='2018-01-09 00:00:00' and time<='2018-01-09 23:59:59' and db_id=2 ) LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Undefined variable: www_url E:\Alirefor\APP\Runtime\Cache\Home\d9bfb8879b856e4469164cbfc09824ae.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007068s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000422s ]
+
+[ 2018-01-15T17:35:51+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0002s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY game_user_id' at line 1
+ [ SQL语句 ] : SELECT * FROM `order` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' and  ) GROUP BY game_user_id 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY game_user_id' at line 1
+ [ SQL语句 ] : SELECT * FROM `order` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' and  ) GROUP BY game_user_id 
+
+[ 2018-01-15T17:36:04+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0038s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0008s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY game_user_id' at line 1
+ [ SQL语句 ] : SELECT * FROM `pay` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' and  ) GROUP BY game_user_id 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY game_user_id' at line 1
+ [ SQL语句 ] : SELECT * FROM `pay` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' and  ) GROUP BY game_user_id 
+
+[ 2018-01-15T17:36:17+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0038s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0009s ]
+ERR: 1054:Unknown column 'time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pay` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59'  ) GROUP BY game_user_id 
+ERR: 1054:Unknown column 'time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pay` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59'  ) GROUP BY game_user_id 
+
+[ 2018-01-15T17:36:35+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0036s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+
+[ 2018-01-15T17:37:33+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0021s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-01-15T17:37:59+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-15T17:38:02+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0036s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0007s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59'  ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59'  ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59'  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59'  ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0007s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59'  ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59'  ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined variable: www_url E:\Alirefor\APP\Runtime\Cache\Home\d9bfb8879b856e4469164cbfc09824ae.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014903s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000994s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2018-01-15T17:40:38+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0012s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0011s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59'  ) LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59'  ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59'  ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59'  ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59'  ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0009s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59'  ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined variable: www_url E:\Alirefor\APP\Runtime\Cache\Home\d9bfb8879b856e4469164cbfc09824ae.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018136s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000963s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001020s ]
+
+[ 2018-01-15T17:40:56+08:00 ] ::1 /index.php?m=Home&c=PayMoney&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0037s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='PayMoney/index' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `db`  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `pay` WHERE (  pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59' ) GROUP BY user_id  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pay` WHERE (  pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59' ) GROUP BY user_id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pay` WHERE (  pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59' ) GROUP BY user_id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pay` WHERE (  pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59' ) GROUP BY user_id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pay` WHERE (  pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59' ) GROUP BY user_id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pay` WHERE (  pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59' ) GROUP BY user_id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pay` WHERE (  pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59' ) GROUP BY user_id  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+NOTIC: [8] Undefined variable: qudao E:\Alirefor\APP\Runtime\Cache\Home\52c381ee449dec82afb5d517c4991950.php 第 141 行.
+NOTIC: [8] Undefined variable: www_url E:\Alirefor\APP\Runtime\Cache\Home\52c381ee449dec82afb5d517c4991950.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015871s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015933s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001218s ]
+
+[ 2018-01-15T17:41:05+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0036s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index3' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0011s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59'  ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59'  ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0009s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59'  ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59'  ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0009s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59'  ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59'  ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59'  ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 180 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59'  ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 182 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+NOTIC: [8] Undefined variable: www_url E:\Alirefor\APP\Runtime\Cache\Home\d9bfb8879b856e4469164cbfc09824ae.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024897s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001626s ]
+
+[ 2018-01-15T17:41:13+08:00 ] ::1 /index.php?m=Home&c=ACU&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='ACU/index' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0006s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-01-15' ) LIMIT 1   [ RunTime:0.0087s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-01-14' ) LIMIT 1   [ RunTime:0.0085s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-01-13' ) LIMIT 1   [ RunTime:0.0087s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-01-12' ) LIMIT 1   [ RunTime:0.0088s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-01-11' ) LIMIT 1   [ RunTime:0.0059s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-01-10' ) LIMIT 1   [ RunTime:0.0047s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-01-09' ) LIMIT 1   [ RunTime:0.0046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined variable: www_url E:\Alirefor\APP\Runtime\Cache\Home\a6476a16ba80a504a02b40e205b86e4d.php 第 168 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2018-01-15T17:41:16+08:00 ] ::1 /index.php?m=Home&c=PCU&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0035s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='PCU/index' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 and db_id=2 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT MAX(num) AS tp_Max FROM `period` WHERE ( time='2018-01-15' ) LIMIT 1   [ RunTime:0.0127s ]
+SQL: SELECT MAX(num) AS tp_Max FROM `period` WHERE ( time='2018-01-14' ) LIMIT 1   [ RunTime:0.0128s ]
+SQL: SELECT MAX(num) AS tp_Max FROM `period` WHERE ( time='2018-01-13' ) LIMIT 1   [ RunTime:0.0077s ]
+SQL: SELECT MAX(num) AS tp_Max FROM `period` WHERE ( time='2018-01-12' ) LIMIT 1   [ RunTime:0.0073s ]
+SQL: SELECT MAX(num) AS tp_Max FROM `period` WHERE ( time='2018-01-11' ) LIMIT 1   [ RunTime:0.0072s ]
+SQL: SELECT MAX(num) AS tp_Max FROM `period` WHERE ( time='2018-01-10' ) LIMIT 1   [ RunTime:0.0072s ]
+SQL: SELECT MAX(num) AS tp_Max FROM `period` WHERE ( time='2018-01-09' ) LIMIT 1   [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+NOTIC: [8] Undefined variable: www_url E:\Alirefor\APP\Runtime\Cache\Home\cec6030e5463425186fd47c7ae519728.php 第 168 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006285s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000388s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2018-01-15T17:41:20+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0037s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index2' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-15 00:00:00' and start_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0048s ]
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' ) GROUP BY uid  [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-14 00:00:00' and start_time<='2018-01-14 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-14 00:00:00' and time<='2018-01-14 23:59:59' ) GROUP BY uid  [ RunTime:0.0055s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 122 行.
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-13 00:00:00' and start_time<='2018-01-13 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-13 00:00:00' and time<='2018-01-13 23:59:59' ) GROUP BY uid  [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-12 00:00:00' and start_time<='2018-01-12 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0044s ]
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-12 00:00:00' and time<='2018-01-12 23:59:59' ) GROUP BY uid  [ RunTime:0.0051s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-11 00:00:00' and start_time<='2018-01-11 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-11 00:00:00' and time<='2018-01-11 23:59:59' ) GROUP BY uid  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-10 00:00:00' and start_time<='2018-01-10 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0028s ]
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-10 00:00:00' and time<='2018-01-10 23:59:59' ) GROUP BY uid  [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-09 00:00:00' and start_time<='2018-01-09 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0052s ]
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-09 00:00:00' and time<='2018-01-09 23:59:59' ) GROUP BY uid  [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+NOTIC: [8] Undefined variable: www_url E:\Alirefor\APP\Runtime\Cache\Home\65673113687a974706a5247f47e9d345.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012173s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2018-01-15T17:44:14+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0037s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index2' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-15 00:00:00' and start_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0036s ]
+
+[ 2018-01-15T17:44:59+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0021s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index2' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-15 00:00:00' and start_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0023s ]
+ERR: 1054:Unknown column 'time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pay` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' ) GROUP BY game_user_id 
+ERR: 1054:Unknown column 'time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `pay` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' ) GROUP BY game_user_id 
+
+[ 2018-01-15T17:45:12+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0021s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index2' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-15 00:00:00' and start_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0007s ]
+
+[ 2018-01-15T17:46:59+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0031s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index2' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-15 00:00:00' and start_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0016s ]
+
+[ 2018-01-15T17:47:03+08:00 ] ::1 /index.php?m=Home&c=UserPay&a=index2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0037s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='UserPay/index2' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-15 00:00:00' and start_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0042s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-14 00:00:00' and start_time<='2018-01-14 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\UserPayController.class.php 第 123 行.
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-13 00:00:00' and start_time<='2018-01-13 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0029s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-12 00:00:00' and start_time<='2018-01-12 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0059s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-11 00:00:00' and start_time<='2018-01-11 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-10 00:00:00' and start_time<='2018-01-10 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0037s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-09 00:00:00' and start_time<='2018-01-09 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0037s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Undefined variable: www_url E:\Alirefor\APP\Runtime\Cache\Home\65673113687a974706a5247f47e9d345.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015900s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000917s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000981s ]
+
+[ 2018-01-15T18:07:16+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `db`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 37 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-15 00:00:00' and pay_time<='2018-01-15 23:59:59' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( register_time>='2018-01-15 00:00:00' and register_time<='2018-01-15 23:59:59' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-15 00:00:00' and start_time<='2018-01-15 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 37 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-14 00:00:00' and pay_time<='2018-01-14 23:59:59' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( register_time>='2018-01-14 00:00:00' and register_time<='2018-01-14 23:59:59' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-14 00:00:00' and start_time<='2018-01-14 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 37 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-13 00:00:00' and pay_time<='2018-01-13 23:59:59' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( register_time>='2018-01-13 00:00:00' and register_time<='2018-01-13 23:59:59' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-13 00:00:00' and start_time<='2018-01-13 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 37 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-12 00:00:00' and pay_time<='2018-01-12 23:59:59' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( register_time>='2018-01-12 00:00:00' and register_time<='2018-01-12 23:59:59' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-12 00:00:00' and start_time<='2018-01-12 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 37 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-11 00:00:00' and pay_time<='2018-01-11 23:59:59' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( register_time>='2018-01-11 00:00:00' and register_time<='2018-01-11 23:59:59' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-11 00:00:00' and start_time<='2018-01-11 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 37 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-10 00:00:00' and pay_time<='2018-01-10 23:59:59' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( register_time>='2018-01-10 00:00:00' and register_time<='2018-01-10 23:59:59' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-10 00:00:00' and start_time<='2018-01-10 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 37 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-01-09 00:00:00' and pay_time<='2018-01-09 23:59:59' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( register_time>='2018-01-09 00:00:00' and register_time<='2018-01-09 23:59:59' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-01-09 00:00:00' and start_time<='2018-01-09 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='00:00' ) LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='00:00' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='00:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='00:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='00:00' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='01:00' ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='01:00' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='01:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='01:00' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='01:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='02:00' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='02:00' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='02:00' ) LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='02:00' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='02:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='03:00' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='03:00' ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='03:00' ) LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='03:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='03:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='04:00' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='04:00' ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='04:00' ) LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='04:00' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='04:00' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='05:00' ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='05:00' ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='05:00' ) LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='05:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='05:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='06:00' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='06:00' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='06:00' ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='06:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='06:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='07:00' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='07:00' ) LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='07:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='07:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='07:00' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='08:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='08:00' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='08:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='08:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='08:00' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='09:00' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='09:00' ) LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='09:00' ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='09:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='09:00' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='10:00' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='10:00' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='10:00' ) LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='10:00' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='10:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='11:00' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='11:00' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='11:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='11:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='11:00' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='12:00' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='12:00' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='12:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='12:00' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='12:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='13:00' ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='13:00' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='13:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='13:00' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='13:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='14:00' ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='14:00' ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='14:00' ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='14:00' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='14:00' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='15:00' ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='15:00' ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='15:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='15:00' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='15:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='16:00' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='16:00' ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='16:00' ) LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='16:00' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='16:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='17:00' ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='17:00' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='17:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='17:00' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='17:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='18:00' ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='18:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='18:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='18:00' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='18:00' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='19:00' ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='19:00' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='19:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='19:00' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='19:00' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='20:00' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='20:00' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='20:00' ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='20:00' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='20:00' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='21:00' ) LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='21:00' ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='21:00' ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='21:00' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='21:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='22:00' ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='22:00' ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='22:00' ) LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='22:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='22:00' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-15' and f_time='23:00' ) LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-14' and f_time='23:00' ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-13' and f_time='23:00' ) LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `period` WHERE (  time='2018-01-11' and f_time='23:00' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `period` WHERE ( time='2018-01-09' and f_time='23:00' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `num` FROM `period` WHERE ( time='2018-01-15' ) ORDER BY f_time desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant amount - assumed 'amount' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 174 行.
+SQL: SELECT SUM(amount) AS tp_sum FROM `order` LIMIT 1   [ RunTime:0.0021s ]
+NOTIC: [8] Use of undefined constant amount - assumed 'amount' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 177 行.
+SQL: SELECT SUM(amount) AS tp_sum FROM `order` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `order` WHERE ( time>='2018-01-15 00:00:00' and time<='2018-01-15 23:59:59' ) GROUP BY uid  [ RunTime:0.0011s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 183 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( register_time>='2018-01-14 00:00:00' and register_time<='2018-01-14 23:59:59'  and game_id=1 and db_id=1  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( register_time>='2018-01-14 00:00:00' and register_time<='2018-01-14 23:59:59' and end_time>='2018-01-15 00:00:00' and end_time<='2018-01-15 23:59:59' and game_id=1 and db_id=1 and source!=' ' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 204 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 98 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 103 行.
+NOTIC: [8] Undefined variable: num E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 121 行.
+NOTIC: [8] Undefined variable: data E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 248 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000268s ]
+SQL: REPLACE INTO `pay` (`LogTime`,`pay_time`,`pay_number`,`game_user_name`,`db_id`,`game_user_id`,`level`,`user_id`) VALUES ('2018-01-15 15:03:49','2018-01-15 15:03:49','648','战场原英雄','1','1800200757','99','1639') [ RunTime:0.0003s ]
+SQL: REPLACE INTO `user` (`register_time`,`game_user_name`,`db_id`,`game_user_id`) VALUES ('2018-01-15 14:36:23','海贼东华','1','1800200796'),('2018-01-15 15:04:44','七狱使恐怖','1','1800200800'),('2018-01-15 15:51:53','天神月隐','1','1800200801'),('2018-01-15 16:00:25','剑圣亥月','1','1800200802'),('2018-01-15 16:12:24','圣斗士耀天','1','1800200803'),('2018-01-15 16:13:59','战歌辰月','1','1800200804'),('2018-01-15 16:25:30','游龙风锤','1','1800200805'),('2018-01-15 16:55:33','飞龙在天岁始','1','1800200807'),('2018-01-15 17:10:29','风神白鹿','1','1800200808'),('2018-01-15 17:40:06','霜华','1','1800200813') [ RunTime:0.0011s ]
+SQL: REPLACE INTO `sign` (`ip`,`start_time`,`game_user_id`) VALUES ('192.168.88.50:2112 ','2018-01-15 09:58:16','1800200514'),('192.168.88.63:1435 ','2018-01-15 10:01:36','1800200778'),('192.168.88.63:1473 ','2018-01-15 10:10:31','1800200778'),('192.168.88.63:1483 ','2018-01-15 10:13:50','1800200778'),('192.168.88.61:1237 ','2018-01-15 10:14:44','1800200651'),('192.168.88.63:1517 ','2018-01-15 10:33:24','1800200778'),('192.168.88.61:1323 ','2018-01-15 10:33:55','1800200651'),('192.168.88.68:1801 ','2018-01-15 10:35:16','1800200620'),('192.168.88.63:1971 ','2018-01-15 10:49:28','1800200778'),('192.168.88.63:1994 ','2018-01-15 10:57:56','1800200778'),('192.168.88.68:1919 ','2018-01-15 10:58:24','1800200620'),('192.168.88.51:4074 ','2018-01-15 11:01:45','1800200289'),('192.168.88.51:4078 ','2018-01-15 11:02:32','1800200756'),('192.168.88.51:4101 ','2018-01-15 11:05:10','1800200289'),('192.168.88.68:2057 ','2018-01-15 11:12:02','1800200045'),('192.168.88.68:2096 ','2018-01-15 11:16:34','1800200268'),('192.168.88.68:2099 ','2018-01-15 11:17:16','1800200469'),('192.168.88.68:2102 ','2018-01-15 11:17:39','1800200591'),('192.168.88.68:2193 ','2018-01-15 11:26:32','1800200620'),('192.168.88.51:4512 ','2018-01-15 11:32:47','1800200756'),('192.168.88.68:2242 ','2018-01-15 11:37:42','1800200620'),('192.168.88.63:2333 ','2018-01-15 11:39:56','1800200647'),('192.168.88.51:4560 ','2018-01-15 11:40:01','1800200289'),('192.168.88.57:17398 ','2018-01-15 11:46:19','1800200271'),('192.168.88.63:2673 ','2018-01-15 11:51:08','1800200647'),('192.168.88.68:2302 ','2018-01-15 11:53:44','1800200780'),('192.168.88.61:3175 ','2018-01-15 13:44:06','1800200651'),('192.168.88.67:47064 ','2018-01-15 13:44:58','1800200188'),('192.168.88.68:2801 ','2018-01-15 14:15:37','1800200045'),('192.168.88.15:9854 ','2018-01-15 14:22:38','1800200452'),('192.168.88.68:2908 ','2018-01-15 14:26:28','1800200200'),('192.168.88.68:2952 ','2018-01-15 14:32:44','1800200045'),('192.168.88.59:1543 ','2018-01-15 14:34:34','1800200757'),('192.168.88.68:3002 ','2018-01-15 14:36:22','1800200045'),('192.168.88.59:1563 ','2018-01-15 14:36:23','1800200796'),('192.168.88.68:3014 ','2018-01-15 14:37:23','1800200200'),('192.168.88.68:3026 ','2018-01-15 14:39:18','1800200620'),('192.168.88.59:1585 ','2018-01-15 14:40:02','1800200757'),('192.168.88.68:3084 ','2018-01-15 14:48:59','1800200780'),('192.168.88.50:54646 ','2018-01-15 14:50:55','1800200045'),('192.168.88.68:3142 ','2018-01-15 14:55:33','1800200162'),('192.168.88.68:3151 ','2018-01-15 14:57:02','1800200169'),('192.168.88.157:46159 ','2018-01-15 14:58:32','1800200228'),('192.168.88.50:56204 ','2018-01-15 14:59:49','1800200045'),('192.168.88.68:3186 ','2018-01-15 15:01:50','1800200177'),('192.168.88.50:56717 ','2018-01-15 15:02:40','1800200045'),('192.168.88.68:3193 ','2018-01-15 15:03:19','1800200162'),('192.168.88.68:3206 ','2018-01-15 15:04:34','1800200200'),('192.168.88.53:5832 ','2018-01-15 15:04:44','1800200800'),('192.168.88.68:3220 ','2018-01-15 15:05:27','1800200415'),('192.168.88.68:3228 ','2018-01-15 15:06:19','1800200576'),('192.168.88.50:57503 ','2018-01-15 15:07:12','1800200045'),('192.168.88.59:2274 ','2018-01-15 15:08:22','1800200757'),('192.168.88.53:5902 ','2018-01-15 15:08:52','1800200755'),('192.168.88.62:13138 ','2018-01-15 15:14:04','1800200775'),('192.168.88.62:13154 ','2018-01-15 15:14:23','1800200775'),('192.168.88.59:2391 ','2018-01-15 15:16:21','1800200757'),('192.168.88.59:2398 ','2018-01-15 15:16:46','1800200757'),('192.168.88.62:13297 ','2018-01-15 15:19:25','1800200775'),('192.168.88.59:2480 ','2018-01-15 15:22:59','1800200757'),('192.168.88.68:3312 ','2018-01-15 15:23:47','1800200620'),('192.168.88.59:2510 ','2018-01-15 15:27:21','1800200757'),('192.168.88.50:61041 ','2018-01-15 15:27:36','1800200045'),('192.168.88.68:3366 ','2018-01-15 15:27:56','1800200576'),('192.168.88.68:3371 ','2018-01-15 15:28:14','1800200620'),('192.168.88.68:3497 ','2018-01-15 15:41:31','1800200780'),('192.168.88.62:14287 ','2018-01-15 15:50:10','1800200798'),('192.168.88.68:3542 ','2018-01-15 15:51:53','1800200801'),('192.168.88.59:2663 ','2018-01-15 15:55:12','1800200757'),('192.168.88.50:1364 ','2018-01-15 15:55:42','1800200514'),('192.168.88.68:3595 ','2018-01-15 15:56:21','1800200045'),('192.168.88.62:14545 ','2018-01-15 15:56:45','1800200798'),('192.168.88.59:2688 ','2018-01-15 15:57:34','1800200757'),('192.168.88.68:3613 ','2018-01-15 15:58:30','1800200200'),('192.168.88.59:2709 ','2018-01-15 15:59:00','1800200757'),('192.168.88.59:2721 ','2018-01-15 15:59:33','1800200757'),('192.168.88.59:2727 ','2018-01-15 15:59:58','1800200796'),('192.168.88.68:3624 ','2018-01-15 15:59:59','1800200415'),('192.168.88.59:2729 ','2018-01-15 16:00:25','1800200802'),('192.168.88.59:2735 ','2018-01-15 16:00:47','1800200757'),('192.168.88.68:3657 ','2018-01-15 16:02:14','1800200415'),('192.168.88.68:3660 ','2018-01-15 16:02:29','1800200781'),('192.168.88.68:3684 ','2018-01-15 16:05:23','1800200801'),('192.168.88.63:5413 ','2018-01-15 16:07:35','1800200778'),('192.168.88.53:7678 ','2018-01-15 16:07:46','1800200704'),('192.168.88.53:7756 ','2018-01-15 16:12:24','1800200803'),('192.168.88.68:3746 ','2018-01-15 16:13:05','1800200780'),('192.168.88.68:3755 ','2018-01-15 16:13:10','1800200415'),('192.168.88.53:7788 ','2018-01-15 16:13:44','1800200803'),('192.168.88.68:3765 ','2018-01-15 16:14:00','1800200804'),('192.168.88.68:3793 ','2018-01-15 16:18:18','1800200415'),('192.168.88.68:3798 ','2018-01-15 16:18:35','1800200801'),('192.168.88.59:2850 ','2018-01-15 16:18:40','1800200757'),('192.168.88.53:7891 ','2018-01-15 16:19:24','1800200803'),('192.168.88.68:3819 ','2018-01-15 16:22:33','1800200801'),('192.168.88.68:3826 ','2018-01-15 16:25:31','1800200805'),('192.168.88.68:3840 ','2018-01-15 16:26:17','1800200805'),('192.168.88.68:3859 ','2018-01-15 16:28:36','1800200620'),('192.168.88.68:3880 ','2018-01-15 16:29:29','1800200804'),('192.168.88.68:3895 ','2018-01-15 16:32:45','1800200804'),('192.168.88.68:3992 ','2018-01-15 16:50:35','1800200804'),('192.168.88.68:3995 ','2018-01-15 16:50:59','1800200804'),('192.168.88.68:4004 ','2018-01-15 16:53:49','1800200801'),('192.168.88.68:4012 ','2018-01-15 16:54:21','1800200804'),('192.168.88.68:4016 ','2018-01-15 16:55:33','1800200807'),('192.168.88.53:8624 ','2018-01-15 17:00:55','1800200803'),('192.168.88.68:4046 ','2018-01-15 17:02:20','1800200804'),('192.168.88.53:8691 ','2018-01-15 17:03:27','1800200803'),('192.168.88.68:4090 ','2018-01-15 17:10:29','1800200808'),('192.168.88.68:4093 ','2018-01-15 17:10:52','1800200808'),('192.168.88.68:4191 ','2018-01-15 17:22:53','1800200804'),('192.168.88.68:4219 ','2018-01-15 17:26:08','1800200620'),('192.168.88.68:4228 ','2018-01-15 17:27:37','1800200780'),('192.168.88.62:18529 ','2018-01-15 17:40:07','1800200813'),('192.168.88.68:4338 ','2018-01-15 17:40:38','1800200045'),('192.168.88.62:18952 ','2018-01-15 17:51:30','1800200813'),('192.168.88.68:4454 ','2018-01-15 17:54:21','1800200268'),('192.168.88.59:3474 ','2018-01-15 17:55:13','1800200757'),('192.168.88.68:4463 ','2018-01-15 17:56:15','1800200469'),('192.168.88.62:19186 ','2018-01-15 17:57:03','1800200813'),('192.168.88.62:19197 ','2018-01-15 17:57:27','1800200813'),('192.168.88.51:8101 ','2018-01-15 18:05:15','1800200557') [ RunTime:0.0053s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200514" ) [ RunTime:0.0130s ]
+SQL: UPDATE `user` SET `level`='3' WHERE ( game_user_id="1800200778" ) [ RunTime:0.0131s ]
+SQL: UPDATE `user` SET `level`='3' WHERE ( game_user_id="1800200778" ) [ RunTime:0.0129s ]
+SQL: UPDATE `user` SET `level`='3' WHERE ( game_user_id="1800200778" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='52' WHERE ( game_user_id="1800200651" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='3' WHERE ( game_user_id="1800200778" ) [ RunTime:0.0127s ]
+SQL: UPDATE `user` SET `level`='52' WHERE ( game_user_id="1800200651" ) [ RunTime:0.0138s ]
+SQL: UPDATE `user` SET `level`='85' WHERE ( game_user_id="1800200620" ) [ RunTime:0.0130s ]
+SQL: UPDATE `user` SET `level`='3' WHERE ( game_user_id="1800200778" ) [ RunTime:0.0130s ]
+SQL: UPDATE `user` SET `level`='3' WHERE ( game_user_id="1800200778" ) [ RunTime:0.0132s ]
+SQL: UPDATE `user` SET `level`='85' WHERE ( game_user_id="1800200620" ) [ RunTime:0.0128s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200289" ) [ RunTime:0.0139s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200756" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200289" ) [ RunTime:0.0131s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0128s ]
+SQL: UPDATE `user` SET `level`='52' WHERE ( game_user_id="1800200268" ) [ RunTime:0.0130s ]
+SQL: UPDATE `user` SET `level`='71' WHERE ( game_user_id="1800200469" ) [ RunTime:0.0132s ]
+SQL: UPDATE `user` SET `level`='59' WHERE ( game_user_id="1800200591" ) [ RunTime:0.0136s ]
+SQL: UPDATE `user` SET `level`='86' WHERE ( game_user_id="1800200620" ) [ RunTime:0.0129s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200756" ) [ RunTime:0.0131s ]
+SQL: UPDATE `user` SET `level`='86' WHERE ( game_user_id="1800200620" ) [ RunTime:0.0139s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200647" ) [ RunTime:0.0140s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200289" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200271" ) [ RunTime:0.0140s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200647" ) [ RunTime:0.0129s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200780" ) [ RunTime:0.0140s ]
+SQL: UPDATE `user` SET `level`='52' WHERE ( game_user_id="1800200651" ) [ RunTime:0.0150s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200188" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0137s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200452" ) [ RunTime:0.0149s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200200" ) [ RunTime:0.0132s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0236s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0188s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200796" ) [ RunTime:0.0146s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200200" ) [ RunTime:0.0130s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200620" ) [ RunTime:0.0130s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='17' WHERE ( game_user_id="1800200780" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0138s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200162" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200169" ) [ RunTime:0.0141s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200228" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0136s ]
+SQL: UPDATE `user` SET `level`='29' WHERE ( game_user_id="1800200177" ) [ RunTime:0.0129s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0140s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200162" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200200" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200800" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200415" ) [ RunTime:0.0136s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200576" ) [ RunTime:0.0137s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0131s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200755" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200775" ) [ RunTime:0.0137s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200775" ) [ RunTime:0.0137s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0129s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0127s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200775" ) [ RunTime:0.0139s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200620" ) [ RunTime:0.0131s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0142s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0129s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200576" ) [ RunTime:0.0138s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200620" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='18' WHERE ( game_user_id="1800200780" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='22' WHERE ( game_user_id="1800200798" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200801" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200514" ) [ RunTime:0.0128s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='22' WHERE ( game_user_id="1800200798" ) [ RunTime:0.0130s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0136s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200200" ) [ RunTime:0.0130s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='3' WHERE ( game_user_id="1800200796" ) [ RunTime:0.0136s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200415" ) [ RunTime:0.0138s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200802" ) [ RunTime:0.0129s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0143s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200415" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200781" ) [ RunTime:0.0131s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200801" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='3' WHERE ( game_user_id="1800200778" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200704" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200803" ) [ RunTime:0.0132s ]
+SQL: UPDATE `user` SET `level`='18' WHERE ( game_user_id="1800200780" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200415" ) [ RunTime:0.0132s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200803" ) [ RunTime:0.0125s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200804" ) [ RunTime:0.0137s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200415" ) [ RunTime:0.0127s ]
+SQL: UPDATE `user` SET `level`='3' WHERE ( game_user_id="1800200801" ) [ RunTime:0.0140s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200803" ) [ RunTime:0.0129s ]
+SQL: UPDATE `user` SET `level`='13' WHERE ( game_user_id="1800200801" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200805" ) [ RunTime:0.0135s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200805" ) [ RunTime:0.0131s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200620" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200804" ) [ RunTime:0.0139s ]
+SQL: UPDATE `user` SET `level`='10' WHERE ( game_user_id="1800200804" ) [ RunTime:0.0140s ]
+SQL: UPDATE `user` SET `level`='56' WHERE ( game_user_id="1800200804" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='56' WHERE ( game_user_id="1800200804" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200801" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='59' WHERE ( game_user_id="1800200804" ) [ RunTime:0.0131s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200807" ) [ RunTime:0.0136s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200803" ) [ RunTime:0.0138s ]
+SQL: UPDATE `user` SET `level`='59' WHERE ( game_user_id="1800200804" ) [ RunTime:0.0136s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200803" ) [ RunTime:0.0142s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200808" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200808" ) [ RunTime:0.0138s ]
+SQL: UPDATE `user` SET `level`='98' WHERE ( game_user_id="1800200804" ) [ RunTime:0.0128s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200620" ) [ RunTime:0.0144s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200780" ) [ RunTime:0.0129s ]
+SQL: UPDATE `user` SET `level`='1' WHERE ( game_user_id="1800200813" ) [ RunTime:0.0130s ]
+SQL: UPDATE `user` SET `level`='100' WHERE ( game_user_id="1800200045" ) [ RunTime:0.0141s ]
+SQL: UPDATE `user` SET `level`='12' WHERE ( game_user_id="1800200813" ) [ RunTime:0.0134s ]
+SQL: UPDATE `user` SET `level`='52' WHERE ( game_user_id="1800200268" ) [ RunTime:0.0132s ]
+SQL: UPDATE `user` SET `level`='99' WHERE ( game_user_id="1800200757" ) [ RunTime:0.0133s ]
+SQL: UPDATE `user` SET `level`='71' WHERE ( game_user_id="1800200469" ) [ RunTime:0.0141s ]
+SQL: UPDATE `user` SET `level`='12' WHERE ( game_user_id="1800200813" ) [ RunTime:0.0132s ]
+SQL: UPDATE `user` SET `level`='12' WHERE ( game_user_id="1800200813" ) [ RunTime:0.0138s ]
+SQL: UPDATE `user` SET `level`='49' WHERE ( game_user_id="1800200557" ) [ RunTime:0.0135s ]
+SQL: REPLACE INTO `period` (`LogTime`,`time`,`db_id`,`num`,`f_time`) VALUES ('2018-01-15 00:00:00','2018-01-15 ','1','0','00:00'),('2018-01-15 00:02:00','2018-01-15 ','1','0','00:02'),('2018-01-15 00:04:00','2018-01-15 ','1','0','00:04'),('2018-01-15 00:06:00','2018-01-15 ','1','0','00:06'),('2018-01-15 00:08:00','2018-01-15 ','1','0','00:08'),('2018-01-15 00:10:00','2018-01-15 ','1','0','00:10'),('2018-01-15 00:12:00','2018-01-15 ','1','0','00:12'),('2018-01-15 00:14:00','2018-01-15 ','1','0','00:14'),('2018-01-15 00:16:00','2018-01-15 ','1','0','00:16'),('2018-01-15 00:18:00','2018-01-15 ','1','0','00:18'),('2018-01-15 00:20:00','2018-01-15 ','1','0','00:20'),('2018-01-15 00:22:00','2018-01-15 ','1','0','00:22'),('2018-01-15 00:24:00','2018-01-15 ','1','0','00:24'),('2018-01-15 00:26:00','2018-01-15 ','1','0','00:26'),('2018-01-15 00:28:00','2018-01-15 ','1','0','00:28'),('2018-01-15 00:30:00','2018-01-15 ','1','0','00:30'),('2018-01-15 00:32:00','2018-01-15 ','1','0','00:32'),('2018-01-15 00:34:00','2018-01-15 ','1','0','00:34'),('2018-01-15 00:36:00','2018-01-15 ','1','0','00:36'),('2018-01-15 00:38:00','2018-01-15 ','1','0','00:38'),('2018-01-15 00:40:00','2018-01-15 ','1','0','00:40'),('2018-01-15 00:42:00','2018-01-15 ','1','0','00:42'),('2018-01-15 00:44:00','2018-01-15 ','1','0','00:44'),('2018-01-15 00:46:00','2018-01-15 ','1','0','00:46'),('2018-01-15 00:48:00','2018-01-15 ','1','0','00:48'),('2018-01-15 00:50:00','2018-01-15 ','1','0','00:50'),('2018-01-15 00:52:00','2018-01-15 ','1','0','00:52'),('2018-01-15 00:54:00','2018-01-15 ','1','0','00:54'),('2018-01-15 00:56:00','2018-01-15 ','1','0','00:56'),('2018-01-15 00:58:00','2018-01-15 ','1','0','00:58'),('2018-01-15 01:00:00','2018-01-15 ','1','0','01:00'),('2018-01-15 01:02:00','2018-01-15 ','1','0','01:02'),('2018-01-15 01:04:00','2018-01-15 ','1','0','01:04'),('2018-01-15 01:06:00','2018-01-15 ','1','0','01:06'),('2018-01-15 01:08:00','2018-01-15 ','1','0','01:08'),('2018-01-15 01:10:00','2018-01-15 ','1','0','01:10'),('2018-01-15 01:12:00','2018-01-15 ','1','0','01:12'),('2018-01-15 01:14:00','2018-01-15 ','1','0','01:14'),('2018-01-15 01:16:00','2018-01-15 ','1','0','01:16'),('2018-01-15 01:18:00','2018-01-15 ','1','0','01:18'),('2018-01-15 01:20:00','2018-01-15 ','1','0','01:20'),('2018-01-15 01:22:00','2018-01-15 ','1','0','01:22'),('2018-01-15 01:24:00','2018-01-15 ','1','0','01:24'),('2018-01-15 01:26:00','2018-01-15 ','1','0','01:26'),('2018-01-15 01:28:00','2018-01-15 ','1','0','01:28'),('2018-01-15 01:30:00','2018-01-15 ','1','0','01:30'),('2018-01-15 01:32:00','2018-01-15 ','1','0','01:32'),('2018-01-15 01:34:00','2018-01-15 ','1','0','01:34'),('2018-01-15 01:36:00','2018-01-15 ','1','0','01:36'),('2018-01-15 01:38:00','2018-01-15 ','1','0','01:38'),('2018-01-15 01:40:00','2018-01-15 ','1','0','01:40'),('2018-01-15 01:42:00','2018-01-15 ','1','0','01:42'),('2018-01-15 01:44:00','2018-01-15 ','1','0','01:44'),('2018-01-15 01:46:00','2018-01-15 ','1','0','01:46'),('2018-01-15 01:48:00','2018-01-15 ','1','0','01:48'),('2018-01-15 01:50:00','2018-01-15 ','1','0','01:50'),('2018-01-15 01:52:00','2018-01-15 ','1','0','01:52'),('2018-01-15 01:54:00','2018-01-15 ','1','0','01:54'),('2018-01-15 01:56:00','2018-01-15 ','1','0','01:56'),('2018-01-15 01:58:00','2018-01-15 ','1','0','01:58'),('2018-01-15 02:00:00','2018-01-15 ','1','0','02:00'),('2018-01-15 02:02:00','2018-01-15 ','1','0','02:02'),('2018-01-15 02:04:00','2018-01-15 ','1','0','02:04'),('2018-01-15 02:06:00','2018-01-15 ','1','0','02:06'),('2018-01-15 02:08:00','2018-01-15 ','1','0','02:08'),('2018-01-15 02:10:00','2018-01-15 ','1','0','02:10'),('2018-01-15 02:12:00','2018-01-15 ','1','0','02:12'),('2018-01-15 02:14:00','2018-01-15 ','1','0','02:14'),('2018-01-15 02:16:00','2018-01-15 ','1','0','02:16'),('2018-01-15 02:18:00','2018-01-15 ','1','0','02:18'),('2018-01-15 02:20:00','2018-01-15 ','1','0','02:20'),('2018-01-15 02:22:00','2018-01-15 ','1','0','02:22'),('2018-01-15 02:24:00','2018-01-15 ','1','0','02:24'),('2018-01-15 02:26:00','2018-01-15 ','1','0','02:26'),('2018-01-15 02:28:00','2018-01-15 ','1','0','02:28'),('2018-01-15 02:30:00','2018-01-15 ','1','0','02:30'),('2018-01-15 02:32:00','2018-01-15 ','1','0','02:32'),('2018-01-15 02:34:00','2018-01-15 ','1','0','02:34'),('2018-01-15 02:36:00','2018-01-15 ','1','0','02:36'),('2018-01-15 02:38:00','2018-01-15 ','1','0','02:38'),('2018-01-15 02:40:00','2018-01-15 ','1','0','02:40'),('2018-01-15 02:42:00','2018-01-15 ','1','0','02:42'),('2018-01-15 02:44:00','2018-01-15 ','1','0','02:44'),('2018-01-15 02:46:00','2018-01-15 ','1','0','02:46'),('2018-01-15 02:48:00','2018-01-15 ','1','0','02:48'),('2018-01-15 02:50:00','2018-01-15 ','1','0','02:50'),('2018-01-15 02:52:00','2018-01-15 ','1','0','02:52'),('2018-01-15 02:54:00','2018-01-15 ','1','0','02:54'),('2018-01-15 02:56:00','2018-01-15 ','1','0','02:56'),('2018-01-15 02:58:00','2018-01-15 ','1','0','02:58'),('2018-01-15 03:00:00','2018-01-15 ','1','0','03:00'),('2018-01-15 03:02:00','2018-01-15 ','1','0','03:02'),('2018-01-15 03:04:00','2018-01-15 ','1','0','03:04'),('2018-01-15 03:06:00','2018-01-15 ','1','0','03:06'),('2018-01-15 03:08:00','2018-01-15 ','1','0','03:08'),('2018-01-15 03:10:00','2018-01-15 ','1','0','03:10'),('2018-01-15 03:12:00','2018-01-15 ','1','0','03:12'),('2018-01-15 03:14:00','2018-01-15 ','1','0','03:14'),('2018-01-15 03:16:00','2018-01-15 ','1','0','03:16'),('2018-01-15 03:18:00','2018-01-15 ','1','0','03:18'),('2018-01-15 03:20:00','2018-01-15 ','1','0','03:20'),('2018-01-15 03:22:00','2018-01-15 ','1','0','03:22'),('2018-01-15 03:24:00','2018-01-15 ','1','0','03:24'),('2018-01-15 03:26:00','2018-01-15 ','1','0','03:26'),('2018-01-15 03:28:00','2018-01-15 ','1','0','03:28'),('2018-01-15 03:30:00','2018-01-15 ','1','0','03:30'),('2018-01-15 03:32:00','2018-01-15 ','1','0','03:32'),('2018-01-15 03:34:00','2018-01-15 ','1','0','03:34'),('2018-01-15 03:36:00','2018-01-15 ','1','0','03:36'),('2018-01-15 03:38:00','2018-01-15 ','1','0','03:38'),('2018-01-15 03:40:00','2018-01-15 ','1','0','03:40'),('2018-01-15 03:42:00','2018-01-15 ','1','0','03:42'),('2018-01-15 03:44:00','2018-01-15 ','1','0','03:44'),('2018-01-15 03:46:00','2018-01-15 ','1','0','03:46'),('2018-01-15 03:48:00','2018-01-15 ','1','0','03:48'),('2018-01-15 03:50:00','2018-01-15 ','1','0','03:50'),('2018-01-15 03:52:00','2018-01-15 ','1','0','03:52'),('2018-01-15 03:54:00','2018-01-15 ','1','0','03:54'),('2018-01-15 03:56:00','2018-01-15 ','1','0','03:56'),('2018-01-15 03:58:00','2018-01-15 ','1','0','03:58'),('2018-01-15 04:00:00','2018-01-15 ','1','0','04:00'),('2018-01-15 04:02:00','2018-01-15 ','1','0','04:02'),('2018-01-15 04:04:00','2018-01-15 ','1','0','04:04'),('2018-01-15 04:06:00','2018-01-15 ','1','0','04:06'),('2018-01-15 04:08:00','2018-01-15 ','1','0','04:08'),('2018-01-15 04:10:00','2018-01-15 ','1','0','04:10'),('2018-01-15 04:12:00','2018-01-15 ','1','0','04:12'),('2018-01-15 04:14:00','2018-01-15 ','1','0','04:14'),('2018-01-15 04:16:00','2018-01-15 ','1','0','04:16'),('2018-01-15 04:18:00','2018-01-15 ','1','0','04:18'),('2018-01-15 04:20:00','2018-01-15 ','1','0','04:20'),('2018-01-15 04:22:00','2018-01-15 ','1','0','04:22'),('2018-01-15 04:24:00','2018-01-15 ','1','0','04:24'),('2018-01-15 04:26:00','2018-01-15 ','1','0','04:26'),('2018-01-15 04:28:00','2018-01-15 ','1','0','04:28'),('2018-01-15 04:30:00','2018-01-15 ','1','0','04:30'),('2018-01-15 04:32:00','2018-01-15 ','1','0','04:32'),('2018-01-15 04:34:00','2018-01-15 ','1','0','04:34'),('2018-01-15 04:36:00','2018-01-15 ','1','0','04:36'),('2018-01-15 04:38:00','2018-01-15 ','1','0','04:38'),('2018-01-15 04:40:00','2018-01-15 ','1','0','04:40'),('2018-01-15 04:42:00','2018-01-15 ','1','0','04:42'),('2018-01-15 04:44:00','2018-01-15 ','1','0','04:44'),('2018-01-15 04:46:00','2018-01-15 ','1','0','04:46'),('2018-01-15 04:48:00','2018-01-15 ','1','0','04:48'),('2018-01-15 04:50:00','2018-01-15 ','1','0','04:50'),('2018-01-15 04:52:00','2018-01-15 ','1','0','04:52'),('2018-01-15 04:54:00','2018-01-15 ','1','0','04:54'),('2018-01-15 04:56:00','2018-01-15 ','1','0','04:56'),('2018-01-15 04:58:00','2018-01-15 ','1','0','04:58'),('2018-01-15 05:00:00','2018-01-15 ','1','0','05:00'),('2018-01-15 05:02:00','2018-01-15 ','1','0','05:02'),('2018-01-15 05:04:00','2018-01-15 ','1','0','05:04'),('2018-01-15 05:06:00','2018-01-15 ','1','0','05:06'),('2018-01-15 05:08:00','2018-01-15 ','1','0','05:08'),('2018-01-15 05:10:00','2018-01-15 ','1','0','05:10'),('2018-01-15 05:12:00','2018-01-15 ','1','0','05:12'),('2018-01-15 05:14:00','2018-01-15 ','1','0','05:14'),('2018-01-15 05:16:00','2018-01-15 ','1','0','05:16'),('2018-01-15 05:18:00','2018-01-15 ','1','0','05:18'),('2018-01-15 05:20:00','2018-01-15 ','1','0','05:20'),('2018-01-15 05:22:00','2018-01-15 ','1','0','05:22'),('2018-01-15 05:24:00','2018-01-15 ','1','0','05:24'),('2018-01-15 05:26:00','2018-01-15 ','1','0','05:26'),('2018-01-15 05:28:00','2018-01-15 ','1','0','05:28'),('2018-01-15 05:30:00','2018-01-15 ','1','0','05:30'),('2018-01-15 05:32:00','2018-01-15 ','1','0','05:32'),('2018-01-15 05:34:00','2018-01-15 ','1','0','05:34'),('2018-01-15 05:36:00','2018-01-15 ','1','0','05:36'),('2018-01-15 05:38:00','2018-01-15 ','1','0','05:38'),('2018-01-15 05:40:00','2018-01-15 ','1','0','05:40'),('2018-01-15 05:42:00','2018-01-15 ','1','0','05:42'),('2018-01-15 05:44:00','2018-01-15 ','1','0','05:44'),('2018-01-15 05:46:00','2018-01-15 ','1','0','05:46'),('2018-01-15 05:48:00','2018-01-15 ','1','0','05:48'),('2018-01-15 05:50:00','2018-01-15 ','1','0','05:50'),('2018-01-15 05:52:00','2018-01-15 ','1','0','05:52'),('2018-01-15 05:54:00','2018-01-15 ','1','0','05:54'),('2018-01-15 05:56:00','2018-01-15 ','1','0','05:56'),('2018-01-15 05:58:00','2018-01-15 ','1','0','05:58'),('2018-01-15 06:00:00','2018-01-15 ','1','0','06:00'),('2018-01-15 06:02:00','2018-01-15 ','1','0','06:02'),('2018-01-15 06:04:00','2018-01-15 ','1','0','06:04'),('2018-01-15 06:06:00','2018-01-15 ','1','0','06:06'),('2018-01-15 06:08:00','2018-01-15 ','1','0','06:08'),('2018-01-15 06:10:00','2018-01-15 ','1','0','06:10'),('2018-01-15 06:12:00','2018-01-15 ','1','0','06:12'),('2018-01-15 06:14:00','2018-01-15 ','1','0','06:14'),('2018-01-15 06:16:00','2018-01-15 ','1','0','06:16'),('2018-01-15 06:18:00','2018-01-15 ','1','0','06:18'),('2018-01-15 06:20:00','2018-01-15 ','1','0','06:20'),('2018-01-15 06:22:00','2018-01-15 ','1','0','06:22'),('2018-01-15 06:24:00','2018-01-15 ','1','0','06:24'),('2018-01-15 06:26:00','2018-01-15 ','1','0','06:26'),('2018-01-15 06:28:00','2018-01-15 ','1','0','06:28'),('2018-01-15 06:30:00','2018-01-15 ','1','0','06:30'),('2018-01-15 06:32:00','2018-01-15 ','1','0','06:32'),('2018-01-15 06:34:00','2018-01-15 ','1','0','06:34'),('2018-01-15 06:36:00','2018-01-15 ','1','0','06:36'),('2018-01-15 06:38:00','2018-01-15 ','1','0','06:38'),('2018-01-15 06:40:00','2018-01-15 ','1','0','06:40'),('2018-01-15 06:42:00','2018-01-15 ','1','0','06:42'),('2018-01-15 06:44:00','2018-01-15 ','1','0','06:44'),('2018-01-15 06:46:00','2018-01-15 ','1','0','06:46'),('2018-01-15 06:48:00','2018-01-15 ','1','0','06:48'),('2018-01-15 06:50:00','2018-01-15 ','1','0','06:50'),('2018-01-15 06:52:00','2018-01-15 ','1','0','06:52'),('2018-01-15 06:54:00','2018-01-15 ','1','0','06:54'),('2018-01-15 06:56:00','2018-01-15 ','1','0','06:56'),('2018-01-15 06:58:00','2018-01-15 ','1','0','06:58'),('2018-01-15 07:00:00','2018-01-15 ','1','0','07:00'),('2018-01-15 07:02:00','2018-01-15 ','1','0','07:02'),('2018-01-15 07:04:00','2018-01-15 ','1','0','07:04'),('2018-01-15 07:06:00','2018-01-15 ','1','0','07:06'),('2018-01-15 07:08:00','2018-01-15 ','1','0','07:08'),('2018-01-15 07:10:00','2018-01-15 ','1','0','07:10'),('2018-01-15 07:12:00','2018-01-15 ','1','0','07:12'),('2018-01-15 07:14:00','2018-01-15 ','1','0','07:14'),('2018-01-15 07:16:00','2018-01-15 ','1','0','07:16'),('2018-01-15 07:18:00','2018-01-15 ','1','0','07:18'),('2018-01-15 07:20:00','2018-01-15 ','1','0','07:20'),('2018-01-15 07:22:00','2018-01-15 ','1','0','07:22'),('2018-01-15 07:24:00','2018-01-15 ','1','0','07:24'),('2018-01-15 07:26:00','2018-01-15 ','1','0','07:26'),('2018-01-15 07:28:00','2018-01-15 ','1','0','07:28'),('2018-01-15 07:30:00','2018-01-15 ','1','0','07:30'),('2018-01-15 07:32:00','2018-01-15 ','1','0','07:32'),('2018-01-15 07:34:00','2018-01-15 ','1','0','07:34'),('2018-01-15 07:36:00','2018-01-15 ','1','0','07:36'),('2018-01-15 07:38:00','2018-01-15 ','1','0','07:38'),('2018-01-15 07:40:00','2018-01-15 ','1','0','07:40'),('2018-01-15 07:42:00','2018-01-15 ','1','0','07:42'),('2018-01-15 07:44:00','2018-01-15 ','1','0','07:44'),('2018-01-15 07:46:00','2018-01-15 ','1','0','07:46'),('2018-01-15 07:48:00','2018-01-15 ','1','0','07:48'),('2018-01-15 07:50:00','2018-01-15 ','1','0','07:50'),('2018-01-15 07:52:00','2018-01-15 ','1','0','07:52'),('2018-01-15 07:54:00','2018-01-15 ','1','0','07:54'),('2018-01-15 07:56:00','2018-01-15 ','1','0','07:56'),('2018-01-15 07:58:00','2018-01-15 ','1','0','07:58'),('2018-01-15 08:00:00','2018-01-15 ','1','0','08:00'),('2018-01-15 08:02:00','2018-01-15 ','1','0','08:02'),('2018-01-15 08:04:00','2018-01-15 ','1','0','08:04'),('2018-01-15 08:06:00','2018-01-15 ','1','0','08:06'),('2018-01-15 08:08:00','2018-01-15 ','1','0','08:08'),('2018-01-15 08:10:00','2018-01-15 ','1','0','08:10'),('2018-01-15 08:12:00','2018-01-15 ','1','0','08:12'),('2018-01-15 08:14:00','2018-01-15 ','1','0','08:14'),('2018-01-15 08:16:00','2018-01-15 ','1','0','08:16'),('2018-01-15 08:18:00','2018-01-15 ','1','0','08:18'),('2018-01-15 08:20:00','2018-01-15 ','1','0','08:20'),('2018-01-15 08:22:00','2018-01-15 ','1','0','08:22'),('2018-01-15 08:24:00','2018-01-15 ','1','0','08:24'),('2018-01-15 08:26:00','2018-01-15 ','1','0','08:26'),('2018-01-15 08:28:00','2018-01-15 ','1','0','08:28'),('2018-01-15 08:30:00','2018-01-15 ','1','0','08:30'),('2018-01-15 08:32:00','2018-01-15 ','1','0','08:32'),('2018-01-15 08:34:00','2018-01-15 ','1','0','08:34'),('2018-01-15 08:36:00','2018-01-15 ','1','0','08:36'),('2018-01-15 08:38:00','2018-01-15 ','1','0','08:38'),('2018-01-15 08:40:00','2018-01-15 ','1','0','08:40'),('2018-01-15 08:42:00','2018-01-15 ','1','0','08:42'),('2018-01-15 08:44:00','2018-01-15 ','1','0','08:44'),('2018-01-15 08:46:00','2018-01-15 ','1','0','08:46'),('2018-01-15 08:48:00','2018-01-15 ','1','0','08:48'),('2018-01-15 08:50:00','2018-01-15 ','1','0','08:50'),('2018-01-15 08:52:00','2018-01-15 ','1','0','08:52'),('2018-01-15 08:54:00','2018-01-15 ','1','0','08:54'),('2018-01-15 08:56:00','2018-01-15 ','1','0','08:56'),('2018-01-15 08:58:00','2018-01-15 ','1','0','08:58'),('2018-01-15 09:00:00','2018-01-15 ','1','0','09:00'),('2018-01-15 09:02:00','2018-01-15 ','1','0','09:02'),('2018-01-15 09:04:00','2018-01-15 ','1','0','09:04'),('2018-01-15 09:06:00','2018-01-15 ','1','0','09:06'),('2018-01-15 09:08:00','2018-01-15 ','1','0','09:08'),('2018-01-15 09:10:00','2018-01-15 ','1','0','09:10'),('2018-01-15 09:12:00','2018-01-15 ','1','0','09:12'),('2018-01-15 09:14:00','2018-01-15 ','1','0','09:14'),('2018-01-15 09:16:00','2018-01-15 ','1','0','09:16'),('2018-01-15 09:18:00','2018-01-15 ','1','0','09:18'),('2018-01-15 09:20:00','2018-01-15 ','1','0','09:20'),('2018-01-15 09:22:00','2018-01-15 ','1','0','09:22'),('2018-01-15 09:24:00','2018-01-15 ','1','0','09:24'),('2018-01-15 09:26:00','2018-01-15 ','1','0','09:26'),('2018-01-15 09:28:00','2018-01-15 ','1','0','09:28'),('2018-01-15 09:30:00','2018-01-15 ','1','0','09:30'),('2018-01-15 09:32:00','2018-01-15 ','1','0','09:32'),('2018-01-15 09:34:00','2018-01-15 ','1','0','09:34'),('2018-01-15 09:36:00','2018-01-15 ','1','0','09:36'),('2018-01-15 09:38:00','2018-01-15 ','1','0','09:38'),('2018-01-15 09:40:00','2018-01-15 ','1','0','09:40'),('2018-01-15 09:42:00','2018-01-15 ','1','0','09:42'),('2018-01-15 09:44:00','2018-01-15 ','1','0','09:44'),('2018-01-15 09:46:00','2018-01-15 ','1','0','09:46'),('2018-01-15 09:48:00','2018-01-15 ','1','0','09:48'),('2018-01-15 09:50:00','2018-01-15 ','1','0','09:50'),('2018-01-15 09:52:00','2018-01-15 ','1','0','09:52'),('2018-01-15 09:54:00','2018-01-15 ','1','0','09:54'),('2018-01-15 09:56:00','2018-01-15 ','1','0','09:56'),('2018-01-15 09:58:00','2018-01-15 ','1','0','09:58'),('2018-01-15 10:00:00','2018-01-15 ','1','1','10:00'),('2018-01-15 10:02:00','2018-01-15 ','1','2','10:02'),('2018-01-15 10:04:00','2018-01-15 ','1','1','10:04'),('2018-01-15 10:06:00','2018-01-15 ','1','0','10:06'),('2018-01-15 10:08:00','2018-01-15 ','1','0','10:08'),('2018-01-15 10:10:00','2018-01-15 ','1','0','10:10'),('2018-01-15 10:12:00','2018-01-15 ','1','0','10:12'),('2018-01-15 10:14:00','2018-01-15 ','1','1','10:14'),('2018-01-15 10:16:00','2018-01-15 ','1','1','10:16'),('2018-01-15 10:18:00','2018-01-15 ','1','1','10:18'),('2018-01-15 10:20:00','2018-01-15 ','1','1','10:20'),('2018-01-15 10:22:00','2018-01-15 ','1','1','10:22'),('2018-01-15 10:24:00','2018-01-15 ','1','1','10:24'),('2018-01-15 10:26:00','2018-01-15 ','1','1','10:26'),('2018-01-15 10:28:00','2018-01-15 ','1','1','10:28'),('2018-01-15 10:34:00','2018-01-15 ','1','2','10:34'),('2018-01-15 10:36:00','2018-01-15 ','1','2','10:36'),('2018-01-15 10:38:00','2018-01-15 ','1','1','10:38'),('2018-01-15 10:40:00','2018-01-15 ','1','1','10:40'),('2018-01-15 10:42:00','2018-01-15 ','1','1','10:42'),('2018-01-15 10:46:00','2018-01-15 ','1','1','10:46'),('2018-01-15 10:48:00','2018-01-15 ','1','1','10:48'),('2018-01-15 10:50:00','2018-01-15 ','1','2','10:50'),('2018-01-15 10:52:00','2018-01-15 ','1','1','10:52'),('2018-01-15 10:54:00','2018-01-15 ','1','1','10:54'),('2018-01-15 10:56:00','2018-01-15 ','1','1','10:56'),('2018-01-15 10:58:00','2018-01-15 ','1','2','10:58'),('2018-01-15 11:00:00','2018-01-15 ','1','2','11:00'),('2018-01-15 11:02:00','2018-01-15 ','1','3','11:02'),('2018-01-15 11:04:00','2018-01-15 ','1','3','11:04'),('2018-01-15 11:06:00','2018-01-15 ','1','3','11:06'),('2018-01-15 11:08:00','2018-01-15 ','1','3','11:08'),('2018-01-15 11:10:00','2018-01-15 ','1','3','11:10'),('2018-01-15 11:14:00','2018-01-15 ','1','4','11:14'),('2018-01-15 11:16:00','2018-01-15 ','1','4','11:16'),('2018-01-15 11:18:00','2018-01-15 ','1','4','11:18'),('2018-01-15 11:20:00','2018-01-15 ','1','3','11:20'),('2018-01-15 11:22:00','2018-01-15 ','1','3','11:22'),('2018-01-15 11:24:00','2018-01-15 ','1','3','11:24'),('2018-01-15 11:26:00','2018-01-15 ','1','3','11:26'),('2018-01-15 11:28:00','2018-01-15 ','1','3','11:28'),('2018-01-15 11:30:00','2018-01-15 ','1','3','11:30'),('2018-01-15 11:32:00','2018-01-15 ','1','3','11:32'),('2018-01-15 11:34:00','2018-01-15 ','1','3','11:34'),('2018-01-15 11:36:00','2018-01-15 ','1','3','11:36'),('2018-01-15 11:38:00','2018-01-15 ','1','3','11:38'),('2018-01-15 11:40:00','2018-01-15 ','1','3','11:40'),('2018-01-15 11:42:00','2018-01-15 ','1','3','11:42'),('2018-01-15 11:44:00','2018-01-15 ','1','3','11:44'),('2018-01-15 11:46:00','2018-01-15 ','1','3','11:46'),('2018-01-15 11:48:00','2018-01-15 ','1','3','11:48'),('2018-01-15 11:50:00','2018-01-15 ','1','2','11:50'),('2018-01-15 11:52:00','2018-01-15 ','1','3','11:52'),('2018-01-15 11:54:00','2018-01-15 ','1','3','11:54'),('2018-01-15 11:56:00','2018-01-15 ','1','3','11:56'),('2018-01-15 11:58:00','2018-01-15 ','1','3','11:58'),('2018-01-15 12:00:00','2018-01-15 ','1','3','12:00'),('2018-01-15 12:02:00','2018-01-15 ','1','3','12:02'),('2018-01-15 12:04:00','2018-01-15 ','1','3','12:04'),('2018-01-15 12:06:00','2018-01-15 ','1','3','12:06'),('2018-01-15 12:08:00','2018-01-15 ','1','3','12:08'),('2018-01-15 12:10:00','2018-01-15 ','1','3','12:10'),('2018-01-15 12:12:00','2018-01-15 ','1','3','12:12'),('2018-01-15 12:14:00','2018-01-15 ','1','3','12:14'),('2018-01-15 12:16:00','2018-01-15 ','1','3','12:16'),('2018-01-15 12:18:00','2018-01-15 ','1','3','12:18'),('2018-01-15 12:20:00','2018-01-15 ','1','3','12:20'),('2018-01-15 12:22:00','2018-01-15 ','1','3','12:22'),('2018-01-15 12:24:00','2018-01-15 ','1','3','12:24'),('2018-01-15 12:26:00','2018-01-15 ','1','3','12:26'),('2018-01-15 12:28:00','2018-01-15 ','1','3','12:28'),('2018-01-15 12:30:00','2018-01-15 ','1','3','12:30'),('2018-01-15 12:32:00','2018-01-15 ','1','3','12:32'),('2018-01-15 12:34:00','2018-01-15 ','1','3','12:34'),('2018-01-15 12:36:00','2018-01-15 ','1','3','12:36'),('2018-01-15 12:38:00','2018-01-15 ','1','3','12:38'),('2018-01-15 12:40:00','2018-01-15 ','1','3','12:40'),('2018-01-15 12:42:00','2018-01-15 ','1','3','12:42'),('2018-01-15 12:44:00','2018-01-15 ','1','3','12:44'),('2018-01-15 12:46:00','2018-01-15 ','1','3','12:46'),('2018-01-15 12:48:00','2018-01-15 ','1','3','12:48'),('2018-01-15 12:50:00','2018-01-15 ','1','3','12:50'),('2018-01-15 12:52:00','2018-01-15 ','1','3','12:52'),('2018-01-15 12:54:00','2018-01-15 ','1','3','12:54'),('2018-01-15 12:56:00','2018-01-15 ','1','3','12:56'),('2018-01-15 12:58:00','2018-01-15 ','1','3','12:58'),('2018-01-15 13:00:00','2018-01-15 ','1','3','13:00'),('2018-01-15 13:02:00','2018-01-15 ','1','3','13:02'),('2018-01-15 13:04:00','2018-01-15 ','1','3','13:04'),('2018-01-15 13:06:00','2018-01-15 ','1','3','13:06'),('2018-01-15 13:08:00','2018-01-15 ','1','3','13:08'),('2018-01-15 13:10:00','2018-01-15 ','1','3','13:10'),('2018-01-15 13:12:00','2018-01-15 ','1','3','13:12'),('2018-01-15 13:14:00','2018-01-15 ','1','3','13:14'),('2018-01-15 13:16:00','2018-01-15 ','1','3','13:16'),('2018-01-15 13:18:00','2018-01-15 ','1','3','13:18'),('2018-01-15 13:20:00','2018-01-15 ','1','3','13:20'),('2018-01-15 13:22:00','2018-01-15 ','1','3','13:22'),('2018-01-15 13:24:00','2018-01-15 ','1','3','13:24'),('2018-01-15 13:26:00','2018-01-15 ','1','3','13:26'),('2018-01-15 13:28:00','2018-01-15 ','1','3','13:28'),('2018-01-15 13:30:00','2018-01-15 ','1','3','13:30'),('2018-01-15 13:32:00','2018-01-15 ','1','3','13:32'),('2018-01-15 13:34:00','2018-01-15 ','1','3','13:34'),('2018-01-15 13:36:00','2018-01-15 ','1','3','13:36'),('2018-01-15 13:38:00','2018-01-15 ','1','3','13:38'),('2018-01-15 13:40:00','2018-01-15 ','1','2','13:40'),('2018-01-15 13:42:00','2018-01-15 ','1','2','13:42'),('2018-01-15 13:44:00','2018-01-15 ','1','2','13:44'),('2018-01-15 13:46:00','2018-01-15 ','1','4','13:46'),('2018-01-15 13:48:00','2018-01-15 ','1','4','13:48'),('2018-01-15 13:50:00','2018-01-15 ','1','4','13:50'),('2018-01-15 13:52:00','2018-01-15 ','1','3','13:52'),('2018-01-15 13:54:00','2018-01-15 ','1','3','13:54'),('2018-01-15 13:56:00','2018-01-15 ','1','3','13:56'),('2018-01-15 13:58:00','2018-01-15 ','1','3','13:58'),('2018-01-15 14:00:00','2018-01-15 ','1','3','14:00'),('2018-01-15 14:02:00','2018-01-15 ','1','3','14:02'),('2018-01-15 14:04:00','2018-01-15 ','1','3','14:04'),('2018-01-15 14:06:00','2018-01-15 ','1','3','14:06'),('2018-01-15 14:08:00','2018-01-15 ','1','3','14:08'),('2018-01-15 14:10:00','2018-01-15 ','1','3','14:10'),('2018-01-15 14:12:00','2018-01-15 ','1','3','14:12'),('2018-01-15 14:14:00','2018-01-15 ','1','3','14:14'),('2018-01-15 14:16:00','2018-01-15 ','1','4','14:16'),('2018-01-15 14:18:00','2018-01-15 ','1','4','14:18'),('2018-01-15 14:20:00','2018-01-15 ','1','4','14:20'),('2018-01-15 14:22:00','2018-01-15 ','1','4','14:22'),('2018-01-15 14:24:00','2018-01-15 ','1','4','14:24'),('2018-01-15 14:26:00','2018-01-15 ','1','3','14:26'),('2018-01-15 14:28:00','2018-01-15 ','1','3','14:28'),('2018-01-15 14:30:00','2018-01-15 ','1','3','14:30'),('2018-01-15 14:32:00','2018-01-15 ','1','2','14:32'),('2018-01-15 14:34:00','2018-01-15 ','1','3','14:34'),('2018-01-15 14:36:00','2018-01-15 ','1','4','14:36'),('2018-01-15 14:38:00','2018-01-15 ','1','3','14:38'),('2018-01-15 14:40:00','2018-01-15 ','1','2','14:40'),('2018-01-15 14:42:00','2018-01-15 ','1','3','14:42'),('2018-01-15 14:44:00','2018-01-15 ','1','3','14:44'),('2018-01-15 14:46:00','2018-01-15 ','1','3','14:46'),('2018-01-15 14:48:00','2018-01-15 ','1','3','14:48'),('2018-01-15 14:50:00','2018-01-15 ','1','3','14:50'),('2018-01-15 14:52:00','2018-01-15 ','1','4','14:52'),('2018-01-15 14:54:00','2018-01-15 ','1','3','14:54'),('2018-01-15 14:56:00','2018-01-15 ','1','4','14:56'),('2018-01-15 14:58:00','2018-01-15 ','1','4','14:58'),('2018-01-15 15:00:00','2018-01-15 ','1','6','15:00'),('2018-01-15 15:02:00','2018-01-15 ','1','5','15:02'),('2018-01-15 15:04:00','2018-01-15 ','1','3','15:04'),('2018-01-15 15:06:00','2018-01-15 ','1','4','15:06'),('2018-01-15 15:08:00','2018-01-15 ','1','5','15:08'),('2018-01-15 15:10:00','2018-01-15 ','1','5','15:10'),('2018-01-15 15:12:00','2018-01-15 ','1','3','15:12'),('2018-01-15 15:14:00','2018-01-15 ','1','3','15:14'),('2018-01-15 15:16:00','2018-01-15 ','1','3','15:16'),('2018-01-15 15:18:00','2018-01-15 ','1','4','15:18'),('2018-01-15 15:20:00','2018-01-15 ','1','4','15:20'),('2018-01-15 15:22:00','2018-01-15 ','1','4','15:22'),('2018-01-15 15:24:00','2018-01-15 ','1','5','15:24'),('2018-01-15 15:26:00','2018-01-15 ','1','5','15:26'),('2018-01-15 15:28:00','2018-01-15 ','1','5','15:28'),('2018-01-15 15:30:00','2018-01-15 ','1','5','15:30'),('2018-01-15 15:32:00','2018-01-15 ','1','4','15:32'),('2018-01-15 15:34:00','2018-01-15 ','1','4','15:34'),('2018-01-15 15:36:00','2018-01-15 ','1','4','15:36'),('2018-01-15 15:38:00','2018-01-15 ','1','3','15:38'),('2018-01-15 15:40:00','2018-01-15 ','1','3','15:40'),('2018-01-15 15:42:00','2018-01-15 ','1','4','15:42'),('2018-01-15 15:44:00','2018-01-15 ','1','4','15:44'),('2018-01-15 15:46:00','2018-01-15 ','1','4','15:46'),('2018-01-15 15:48:00','2018-01-15 ','1','4','15:48'),('2018-01-15 15:50:00','2018-01-15 ','1','3','15:50'),('2018-01-15 15:52:00','2018-01-15 ','1','2','15:52'),('2018-01-15 15:54:00','2018-01-15 ','1','2','15:54'),('2018-01-15 15:56:00','2018-01-15 ','1','3','15:56'),('2018-01-15 15:58:00','2018-01-15 ','1','4','15:58'),('2018-01-15 16:00:00','2018-01-15 ','1','3','16:00'),('2018-01-15 16:02:00','2018-01-15 ','1','3','16:02'),('2018-01-15 16:04:00','2018-01-15 ','1','4','16:04'),('2018-01-15 16:06:00','2018-01-15 ','1','3','16:06'),('2018-01-15 16:08:00','2018-01-15 ','1','4','16:08'),('2018-01-15 16:10:00','2018-01-15 ','1','2','16:10'),('2018-01-15 16:12:00','2018-01-15 ','1','2','16:12'),('2018-01-15 16:14:00','2018-01-15 ','1','4','16:14'),('2018-01-15 16:18:00','2018-01-15 ','1','0','16:18'),('2018-01-15 16:20:00','2018-01-15 ','1','4','16:20'),('2018-01-15 16:22:00','2018-01-15 ','1','4','16:22'),('2018-01-15 16:24:00','2018-01-15 ','1','3','16:24'),('2018-01-15 16:26:00','2018-01-15 ','1','3','16:26'),('2018-01-15 16:28:00','2018-01-15 ','1','3','16:28'),('2018-01-15 16:30:00','2018-01-15 ','1','2','16:30'),('2018-01-15 16:32:00','2018-01-15 ','1','2','16:32'),('2018-01-15 16:34:00','2018-01-15 ','1','2','16:34'),('2018-01-15 16:36:00','2018-01-15 ','1','2','16:36'),('2018-01-15 16:38:00','2018-01-15 ','1','2','16:38'),('2018-01-15 16:40:00','2018-01-15 ','1','2','16:40'),('2018-01-15 16:42:00','2018-01-15 ','1','2','16:42'),('2018-01-15 16:44:00','2018-01-15 ','1','2','16:44'),('2018-01-15 16:46:00','2018-01-15 ','1','2','16:46'),('2018-01-15 16:48:00','2018-01-15 ','1','1','16:48'),('2018-01-15 16:50:00','2018-01-15 ','1','1','16:50'),('2018-01-15 16:52:00','2018-01-15 ','1','1','16:52'),('2018-01-15 16:54:00','2018-01-15 ','1','1','16:54'),('2018-01-15 16:56:00','2018-01-15 ','1','1','16:56'),('2018-01-15 16:58:00','2018-01-15 ','1','1','16:58'),('2018-01-15 17:00:00','2018-01-15 ','1','1','17:00'),('2018-01-15 17:02:00','2018-01-15 ','1','1','17:02'),('2018-01-15 17:04:00','2018-01-15 ','1','2','17:04'),('2018-01-15 17:06:00','2018-01-15 ','1','1','17:06'),('2018-01-15 17:08:00','2018-01-15 ','1','1','17:08'),('2018-01-15 17:10:00','2018-01-15 ','1','0','17:10'),('2018-01-15 17:12:00','2018-01-15 ','1','1','17:12'),('2018-01-15 17:14:00','2018-01-15 ','1','0','17:14'),('2018-01-15 17:16:00','2018-01-15 ','1','0','17:16'),('2018-01-15 17:18:00','2018-01-15 ','1','0','17:18'),('2018-01-15 17:20:00','2018-01-15 ','1','0','17:20'),('2018-01-15 17:22:00','2018-01-15 ','1','0','17:22'),('2018-01-15 17:24:00','2018-01-15 ','1','1','17:24'),('2018-01-15 17:26:00','2018-01-15 ','1','1','17:26'),('2018-01-15 17:28:00','2018-01-15 ','1','1','17:28'),('2018-01-15 17:30:00','2018-01-15 ','1','1','17:30'),('2018-01-15 17:32:00','2018-01-15 ','1','1','17:32'),('2018-01-15 17:34:00','2018-01-15 ','1','1','17:34'),('2018-01-15 17:36:00','2018-01-15 ','1','1','17:36'),('2018-01-15 17:38:00','2018-01-15 ','1','1','17:38'),('2018-01-15 17:40:00','2018-01-15 ','1','1','17:40'),('2018-01-15 17:42:00','2018-01-15 ','1','2','17:42'),('2018-01-15 17:44:00','2018-01-15 ','1','2','17:44'),('2018-01-15 17:46:00','2018-01-15 ','1','2','17:46'),('2018-01-15 17:48:00','2018-01-15 ','1','2','17:48'),('2018-01-15 17:50:00','2018-01-15 ','1','2','17:50'),('2018-01-15 17:52:00','2018-01-15 ','1','2','17:52'),('2018-01-15 17:54:00','2018-01-15 ','1','2','17:54'),('2018-01-15 17:56:00','2018-01-15 ','1','1','17:56'),('2018-01-15 17:58:00','2018-01-15 ','1','3','17:58'),('2018-01-15 18:00:00','2018-01-15 ','1','3','18:00'),('2018-01-15 18:02:00','2018-01-15 ','1','3','18:02'),('2018-01-15 18:04:00','2018-01-15 ','1','3','18:04'),('2018-01-15 18:06:00','2018-01-15 ','1','4','18:06') [ RunTime:0.0222s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2018-01-15T18:19:39+08:00 ] ::1 /index.php?m=Home&c=PaySave&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166  )  [ RunTime:0.0043s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='PaySave/index' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 ) ORDER BY db_id desc  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `db` WHERE ( game_id=1 and db_id=2 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `paysave` WHERE ( db_id=2 ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `paysave` WHERE ( db_id=2 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `db` WHERE ( db_id=2 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `game_user_id` FROM `pay` WHERE ( pay_time>='2018-01-01 00:00:00' and pay_time<='2018-01-01 23:59:59' ) GROUP BY game_user_id  [ RunTime:0.0017s ]
+

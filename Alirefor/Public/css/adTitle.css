@@ -1,0 +1,103 @@
+* {
+			margin: 0px;
+			padding: 0px;
+			border: 0;
+			font-family: "微软雅黑";
+			box-sizing: border-box;
+		}
+		
+		html,
+		body,
+		div,
+		p,
+		h1,
+		h2,
+		span,
+		a {
+			margin: 0px;
+			padding: 0px;
+		}
+		li {
+			list-style: none;
+		}
+		a {
+			text-decoration: none;
+			color: black;
+		}
+		body {
+			/*width: 10.8rem;*/
+			width: 100%;
+			overflow-x: hidden;
+		}
+		.main {
+			width: 100%;
+			margin: 0 auto;
+		}
+		
+		
+		.title {
+			height: 1.82rem;
+			/*padding: 0.5rem;*/
+			text-align: center;
+			border-bottom: solid 0.03rem #F5F5F5;
+			position: relative;
+		}
+		.title a {
+			display: inline-block;
+		}
+		.title a img {
+			width: 0.55rem;
+			height: 0.55rem;
+		}
+		
+		.title h1 {
+			display: inline-block;
+			font-size: 0.44rem;	
+			margin-top: 6%;
+			width: 50%;
+			overflow:hidden;
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis;
+			white-space:nowrap;
+		}
+		
+		.back {
+			position: absolute;
+			left: 0.4rem;
+			top: 37%;
+		}
+	
+		/*第一部分*/
+		.content1 {
+			width: 100%;
+			padding-left:0.4rem ;
+			padding-right:0.4rem ;
+			padding-top: 0.34rem;
+			text-align: center;
+		}
+		
+		.content1 h1 {
+			font-size: 0.38rem;
+			/*border-bottom: solid 0.03rem #F5F5F5;*/
+			margin-bottom: 0.4rem;
+		}
+		.content1 p {
+			font-size:0.28rem ;
+			color: rgb(160,160,160);
+		}
+		
+		.content1 img {
+			width: 96%;
+			height: 4.15rem;
+			margin-top: 0.34rem;
+			margin-bottom: 0.34rem;
+		}
+		
+		.content1 p.con {
+			/*border-top: solid 0.03rem #F5F5F5;*/
+			padding-top: 0.4rem;
+			font-size: 0.38rem;
+			text-align: left;
+			line-height: 0.6rem;
+			text-indent: 0.8rem;
+		}

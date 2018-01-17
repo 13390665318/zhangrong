@@ -1,0 +1,217 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{$apiSetting.sitename}</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="__PUBLIC__/amazeui/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="__PUBLIC__/amazeui/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="__PUBLIC__/amazeui/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="__PUBLIC__/amazeui/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="__PUBLIC__/amazeui/css/amazeui.min.css">
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="__PUBLIC__/js/jquery-1.11.0.min.js"></script>
+    <script src="__PUBLIC__/ckeditor/ckeditor/ckeditor.js"></script>
+    <script src="__PUBLIC__/js/sha1.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="__PUBLIC__/amazeui/js/amazeui.ie8polyfill.min.js"></script>
+    <![endif]-->
+    <script src="__PUBLIC__/amazeui/js/amazeui.min.js"></script>
+    <script src="__PUBLIC__/Js/jquery.base64.js"></script>
+    <style>
+        blockquote {
+            border-left: solid 4px rgb(59, 180, 242);
+            background: rgb(241, 247, 253);
+        }
+
+        td p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header class="am-topbar am-topbar-fixed-top" style="border-top: 5px solid rgb(59,180,242)">
+    <h1 class="am-topbar-brand">
+        <a href="#">{$apiSetting.sitename}</a>
+    </h1>
+
+    <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            <eq name="Think.CONTROLLER_NAME" value="Index">
+                <eq name="Think.ACTION_NAME" value="explain">
+                    <li class="am-active"><a href="{:U('Index/explain')}">接口说明</a></li>
+                    <else/>
+                    <li><a href="{:U('Index/explain')}">接口说明</a></li>
+                </eq>
+                <eq name="Think.ACTION_NAME" value="index">
+                    <li class="am-active"><a href="{:U('Index/index')}">接口文档</a></li>
+                    <else/>
+                    <li><a href="{:U('Index/index')}">接口文档</a></li>
+                </eq>
+
+                <else/>
+
+                <li><a href="{:U('Index/explain')}">接口说明</a></li>
+                <li><a href="{:U('Index/index')}">接口文档</a></li>
+            </eq>
+            <li><a href="#">访问记录</a></li>
+            <eq name="Think.CONTROLLER_NAME" value="Exception">
+                <eq name="Think.ACTION_NAME" value="android">
+                    <li class="am-active"><a href="{:U('Exception/android')}">android异常日志</a></li>
+                    <else/>
+                    <li><a href="{:U('Exception/android')}">android异常日志</a></li>
+                </eq>
+                <eq name="Think.ACTION_NAME" value="ios">
+                    <li class="am-active"><a href="{:U('Exception/ios')}">ios异常日志</a></li>
+                    <else/>
+                    <li><a href="{:U('Exception/ios')}">ios异常日志</a></li>
+                </eq>
+                <eq name="Think.ACTION_NAME" value="api">
+                    <li class="am-active"><a href="{:U('Exception/api')}">api异常日志</a></li>
+                    <else/>
+                    <li><a href="{:U('Exception/api')}">api异常日志</a></li>
+                </eq>
+                <else/>
+                <li><a href="{:U('Exception/android')}">android异常日志</a></li>
+                <li><a href="{:U('Exception/ios')}">ios异常日志</a></li>
+                <li><a href="{:U('Exception/api')}">api异常日志</a></li>
+            </eq>
+        </ul>
+
+
+        <div class="am-topbar-right">
+            <a class="am-btn am-btn-warning am-topbar-btn am-btn-sm am-radius" href="__APP__/Printt/Index"><span
+                    class="am-icon-floppy-o"></span></a>
+            <a class="am-btn am-btn-primary am-topbar-btn am-btn-sm am-radius" href="{:U('IndexEdit/index')}">接口管理</a>
+        </div>
+    </div>
+</header>
+<section class="main">
+    <div class="am-g ">
+        <div class="am-u-md-3 am-u-lg-3">
+            <ul data-am-widget="accordion" class="am-accordion am-accordion-basic"
+                data-am-accordion='{ "multiple": true }'>
+                <volist name="apitype" id="vo">
+                    <dl class=" am-accordion-item  am-active">
+                        <dt class="am-accordion-title" style="padding:0">
+                            {$vo.name}
+                        </dt>
+                        <dd class="am-accordion-bd am-collapse am-in">
+                            <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+                            <div class="am-accordion-content" style="padding:0 10px">
+                                <ul class="am-nav am-nav-default ">
+                                    <volist name="vo.api" id="v">
+                                        <li <?php echo $v['id']==$api_id?'class="am-active"':'';?>><a href='{:U("IndexEdit/lst","api_id=$v[id]")}' style="padding:0 10px" class="am-link-muted">{$v.title}
+                                            <span class=" am-padding-left-xs am-text-xs ">{$v.name}</span></a></li>
+                                    </volist>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                </volist>
+                <dl class=" am-accordion-item  am-active">
+                    <dt class="am-accordion-title">
+                        <a href='{:U("ApiEdit/lst")}'>接口管理</a>
+                    </dt>
+                </dl>
+            </ul>
+        </div>
+        <div class="am-u-md-9 am-u-lg-9 am-margin-top-lg">
+            
+            <div style="width:50% ">
+                <form action="{:U('edit')}" method="post" class="am-form am-text-sm">
+                        <input type="hidden" name="edit" value="{$edit}">
+                        <input type="hidden" name="id" value="{$id}">
+                        <input type="hidden" name="api_id" value="{$api_id}">
+                        <input type="hidden" name="isadd" value="{$isadd}">
+
+                        <div class="am-form-group">
+                            <label class="lable_title">参数名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input class="" name="name" type="text" value="{$post.name}"/>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="mytype">类&nbsp;&nbsp;&nbsp;&nbsp;型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <select name="type" id="mytype" >
+                                <option value="string" <?php echo $post['type']=='string'?"selected = 'selected'":'';?>>string</option>
+                                <option value="json" <?php echo $post['type']=='json'?"selected = 'selected'":'';?>>json</option>
+                                <option value="array" <?php echo $post['type']=='array'?"selected = 'selected'":'';?>>array</option>
+                                <option value="file" <?php echo $post['type']=='file'?"selected = 'selected'":'';?>>file</option>
+                            </select>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label class="lable_title">说&nbsp;&nbsp;&nbsp;&nbsp;明&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <textarea  id="TextArea1" class="ckeditor" name="remark" rows="5" type="text" value="">{$post.remark}</textarea>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label class="lable_title">示例值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input name="example" class="" type="text" value="{$post.example}"/>
+                        </div>
+
+                        <!--<?php echo $post['type']==string||$post['type']==''?'am-hide':''?>-->
+                        <div class="am-form-group " id="a">
+                            <label for="parent_id">父&nbsp;&nbsp;&nbsp;&nbsp;级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <select name="parent_id" id="parent_id" >
+                                <option value="0" >顶级</option>
+                                <volist name="pname" id="v">
+                                    <option value="{$v.id}" <?php echo $post['parent_id']==$v['id']?"selected = 'selected'":'';?>>{$v.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label class="lable_title">排&nbsp;&nbsp;&nbsp;&nbsp;序&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input name="sort" class="" type="text" value="<?php echo isset($post['sort'])?$post['sort']:'1'?>"/>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label class="lable_title">必&nbsp;&nbsp;&nbsp;&nbsp;传&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="radio" value="Y"name="isneed" <?php echo $post['isneed']==Y?"checked='checked'":''?>>是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" value="N" name="isneed" <?php echo $post['isneed']==Y?'':"checked='checked'"?>>&nbsp;&nbsp;否
+                        </div>
+
+                        <div class="am-form-group">
+                            <label class="lable_title">显&nbsp;&nbsp;&nbsp;&nbsp;示&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="radio" value="1"name="isshow" <?php echo $post['isshow']=='Y'||$post['isshow']==''?"checked='checked'":''?>>是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" value="0" name="isshow" <?php echo $post['isshow']=='N'?"checked='checked'":''?>>&nbsp;&nbsp;否
+                        </div>
+
+                        <p><button type="submit" class="am-btn am-btn-default">提交</button></p>
+                </form>   
+              </div>
+
+        </div>
+    </div>
+</section>
+
+
+

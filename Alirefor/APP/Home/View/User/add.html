@@ -1,0 +1,102 @@
+
+<include file="Public:header"/>
+<div id="page-wrapper">
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">后台用户管理</h1>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			增加后台用户 <div style="clear: both;"></div>
+		</div>
+
+		<div class="container">
+			<form class="xq" action="{:U('User/add')}" method="post" enctype="multipart/form-data" >
+				<div class="lei">
+					<p>
+						<label><font>*</font>用户名：</label>
+						<input class ="sr" type="text" placeholder="" name="user_name" value="" id="user_name"/>
+					</p>
+				</div>
+				<div class="lei">
+					<p>
+						<label><font>*</font>权限：</label>
+						<select name="auth" class ="sr" id="auth">
+							<volist name="arr" id="vo">
+								<option value="{$vo.id}">{$vo.name}</option>
+							</volist>
+						</select>
+					</p>
+				</div>
+				<div class="lei">
+					<p>
+						<label><font>*</font>昵称：</label>
+						<input class ="sr" type="text" placeholder="" name="name" value="" id="name"/>
+
+					</p>
+
+				</div>
+				<div class="lei">
+					<p>
+						<label><font>*</font>使用者：</label>
+						<input class ="sr" type="text" placeholder="" name="user" value="" id="user"/>
+
+					</p>
+
+				</div>
+				<div class="lei">
+					<p>
+						<label><font>*</font>密码：</label>
+						<input class ="sr" type="text" placeholder="" name="password" id="password"/>
+
+					</p>
+
+				</div>
+
+
+
+				<button type="submit" name ="sub"class="btn btn-primary" style="margin:20px auto;display: block;">确定</button>
+			</form>
+
+
+		</div>
+
+	</div>
+
+
+
+
+</div>
+<script>
+    $(function() {
+        $(window).bind("load resize", function() {
+            var topOffset = 50;
+            var width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
+            if (width < 768) {
+                $('div.navbar-collapse').addClass('collapse');
+                topOffset = 100; // 2-row-menu
+            } else {
+                $('div.navbar-collapse').removeClass('collapse');
+            }
+            var height = ((this.window.innerHeight > 0) ? this.window.innerHeight : this.screen.height) - 1;
+            height = height - topOffset;
+            if (height < 1) height = 1;
+            if (height > topOffset) {
+                $("#page-wrapper").css("min-height", (height) + "px");
+            }
+        });
+
+        $("#side-menu>li").each(function () {
+            $(this).click(function(){
+                $(this).find('ul').slideDown();
+                $(this).siblings().find('ul').slideUp();
+            })
+        })
+    });
+</script>
+
+</body>
+</html>

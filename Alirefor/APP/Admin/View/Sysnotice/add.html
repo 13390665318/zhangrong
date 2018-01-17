@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <LINK href="__ROOT__/public/admin/css/admin.css" type="text/css" rel="stylesheet">
+    <LINK href="__ROOT__/public/admin/css/sp.css" type="text/css" rel="stylesheet">
+    <script src="__ROOT__/public/js/jquery-1.7.2.min.js"></script>
+    <script src="__ROOT__/laydate/laydate.js"></script>
+    <script charset="utf-8" src="__ROOT__/public/admin/kindeditor/kindeditor.js"></script>
+    <script charset="utf-8" src="__ROOT__/public/admin/kindeditor/lang/zh_CN.js"></script>
+    <script charset="utf-8" src="__ROOT__/public/admin/kindeditor/plugins/code/prettify.js"></script>
+
+</HEAD>
+<style>
+    .lei p {
+        display:inline-block;
+        text-align: right;
+        width:256px;
+    }
+
+</style>
+<BODY>
+<div class="headr_bottom">
+
+    <div class="header_place"><img src="__ROOT__/public/admin/images/p_11.jpg">您当前所处位置：
+        <span>客服管理</span>-&gt;<span>系统通知增加</span></div>
+</div>
+<div class="container">
+    <h4>基础信息</h4>
+
+    <form class="xq" action="{:U('Sysnotice/add')}" method="post" enctype="multipart/form-data">
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>服务器：</span>
+            </p>
+                <select name="clothes">
+                    <volist name="arr" id="vo">
+                    <option value="{$vo.db_id}">{$vo.clothes}</option>
+                    </volist>
+                </select>
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>类别 ：</span>
+            </p>
+            <input type="text" name="type" class ="sr">
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>开始时间：</span>
+            </p>
+            <input onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="start_time" name="begin_time" class ="sr">
+
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>结束时间：</span>
+            </p>
+            <input onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time" name="end_time"  class ="sr">
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>间隔 ：</span>
+            </p>
+            <input type="text" name="systime" class ="sr" value="60">秒
+        </div>
+
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>公告内容 ：</span>
+            </p>
+            <textarea name="content" style="width:500px;height:300px;position: relative;"></textarea>
+        </div>
+        <div class="qdtj">
+
+        </div>
+
+
+
+        <input class="ztj" type="submit" name="sub" value="确定"/>
+    </form>
+</div>
+<script type="text/javascript">
+$(function(){
+
+
+
+KindEditor.ready(function(K) {
+var editor1 = K.create('textarea[name="content"]', {
+cssPath : '__ROOT__/public/admin/kindeditor/plugins/code/prettify.css',
+uploadJson : '__ROOT__/public/admin/kindeditor/php/upload_json.php',
+fileManagerJson : '__ROOT__/public/admin/kindeditor/php/file_manager_json.php',
+allowFileManager : true,
+
+});
+prettyPrint();
+});
+
+})
+
+
+
+
+</script>
+</BODY>
+</HTML>

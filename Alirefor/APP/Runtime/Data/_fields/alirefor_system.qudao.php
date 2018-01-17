@@ -1,0 +1,1 @@
+a:9:{i:0;s:3:"cid";i:1;s:4:"code";i:2;s:4:"name";i:3;s:5:"cname";i:4;s:6:"status";i:5;s:4:"time";i:6;s:5:"etime";s:3:"_pk";s:3:"cid";s:5:"_type";a:7:{s:3:"cid";s:7:"int(11)";s:4:"code";s:12:"varchar(255)";s:4:"name";s:12:"varchar(255)";s:5:"cname";s:12:"varchar(255)";s:6:"status";s:12:"varchar(255)";s:4:"time";s:12:"varchar(255)";s:5:"etime";s:12:"varchar(255)";}}
