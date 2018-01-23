@@ -76,17 +76,18 @@ class TrendActivityController  extends BaseController
             $Strtime=$arr[$i]["time1"];
             $Endtime=$arr[$i]["time2"];
 
-            $ru['_string']="(".$con.") and start_time>='$Strtime' and start_time<='$Endtime'";
+            $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
             $data[$i]["num"]=0;
 
-            for($j=0;$j<count($db);$j++){
-                $db_id=$db[$j]["db_id"];
-                $connection=db2($game_id,$db_id);
-                $sum=M('sign','',$connection)->where($ru)->group('game_user_id')->select();
+           // for($j=0;$j<count($db);$j++)
+               // $db_id=$db[$j]["db_id"];
+              //  $connection=db2($game_id,$db_id);
+                $sum=M('sign')->where($ru)->group('game_user_id')->select();
+
                 $data[$i]["num"]=$data[$i]["num"]+count($sum);
 
                 $user=$user+count($sum);
-            }
+
         }
         for($i=0;$i<count($data);$i++){
             $data[$i]["nums"]=round($data[$i]["num"]/$user,4)*100;
@@ -94,6 +95,7 @@ class TrendActivityController  extends BaseController
         //   var_dump($data);exit;
         $Stime=substr($Stime,0,strlen($Stime)-1);
         $this->assign("data",$data);
+        dump($data);exit;
         $jsoBj=json_encode($data);
         $this->assign("jsoBj",$jsoBj);
         $this->assign("Stime",$Stime);
@@ -154,18 +156,22 @@ class TrendActivityController  extends BaseController
         $data[0]["time"]="本周";
         $Strtime=date('Y-m-d 00:00:00', strtotime ("-0 day", strtotime($stime)));
         $Endtime=date('Y-m-d 23:59:59', strtotime ("-6 day", strtotime($stime)));
+
         $user=0;
-        $ru['_string']="(".$con.") and start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+
         $data[0]["num"]=0;
-        for($j=0;$j<count($db);$j++){
-            $db_id=$db[$j]["db_id"];
-            $connection=db2($game_id,$db_id);
-            $sum=M('sign','',$connection)->where($ru)->field('game_user_id')->group("game_user_id")->select();
+       // for($j=0;$j<count($db);$j++){
+         //   $db_id=$db[$j]["db_id"];
+         //   $connection=db2($game_id,$db_id);
+            $sum=M('sign')->where($ru)->field('game_user_id')->group("game_user_id")->select();
+
             //  echo M('sign','',$connection)->getLastSql();exit;
             $data[0]["num"]=$data[0]["num"]+count($sum);
 
             $user=$user+count($sum);
-        }
+      //  }
+
       //  dump($data);
         for($i=0;$i<count($data);$i++){
             $data[0]["nums"]=round($data[0]["num"]/$user,4)*100;
@@ -176,16 +182,14 @@ class TrendActivityController  extends BaseController
         $Strtime=date('Y-m-d 00:00:00', strtotime ("-7 day", strtotime($stime)));
         $Endtime=date('Y-m-d 23:59:59', strtotime ("-13 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="(".$con.") and start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
         $data[1]["num"]=0;
-        for($j=0;$j<count($db);$j++){
-            $db_id=$db[$j]["db_id"];
-            $connection=db2($game_id,$db_id);
-            $sum=M('sign','',$connection)->where($ru)->field('game_user_id')->group("game_user_id")->select();
-            $data[1]["num"]=$data[1]["num"]+count($sum);
 
+
+            $sum=M('sign')->where($ru)->field('game_user_id')->group("game_user_id")->select();
+
+            $data[1]["num"]=$data[1]["num"]+count($sum);
             $user=$user+count($sum);
-        }
         for($i=0;$i<count($data);$i++){
             $data[1]["nums"]=round($data[1]["num"]/$user,4)*100;
         }
@@ -194,24 +198,21 @@ class TrendActivityController  extends BaseController
         $Strtime=date('Y-m-d 00:00:00', strtotime ("-30 day", strtotime($stime)));
         $Endtime=date('Y-m-d 23:59:59', strtotime ("-36 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="(".$con.") and start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
         $data[2]["num"]=0;
-        for($j=0;$j<count($db);$j++){
-            $db_id=$db[$j]["db_id"];
-            $connection=db2($game_id,$db_id);
-            $sum=M('sign','',$connection)->where($ru)->field('game_user_id')->group("game_user_id")->select();
+
+
+            $sum=M('sign')->where($ru)->field('game_user_id')->group("game_user_id")->select();
             $data[2]["num"]=$data[2]["num"]+count($sum);
 
-            $user=$user+count($sum);
-        }
+
         for($i=0;$i<count($data);$i++){
             $data[2]["nums"]=round($data[2]["num"]/$user,4)*100;
         }
 
-
-
         $this->assign("data",$data);
         $jsoBj=json_encode($data);
+
         $this->assign("jsoBj",$jsoBj);
 
         $this->display();
@@ -272,16 +273,14 @@ class TrendActivityController  extends BaseController
         $Strtime=date('Y-m-d 00:00:00', strtotime ("-0 day", strtotime($stime)));
         $Endtime=date('Y-m-d 23:59:59', strtotime ("-13 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="(".$con.") and start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
         $data[0]["num"]=0;
-        for($j=0;$j<count($db);$j++){
-            $db_id=$db[$j]["db_id"];
-            $connection=db2($game_id,$db_id);
-            $sum=M('sign','',$connection)->where($ru)->field('game_user_id')->group("game_user_id")->select();
-            $data[0]["num"]=$data[0]["num"]+count($sum);
 
+
+
+            $sum=M('sign')->where($ru)->field('game_user_id')->group("game_user_id")->select();
+            $data[0]["num"]=$data[0]["num"]+count($sum);
             $user=$user+count($sum);
-        }
         for($i=0;$i<count($data);$i++){
             $data[0]["nums"]=round($data[0]["num"]/$user,4)*100;
         }
@@ -291,16 +290,14 @@ class TrendActivityController  extends BaseController
         $Strtime=date('Y-m-d 00:00:00', strtotime ("-14 day", strtotime($stime)));
         $Endtime=date('Y-m-d 23:59:59', strtotime ("-27 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="(".$con.") and start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
         $data[1]["num"]=0;
-        for($j=0;$j<count($db);$j++){
-            $db_id=$db[$j]["db_id"];
-            $connection=db2($game_id,$db_id);
-            $sum=M('sign','',$connection)->where($ru)->group("game_user_id")->field('game_user_id')->select();
+
+            $sum=M('sign')->where($ru)->group("game_user_id")->field('game_user_id')->select();
             $data[1]["num"]=$data[1]["num"]+count($sum);
 
             $user=$user+count($sum);;
-        }
+
         for($i=0;$i<count($data);$i++){
             $data[1]["nums"]=round($data[1]["num"]/$user,4)*100;
         }
@@ -309,24 +306,24 @@ class TrendActivityController  extends BaseController
         $Strtime=date('Y-m-d 00:00:00', strtotime ("-30 day", strtotime($stime)));
         $Endtime=date('Y-m-d 23:59:59', strtotime ("-33 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="(".$con.") and start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
         $data[2]["num"]=0;
-        for($j=0;$j<count($db);$j++){
-            $db_id=$db[$j]["db_id"];
-            $connection=db2($game_id,$db_id);
-            $sum=M('sign','',$connection)->where($ru)->group("game_user_id")->field('game_user_id')->select();
+
+
+
+            $sum=M('sign')->where($ru)->group("game_user_id")->field('game_user_id')->select();
             $data[2]["num"]=$data[2]["num"]+count($sum);;
 
-            $user=$user+count($sum);;
-        }
-        for($i=0;$i<count($data);$i++){
-            $data[2]["nums"]=round($data[2]["num"]/$user,4)*100;
-        }
+            $user=$user+count($sum);
 
+       for($i=0;$i<count($data);$i++){
+            $data[2]["nums"]=(int)round($data[2]["num"]/$user,4)*100;
+        }
 
 
         $this->assign("data",$data);
         $jsoBj=json_encode($data);
+
         $this->assign("jsoBj",$jsoBj);
 
         $this->display();

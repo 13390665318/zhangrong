@@ -58,7 +58,7 @@ class UserLossController extends BaseController
         $time=date("Y-m-d",time());
         $arrs=array('日期','新玩家','2日流失率','3日流失率','4日流失率','5日流失率','6日流失率','7日流失率');
         $arr=D("usersave")->where("time>='$stime' and time <='$etime' ")->order("time asc")->select();
-        //dump($arr);exit;
+
         for($i=0;$i<count($arr);$i++){
             $data[$i]["time"]=$arr[$i]["time"];
             $data[$i]["newuser"]=$arr[$i]["adduser"];
@@ -90,6 +90,7 @@ class UserLossController extends BaseController
             }
 
         }
+        //dump($data);exit;
 
 
         $this->assign("arrs",$arrs);

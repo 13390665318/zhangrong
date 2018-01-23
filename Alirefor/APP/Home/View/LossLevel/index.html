@@ -66,7 +66,7 @@
                             <volist name="arr" id="vo">
                                 <tr>
                                     <td width="10%">{$vo.level}</td>
-                                    <td>{$vo.loss}({$vo.loss_num}%)</td>
+                                    <td>{$vo.num}({$vo.nums}%)</td>
 
                                 </tr>
                             </volist>
@@ -117,15 +117,15 @@
     var stu=new Array();
     var rus= new Array();
     for (var i =0; i<obj.length; i++) {
-        stu[i]=obj[i].loss;
+        stu[i]=obj[i].num;
 
     }
     //  var a={$Stime};
-    var maxN = eval("Math.max(" + stu.toString() + ")")+1000;
+    var maxN = eval("Math.max(" + stu.toString() + ")")+100;
     stu=stu.reverse();
     var data = [stu];
     var data_max = maxN; //Y轴最大刻度
-    var line_title = ["流失用户","B"]; //曲线名称
+    var line_title = ["登录用户","B"]; //曲线名称
     var y_label = "人数"; //Y轴标题
     var x_label = "等级"; //X轴标题
     var x = [{$stu}]; //定义X轴刻度值

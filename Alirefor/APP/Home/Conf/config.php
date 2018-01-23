@@ -28,6 +28,19 @@ return array(
     'DB_SQL_BUILD_LENGTH'   => 20, // SQL缓存的队列长度
     'DB_SQL_LOG'            => false, // SQL执行日志记录
     'DB_PARAMS'             => array(\PDO::ATTR_CASE => \PDO::CASE_NATURAL),//不强制转换
+    'DATA_CACHE_TYPE'		=> 'Redis',
+    'REDIS_HOST'            =>  '127.0.0.1',
+    'REDIS_PORT'            =>  6379,
+    'cfg_smssid' => 'LTAIosqvNKPGAevl',
+    'cfg_smstoken' => 'YSTxo2psdFgHjJzqNF2EZT56NAq7t6',
+    'cfg_smsname' => '荣昕',
+    'ALI_SMS' => array(
+    'PRODUCT' => 'Dysmsapi',
+    'DOMAIN' => 'dysmsapi.aliyuncs.com',
+    'REGION' => 'cn-hangzhou',
+    'END_POINT_NAME' => 'cn-hangzhou',
+    ),
+
 
 
 

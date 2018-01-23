@@ -288,7 +288,7 @@ class FirstPayController extends BaseController
             $data[$i]["money"]=$data[$i]["sum(b.money)"]/100;
         }
         //设置excel列名
-        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A1','序号');
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A1','音响线');
         $objPHPExcel->setActiveSheetIndex(0)->setCellValue('B1','用户编号');
         $objPHPExcel->setActiveSheetIndex(0)->setCellValue('C1','用户昵称');
         $objPHPExcel->setActiveSheetIndex(0)->setCellValue('D1','用户等级');

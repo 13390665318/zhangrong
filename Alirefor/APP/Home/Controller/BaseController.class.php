@@ -38,45 +38,64 @@ class BaseController extends Controller
 
 
 //$game_id=1;
-        //$qudao2=array();
-        //$db=D("db")->select();
-       // for($i=0;$i<count($db);$i++){
-       //     $db_ids=$db[$i]["db_id"];
-       //     $connection=db2($game_id,$db_ids);
-       //     $qudao[$i]=M('user','',$connection)->where("source!=' ' and source!='DS' and source!='guest ' ")->field("source")->group("source")->order("count(source) desc")->select();
-       // }
+                //$qudao2=array();
+                //$db=D("db")->select();
+                // for($i=0;$i<count($db);$i++){
+                //     $db_ids=$db[$i]["db_id"];
+                //     $connection=db2($game_id,$db_ids);
+                //     $qudao[$i]=M('user','',$connection)->where("source!=' ' and source!='DS' and source!='guest ' ")->field("source")->group("source")->order("count(source) desc")->select();
+                // }
 
-        //$qudao2=arr_foreach($qudao);
-        //for($i=0;$i<count($qudao2);$i++){
-        //    $cid=$qudao2[$i];
-        //    $qudao3[$i]["cid"]=$cid;
-         //   $ras=D("qudao")->where("cid=$cid")->find();
-         //   $qudao3[$i]["name"]=$ras["name"];
-      //  }
+                //$qudao2=arr_foreach($qudao);
+                //for($i=0;$i<count($qudao2);$i++){
+                //    $cid=$qudao2[$i];
+                //    $qudao3[$i]["cid"]=$cid;
+                //   $ras=D("qudao")->where("cid=$cid")->find();
+                //   $qudao3[$i]["name"]=$ras["name"];
+                //  }
 
-      //  $this->qudao3=$qudao3;//这里赋值
+                //  $this->qudao3=$qudao3;//这里赋值
 
-                $userID=$_SESSION["userID"];
-                $ru=D("admin")->where("id=$userID")->find();
+                $userID = $_SESSION["userID"];
+                $ru = D("admin")->where("id=$userID")->find();
                 $auth = $ru["auth"];
                 $list = D("admin_auth_type")->where("id=$auth")->find();
                 $auths = $list["auth"];
                 $arr = explode(",", $auths);
 
-                $where=" status=1 and ";
-                for($i=0;$i<count($arr);$i++){
-                    $id=$arr[$i];
-                    $where = $where." id = $id or " ;
+                $where = " status=1 and ";
+                for ($i = 0; $i < count($arr); $i++) {
+                    $id = $arr[$i];
+                    $where = $where . " id = $id or ";
                 }
-                $con=substr($where,0,strlen($where)-3);
-                $Mune2=D("admin_auth_rule")->where($con)->select();
+                $con = substr($where, 0, strlen($where) - 3);
+                $redis = new \Redis();
+                $redis->connect('127.0.0.1', 6379);
+                if ($redis->get('Mune2')) {
+                    $Mune2 = $redis->get('Mune2');
+                    $Mune2 = json_decode($Mune2, 1);
+                } else {
+                    $Mune2 = D("admin_auth_rule")->where($con)->select();
+                    $Mune2 = json_encode($Mune2);
+                    $redis->set('Mune2', $Mune2);
+                    $Mune2 = json_decode($Mune2, 1);
+                }
+                $Mune2 = array_filter($Mune2);
+                $Mune2 = array_values($Mune2);
 
-                $Mune2=array_filter($Mune2);
-                $Mune2=array_values($Mune2);
+
+
 
 //var_dump($data);
-                $ku=D("admin_auth_rule")->where("type=-1")->order("status asc")->select();
-
+                if ($redis->get('type-1')) {
+                    $ku = $redis->get('type-1');
+                    $ku = json_decode($ku, 1);
+                } else {
+                $ku = D("admin_auth_rule")->where("type=-1")->order("status asc")->select();
+                $ku=json_encode($ku);
+                $redis->set('type-1',$ku);
+                $ku=json_decode($ku,1);
+            }
                 for($i=0;$i<count($ku);$i++){
                     for($j=0;$j<count($Mune2);$j++){
 

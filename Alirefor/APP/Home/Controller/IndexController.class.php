@@ -238,8 +238,11 @@ class IndexController extends BaseController {
                     $CreateRole[] = $value;
                 }elseif($value['Operation']=='Prepaid'){
                     $Prepaid[]=$value;
+                }elseif($value['Operation']=='backpack'){
+                    $backpack[]=$value;
                 }
             }
+          //  dump($backpack);exit;
         foreach ($Prepaid as $k=>$value){
             $Prepaid[$k]['pay_number']=$value['cash'];
             $Prepaid[$k]['game_user_name']=$value['role_name'];
@@ -317,6 +320,54 @@ class IndexController extends BaseController {
             $model = D('Playeronline');
             $model->onlineadd($linestatus);
         }
+    function sendSms($phone,$code){
+
+        // 基于TP3.2开发
+
+        //引进阿里的配置文件
+
+        Vendor ('api_sdk.vendor.autoload');
+
+
+        // 加载区域结点配置
+        \Aliyun\Core\Config::load();
+        // 初始化用户Profile实例
+        $profile = \Aliyun\Core\Profile\DefaultProfile::getProfile(C('ALI_SMS.REGION'), C('cfg_smssid'), C('cfg_smstoken'));
+
+
+        // 增加服务结点
+        \Aliyun\Core\Profile\DefaultProfile::addEndpoint(C('ALI_SMS.END_POINT_NAME'), C('ALI_SMS.REGION'), C('ALI_SMS.PRODUCT'), C('ALI_SMS.DOMAIN'));
+        // 初始化AcsClient用于发起请求
+        $acsClient = new \Aliyun\Core\DefaultAcsClient($profile);
+        // 初始化SendSmsRequest实例用于设置发送短信的参数
+        $request = new \Aliyun\Api\Sms\Request\V20170525\SendSmsRequest();
+        // 必填，设置雉短信接收号码
+        $request->setPhoneNumbers($phone);
+        // 必填，设置签名名称
+        $request->setSignName(C('cfg_smsname'));
+        // 必填，设置模板CODE
+        $request->setTemplateCode('SMS_122281847');
+        $params = array(
+            'code' => $code
+        );
+        // 可选，设置模板参数
+        $request->setTemplateParam(json_encode($params));
+        // 可选，设置流水号
+        //if($outId) {
+        //    $request->setOutId($outId);
+        //}
+        // 发起访问请求
+        $acsResponse = $acsClient->getAcsResponse($request);
+        // 打印请求结果
+        // var_dump($acsResponse);
+        return $acsResponse;
+    }
+
+
+    //config配置文件中要写上参数
+
+
+
 
   
     

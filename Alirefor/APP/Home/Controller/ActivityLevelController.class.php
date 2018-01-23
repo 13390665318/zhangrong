@@ -47,7 +47,8 @@ class ActivityLevelController extends BaseController
        // $connection=db2($game_id,$db_id);
         //$sum=0;
         $arr=M('user')->join("sign as b on user.game_user_id =b.game_user_id ")->where("b.start_time>='$start_time' and b.start_time<='$end_time'")->order("user.level desc")->group("user.game_user_id")->field('user.level')->select();
-       // dump(M('user')->getLastSql());exit;
+
+        // dump(M('user')->getLastSql());exit;
        // $sum=D("sign")->where("start_time>='$start_time' and start_time<='$end_time'")->field('game_user_id')->group("game_user_id")->select();
 
         for($i=100;$i>=1;$i--){
@@ -64,11 +65,13 @@ $data[$i]["num"]=0;
 
             $data[$i]["nums"]=round($data[$i]["num"]/count($arr),4)*100;
         }
+
         $data=array_values($data);
 
 
 
-       
+
+
         $jsoBj=json_encode($data);
         $this->assign("jsoBj",$jsoBj);
         $this->assign("stu",$stu);

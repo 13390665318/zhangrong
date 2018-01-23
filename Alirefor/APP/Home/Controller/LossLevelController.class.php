@@ -42,6 +42,7 @@ class LossLevelController extends BaseController
 
        if(isset($_GET["cesa"])){
             $cesa=I("get.cesa");
+
             if($cesa==24){
                 $day=1;
             }else if($cesa==48){
@@ -54,32 +55,62 @@ class LossLevelController extends BaseController
             $day=1;
         }
         $this->assign("cesa",$cesa);
-        $endtime=date('Y-m-d H:i:s', strtotime ("+$day day", strtotime($time)));
+        //$endtime=date('Y-m-d H:i:s', strtotime ("+$day day", strtotime($time)));
 
-        $con["_string"]="regtime>='$stime' AND regtime<='$etime' and lastupdtime < '$endtime'"; // 注册时间
-        $con=array_filter($con);
-        $connection=db($game_id,$db_id);
-        $Userbase = M('San_userbase','',$connection);
-        $loss=$Userbase->where($con)->count(); // 流失总人数
-        $stu = $Userbase->where($con)->distinct(true)->field('level')->order("level desc")->select();
-        $ru=null;
-        for($i=0;$i<count($stu);$i++){
-            $level=$stu[$i]["level"];
-            $ru='" '.$level.'" '.",".$ru;
-            $arr[$i]["level"]=$stu[$i]["level"];
+        //$con["_string"]="regtime>='$stime' AND regtime<='$etime' and lastupdtime < '$endtime'"; // 注册时间
+       // $con=array_filter($con);
+       // $connection=db($game_id,$db_id);
+        $stu = D('user')->field('game_user_id')->select();
 
-            $con["level"]=$stu[$i]["level"];
-            //等级流失人数
-            $arr[$i]["loss"]=$Userbase->where($con)->count();
-            // 流失率
-            $arr[$i]["loss_num"]=round($arr[$i]["loss"]/$loss,4)*100;
+        for($j=0;$j<count($stu);$j++){
+            $uid=$stu[$j]["game_user_id"];
+            $rus=D("sign")->field('sign.game_user_id,start_time,level')->join('left join user  on sign.game_user_id = user.game_user_id')->where("sign.game_user_id=$uid")->order("start_time desc")->find();
+            //判断7天没有上线为流失玩家
+            if(count_days($rus['start_time'],date('Y-m-d H:i:s',time()))>=$day){
+                $arr[]=$rus;
+            }
         }
 
-        $jsoBj=json_encode($arr);
+        for($i=100;$i>=1;$i--){
+            $level=$i;
+            $data[$i]["level"]=$level;
+            $stu='" '.$level.'" '.",".$stu;
+            $data[$i]["num"]=0;
+            //  $data[$i]["num"]=M('user as a','',$connection)->join("sign as b on a.game_user_id =b.game_user_id ")->where(" a.level=$level and b.start_time>='$start_time' and b.start_time<='$end_time'")->count();
+            for($j=0;$j<count($arr);$j++){
+                if($level==$arr[$j]["level"]){
+                    $data[$i]["num"]++;
+                }
+            }
+
+            $data[$i]["nums"]=round($data[$i]["num"]/count($arr),4)*100;
+        }
+        $data=array_values($data);
+
+
+
+        //$Userbase = M('San_userbase','',$connection);
+        /*$loss=$Userbase->where($con)->count(); // 流失总人数
+        $stu = $Userbase->where($con)->distinct(true)->field('level')->order("level desc")->select();*/
+
+      //  for($i=0;$i<count($stu);$i++){
+       //     $level=$stu[$i]["level"];
+       //     $ru='" '.$level.'" '.",".$ru;
+       //     $arr[$i]["level"]=$stu[$i]["level"];
+
+        //    $con["level"]=$stu[$i]["level"];
+            //等级流失人数
+            //$arr[$i]["loss"]=$Userbase->where($con)->count();
+            // 流失率
+            //$arr[$i]["loss_num"]=round($arr[$i]["loss"]/$loss,4)*100;
+      //  }
+
+
+        $jsoBj=json_encode($data);
         $this->assign("jsoBj",$jsoBj);
-        $this->assign("stu",$ru);
-$arr=array_reverse($arr);
-        $this->assign("arr",$arr);
+        $this->assign("stu",$stu);
+        $data=array_reverse($data);
+        $this->assign("arr",$data);
         $this->display();
     }
 
