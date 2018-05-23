@@ -1,0 +1,42 @@
+<!--datagrid列表-->
+<table id="<{:html_id('datagrid')}>" data-menu="#<{:html_id('datagrid-menu')}>" data-toolbar="#<{:html_id('datagrid-toolbar')}>" data-title="<{$title}>" data-url="<{:U(CONTROLLER_NAME . '/' . ACTION_NAME, array('grid'=>'datagrid'))}>">
+	<thead>
+		<tr>
+			<th data-options="field:'roleid',width:100,sortable:true">ID</th>
+			<th data-options="field:'rolename',width:200,sortable:true"><{:l("public_role_name")}></th>
+			<th data-options="field:'description',width:350,sortable:true"><{:l("system_role_description")}></th>
+			<th data-options="field:'listorder',width:100,sortable:true"><{:l("system_sort")}></th>
+			<th data-options="field:'status',width:100,sortable:true"><{:l("public_state")}></th>
+		</tr>
+	</thead>
+</table>
+
+<!--工具栏-->
+<div id="<{:html_id('datagrid-toolbar')}>">
+	<!--搜索-->
+    <a class="easyui-linkbutton toolbar-search" data-data="[
+		{name:'<{:l("adjudication_info_role_id")}>',field:'roleid', editor:'numberbox',group:'<{:l("system_other")}>'},
+        {name:'<{:l("public_role_name")}>',field:'rolename', editor:'text',group:'<{:l("system_other")}>'},
+        {name:'<{:l("public_state")}>',field:'status', editor:{type:'combobox',options:{editable:false,panelHeight:'auto',data:[{value:1,text:'<{:l("system_enable")}>'},{value:0,text:'<{:l("system_disable_system")}>'}]}},group:'<{:l("system_other")}>'}]" data-close="true" data-group="false" data-width="400" data-height="200" iconCls="fa fa-search" plain="true"><{:l("operation_info_search")}>
+    </a>
+	<!--操作项-->
+	<foreach name="toolbars" item="li">
+		<a class="easyui-linkbutton toolbar-action" data-action="<{$li.a}>" iconCls="<{$li.icon}>" plain="true" data-href="<{:U($li['c'] . '/' . $li['a'] . '?' . $li['data'])}>"><{$li.name}></a>
+	</foreach>
+</div>
+
+<!--右键菜单-->
+<if condition="count($toolbars) gt 0">
+	<div id="<{:html_id('datagrid-menu')}>" class="easyui-menu">
+		<foreach name="toolbars" item="li">
+			<div class="menu-action" data-action="<{$li.a}>" data-href="<{:U($li['c'] . '/' . $li['a'] . '?' . $li['data'])}>" iconCls="<{$li.icon}>"><{$li.name}></div>
+		</foreach>
+	</div>
+</if>
+
+<script type="text/javascript">
+	require(['user/role'], function(module){
+        console.log(module);
+		module.init("#<{:html_id('datagrid')}>");
+	});
+</script>

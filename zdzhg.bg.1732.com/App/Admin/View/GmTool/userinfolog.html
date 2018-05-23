@@ -1,0 +1,148 @@
+﻿<!--datagrid列表-->
+<div class="panel-header panel-header-noborder" style="width: 99%;"><{$title}></div>
+
+<div class="panel-noscroll" title="" style="width: 100%; height: 110px;" id="userinfotoolbar">
+    <div style="padding:10px;padding-bottom:10px; text-align:left;">
+        <{:l("public_search")}>：<select id="ulogacctype" style="width:100px;" class="easyui-combobox" data-options="editable:false,panelHeight:'auto',valueField:'id',textField:'text'">
+                <option value="2" <{$acctype==2?"selected=selected":""}>>ID</option>
+                <option value="1" <{$acctype==1?"selected=selected":""}>><{:l("public_use_platform_number")}></option>
+            </select>&nbsp;&nbsp;
+            <input style="width:100px;" id="ulogaccount" value="<{$account}>" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="return gotoUserInfo();" id="butexportuserlog" class="easyui-linkbutton" style="">&nbsp;&nbsp;<{:l("user_gotu_userinfo")}>&nbsp;&nbsp;</a>
+            <div style="padding-top:10px;"></div>
+            <{:l("public_log_type")}>：<select class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" id="seltablename" style="width:165px;height:24px" onchange="getTableName()">
+                    <option value="-1"><{:l("user_please_select_type")}></option>
+                    <foreach name="logtable" key="tabid" item="tabname">
+                        <option value="<{$tabname}>"><{$tabid}></option>
+                    </foreach>
+                </select>&nbsp;&nbsp;
+                <select class="easyui-combobox" data-options="editable:false,panelHeight:'auto',valueField:'id',textField:'text'" id="seltablenamelikeage" style="width:180px;height:24px"></select>
+                <div style="padding-top: 10px;"></div>
+                <{:l("public_query_date")}>(UTC<{:l("content_api_time")}>)：<input class="easyui-datebox" id="selulogbegintime" data-options="editable:false,showSeconds:true" style="width: 150px" value="<{$begintime}>">&nbsp;&nbsp;<{:l("public_to")}>
+        &nbsp;&nbsp;
+        <input class="easyui-datebox" id="selulogendtime" data-options="editable:false,showSeconds:true" style="width: 150px" value="<{$endtime}>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0);" onclick="return ULogSearch('1');" id="butseluserlog" class="easyui-linkbutton" style="">&nbsp;&nbsp;<{:l("public_select")}>&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0);" onclick="return ULogSearch('2');" id="butexportuserlog" class="easyui-linkbutton" style="">&nbsp;&nbsp;<{:l("public_export")}>&nbsp;&nbsp;</a>
+</div>
+</div>
+<div style="height:600px;">
+    <table id="duserloglist" class="easyui-datagrid" data-options="border:false,striped:true,pageSize:20,fit:true,striped:true,fitColumns:true,rownumbers:true,singleSelect:true,pagination:true"></table>
+</div>
+
+    <script type="text/javascript">
+        var getsystemdate = getsystemdata();
+        $('.easyui-datetimebox').datetimebox({
+            value: getsystemdate
+        });
+
+        function gotoUserInfo() {
+            var acctype = Getcomboboxvalue('ulogacctype');
+            var account = Getinputvalue("ulogaccount");
+            //var tab = $('#index-index-layout-center-tabs').tabs('getSelected');  // get selected panel
+            //tab.panel('refresh', "<{:U('GmTool/getUserInfo')}>&menuid=71&acctype=" + acctype + "&account=" + escape(account));
+            var title = "玩家信息";
+            var thinklanguage = "<{$thinklanguage}>";
+            if (thinklanguage == "ko-kr") {
+                title = "유저 정보";
+            }
+            var url = "/index.php?m=&c=gm_tool&a=getuserinfo&menuid=65&acctype=" + acctype + "&account=" + escape(account);
+            var iconCls = "fa fa-puzzle-piece";
+            if ($('#index-index-layout-center-tabs').tabs('exists', title)) {
+                $('#index-index-layout-center-tabs').tabs('close', title);
+            }
+            var option = { title: title, href: url, iconCls: iconCls, closable: true, cache: false };
+            $('#index-index-layout-center-tabs').tabs('add', option);
+        }
+        
+        function ULogSearch(flag) {
+            var acctype = Getcomboboxvalue("ulogacctype");//平台
+            var account = Getinputvalue("ulogaccount");//开始等级
+            var tabname = Getcomboboxvalue("seltablename");//log类型(一级)
+            var tabnamelikeage = Getcomboboxvalue("seltablenamelikeage");//log类型(二级)
+            var begtime = Getdateboxvalue('selulogbegintime');//开始时间
+            var endtime = Getdateboxvalue('selulogendtime');//结束时间 
+            if (account == "") {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_please_enter_a_number_or_id")}>');
+                return false;
+            }
+            if (acctype == "1") {//编号
+                if (account.indexOf("#") < 0) {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_wrong_numbering_information")}>');
+                    return false;
+                }
+            } else {//ID
+                if (isNaN(account)) {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_wrong_id")}>');
+                    return false;
+                }
+            }
+            if (tabname == "-1") {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_please_select_log_type")}>');
+                return false;
+            }
+            if (acctype == "1") {
+                account = UInt32To10(account);
+            }
+
+            var p = { acctype: acctype, account: account, tabname: tabname, tabnamelikeage: tabnamelikeage, begtime: begtime, endtime: endtime };
+            ShowProgress('<{:l("public_loading")}>');
+            if (flag == "1") {
+                $.post("<{:U('GmTool/getUserInfolog')}>", p, function (data) {
+                    HideProgress();
+                    var rows = data.rows;
+                    if (rows.length > 0) {
+
+                        var rowsList = "[[";
+                        $.each(rows[0], function (index, content) {
+                            rowsList += "{ field: '" + index + "', title: '" + index + "'},";
+                        });
+                        rowsList = (rowsList.length > 10 ? rowsList.substring(0, rowsList.length - 1) : "");
+                        rowsList += "]]";
+                        $('#duserloglist').datagrid({
+                            url: "<{:U('GmTool/getUserInfolog')}>",
+                            queryParams: { acctype: acctype, account: account, tabname: tabname, tabnamelikeage: tabnamelikeage, begtime: begtime, endtime: endtime },
+                            loadMsg: '<{:l("public_is_Loading")}>',
+                            columns: eval(rowsList)
+                        });
+                        $("#duserloglist").datagrid('loadData', data);
+                    } else {
+                        ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_data_was_not_checked")}>!');
+                        return false;
+                    }
+                });
+            } else if (flag == "2") {
+                window.open("<{:U('GmTool/exportUserInfolog')}><{:C('URL_MODEL_PARAS')}>vars=" + account + "|" + tabname + "|" + tabnamelikeage + "|" + begtime + "|" + endtime, "windows", "scrollbars=1,height=500,width=500,status=yes,toolbar=no,menubar=no,location=no", "false");
+                HideProgress();
+            } else {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_data_was_not_checked")}>!');
+                return false;
+            }
+        }
+        //功能联动
+        $(document).ready(function () {
+            $("#seltablename").combobox({
+                onChange: function (n, o) {
+                    var tabname = Getcomboboxvalue("seltablename");
+                    $.post("<{:U('GmTool/getTableNameLikeage')}>", { tabname: tabname }, function (data) {
+                        if (data != "-100") {
+                            var dataObj = eval("(" + data + ")");
+                            var data = [];
+                            var selval = "";
+                            $.each(dataObj, function (index, content) {
+                                if (selval == "") {
+                                    selval = content;
+                                }
+                                data.push({ "text": index, "id": content });
+                            });
+                            $("#seltablenamelikeage").combobox("loadData", data);
+                            if (selval != "") {
+                                $('#seltablenamelikeage').combobox("select", selval);
+                            }
+                        } else {
+                            $('#seltablenamelikeage').combobox("clear");
+                            $('#seltablenamelikeage').combobox('loadData', eval("[]"));
+                        }
+                    });
+                }
+            });
+        });
+    </script>

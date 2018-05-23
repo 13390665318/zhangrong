@@ -1,0 +1,98 @@
+<form id="taskAddForm" method="post">
+    <table  class="tab_style_table" style="width:100%;text-align:left;">
+        <tr>
+            <td><{$Think.lang.activity_task_id}></td>
+            <td> <input name="awardid" value="0" type="text"  class="easyui-textbox" data-options="required:true" readonly="readonly"/></td>
+            <td><{$Think.lang.activity_task_reward_content}></td>
+            <td >
+                <select name="conditiontype" class="easyui-combobox"  data-options="editable:false,panelHeight:'300'" >
+                    <foreach name="conditiontype" key="typeid" item="typename">
+                        <option value="<{$typeid}>"><{$typename}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td><{$Think.lang.activity_task_reward_demand_value}></td>
+            <td> <input name="conditionvalue" value="1" type="text"  class="easyui-numberspinner" data-options="min:1,required:true" /></td>
+        </tr>
+
+        <tr>
+            <td><{$Think.lang.activity_task_reward_type}>_1</td>
+            <td>
+                <select name="type1" class="easyui-combobox type" id="type_1" data-options="editable:false,panelHeight:'300'" style="width:160px;">
+                    <option value="-1"><{:l("email_goods_classification")}></option>
+                    <foreach name="itemtype" key="typeid" item="typename">
+                        <option value="<{$typeid}>"><{$typename}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td><{$Think.lang.activity_task_reward_id}>_1</td>
+            <td>
+                <select name="id1" class="easyui-combobox" id="id1" data-options="editable:false,panelHeight:'300',valueField:'id',textField:'text'" style="width: 160px;"></select>
+            </td>
+            <td><{$Think.lang.activity_task_reward_num}>_1</td>
+            <td> <input name="count1" type="text" id="count1"  class="easyui-numberbox" data-options="min:1" /></td>
+        </tr>
+        <tr>
+            <td><{$Think.lang.activity_task_reward_type}>_2</td>
+            <td>
+                <select name="type2" class="easyui-combobox type" id="type_2" data-options="editable:false,panelHeight:'300'" style="width:160px;">
+                    <option value="-1"><{:l("email_goods_classification")}></option>
+                    <foreach name="itemtype" key="typeid" item="typename">
+                        <option value="<{$typeid}>"><{$typename}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td><{$Think.lang.activity_task_reward_id}>_2</td>
+            <td>
+                <select name="id2" class="easyui-combobox" id="id2" data-options="editable:false,panelHeight:'300',valueField:'id',textField:'text'" style="width: 160px;"></select>
+            </td>
+            <td><{$Think.lang.activity_task_reward_num}>_2</td>
+            <td> <input name="count2" type="text" id="count2" class="easyui-numberbox" data-options="min:1" /></td>
+        </tr>
+
+        <tr>
+            <td><{$Think.lang.activity_task_reward_limit_count}></td>
+            <td> <input name="limittotalnum" value="1" type="text"  class="easyui-numberspinner" data-options="min:1,required:true" /></td>
+            <td><{$Think.lang.activity_task_reward_limit_daily}></td>
+            <td> <input name="limiteverynum" value="1" type="text"  class="easyui-numberspinner" data-options="min:1,required:true" /></td>
+            <td><{$Think.lang.activity_task_reward_limit_show}></td>
+            <td>
+                <span>
+                    <input name="isshow" type="radio" value="-1"  checked="true"><{$Think.lang.preferential_info_content_one}>
+                    <input name="isshow" type="radio" value="1"><{$Think.lang.preferential_info_content_two}>
+                </span>
+            </td>
+        </tr>
+
+    </table>
+</form>
+<script type="text/javascript">
+    //选择分类
+    $(document).ready(function () {
+        $(".type").combobox({
+            onChange: function (n, o) {
+                var listid = $(this).attr('id').split("_");
+                binditem(n,listid[1]);
+            }
+        });
+    })
+    //绑定物品列表
+    function binditem(typeid,listid) {
+        if(typeid==6||typeid==3){
+            $('#count'+listid).numberbox('setValue',1);
+            $('#count'+listid).textbox('textbox').attr('readonly',true);
+        }else {
+            $('#count'+listid).textbox('textbox').attr('readonly',false);
+        }
+
+        $.post("<{:U('Common/getitemlist')}>", { typeid: typeid ,type:1}, function (data) {
+            $('#id'+listid).combobox('clear');
+            $('#id'+listid).combobox('loadData', eval(data));
+            var val = $('#id'+listid).combobox("getData");
+            if (val != "") {
+                $('#id'+listid).combobox("select", val[0].id);
+            }
+        });
+    }
+
+</script>

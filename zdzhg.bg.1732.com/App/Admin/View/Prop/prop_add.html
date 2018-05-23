@@ -1,0 +1,42 @@
+<form id="addFrom" method="post">
+    <table  class="tab_style_table" style="width:100%;text-align:left;">
+        <tr>
+            <td><{$Think.lang.prop_info_name}>:</td>
+            <td> <input class="easyui-textbox" type="text" name="itemname" data-options="required:true" /></td>
+        </tr>
+        <tr>
+            <td><{$Think.lang.prop_info_id}>:</td>
+            <td> <input name="itemid" value="" type="text"  class="easyui-numberbox" data-options="required:true,min:0"  /></td>
+        </tr>
+        <tr>
+            <td><{$Think.lang.prop_info_type}>:</td>
+            <td>
+                <select class="easyui-combobox" name="itemtype" id="item_type_select" style="width:100%;" validType="propSelectValidate['item_type_select']" data-options="editable:false,panelHeight:'auto'" >
+                    <option value=""><{$Think.lang.prop_info_type_name}></option>
+                    <foreach name="itemtype" key="item" item="itemname">
+                        <option value="<{$item}>"><{$itemname}></option>
+                    </foreach>
+                </select>
+            </td>
+        </tr>
+        <!--<tr>-->
+            <!--<td><{$Think.lang.prop_info_sun}>:</td>-->
+            <!--<td><input name="maxnum" value="" type="text"  class="easyui-numberbox" data-options="min:0,required:true" /></td>-->
+        <!--</tr>-->
+    </table>
+</form>
+
+<script>
+    $.extend($.fn.validatebox.defaults.rules, {
+        propSelectValidate: {
+            validator: function (value, param) {
+                console.log($("#"+param).combobox('getText'));
+                if ($("#"+param).combobox('getText') != "<{$Think.lang.prop_info_type_name}>") {
+                    return true;
+                }
+                return false;
+            },
+            message: "<{$Think.lang.info_missing_message}>"
+        }
+    });
+</script>

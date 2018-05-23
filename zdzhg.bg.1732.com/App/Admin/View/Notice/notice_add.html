@@ -1,0 +1,278 @@
+<form id="addPost">
+    <table class="tab_style_table" style="width:100%">
+        <tr>
+            <td class="tab_style_bgcolor"><{$Think.lang.content_api_platform}></td>
+            <td style="width:40%;">
+                <select name="platform" class="easyui-combobox platform" data-options="editable:false,panelHeight:'auto'" style="width: 150px;">
+                    <foreach name="platlist" key="platid" item="platname">
+                        <option value="<{$platid}>"><{$platname}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td class="tab_style_bgcolor"><{:l("content_api_start")}><br />(UTC<{:l("content_api_time")}>)</td>
+            <td style="width:40%;">
+                <input name="start" class="easyui-datetimebox" id="sendtime_aa" data-options="editable:false,showSeconds:true,required:true" style="width:150px;">
+            </td>
+        </tr>
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.content_api_level}></td>
+            <td>
+                <input name="minlv" type="text" id="levelbegin" class="easyui-numberbox" data-options="min:1,max:150"  />
+                -
+                <input name="maxlv" type="text" id="levelend"    class="easyui-numberbox" data-options="min:1,max:150" />
+            </td>
+            <td class="tab_style_bgcolor" ><{:l("content_api_end")}><br />(UTC<{:l("content_api_time")}>)</td>
+            <td>
+                <input name="end" class="easyui-datetimebox" id="deadline_aa" data-options="editable:false,showSeconds:true,required:true" style="width:150px;">
+            </td>
+        </tr>
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.content_api_rank}></td>
+            <td>
+
+                <input name="rankmin" type="text" id="danbegin" class="easyui-numberbox" data-options="min:1,max:20"/>
+                -
+                <input name="rankmax" type="text" id="danend"   class="easyui-numberbox" data-options="min:1,max:20" />
+                    <a href="javascript:void(0);" id="explanin"><{$Think.lang.content_api_explain}></a>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.content_api_interval}></td>
+            <td >
+                <input name="interval" value="10" class="easyui-numberspinner interval" data-options="min:1,max:10000,required:false,required:true">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor"><{$Think.lang.content_api_region}></td>
+            <td>
+                <select class="easyui-combobox"  name="worldid" validtype="comboxValidates['#textType']" data-options="editable:false,panelHeight:'auto'" id="textType" style="width:150px;height:24px">
+                    <option value=""><{$Think.lang.public_use_no_choice}></option>
+                    <foreach name="textType" key="textid" item="textname">
+                        <option value="<{$textname}>"><{$textid}></option>
+                    </foreach>
+                </select>
+            </td>
+
+            <td class="tab_style_bgcolor"><{$Think.lang.content_api_reason}></td>
+            <td>
+                <input  class="easyui-textbox" name="operationreason" data-options="required:true"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor"><{$Think.lang.content_api_notice_content}></td>
+            <td colspan="3">
+                <input name="content" class="easyui-textbox" id="noticecontent"  disabled="disabled" data-options="multiline:true,required:true" style="width: 600px; height: 200px">
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div style="text-align:center;padding: 20px">
+    <a id="release" href="javascript:void(0);" class="easyui-linkbutton" data-options="size:'large',iconAlign:'top'" style="width:250px;height:60px;"><span style="font-size:18px;">&nbsp;&nbsp;&nbsp;<{:l("content_api_release")}>&nbsp;&nbsp;&nbsp;</></a>
+</div>
+<script>
+    var getsystemdate = getsystemdata();
+    $('.easyui-datetimebox').datetimebox({
+        value: getsystemdate
+    });
+    $(document).ready(function () {
+        $("#textType").combobox({
+            onChange: function (n, o) {
+                if (n == "") {
+                    $("#noticecontent").textbox("setValue", "");
+                } else {
+                    $("#noticecontent").textbox("setValue", n);
+                }
+            }
+        });
+    })
+
+    $.extend($.fn.validatebox.defaults.rules, {
+//        startDate: {
+//            validator: function (value) {
+//
+//                var timestamp2 = Date.parse(new Date(value));
+//                var timestamp=new Date();
+//                var timestamp2 = Date.parse(value.replace(/-/g, "/"));
+//                console.log(Date.parse(timestamp));
+//                console.log(timestamp2);
+//                if(timestamp2<(timestamp-360000)){
+//                    ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_time_start_error}>");
+//                    $('#sendtime_aa').datetimebox('setValue', '');
+//                    return false;
+//                }
+//                return true;                          //鏈夋晥鑼冨洿涓哄綋鍓嶆椂闂村ぇ浜庡紑濮嬫椂闂?
+//            },
+//            message: '<{$Think.lang.info_start_data}>'                     //鍖归厤澶辫触娑堟伅
+//        },
+//        endDate: {
+//            validator: function (value, param) {
+//                var start = $(param[0]).datetimebox('getValue');  //鑾峰彇寮€濮嬫椂闂?
+//
+//                if(value < start){
+//                    ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_time_end_error}>");
+//                    $('#deadline_aa').datetimebox('setValue', '');
+//                    return false;
+//                }
+//                return true;                            //鏈夋晥鑼冨洿涓哄綋鍓嶆椂闂村ぇ浜庡紑濮嬫椂闂?
+//            },
+//            message: '<{$Think.lang.info_end_data}>'
+//        },
+        comboxValidates: {
+            validator: function (value, param) {
+                console.log($(param[0]).combobox('getText'));
+                if ($(param[0]).combobox('getText') != "<{$Think.lang.public_use_no_choice}>") {
+                    return true;
+                }
+                return false;
+            },
+            message: "<{$Think.lang.public_use_error_worldid}>"
+        }
+    });
+
+    $("#explanin").tooltip({
+        content:"<{$Think.lang.info_api_explain}>"
+    });
+
+    $("#release").click(function () {
+        var timestamp=getsystemtime();
+        var data = $('#addPost').serializeArray();
+
+        if(!($('#sendtime_aa').datetimebox("isValid"))){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_start}>");
+            return false;
+        }
+
+        if(!($('#deadline_aa').datetimebox("isValid"))){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_end}>");
+            return false;
+        }
+
+        if(!($('#textType').datetimebox("isValid"))){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_use_error_worldid}>");
+            return false;
+        }
+
+        var level = 0;var rank = 0;var minlv =0;var maxlv = 1;var rankmax = 1;var rankmin = 0;var strat = 0;var end = 0;var state =true; var len = 0;
+        for(var i=0;i<data.length;i++){
+            if(data[i].name=="content"){
+                data[i].value = $("#textType").combobox("getText");
+                len = data[i].value.length;
+                state =false;
+            }
+            if(data[i].name=="minlv"&&data[i].value!=""){
+                level++;minlv = parseInt(data[i].value);
+            }
+            if(data[i].name=="maxlv"&&data[i].value!=""){
+                level++;maxlv = parseInt(data[i].value);
+            }
+            if(data[i].name=="rankmin"&&data[i].value!=""){
+                rank++;rankmin = parseInt(data[i].value);
+            }
+            if(data[i].name=="rankmax"&&data[i].value!=""){
+                rank++;rankmax = parseInt(data[i].value);
+            }
+            if(data[i].name=="start"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_start}>");
+
+                return false;
+            }else if (data[i].name=="start"){
+                strat = data[i].value;
+            }
+            if(data[i].name=="worldid"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_use_error_worldid}>");
+                return false;
+            }
+
+            if(data[i].name=="end"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_end}>");
+                end = data[i].value;
+                return false;
+            }else if (data[i].name=="end"){
+                end = data[i].value;
+            }
+//            if(data[i].name=="content"&&data[i].value==""){
+//                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_content}>");
+//                return false;
+//            }
+            if(data[i].name=="operationreason"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_reason}>");
+                return false;
+            }
+
+        }
+
+        if(state){
+            var o = new Object();
+            o.name='content';
+            o.value=$("#textType").combobox("getText");
+            data[data.length]=o;
+            len = o.value.length;
+        }
+        if (len>1024){
+            ShowErrorMsg('<{$Think.lang.public_string_len}>');
+            return false;
+        }
+        if( Date.parse(strat.replace(/-/g, "/")) / 1000<(timestamp-36000)){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_time_start_error}>");
+            $('#sendtime_aa').datetimebox('setValue', '');
+            return false;
+        }
+        if( Date.parse(end.replace(/-/g, "/")) / 1000<(Date.parse(strat.replace(/-/g, "/")) / 1000)){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_time_end_error}>");
+            $('#deadline_aa').datetimebox('setValue', '');
+            return false;
+        }
+        if(level%2!=0){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_level}>");
+            return false;
+        }
+        if(rank%2!=0){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_rank}>");
+            return false;
+        }
+
+        if(minlv>maxlv){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_level_size}>");
+            return false;
+        }
+        if(rankmin>rankmax){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_rank_size}>");
+            return false;
+        }
+
+        ShowProgress("<{$Think.lang.notice_show_release}>");
+
+
+       $.post(
+           "<{:U('noticeAddPost')}>",
+           data,
+           function (data) {
+               HideProgress();
+               if(data.status==0){
+                   ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                   return false;
+               }
+               var info = "<{$Think.lang.notice_error}>";
+               switch (data){
+                   case 8:info="<{$Think.lang.notice_info_error}>";break;
+                   case 30:info="<{$Think.lang.notice_info_error}>";break;
+                   case 9:info="<{$Think.lang.notice_success}>";break;
+               }
+               if(data==9){
+                   ShowSuccessMsg('<{:l("public_prompt_information")}>',info);
+                   $("#addPost").form('clear');
+                   $('.prohibit').textbox('setText',"<{$Think.lang.content_api_prohibit}>");
+                   $('.interval').numberspinner('setValue',"10");
+                   $('.platform').combobox('setValue', '-1');
+                   notice_refresh();
+               }else {
+                   ShowErrorMsg('<{:l("public_prompt_information")}>',info);
+               }
+               return false;
+           }
+       );
+    });
+
+
+</script>

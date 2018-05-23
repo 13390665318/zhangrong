@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var emaildeadline = "2017-12-19 09:02:45";
+        var sendtimedate_n = new Date(Date.parse(emaildeadline.replace(/-/g, "/")));
+        var deadlinedate = Date.UTC(sendtimedate_n.getUTCFullYear(), sendtimedate_n.getUTCMonth(), sendtimedate_n.getUTCDate(), sendtimedate_n.getUTCHours(), sendtimedate_n.getUTCMinutes(), sendtimedate_n.getUTCSeconds()) / 1000;
+        alert(deadlinedate);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

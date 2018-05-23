@@ -1,0 +1,325 @@
+<div class="panel-header panel-header-noborder" ><{$title}></div>
+
+<div  style="height: 96%;width: 98%; min-width: 1400px;">
+    <table id="textFrom"></table>
+</div>
+<script type="text/javascript">
+
+    $(function () {
+        $('#textFrom').datagrid({
+            url: "<{:U('textListPost')}>",
+            fitColumns: true,
+            fit: true,//自适应高度
+            toolbar: [{
+                text: '<{$Think.lang.public_use_delete}>',
+                iconCls: 'icon-remove',
+                handler: function() {
+                    textDelete();
+                }
+            },'-',{
+                text: '<{$Think.lang.text_icon_add}>',
+                iconCls: 'icon-add',
+                handler: function() {
+                    textAdd();
+                }
+            },'-',{
+                text: '<{$Think.lang.public_icon_mini_refresh}>',
+                iconCls: 'icon-mini-refresh',
+                handler: function() {
+                    textReloadPost();
+                }
+            },'-',{
+                text: '<{$Think.lang.public_use_edit}>',
+                iconCls: 'icon-edit',
+                handler: function() {
+                    textEdit();
+                }
+            }
+            
+            ],
+            columns:[[
+                {field:'sumnum',title:'<{$Think.lang.text_icon_order}>',width:200,align:'center'},
+                {field:'types',title:'types',hidden:'true'},
+                {field:'type',title:'<{$Think.lang.text_info_type}>',width:200,align:'center'},
+                {field:'explain',title:'<{$Think.lang.text_info_explain}>',width:200,align:'center'},
+                {field:'tid',title:'ID',width:200,align:'center'},
+                {field:'chinese',title:'Chinese',width:200,align:'center'},
+                {field:'vietnamese',title:'Vietnamese',width:200,align:'center'},
+                {field:'chinese_traditional',title:'ChineseTraditional',width:200,align:'center'},
+                {field:'english',title:'English',width:200,align:'center'},
+                {field:'korean',title:'Korean',width:200,align:'center'},
+                {field:'japanese',title:'Japanese',width:200,align:'center'},
+                {field:'thai',title:'Thai',width:200,align:'center'},
+                {field:'spanish',title:'Spanish',width:200,align:'center'},
+                {field:'portuguese',title:'Portuguese',width:200,align:'center'},
+                {field:'russian',title:'Russian',width:200,align:'center'},
+                {field:'french',title:'French',width:200,align:'center'},
+                {field:'german',title:'German',width:200,align:'center'},
+                {field:'arabic',title:'Arabic',width:200,align:'center'},
+                {field:'operator',title:'<{$Think.lang.text_info_operator}>',width:200,align:'center'},
+            ]],
+            singleSelect:true,//设置为 true，则只允许选中一行。
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:15,   //表格中每页显示的行数
+            pageList:[15,30,45],
+            nowrap: false,
+            striped: true,  //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.public_data_load}>',
+            method:'post',
+
+        });
+    });
+    
+    function textEdit() {
+
+        var row = $('#textFrom').datagrid('getSelected');
+        if(row==null){
+            $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+        }
+        localStorage.setItem('text_data', JSON.stringify(row));
+
+        $('body').append('<div id="textEdit"></div>');
+        $('#textEdit').dialog({
+            title: '<{$Think.lang.public_use_edit}>',
+            width: 850,
+            height: 720,
+            closed: false,
+            href:"<{:U('textEdit')}>",
+            cache: false,
+            modal: true,
+            buttons:[{
+                text:'<{$Think.lang.public_use_determine}>',
+                handler:function(){
+                    textEditPost();
+                }
+            },{
+                text:'<{$Think.lang.public_use_cancel}>',
+                handler:function(){
+                    $('#textEdit').dialog('close',true);
+                }
+            }],
+            onLoad:function (title) {
+                var data = JSON.parse(localStorage.getItem('text_data'));
+                $("#text-type").combobox('select',data.types);
+                $("#explain").textbox('setValue',data.explain);
+                $("#korean").textbox('setValue',data.korean);
+                $("#vietnamese").textbox('setValue',data.vietnamese);
+                $("#english").textbox('setValue',data.english);
+                $("#chinese").textbox('setValue',data.chinese);
+                $("#chinese_traditional").textbox('setValue',data.chinese_traditional);
+                $("#japanese").textbox('setValue',data.japanese);
+                $("#thai").textbox('setValue',data.thai);
+                $("#spanish").textbox('setValue',data.spanish);
+                $("#portuguese").textbox('setValue',data.portuguese);
+                $("#russian").textbox('setValue',data.russian);
+                $("#french").textbox('setValue',data.french);
+                $("#german").textbox('setValue',data.german);
+                $("#arabic").textbox('setValue',data.arabic);
+                $("#tid").val(data.tid);
+            }
+        });
+    }
+
+    function textEditPost() {
+        var data = $("#textEditForm").serializeArray();
+        var type = 0;var len = 0;var prompt = '';
+        for (var i=0;i<data.length;i++){
+            if(data[i].name=="type"){
+                type = data[i].value;
+            }else {
+                if(len<data[i].value.length){
+                    len = data[i].value.length;
+                    prompt = data[i].name;
+                }
+            }
+            if (data[i].value.length==0){
+                var str = $("input[name='"+data[i].name+"']").parent().parent().prev().html();
+                str = str.substr(0,str.length-1);
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>', str+"<{$Think.lang.text_info_not_error}>");
+                return false;
+            }
+
+        }
+        if (len>255&&type==1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',prompt+'<{$Think.lang.public_string_len}>');
+            return false;
+        }
+        if (len>1024&&type==1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_string_len}>');
+            return false;
+        }
+        $.post(
+            "<{:U('textEditPost')}>",
+            data,
+            function (data) {
+                HideProgress();
+                var info = "<{$Think.lang.public_return_edit_error}>";
+                switch (data){
+                    case 10:
+                        info="<{$Think.lang.public_return_edit_success}>";
+                        $('#textEdit').dialog('close',true);
+                        $('#textFrom').datagrid('reload');
+                        break;
+                    default:
+                        ShowErrorMsg('<{$Think.lang.public_prompt_information}>',info);
+                        return false;
+                        break;
+
+                }
+                ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',info);
+            }
+        );
+    }
+
+    function textDelete() {
+
+        var row = $('#textFrom').datagrid('getSelected');
+        if(row==null){
+            $.messager.alert('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.public_messager_operation}>");
+            return false;
+        }
+        $.messager.confirm("<{$Think.lang.public_use_determine}>", "<{$Think.lang.public_messager_delete}>", function (r) {
+            if (r) {
+                ShowProgress("<{$Think.lang.public_show_delete}>");
+                $.post(
+                    "<{:U('textDeletePost')}>",
+                    {tid:row.tid},
+                    function (data) {
+                        HideProgress();
+                        if(data.status==0){
+                            ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                            return false;
+                        }
+                        var info = "<{$Think.lang.public_return_delete_error}>";
+                        switch (data){
+                            case 20:
+                                info="<{$Think.lang.public_return_delete_success}>";
+                                $('#textFrom').datagrid('reload');
+                                break;
+                            default:
+                                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',info);
+                                return false;
+                                break;
+                        }
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',info);
+                        return false;
+                    }
+                );
+            }
+        });
+
+    }
+
+    function textAdd() {
+        $('body').append('<div id="textAdd"></div>');
+        $('#textAdd').dialog({
+            title: '<{$Think.lang.text_icon_add}>',
+            width: 850,
+            height: 720,
+            closed: false,
+            href:"<{:U('textAdd')}>",
+            cache: false,
+            modal: true,
+            buttons:[{
+                text:'<{$Think.lang.public_use_determine}>',
+                handler:function(){
+                    textAddPost();
+                }
+            },{
+                text:'<{$Think.lang.public_use_cancel}>',
+                handler:function(){
+                    $('#textAdd').dialog('close',true);
+                }
+            }]
+        });
+    }
+
+    function textAddPost() {
+        var data = $('#textAddForm').serializeArray();
+        if(data.length==0){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_jurisdiction_error}>');
+            return false;
+        }
+        var type = 0;var len = 0;var prompt = '';
+        for (var i=0;i<data.length;i++){
+            console.log();
+            if(data[i].name=="type"){
+                type = data[i].value;
+            }else {
+                if(len<data[i].value.length){
+                    len = data[i].value.length;
+                    prompt = data[i].name;
+                }
+            }
+            if (data[i].value.length==0){
+                var str = $("input[name='"+data[i].name+"']").parent().parent().prev().html();
+                str = str.substr(0,str.length-1);
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>', str+"<{$Think.lang.text_info_not_error}>");
+                return false;
+            }
+
+        }
+        if (len>1024&&type==1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',prompt+'<{$Think.lang.public_string_len}>');
+            return false;
+                }
+
+        if (len>1024&&type==2){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_string_len}>');
+            return false;
+        }
+
+        ShowProgress("<{$Think.lang.public_show_add}>");
+        $.post(
+            "<{:U('textAddPost')}>",
+            data,
+            function (data) {
+
+                HideProgress();
+                var info = "<{$Think.lang.public_return_add_error}>";
+                switch (data){
+                        case 10:
+                        info="<{$Think.lang.public_return_add_success}>";
+                        $('#textAdd').dialog('close',true);
+                        $('#textFrom').datagrid('reload');
+                        break;
+                    default:
+                        ShowErrorMsg('<{$Think.lang.public_prompt_information}>',info);
+                        return false;
+                        break;
+
+                }
+
+                ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',info);
+            }
+        );
+    }
+
+    function textReloadPost() {
+        ShowProgress("<{$Think.lang.public_show_reload}>");
+        $.post(
+            "<{:U('textReloadPost')}>",
+            {id:0},
+            function (data) {
+                HideProgress();
+                if(data.status==0){
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                    return false;
+                }
+                var info = "<{$Think.lang.public_return_reload_error}>";
+                switch (data){
+                    case 30:
+                        info="<{$Think.lang.public_return_reload_success}>";
+                        $('#textFrom').datagrid('reload');
+                        break;
+                    default:
+                        ShowErrorMsg('<{$Think.lang.public_prompt_information}>',info);
+                        return false;
+                        break;
+                }
+                ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',info);
+                return false;
+            }
+        );
+    }
+</script>

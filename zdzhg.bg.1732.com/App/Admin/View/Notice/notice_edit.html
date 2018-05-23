@@ -1,0 +1,260 @@
+<form id="editPost">
+    <input style="display: none;"  name="id" value="<{$notice['id']}>">
+    <table class="tab_style_table" style="width:100%;padding-top:10px;">
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.content_api_platform}></td>
+            <td>
+                <select  name="platform" class="easyui-combobox platform" data-options="editable:false,panelHeight:'auto'" style="width:23%;">
+                    <foreach name="platlist" key="platid" item="platname">
+                        <option value="<{$platid}>"><{$platname}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td class="tab_style_bgcolor" ><{:l("content_api_start")}><br />(UTC<{:l("content_api_time")}>)</td>
+            <td>
+                <input name="start" value="<{$notice['start']}>" class="easyui-datetimebox" id="sendtime_bb" data-options="validType:'startDate',editable:false,showSeconds:true,required:true" style="width:150px;">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.content_api_level}></td>
+            <td>
+                <input name="minlv" type="text"  value="<{$notice['minlv']}>" id="levelbegin" class="easyui-numberbox" data-options="min:1,max:150"  />
+                -
+                <input name="maxlv" type="text" id="levelend"  value="<{$notice['maxlv']}>" class="easyui-numberbox" data-options="min:1,max:150" />
+            </td>
+            <td class="tab_style_bgcolor" ><{:l("content_api_end")}><br />(UTC<{:l("content_api_time")}>)</td>
+            <td>
+                <input name="end" class="easyui-datetimebox" value="<{$notice['end']}>" id="deadline_bb" data-options="validType:'endDate[\'#sendtime_bb\']',editable:false,showSeconds:true,required:true" style="width:150px;">
+            </td>
+        </tr>
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.content_api_rank}></td>
+            <td>
+
+                <input name="rankmin" type="text"  value="<{$notice['rankmin']}>" id="danbegin" class="easyui-numberbox" data-options="min:1,max:20"/>
+                -
+                <input name="rankmax" type="text" id="danend" value="<{$notice['rankmax']}>"   class="easyui-numberbox" data-options="min:1,max:20" />
+                <a href="javascript:void(0);" id="explanins"><{$Think.lang.content_api_explain}></a>
+
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.content_api_interval}></td>
+            <td >
+                <input name="interval" value="10" value="<{$notice['interval']}>"  class="easyui-numberspinner interval" data-options="min:1,max:10000,required:false,required:true">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor"><{$Think.lang.content_api_region}></td>
+            <td>
+
+                <select class="easyui-combobox" name="worldid" validType="comboxValidatess['#textTypes']" data-options="editable:false,panelHeight:'auto'" id="textTypes" style="width:150px;height:24px">
+                    <option value="0"><{$Think.lang.public_use_no_choice}></option>
+                    <foreach name="textType" key="textid" item="textname">
+                        <option value="<{$textname}>"><{$textid}></option>
+                    </foreach>
+                </select>
+
+            </td>
+            <td class="tab_style_bgcolor"><{$Think.lang.content_api_reason}></td>
+            <td>
+                <input  class="easyui-textbox" name="operationreason" value="<{$notice['operationreason']}>" data-options="required:true"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor"><{$Think.lang.content_api_notice_content}></td>
+            <td colspan="3">
+                <input name="content" id="noticecontents"  class="easyui-textbox"    disabled="disabled" data-options="multiline:true,required:true" style="width: 600px; height: 200px">
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+<div style="text-align:center;padding: 20px">
+    <a id="edit" href="javascript:void(0);" class="easyui-linkbutton" data-options="size:'large',iconAlign:'top'" style="width:250px;height:60px;"><span style="font-size:18px;">&nbsp;&nbsp;&nbsp;<{$Think.lang.public_determine}>&nbsp;&nbsp;&nbsp;</span></a>
+</div>
+<script>
+
+    $(document).ready(function () {
+        $("#textTypes").combobox({
+            onChange: function (n, o) {
+                if (n == "0") {
+                    $("#noticecontents").textbox("setValue", "");
+                } else {
+                    $("#noticecontents").textbox("setValue", n);
+                }
+            }
+        });
+
+        var data = "<{$notice['content']}>";
+        setTimeout(function(){
+            if(data != ""){
+                $('#textTypes').combobox('select',data);
+            }
+        }, 200);
+
+
+    })
+
+
+
+    $.extend($.fn.validatebox.defaults.rules, {
+        comboxValidatess: {
+            validator: function (value, param) {
+                if ($(param[0]).combobox('getText') != "<{$Think.lang.public_use_no_choice}>") {
+                    return true;
+                }
+                return false;
+            },
+            message: "<{$Think.lang.public_use_error_worldid}>"
+        }
+    });
+
+    $("#explanins").tooltip({
+        content:"<{$Think.lang.info_api_explain}>"
+    });
+
+    $("#edit").click(function () {
+        var data = $('#editPost').serializeArray();
+//        var timestamp=new Date().toUTCString().getTime();
+        var timestamp=getsystemtime();
+        if(!($('#sendtime_bb').datetimebox("isValid"))){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_start}>");
+            return false;
+        }
+
+        if(!($('#deadline_bb').datetimebox("isValid"))){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_end}>");
+            return false;
+        }
+        if(!($('#textTypes').datetimebox("isValid"))){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_use_error_worldid}>");
+            return false;
+        }
+        var level = 0;var rank = 0;var minlv =0;var maxlv = 1;var rankmax = 1;var rankmin = 0;var strat = 0;var end = 0;var state =true;; var len = 0;
+        for(var i=0;i<data.length;i++){
+            if(data[i].name=="content"){
+                data[i].value = $("#textType").combobox("getText");
+                len = data[i].value.length;
+                state =false;
+            }
+            if(data[i].name=="minlv"&&data[i].value!=""){
+                level++;minlv = parseInt(data[i].value);
+            }
+            if(data[i].name=="maxlv"&&data[i].value!=""){
+                level++;maxlv = parseInt(data[i].value);
+            }
+            if(data[i].name=="rankmin"&&data[i].value!=""){
+                rank++;rankmin = parseInt(data[i].value);
+            }
+            if(data[i].name=="rankmax"&&data[i].value!=""){
+                rank++;rankmax = parseInt(data[i].value);
+            }
+            if(data[i].name=="start"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_start}>");
+
+                return false;
+            }else if (data[i].name=="start"){
+                strat = data[i].value;
+            }
+            if(data[i].name=="worldid"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_use_error_worldid}>");
+                return false;
+            }
+
+            if(data[i].name=="end"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_end}>");
+                end = data[i].value;
+                return false;
+            }else if (data[i].name=="end"){
+                end = data[i].value;
+            }
+//            if(data[i].name=="content"&&data[i].value==""){
+//                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_content}>");
+//                return false;
+//            }
+            if(data[i].name=="operationreason"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_reason}>");
+                return false;
+            }
+
+        }
+
+        if(state){
+            var o = new Object();
+            o.name='content';
+            o.value=$("#textTypes").combobox("getText");
+            data[data.length]=o;
+            len = o.value.length;
+        }
+        if (len>1024){
+            ShowErrorMsg('<{$Think.lang.public_string_len}>');
+            return false;
+        }
+        if( Date.parse(strat.replace(/-/g, "/")) / 1000<(timestamp-36000)){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_time_start_error}>");
+            $('#sendtime_bb').datetimebox('setValue', '');
+            return false;
+        }
+        if( Date.parse(end.replace(/-/g, "/")) / 1000<(Date.parse(strat.replace(/-/g, "/")) / 1000)){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_time_end_error}>");
+            $('#deadline_bb').datetimebox('setValue', '');
+            return false;
+        }
+        if(level%2!=0){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_level}>");
+            return false;
+        }
+        if(rank%2!=0){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_rank}>");
+            return false;
+        }
+
+        if(minlv>maxlv){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_level_size}>");
+            return false;
+        }
+        if(rankmin>rankmax){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_rank_size}>");
+            return false;
+        }
+
+
+        ShowProgress("<{$Think.lang.notice_show_release}>");
+
+        $.post(
+            "<{:U('onticeEditPost')}>",
+            data,
+            function (data) {
+                HideProgress();
+                if(data.status==0){
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                    return false;
+                }
+                var info = "<{$Think.lang.notice_error}>";
+                switch (data){
+                    case 8:info="<{$Think.lang.notice_info_error}>";break;
+                    case 30:info="<{$Think.lang.notice_info_error}>";break;
+                    case 9:info="<{$Think.lang.notice_success}>";break;
+                }
+                if(data==9){
+                    ShowSuccessMsg('<{:l("public_prompt_information")}>',info);
+                    $("#addPost").form('clear');
+                    $('.prohibit').textbox('setText',"<{$Think.lang.content_api_prohibit}>");
+                    $('.interval').numberspinner('setValue',"10");
+                    $('.platform').combobox('setValue', '-1');
+                    notice_refresh();
+                }else {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>',info);
+                }
+                $.messager.alert('Info', info,'info',function () {
+                    $("#tabmenu").tabs("close", "<{$Think.lang.public_use_edit}>");
+                });
+                return false;
+            }
+        );
+
+    });
+</script>

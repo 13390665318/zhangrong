@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "zdzhg.bg.1732.com", "zdzhg.bg.1732.com.phpproj", "{646785BA-DC86-40DA-9521-E87CA2EAEB74}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs:8080/tfs/%E6%8A%80%E6%9C%AF%E8%B5%84%E6%96%99%E5%BA%93
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = zdzhg.bg.1732.com.phpproj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{646785BA-DC86-40DA-9521-E87CA2EAEB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646785BA-DC86-40DA-9521-E87CA2EAEB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646785BA-DC86-40DA-9521-E87CA2EAEB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646785BA-DC86-40DA-9521-E87CA2EAEB74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

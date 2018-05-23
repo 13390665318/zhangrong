@@ -1,0 +1,39 @@
+<form id="orderEditForm" method="post">
+    <table  class="tab_style_table" style="width:100%;text-align:left;">
+        <tr>
+            <td><{$Think.lang.order_search_role_code}></td>
+            <td><div id="role_code"></div></td>
+        </tr>
+        <tr>
+            <td><{$Think.lang.order_before_info_type_state}></td>
+            <td><div id="before_type_state"></div></td>
+        </tr>
+
+        <tr>
+            <td><{$Think.lang.order_edit_info_type_state}></td>
+            <td>
+                <select  name="status"  id="order_status" class="easyui-combobox" validtype=""  data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <foreach name="order_status" key="textid" item="textname" data-options="editable:false,panelHeight:'300'">
+                        <option value="<{$textid}>"><{$textname}></option>
+                    </foreach>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <input name="purchaseid" id="order_purchaseid" hidden>
+    <input name="gid" id="order_gid" hidden>
+    <input name="querytime" id="order_time" hidden>
+    <input name="role" id="order_role" hidden>
+</form>
+
+<script type="text/javascript">
+    var data = JSON.parse(localStorage.getItem('one_order_data'));
+    $(function () {
+        $('#role_code').html(data['rolecode']);
+        $('#order_role').val(data['rolecode']);
+        $('#before_type_state').html(data['statusname']);
+        $('#order_purchaseid').val(data['purchaseid']);
+        $('#order_gid').val(data['id']);
+        $('#order_time').val(data['time']);
+    });
+</script>

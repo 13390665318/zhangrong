@@ -1,0 +1,30 @@
+﻿<div style="padding:20px;">
+    <select class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" id="selsanctiontimes" style="width:210px;height:24px">
+        <option value="-2"><{:l("user_please_choose_sanctions_time")}></option>
+        <option value="86400">1<{:l("public_day")}></option>
+        <option value="259200">3<{:l("public_day")}></option>
+        <option value="518400">6<{:l("public_day")}></option>
+        <option value="1296000">15<{:l("public_day")}></option>
+        <option value="2592000">30<{:l("public_day")}></option>
+        <option value="1576800000"><{:l("public_permanent")}></option>
+        <option value="-3"><{:l("public_enable")}></option>
+    </select>
+    <br /><br />
+    <input type="hidden" id="hidsanction_roleid" value="<{$roleid}>" />
+    <input type="hidden" id="hidsanction_isunlock" value="<{$isunlock}>" />
+    <input type="hidden" id="hidrecovery_rolecode" value="<{$rolecode}>" />
+    <textarea rows="3" cols="20" id="txtupsanctionreason" style="text-align: left; width: 200px; height: 100px;font-size:10pt;" placeholder='<{:l("public_input_modification")}>'></textarea>
+</div>
+<script type="text/javascript">
+    //解封or封号
+
+    $('#selsanctiontimes').combobox({
+        onLoadSuccess: function () {
+            var isunlock = Getinputvalue("hidsanction_isunlock");
+            if (isunlock == "2") {
+                $('#selsanctiontimes').combobox("select", "-3");
+                $('#selsanctiontimes').combobox('disable');
+            }
+        }
+    })
+</script>

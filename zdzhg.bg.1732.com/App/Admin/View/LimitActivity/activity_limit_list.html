@@ -1,0 +1,340 @@
+<div style="text-align:left;">
+    <a id="limit_add_but" href="javascript:void(0);"><{$Think.lang.system_add_system}></a>
+    <a id="limit_edit_but" href="javascript:void(0);"><{$Think.lang.public_update}></a>
+    <a id="limit_delete_but" href="javascript:void(0);"><{$Think.lang.system_delete_system}></a>
+    <a id="limit_refresh_but" href="javascript:void(0);"><{$Think.lang.public_icon_mini_refresh}></a>
+</div>
+
+<!--数据表格 start-->
+<div style="padding:10px;height: 94%;">
+    <table id="limit_list"></table>
+</div>
+
+
+<!--数据表格 end-->
+<script type="text/javascript">
+    var getsystemdate = '';
+    $(function () {
+        getsystemdate = getsystemdata();
+        $('#limit_add_but').linkbutton({
+            iconCls: 'icon-add',
+        });
+        $('#limit_edit_but').linkbutton({
+            iconCls: 'icon-edit'
+        });
+        $('#limit_delete_but').linkbutton({
+            iconCls: 'icon-remove'
+        });
+        $('#limit_refresh_but').linkbutton({
+            iconCls: 'icon-reload'
+        });
+
+        $('#limit_list').datagrid({
+            url:"<{:U('limitActivityList')}>",
+            fitColumns:true,
+            columns:[[
+                {field:'fx',checkbox:true},
+                {field:'sumnum',title:'<{$Think.lang.public_use_sumnum}>',width:50,align:'center'},
+                {field:'activityid',title:'<{$Think.lang.activity_limit_id}>',width:80,align:'center'},
+                {field:'showorder',title:'<{$Think.lang.activity_show_order}>',width:100,align:'center'},
+                {field:'picname',title:'<{$Think.lang.activity_limit_img}>',width:200,align:'center'},
+
+                {field:'title',title:'<{$Think.lang.activity_limit_title_text_id}>',width:200,align:'center'},
+                {field:'titlecomment',title:'<{$Think.lang.activity_limit_title}>',width:200,align:'center'},
+
+                {field:'introduce',title:'<{$Think.lang.activity_limit_introduce_id}>',width:200,align:'center'},
+                {field:'introducecomment',title:'<{$Think.lang.activity_limit_introduce}>',width:200,align:'center'},
+                {field:'exchangeId1',title:'<{$Think.lang.activity_exchange_id}>_1',width:100,align:'center'},
+                {field:'exchangeId2',title:'<{$Think.lang.activity_exchange_id}>_2',width:100,align:'center'},
+                {field:'exchangeId3',title:'<{$Think.lang.activity_exchange_id}>_3',width:100,align:'center'},
+                {field:'exchangeId4',title:'<{$Think.lang.activity_exchange_id}>_4',width:100,align:'center'},
+                {field:'exchangeId5',title:'<{$Think.lang.activity_exchange_id}>_5',width:100,align:'center'},
+                {field:'exchangeId6',title:'<{$Think.lang.activity_exchange_id}>_6',width:100,align:'center'},
+                {field:'exchangeId7',title:'<{$Think.lang.activity_exchange_id}>_7',width:100,align:'center'},
+                {field:'exchangeId8',title:'<{$Think.lang.activity_exchange_id}>_8',width:100,align:'center'},
+                {field:'starttime',title:'<{$Think.lang.activity_limit_start_time}>',width:200,align:'center'},
+                {field:'endtime',title:'<{$Think.lang.activity_limit_end_time}>',width:200,align:'center'},
+//
+//                {field:'lowlevel',title:'<{$Think.lang.activity_limit_lower_level}>',width:100,align:'center'},
+//                {field:'highlevel',title:'<{$Think.lang.activity_limit_high_level}>',width:100,align:'center'},
+//
+//                {field:'lowhisscore',title:'<{$Think.lang.activity_limit_low_hisscore}>',width:150,align:'center'},
+//                {field:'highhisscore',title:'<{$Think.lang.activity_limit_high_hisscore}>',width:150,align:'center'},
+            ]],
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:20,//表格中每页显示的行数
+            pageList:[20,40,80],
+            nowrap:false,
+            singleSelect: true,
+            fit:true, //自适应高度
+            striped: true, //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.notice_data_load}>',
+            method:'post'
+        });
+
+        $('#limit_add_but').bind('click', function(){
+            $('body').append('<div id="limitAdd"></div>');
+            $('#limitAdd').dialog({
+                title: '<{$Think.lang.system_add_system}>',
+                width: 900,
+                height: 650,
+                closed: false,
+                href:"<{:U('limit_add')}>",
+                cache: false,
+                modal: true,
+                buttons:[{
+                    text:'<{$Think.lang.public_use_determine}>',
+                    handler:function(){
+                        limitAddPost();
+                    }
+                },{
+                    text:'<{$Think.lang.public_use_cancel}>',
+                    handler:function(){
+                        $('#limitAdd').dialog('close',true);
+                    }
+                }],
+                onLoad:function () {
+                    $.ajax({
+                        type:'post',
+                        url:"<{:U('taskListPost')}>",
+                        success:function (data) {
+                            $('.task-list').combobox({
+                                data:data,
+                                valueField:'value',
+                                textField:'text'
+                            });
+                            $('.task-list').combobox("select",-1);
+                        }
+                    });
+                }
+            });
+        });
+
+        $('#limit_edit_but').bind('click', function(){
+            var row = $('#limit_list').datagrid('getSelected');
+            if(row==null){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+            }
+            $('body').append('<div id="limitEdit"></div>');
+            $('#limitEdit').dialog({
+                title: '<{$Think.lang.public_update}>',
+                width: 900,
+                height: 650,
+                closed: false,
+                href:"<{:U('limit_edit')}>",
+                cache: false,
+                modal: true,
+                buttons:[{
+                    text:'<{$Think.lang.public_use_determine}>',
+                    handler:function(){
+                        limitEditPost();
+                    }
+                },{
+                    text:'<{$Think.lang.public_use_cancel}>',
+                    handler:function(){
+                        $('#limitEdit').dialog('close',true);
+                    }
+                }],
+                onLoad:function () {
+                    limit_edit_fill(row);
+                }
+            });
+        });
+
+
+        $('#limit_delete_but').bind('click', function(){
+            var row = $('#limit_list').datagrid('getSelected');
+            if(row==null){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+            }
+            $.messager.confirm("<{$Think.lang.public_use_determine}>", "<{$Think.lang.public_messager_delete}>", function (data) {
+                if(data){
+                    ShowProgress("<{$Think.lang.public_show_delete}>");
+                    $.post(
+                        "<{:U('limitDeletePost')}>",
+                        {activityid:row.activityid},
+                        function (data) {
+                            console.log(data);
+                            HideProgress();
+                            if(data.status==0){
+                                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                                return false;
+                            }
+                            if(data==1){
+                                ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_delete_success}>');
+                                $('#limit_list').datagrid('reload');
+                                return false;
+                            }else {
+                                ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_delete_error}>');
+                                return false;
+                            }
+                        }
+                    );
+                }
+            });
+        });
+
+        $('#limit_refresh_but').bind('click', function(){
+            ShowProgress("<{$Think.lang.public_show_reload}>");
+            $.post(
+                "<{:U('limitReloadPost')}>",
+                {id:0},
+                function (data) {
+                    HideProgress();
+                    if(data.status==0){
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                        return false;
+                    }
+                    var info = "<{$Think.lang.public_return_reload_error}>";
+                    switch (data){
+                        case 1:
+                            info="<{$Think.lang.public_return_reload_success}>";
+                            $('#textFrom').datagrid('reload');
+                            break;
+                        default:
+                            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',info);
+                            return false;
+                            break;
+                    }
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',info);
+                    return false;
+                }
+            );
+        });
+    });
+    
+    function limitAddPost() {
+        var data = $('#limitAddForm').serializeArray();
+        data = verification(data);
+       if(!data){
+           return false;
+       }
+        ShowProgress("<{$Think.lang.public_show_add}>");
+        $.post(
+            "<{:U('limitAddPost')}>",
+            data,
+            function (data) {
+                HideProgress();
+                console.log(data);
+                if(data.status==0){
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                    return false;
+                }
+                if(data==1){
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_add_success}>');
+                    $('#limitAdd').dialog('close',true);
+                    $('#limit_list').datagrid('reload');
+                    return false;
+                }
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_add_error}>');
+            }
+        );
+
+    }
+
+    function limitEditPost() {
+        var data = $('#limitEditForm').serializeArray();
+        data = verification(data);
+        if(!data){
+            return false;
+        }
+        ShowProgress("<{$Think.lang.public_loading}>");
+        $.post(
+            "<{:U('limitEditPost')}>",
+            data,
+            function (data) {
+                HideProgress();
+                console.log(data);
+                if(data.status==0){
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                    return false;
+                }
+                if(data==1){
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_edit_success}>');
+                    $('#limitEdit').dialog('close',true);
+                    $('#limit_list').datagrid('reload');
+                    return false;
+                }
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_edit_error}>');
+            }
+        );
+    }
+    
+    //验证
+    function verification(data) {
+
+        var info = new Array(); var num = 0;
+        for (var i =0 ;i<data.length;i++){
+            for (var n =0 ;n<8;n++){
+                if (data[i].name=='exchangeid'+n&&data[i].value!=-1){
+                    num++;
+                }
+            }
+            if (data[i].name=='title'){
+                data[i].value=$('#title_id').combobox('getText');
+            }
+            if (data[i].name=='introduce'){
+                data[i].value=$('#introduce_id').combobox('getText');
+            }
+            if(data[i].value!=""&&data[i].value!=-1){
+                info[data[i].name] = data[i].value;
+            }else {
+                data[i].value = -1;
+            }
+        }
+        if(!info['activityid']){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_id_error}>");
+            return false;
+        }
+        if(!info['showorder']){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_showorder_error}>");
+            return false;
+        }
+//        if(!info['lowlevel']){
+//            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_low_level_error}>");
+//            return false;
+//        }
+//        if(!info['highlevel']){
+//            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_high_level_error}>");
+//            return false;
+//        }
+//        if(!info['lowhisscore']){
+//            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_low_hisscore_error}>");
+//            return false;
+//        }
+//        if(!info['highhisscore']){
+//            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_high_hisscore_error}>");
+//            return false;
+//        }
+        if(!info['starttime']){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_start_time_error}>");
+            return false;
+        }
+        if(!info['endtime']){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_end_timee_error}>");
+            return false;
+        }
+
+        if(Date.parse(info['starttime'].replace(/-/g, "/"))/1000>=Date.parse(info['endtime'].replace(/-/g, "/"))/1000){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.info_end_data}>");
+            return false;
+        }
+        if(!info['title']||info['title']=="<{$Think.lang.public_use_no_choice}>"){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_title_id_error}>");
+            return false;
+        }
+        if(!info['introduce']||info['introduce']=="<{$Think.lang.public_use_no_choice}>"){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_introduce_id_error}>");
+            return false;
+        }
+        if(!info['picname']){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_picname_error}>");
+            return false;
+        }
+        if(num==0){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.activity_at_one_task_id}>");
+            return false;
+        }
+        return data;
+    }
+</script>

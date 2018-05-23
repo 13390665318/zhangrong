@@ -1,0 +1,574 @@
+<div style="float: left;font-size: 20px" ><a   href="javascript:void(0);" id="preferentia_plain"><{$Think.lang.add_activity_step_instructions}></a></div>
+<h1><{$Think.lang.preferential_goods_info_add}></h1>
+
+<form id="preferentialAddPost">
+    <table class="tab_style_table" style="width:100%;min-width: 1200px">
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_goods_id}></td>
+            <td>
+                <input name="goodsid" type="text" class="easyui-numberbox" data-options="min:1,required:true"  />
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_goods_explain}></td>
+            <td>
+                <input name="comment" class="easyui-textbox" data-options="required:true">
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_goods_name_text_id}></td>
+            <td>
+                    <select id="preferential_name_id_add" class="easyui-combobox" validtype="preferential['#preferential_name_id_add']"  data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <option value="-1"><{$Think.lang.public_use_no_choice}></option>
+                    <foreach name="shop_name_id" key="textid" item="textname" data-options="editable:false,panelHeight:'300'">
+                        <option value="<{$textname}>"><{$textid}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_goods_name_text_explain}></td>
+            <td >
+                <textarea disabled="disabled" id="preferential_content"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_goods_multiple_text_id}></td>
+            <td>
+                <select  id="preferential_multiple_id_edit" class="easyui-combobox"   data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <option value="-1"><{$Think.lang.public_use_no_choice}></option>
+                    <foreach name="shop_multiple_id" key="textid" item="textname" data-options="editable:false,panelHeight:'300'">
+                        <option value="<{$textname}>"><{$textid}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_goods_multiple_text_explain}></td>
+            <td>
+                <textarea disabled="disabled" id="preferential_multiplee_content"></textarea>
+            </td>
+
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_goods_position}></td>
+            <td>
+                <input name="position" class="easyui-numberbox"  data-options="required:true">
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_goods_iocn}></td>
+            <td>
+
+                <textarea id="icon_upload_no"  name="icon"></textarea>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_prompt_type}></td>
+            <td>
+               <span>
+                   <input type="radio" name="prompttype" value="0" checked="checked"><{$Think.lang.preferential_info_prompt_one}></input>
+                   <input type="radio" name="prompttype" value="1"><{$Think.lang.preferential_info_prompt_two}></input>
+                </span>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_count_downe}></td>
+            <td>
+                <span>
+                    <input type="radio" name="showcountdown" value="0" checked="checked"><{$Think.lang.preferential_info_content_one}></input>
+                    <input type="radio" name="showcountdown" value="1"><{$Think.lang.preferential_info_content_two}></input>
+                </span>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_limit_buy}></td>
+            <td>
+            <span>
+                <input type="radio" name="showlimitbuy" value="0" checked="checked"><{$Think.lang.preferential_info_content_one}></input>
+                <input type="radio" name="showlimitbuy" value="1"><{$Think.lang.preferential_info_content_two}></input>
+            </span>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_limit_buy_count}></td>
+
+            <td>
+                <input name="limitbuycount" class="easyui-numberbox"  data-options="min:0,required:true">*<{$Think.lang.preferential_limit_buy_count_info}>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_money_type}></td>
+            <td>
+                <select  name="moneytype"  id="preferential_money_type_edit" class="easyui-combobox" validtype="preferential['#preferential_money_type_edit']"  data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <option value=""><{$Think.lang.public_use_no_choice}></option>
+                    <foreach name="money_type" key="textid" item="textname" data-options="editable:false,panelHeight:'300'">
+                        <option value="<{$textid}>"><{$textname}></option>
+                    </foreach>
+                </select>
+            </td>
+
+           <td colspan="2" style="padding: 0px">
+               <table class="tab_style_table" style="width: 100%">
+                   <tr>
+                       <td class="tab_style_bgcolor" style="width: 99px">
+                           AppStoreId
+                           <br/>
+                           <{:l("public_info_cash_yes")}>
+                       </td>
+                       <td>
+                           <input id="appstoreid" class="easyui-textbox" >
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="tab_style_bgcolor" style="width: 99px">
+                           PlayStoreId
+                           <br/>
+                           <{:l("public_info_cash_yes")}>
+                       </td>
+                       <td>
+                           <input id="playstoreid" class="easyui-textbox"  >
+                       </td>
+                   </tr>
+               </table>
+           </td>
+
+
+
+            <td class="tab_style_bgcolor" ><{:l("preferential_time_start")}><br/>(UTC<{:l("content_api_time")}>)</td>
+
+            <td>
+                <input name="starttime" class="easyui-datetimebox"data-options="editable:false,showSeconds:true,required:true" style="width: 160px">
+            </td>
+
+            <td class="tab_style_bgcolor" ><{:l("preferential_time_end")}>><br/>(UTC<{:l("content_api_time")}>)</td>
+
+            <td>
+                <input name="endtime" class="easyui-datetimebox" data-options="editable:false,showSeconds:true,required:true" style="width: 160px">
+            </td>
+        </tr>
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_batch_add}></td>
+            <td>
+                <a id="batch_add_but" href="javascript:void(0);" ><{$Think.lang.preferential_batch_add_info}></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_need_min_rank}></td>
+            <td>
+                <input name="needminrank" class="easyui-numberbox"  data-options="min:1,max:20,required:true">
+                <a href="javascript:void(0);" class="explanin" ><{$Think.lang.content_api_explain}></a>
+            </td>
+
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_need_max_rank}></td>
+            <td>
+                <input name="needmaxrank" class="easyui-numberbox"  data-options="min:1,max:20,required:true">
+                <a href="javascript:void(0);" class="explanin" ><{$Think.lang.content_api_explain}></a>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_need_min_historic_rank}></td>
+            <td>
+                <input name="minhisrank" class="easyui-numberbox"  data-options="min:1,max:20,required:true">
+                <a href="javascript:void(0);" class="explanin" ><{$Think.lang.content_api_explain}></a>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.preferential_need_max_historic_rank}></td>
+            <td>
+                <input name="maxhisrank" class="easyui-numberbox"  data-options="min:1,max:20,required:true">
+                <a href="javascript:void(0);" class="explanin" ><{$Think.lang.content_api_explain}></a>
+            </td>
+        </tr>
+
+        <for start="1" end="11" >
+            <tr>
+                <td class="tab_style_bgcolor" style="width: 100px"><{$Think.lang.preferential_rank_price1k}>_<{$i*2-1}></td>
+                <td>
+                    <input name="price<{$i*2-1}>"   id="price<{$i*2-1}>" class="easyui-numberbox price_money"  data-options="min:1,required:true">
+                </td>
+                <td class="tab_style_bgcolor" style="width: 100px"><{$Think.lang.preferential_rank_award}>_<{$i*2-1}></td>
+                <td>
+                    <select  name="award<{$i*2-1}>"  id="award<{$i*2-1}>" class="easyui-combobox awarddata" validtype="preferential['#award<{$i*2-1}>']" data-options="panelHeight:'300'"  style="width: 100px" >
+
+                    </select>
+                </td>
+                <td class="tab_style_bgcolor" style="width: 100px"><{$Think.lang.preferential_rank_price1k}>_<{$i*2}></td>
+
+                <td>
+                    <input name="price<{$i*2}>" id="price<{$i*2}>" class="easyui-numberbox price_money"  data-options="min:1,required:true">
+                </td>
+                <td class="tab_style_bgcolor" style="width: 100px"><{$Think.lang.preferential_rank_award}>_<{$i*2}></td>
+                <td>
+                    <select  name="award<{$i*2}>"  id="award<{$i*2}>" class="easyui-combobox awarddata" validtype="preferential['#award<{$i*2-1}>']" data-options="panelHeight:'300'"  style="width: 100px" >
+
+                    </select>
+
+                </td>
+            </tr>
+        </for>
+    </table>
+</form>
+
+<div style="text-align:center;padding: 20px">
+    <a id="preferential_add" href="javascript:void(0);" class="easyui-linkbutton" data-options="size:'large',iconAlign:'top'" style="width:250px;height:60px;"><span style="font-size:18px;">&nbsp;&nbsp;&nbsp;<{:l("system_add_system")}>&nbsp;&nbsp;&nbsp;</></a>
+    <a id="preferential_add_return" href="javascript:void(0);" class="easyui-linkbutton" data-options="size:'large',iconAlign:'top'" style="width:250px;height:60px;"><span style="font-size:18px;">&nbsp;&nbsp;&nbsp;<{:l("public_but_return")}>&nbsp;&nbsp;&nbsp;</></a>
+</div>
+<script type="text/javascript">
+    var getsystemdate = getsystemdata();
+    $('.easyui-datetimebox').datetimebox({
+        value: getsystemdate
+    });
+    $(document).ready(function () {
+        $("#preferentia_plain").tooltip({
+            position:'right',
+            content:"<{$Think.lang.info_add_activity_step_instructions}>"
+        });
+        $("#preferential_name_id_add").combobox({
+            onChange: function (n, o) {
+                if (n == "") {
+                    $("#preferential_content").val('');
+                } else {
+                    $("#preferential_content").val(n);
+                }
+            }
+        });
+        $("#preferential_describe_id").combobox({
+            onChange: function (n, o) {
+                if (n == "") {
+                    $("#preferential_describe_content").val('');
+                } else {
+                    $("#preferential_describe_content").val(n);
+                }
+            }
+        });
+        $("#preferential_multiple_id_edit").combobox({
+            onChange: function (n, o) {
+                if (n == "") {
+                    $("#preferential_multiplee_content").val('');
+                } else {
+                    $("#preferential_multiplee_content").val(n);
+                }
+            }
+        });
+
+        $("#preferential_money_type_edit").combobox({
+            onChange: function (n, o) {
+               if(n=='1'||n=='2'){
+                   $('#appstoreid').textbox('clear');
+                   $('#playstoreid').textbox('clear');
+                   $('#appstoreid').textbox({disabled:true});
+                   $('#playstoreid').textbox({disabled:true});
+                   $('.price_money').numberbox('clear');
+                   $('.price_money').numberbox({editable:true});
+               }else {
+                    $('.price_money').numberbox('clear');
+                    $('.price_money').numberbox({editable:true});
+                    $('#appstoreid').textbox('setValue','');
+                    $('#playstoreid').textbox('setValue','');
+                    $('#appstoreid').textbox({disabled:false});
+                    $('#playstoreid').textbox({disabled:false});
+
+               }
+            }
+        });
+
+        $.ajax({
+            type:'post',
+            url:"<{:U('rewardListAllPost')}>",
+                success:function (data) {
+                localStorage.setItem('awar_data', JSON.stringify(data));
+                $('.awarddata').combobox({
+                    data:data,
+                    valueField:'value',
+                    textField:'text'
+                });
+
+            }
+        });
+    });
+    $('#batch_add_but').linkbutton({
+        iconCls: 'icon-add',
+    });
+    $('#batch_add_but').bind('click', function(){
+        $('body').append('<div id="batch_add"></div>');
+        $('#batch_add').dialog({
+            title: '<{$Think.lang.preferential_batch_add}>',
+            width: 700,
+            height: 240,
+            closed: false,
+            cache: false,
+            href:"<{:U('batchAdd')}>",
+            modal: true,
+            buttons:[{
+                text:'<{$Think.lang.public_use_determine}>',
+                handler:function(){
+                    batchAddForm();
+                }
+            },{
+                text:'<{$Think.lang.public_use_cancel}>',
+                handler:function(){
+                    $('#batch_add').dialog('close',true);
+                }
+            }],
+            onLoad: function () {
+                var data = JSON.parse(localStorage.getItem('awar_data'));
+                $('#rank_award1_num').combobox({
+                    data:data,
+                    valueField:'value',
+                    textField:'text'
+                });
+            }
+        });
+    });
+    $('#appstoreid').textbox({disabled:true});
+    $('#playstoreid').textbox({disabled:true});
+    function batchAddForm() {
+        var batch = $("#batch_add_form").serializeArray();
+        for (var i =0 ;i<batch.length;i++){
+           var value =  batch[i].value==""?null:batch[i].value
+            eval("var " + batch[i].name + "="+value+";");
+        }
+        if(rank_price1k_min<=rank_price1k_max&&rank_price1k_max!=null&&rank_price1k_min!=null){
+            var money_type = $("#preferential_money_type_edit").combobox('getValue');
+            if(money_type=='1'||money_type=='2'||money_type=='0'){
+                if(rank_price1k_num!=null){
+                    for (var i = rank_price1k_min;i<=rank_price1k_max;i++){
+                        $('#price'+i).numberbox('setValue', rank_price1k_num);
+                    }
+                }else {
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_rank_num_error}>");
+                    return false;
+                }
+            }
+
+        }else if (rank_price1k_min!=rank_price1k_max){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_rank_section_error}>");
+            return false;
+        }
+        if(rank_award1_min<=rank_award1_max&&rank_award1_max!=null&&rank_award1_min!=null){
+            if(rank_award1_num!=null){
+                for (var i = rank_award1_min;i<=rank_award1_max;i++){
+                    $('#award'+i).combobox("select", rank_award1_num);
+                }
+            }else {
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_num_error}>");
+                return false;
+            }
+        }else  if (rank_award1_min!=rank_award1_max){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_section_error}>");
+            return false;
+        }
+        if(rank_price1k_num==rank_award1_num && rank_price1k_num==null){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.public_data_no_error}>");
+            return false;
+        }
+        $('#batch_add').dialog('close',true);
+    }
+
+    $(function () {
+        $('#preferential_add_return').bind('click', function(){
+            var tab = $('#preferential_goods').tabs('getSelected');
+            tab.panel('refresh', "<{:U('preferentialList')}>");
+        });
+        $(".explanin").tooltip({
+            content:"<{$Think.lang.info_api_explain}>"
+        });
+        $('#preferential_add').bind('click', function(){
+            var data = $('#preferentialAddPost').serializeArray();
+            var nameid = $('#preferential_name_id_add').combobox('getValue')==-1?'0':$('#preferential_name_id_add').combobox('getText');
+
+            var multipleid =  $('#preferential_multiple_id_edit').combobox('getValue')==-1?'0':$('#preferential_multiple_id_edit').combobox('getText');
+            data.push({name:"nameid",value:nameid});
+            data.push({name:"multipleid",value:multipleid});
+            data.push({name:"describeid",value:"-1"});
+            data.push({name:"shoptype",value:"4"});
+            data.push({name:"goodstype",value:"3"});
+            data.push({name:"showhotsell",value:"0"});
+            data.push({name:"timeformula",value:"0"});//时间公式
+            data.push({name:"duration",value:"0"});//持续时间
+            data.push({name:"weekdayflag",value:"1111111"});//星期标识
+            data.push({name:"openstatus",value:"2"});//开放状�?
+            var info = new Array(); var temporary = new Array();
+            for (var i =0 ;i<data.length;i++){
+                if(data[i].value!=""){
+                    info[data[i].name] = data[i].value;
+                    temporary[i]=data[i];
+                }
+            }
+            if($("#preferential_money_type_edit").combobox('getValue')=='0'){
+                temporary.push({name:"appstoreid",value:$('#appstoreid').textbox('getValue')});//Apple商店ID
+                temporary.push({name:"playstoreid",value:$('#playstoreid').textbox('getValue')});//Google商店ID
+            }else {
+                temporary.push({name:"appstoreid",value:""});//Apple商店ID
+                temporary.push({name:"playstoreid",value:""});//Google商店ID
+            }
+            if(!info['goodsid']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_id_error}>");
+                return false;
+            }else if (info['goodsid']<999){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_id_gt_error}>");
+                return false;
+            }
+
+            if(!info['comment']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_comment_error}>");
+                return false;
+            }else if (info['comment'].length>125){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_comment_gt_error}>");
+                return false;
+            }
+
+            if(!info['nameid']||info['nameid']==0){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_nama_id_error}>");
+                return false;
+            }
+
+            if(!info['describeid']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_describe_id_error}>");
+                return false;
+            }
+
+
+            if(!info['position']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_position_error}>");
+                return false;
+            }
+
+            if(!info['icon']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_icon_error}>");
+                return false;
+            }
+
+            if(!info['prompttype']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_prompt_type_error}>");
+                return false;
+            }
+
+            if(!info['showcountdown']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_countdown_error}>");
+                return false;
+            }
+
+            if(!info['showlimitbuy']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_limit_buy_error}>");
+                return false;
+            }
+
+            if(!info['moneytype']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_moneyt_ype_error}>");
+                return false;
+            }
+
+            if(!info['limitbuycount']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_limit_buy_count_error}>");
+                return false;
+            }
+
+            if(!info['starttime']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_start_time_error}>");
+                return false;
+            }
+
+            if(!info['endtime']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_end_time_error}>");
+                return false;
+            }
+//            if(Date.parse(info['starttime'].replace(/-/g, "/"))/1000<Date.parse(getsystemdate.replace(/-/g, "/"))/1000){
+//                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.info_start_data}>");
+//                return false;
+//            }
+            if(Date.parse(info['starttime'].replace(/-/g, "/"))/1000>=Date.parse(info['endtime'].replace(/-/g, "/"))/1000){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.info_end_data}>");
+                return false;
+            }
+
+            if(!info['needminrank']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_need_min_rank_error}>");
+                return false;
+            }
+
+            if(!info['needmaxrank']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_need_max_rank_error}>");
+                return false;
+            }
+
+            if(!info['minhisrank']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_need_min_historic_error}>");
+                return false;
+            }
+
+            if(!info['maxhisrank']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_award_need_max_historic_error}>");
+                return false;
+            }
+
+            for(var i =1 ;i<=20;i++){
+                if(!info['price'+i]){
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_rank_price1k}>_"+i+"<{$Think.lang.preferential_award_no_fill_in_error}>");
+                    return false;
+                }else if (!info['award'+i]){
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.preferential_rank_award}>_"+i+"<{$Think.lang.preferential_award_no_fill_in_error}>");
+                    return false;
+                }
+            }
+
+            ShowProgress("<{$Think.lang.public_show_add}>");
+            $.post(
+                "<{:U('preferentialAddPost')}>",
+                temporary,
+                function (data) {
+                    HideProgress();
+                    console.log(data);
+                    var info  =  "<{$Think.lang.public_return_add_error}>";
+                    switch  (data){
+                        case 2:info="<{$Think.lang.preferential_award_id_yes_error}>";break;
+                    }
+                    if(data==1){
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_add_success}>');
+                        var tab = $('#preferential_goods').tabs('getSelected');
+                        tab.panel('refresh', "<{:U('preferentialList')}>");
+                    }else {
+                        ShowErrorMsg('<{$Think.lang.public_prompt_information}>',info);
+                        return false;
+                    }
+                }
+            );
+
+
+        });
+    });
+
+//    $('#icon_upload').filebox({
+//        buttonText : '<{$Think.lang.identifier_info_upload}>',
+//        onChange: function (n, o) {
+//            flie_uploads(n);
+//        }
+//    });
+
+
+//    function flie_uploads(n) {
+//        var files = $("input[name='icon']").prop('files');
+//        var selectedFile = files[0];//获取读取的File对象
+//        var name = selectedFile.name;//读取选中文件的文件名
+//        var fileExtension = n.substring(n.lastIndexOf('.') + 1);
+//        if (fileExtension != "png"&&fileExtension != "jpg") {
+//            ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.preferential_award_flie_upload}>');
+//            return false;
+//        }
+//        var formdata = new FormData($('#preferentialAddPost')[0]);
+//
+//        $.ajax({
+//            url:"<{:U('upLoadOpen')}>",
+//            type: "post",
+//            data: formdata,
+//            cache: false,
+//            dataType: 'JSON',
+//            asyunc: false,
+//            processData: false,
+//            contentType: false,
+//            success: function(data) {
+//
+//                if(data.status==1){
+//                    icon = "http://dl-bfc.four33.com/AUW/1024/Shop/"+name;
+//                    $('#icon_upload_explain').html('*'+name);
+//                    ShowSuccessMsg('<{:l("public_prompt_information")}>',data.info);
+//                    return false;
+//                }else {
+//                    ShowErrorMsg('<{:l("public_prompt_information")}>',data.info);
+//                    return false;
+//                }
+//                console.log(data)
+//            },
+//            error: function(e) {
+//                console.log(e);
+//            }
+//        });
+//    }
+
+
+</script>

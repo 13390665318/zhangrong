@@ -1,0 +1,115 @@
+<div style="text-align:center;">
+    <form id="compensate_search_data">
+        <select id="compensate_search_type" name="type" class="easyui-combobox" style="width:80px;">
+            <option value="0"><{$Think.lang.system_info_all}></option>
+            <option value="1"><{$Think.lang.order_search_role_code}></option>
+            <!--<option value="6"><{$Think.lang.order_search_google_platform}></option>-->
+            <!--<option value="7"><{$Think.lang.order_search_apple_platform}></option>-->
+        </select>
+        <input id="compensate_search_codeid" name="codeid" type="text" class="easyui-textbox" data-options="readonly:true">
+        查询日期
+        <input id="compensate_search_start_time" name="starttime" class="easyui-datebox" data-options="editable:false">
+        至
+        <input id="compensate_search_end_time" name="endtime" class="easyui-datebox" data-options="editable:false">
+        <a id="compensate_search_but" href="javascript:void(0);"><{$Think.lang.public_select}></a>
+    </form>
+</div>
+
+<!--数据表格 start-->
+<div style="padding:10px;height: 94%;">
+    <table id="compensate_list_data"></table>
+</div>
+
+<script type="text/javascript">
+
+    $('#compensate_search_start_time').datebox().datebox('calendar').calendar({
+        validator: function(date){
+            var startTime = new Date();
+            return date<=startTime;
+        }
+    });
+    $('#compensate_search_end_time').datebox().datebox('calendar').calendar({
+        validator: function(date){
+            var startTime = new Date();
+            return date<=startTime;
+        }
+    });
+
+    $(function () {
+
+        $('#compensate_search_but').bind('click',function () {
+            var data = $('#compensate_search_data').serializeArray();
+
+            var info = new Array();
+            for (var i =0 ;i<data.length;i++){
+                if(data[i].value!=""&&data[i].value!=-1){
+                    info[data[i].name] = data[i].value;
+                }else {
+                    data[i].value = -1;
+                }
+            }
+            console.log(info['codeid']);
+            if(info['type']==1&&typeof(info['codeid'])=="undefined"){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.order_search_role_code_error}>");
+                return false;
+            }
+            var startTime = Date.parse(new Date(info['endtime']));
+            var startTime2 = Date.parse(new Date(info['starttime']));
+
+            if(typeof(info['starttime'])=="undefined" ||startTime<startTime2){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.order_search_time_error}>");
+                return false;
+            }
+            $('#compensate_list_data').datagrid({
+                queryParams: info
+            });
+        });
+
+
+    });
+
+    $('#compensate_search_type').combobox({
+        onSelect:function (record){
+            if(record.value==1){
+                $('#compensate_search_codeid').textbox({readonly:false});
+            }else{
+                $('#compensate_search_codeid').textbox({readonly:true});
+            }
+        }
+    });
+
+    $('#compensate_search_but').linkbutton({
+        iconCls: 'icon-search'
+    });
+
+    $('#compensate_export_but').linkbutton({
+        iconCls: 'icon-print'
+    });
+
+    $('#compensate_list_data').datagrid({
+        url:"<{:U('compensateListPost')}>",
+        fitColumns:true,
+        columns:[[
+//            {field:'fx',checkbox:true},
+            {field:'sumnum',title:'<{$Think.lang.public_use_sumnum}>',width:50,align:'center'},
+            {field:'start_time',title:'<{$Think.lang.notice_list_start}>',width:250,align:'center'},
+            {field:'role',title:'<{$Think.lang.order_search_role_code}>',width:150,align:'center'},
+//            {field:'12',title:'<{$Think.lang.public_platform}>',width:250,align:'center'},
+            {field:'goods_code',title:'<{$Think.lang.order_info_goods_code}>',width:250,align:'center'},
+            {field:'goods_name',title:'<{$Think.lang.order_info_goods_name}>',width:250,align:'center'},
+            {field:'compensate',title:'<{$Think.lang.order_info_goods_compensate}>',width:250,align:'center'},
+        ]],
+        pagination:true,//如果表格需要支持分页，必须设置该选项为true
+        pageSize:15,     //表格中每页显示的行数
+        pageList:[15,30],
+        nowrap: false,
+        singleSelect: true,
+        fit:true,//自适应高度
+        striped: true,  //奇偶行是否使用不同的颜色
+        loadMsg:'<{$Think.lang.notice_data_load}>',
+        method:'post',
+
+    });
+
+
+</script>

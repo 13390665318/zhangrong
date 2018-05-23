@@ -1,0 +1,46 @@
+<form id="editFrom" method="post">
+    <input value="<{$item['id']}>" name="id" style="display: none;" >
+    <table  class="tab_style_table" style="width:100%;text-align:left;">
+        <tr>
+            <td><{$Think.lang.prop_info_name}>:</td>
+            <td> <input class="easyui-textbox" value="<{$item['itemname']}>"  name="itemname" data-options="required:true" /></td>
+        </tr>
+        <tr>
+            <td><{$Think.lang.prop_info_id}>:</td>
+            <td> <input name="itemid" value="<{$item['itemid']}>"  type="text"  class="easyui-numberbox"  data-options="min:0,required:true"  /></td>
+        </tr>
+        <tr>
+            <td><{$Think.lang.prop_info_type}>:</td>
+            <td>
+                <select class="easyui-combobox" name="itemtype" style="width:100%;" validType="propSelectValidates['item_type_edit']" id="item_type_edit" data-options="editable:false,panelHeight:'auto'" >
+                    <option value=""><{$Think.lang.prop_info_type_name}></option>
+                    <foreach name="itemtype" key="itemid" item="itemname">
+                        <option value="<{$itemid}>" <{$itemname['type']}>><{$itemname['name']}></option>
+                    </foreach>
+                </select>
+            </td>
+        </tr>
+        <!--<tr>-->
+            <!--<td><{$Think.lang.prop_info_sun}>:</td>-->
+            <!--<td><input name="maxnum" value="<{$item['maxnum']}>"  type="text"  class="easyui-numberbox" data-options="min:0,required:true" /></td>-->
+        <!--</tr>-->
+    </table>
+</form>
+
+<script type="text/javascript">
+
+
+    $.extend($.fn.validatebox.defaults.rules, {
+        propSelectValidates: {
+            validator: function (value, param) {
+                console.log($("#"+param).combobox('getText'));
+                if ($("#"+param).combobox('getText') != "<{$Think.lang.prop_info_type_name}>") {
+                    return true;
+                }
+                return false;
+            },
+            message: "<{$Think.lang.info_missing_message}>"
+        }
+    });
+
+</script>

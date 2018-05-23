@@ -1,0 +1,933 @@
+﻿<!--datagrid列表-->
+<div class="panel-header panel-header-noborder" style="width: 99%;"><{$title}></div>
+
+<div class="panel-noscroll" title="" style="width: 100%; min-width: 1400px; height: 93%;">
+
+    <div style="padding-top: 10px; padding-left: 20px;padding-bottom:10px;">
+        <{:l("public_search")}>：<select id="acctype" class="easyui-combobox" style="width:100px;" data-options="editable:false,panelHeight:'auto'">
+                <option value="1" <{$acctype==1?"selected=selected":""}>><{:l("public_use_platform_number")}></option>
+                <option value="2" <{$acctype==2?"selected=selected":""}>>ID</option>
+            </select>
+            <input style="width:120px;" id="account" value="<{$account}>" /><!--#CCQZQ-->&nbsp;&nbsp;
+            <a href="javascript:void(0);" onclick="return Search();" id="querybtn" class="easyui-linkbutton" iconcls="icon-search"><{:l("public_search")}></a>
+</div>
+    <input type="hidden" id="tabindex" value="1" />
+    <div class="easyui-tabs" id="tabmenu_userinfo" style="height:93%;width:100%;">
+        <div title='<{:l("public_basic_information")}>' style="padding: 10px;">
+            <table class="tab_style_table">
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_role_id_encoding")}></td>
+                    <td><span id="base_rolecode"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_registration_time")}></td>
+                    <td><span id="base_regtime"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_account_status")}></td>
+                    <td><span id="base_userstatus"></span></td>
+                </tr>
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_role_id")}></td>
+                    <td><span id="base_roleid"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_last_login_time")}></td>
+                    <td><span id="base_logintime"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_cancellation_time")}></td>
+                    <td>
+                        <span id="base_deletetime"></span>
+                        <input type="hidden" id="base_normalid" />
+                        &nbsp;&nbsp;<a href="javascript:void(0);" onclick="return funUserinfoRecovery();" id="linkrecovery" class="easyui-linkbutton" style="display:none;">&nbsp;&nbsp;<{:l("public_recovery")}>&nbsp;&nbsp;</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_platform_information")}></td>
+                    <td colspan="5"><span id="base_plat"></span>&nbsp;&nbsp;<a href="javascript:void(0);" onclick="return selLog();" id="linkSelLog" class="easyui-linkbutton" style="display:none;">&nbsp;&nbsp;<{:l("public_view_log")}>&nbsp;&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("resume_player_account")}></td>
+                    &nbsp;<td><div id="huifuwan" style="display:none;"> <input style="width:120px;"  id="oldaccount" placeholder="请输入旧ID" >&nbsp;&nbsp;
+                    <select id="qiangzhi" class="easyui-combobox" style="width:70px;" data-options="editable:false,panelHeight:'auto'">
+                    <option value="0"><{:l("optional")}></option>
+                    <option value="1" ><{:l("mandatory")}></option>
+                </select>&nbsp&nbsp <a href="javascript:void(0);" onclick="return Huifuwan();"  class="easyui-linkbutton"  ><{:l("public_recovery")}></a></div> </td>
+
+                </tr>
+                <tr>
+                    <td class="tab_style_bgcolor" colspan="2">Game Center</td>
+                    <td class="tab_style_bgcolor" colspan="2">Google play</td>
+                    <td class="tab_style_bgcolor" colspan="2">Facebook</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span id="base_gameCenter"></span></td>
+                    <td colspan="2"><span id="base_googlePlay"></span></td>
+                    <td colspan="2"><span id="base_facebook"></span></td>
+                </tr>
+            </table>
+        </div>
+        <div title='<{:l("public_game_information")}>' style="padding:10px;">
+            <table class="tab_style_table">
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_role_name")}></td>
+                    <td><span id="game_rolename"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_use_level")}></td>
+                    <td><span id="game_level"></span>&nbsp;&nbsp;<input style="width:80px;text-align:center;display:none;" placeholder='<{:l("public_input_modification")}>' id="txt_game_level" /></td>
+                    <td class="tab_style_bgcolor"><{:l("public_use_rank")}></td>
+                    <td><span id="game_rank"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_platform_information")}></td>
+                    <td><span id="game_apptype"></span></td>
+                </tr>
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_role_id")}></td>
+                    <td><span id="game_roleid"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_gold")}></td>
+                    <td><span id="game_gold"></span>&nbsp;&nbsp;<input style="width: 80px; text-align: center; display: none;" placeholder='<{:l("public_input_modification")}>' id="txt_game_gold" /></td>
+                    <td class="tab_style_bgcolor"><{:l("user_the_user_hismaxrank")}></td>
+                    <td><span id="game_hismaxrank"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_account_status")}></td>
+                    <td>
+                        <span id="game_userstate"></span>
+                        &nbsp;&nbsp;<a href="javascript:void(0);" onclick="return funUserinfoUnlock('1');" id="linkdiprequestlockrol" class="easyui-linkbutton" style="display:none;">&nbsp;&nbsp;<{:l("public_disable")}>&nbsp;&nbsp;</a>
+                        <a href="javascript:void(0);" onclick="return funUserinfoUnlock('2');" id="linkrequestunlockrole" class="easyui-linkbutton" style="display:none;">&nbsp;&nbsp;<{:l("public_enable")}>&nbsp;&nbsp;</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_role_id_encoding")}></td>
+                    <td><span id="game_rolecode"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_free_diamond")}></td>
+                    <td><span id="game_freediamond"></span>&nbsp;&nbsp;<input style="width: 80px; text-align: center; display: none;" placeholder='<{:l("public_input_modification")}>' id="txt_game_freediamond" /></td>
+                    <td class="tab_style_bgcolor"><{:l("user_the_user_score")}></td>
+                    <td><span id="game_score"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_end_of_sanctions")}></td>
+                    <td><span id="game_unlocktime"></span></td>
+                </tr>
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_online_state")}></td>
+                    <td><span id="game_onlinestatus"></span> &nbsp;&nbsp;<a href="javascript:void(0);" onclick="return playerOffline();" id="linkonlinestatus" class="easyui-linkbutton" style="display:none;">&nbsp;&nbsp;Kick&nbsp;&nbsp;</a></td>
+                    <td class="tab_style_bgcolor"><{:l("public_rechargeable_diamond")}></td>
+                    <td><span id="game_diamond"></span>&nbsp;&nbsp;<input style="width: 80px; text-align: center; display: none;" placeholder='<{:l("public_input_modification")}>' id="txt_game_diamond" /></td>
+                    <td class="tab_style_bgcolor"><{:l("user_the_user_hismaxscore")}></td>
+                    <td><span id="game_hismaxscore"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("user_scavenging_player_rankings")}></td>
+                    <td><a href="javascript:void(0);" onclick="return funDeleteRanking();" id="linkdeleteranking" class="easyui-linkbutton" style="display:none;">&nbsp;&nbsp;<{:l("user_scavenging_player_rankings")}>&nbsp;&nbsp;</a></td>
+                </tr>
+
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_battle_last_clearance")}></td>
+                    <td><span id="game_last_clearance"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_friends_num")}></td>
+                    <td><span id="game_friends_num"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_legion_id")}></td>
+                    <td><span id="game_legion_id"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_legion_name")}></td>
+                    <td><span id="game_legion_name"></span></td>
+                </tr>
+
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_complete_task_id")}></td>
+                    <td colspan="3"><span id="game_complete_task"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_activation_task_id")}></td>
+                    <td colspan="3"><span id="game_activation_task"></span></td>
+                </tr>
+
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_white_card")}><{:l("public_card_type")}></td>
+                    <td><span id="game_white_card_type"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_blue_card")}><{:l("public_card_type")}></td>
+                    <td><span id="game_blue_card_type"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_purple_card")}><{:l("public_card_type")}></td>
+                    <td><span id="game_purple_card_type"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_orange_card")}><{:l("public_card_type")}></td>
+                    <td><span id="game_orange_card_type"></span></td>
+                </tr>
+
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_white_card")}><{:l("public_all_num")}></td>
+                    <td><span id="game_white_all_num"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_blue_card")}><{:l("public_all_num")}></td>
+                    <td><span id="game_blue_all_num"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_purple_card")}><{:l("public_all_num")}></td>
+                    <td><span id="game_purple_all_num"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_orange_card")}><{:l("public_all_num")}></td>
+                    <td><span id="game_orange_all_num"></span></td>
+                </tr>
+
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_white_card")}><{:l("public_all_grade")}></td>
+                    <td><span id="game_white_all_grade"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_blue_card")}><{:l("public_all_grade")}></td>
+                    <td><span id="game_blue_all_grade"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_purple_card")}><{:l("public_all_grade")}></td>
+                    <td><span id="game_purple_all_grade"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_orange_card")}><{:l("public_all_grade")}></td>
+                    <td><span id="game_orange_all_grade"></span></td>
+                </tr>
+
+                <tr id="game_chest_1" hidden>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_type")}></td>
+                    <td><span id="game_chest_type_1"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_id")}></td>
+                    <td><span id="game_chest_id_1"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_on_time")}></td>
+                    <td  colspan="3"><span id="game_chest_on_time_1"></span></td>
+                </tr>
+
+
+                <tr id="game_chest_2" hidden>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_type")}></td>
+                    <td><span id="game_chest_type_2"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_id")}></td>
+                    <td><span id="game_chest_id_2"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_on_time")}></td>
+                    <td  colspan="3"><span id="game_chest_on_time_2"></span></td>
+                </tr>
+
+
+                <tr id="game_chest_3" hidden>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_type")}></td>
+                    <td><span id="game_chest_type_3"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_id")}></td>
+                    <td><span id="game_chest_id_3"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_on_time")}></td>
+                    <td  colspan="3"><span id="game_chest_on_time_3"></span></td>
+                </tr>
+
+                <tr id="game_chest_4" hidden>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_type")}></td>
+                    <td><span id="game_chest_type_4"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_id")}></td>
+                    <td><span id="game_chest_id_4"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_on_time")}></td>
+                    <td  colspan="3"><span id="game_chest_on_time_4"></span></td>
+                </tr>
+
+
+                <tr id="game_chest_5" hidden>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_type")}></td>
+                    <td><span id="game_chest_type_5"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_id")}></td>
+                    <td><span id="game_chest_id_5"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_on_time")}></td>
+                    <td  colspan="3"><span id="game_chest_on_time_5"></span></td>
+                </tr>
+
+                <tr id="game_chest_6" hidden>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_type")}></td>
+                    <td><span id="game_chest_type_6"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_id")}></td>
+                    <td><span id="game_chest_id_6"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_on_time")}></td>
+                    <td  colspan="3"><span id="game_chest_on_time_6"></span></td>
+                </tr>
+
+                <tr id="game_chest_7" hidden>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_type")}></td>
+                    <td><span id="game_chest_type_7"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_id")}></td>
+                    <td><span id="game_chest_id_7"></span></td>
+                    <td class="tab_style_bgcolor"><{:l("public_chest_on_time")}></td>
+                    <td  colspan="3"><span id="game_chest_on_time_7"></span></td>
+                </tr>
+
+                <tr>
+                    <td class="tab_style_bgcolor"><{:l("public_reasons_for_modification")}></td>
+                    <td colspan="7">
+                        <!--<input style="width: 100%; display: none;" placeholder="输入修改" id="txt_game_reason" />-->
+                        <textarea rows="3" cols="20" id="txt_game_reason" style="text-align: left; width: 100%; height: 50px;"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div style="width: 100%; padding-top: 10px; text-align: center; display: none;" id="devgameuserinfo">
+                <a href="javascript:void(0);" onclick="return upGameUserInfo();" id="butgameuserinfo" style="width: 250px; height: 60px; " class="easyui-linkbutton"><span style="font-size:18px;"><{:l("public_update")}></span></a>
+            </div>
+        </div>
+        <div title='<{:l("public_change_record")}>'>
+            <table id="dgchangelog" class="easyui-datagrid" data-options="border:false,striped:true,pageSize:20,fit:true,fitColumns:true,rownumbers:true,singleSelect:true,pagination:true">
+                <thead>
+                    <tr>
+                        <th data-options="field:'id',hidden:true"></th>
+                        <th data-options="field:'inserttime',width:10,sortable:false"><{:l("public_operating_time")}></th>
+                        <th data-options="field:'content',width:40,sortable:false"><{:l("public_content")}></th>
+                        <th data-options="field:'reason',width:40,sortable:false"><{:l("public_reason")}></th>
+                        <th data-options="field:'operator',width:10,sortable:false"><{:l("public_operator")}></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div title='<{:l("public_mailing_list")}>'>
+            <table id="usermaillist" class="easyui-datagrid" data-options="border:false,striped:true,pageSize:10,fit:true,striped:true,fitColumns:true,rownumbers:true,singleSelect:true,pagination:true">
+                <thead>
+                    <tr>
+                        <!--<th data-options="field:'id',width:15,sortable:false">序号</th>-->
+                        <th data-options="field:'type',width:8,sortable:false,formatter:getEmailTypeName"><{:l("public_type")}></th>
+                        <th data-options="field:'status',width:12,sortable:false,formatter:getEmailStateName"><{:l("public_state")}></th>
+                        <th data-options="field:'content',width:25,sortable:false"><{:l("public_content")}></th>
+                        <th data-options="field:'awards',width:25,sortable:false"><{:l("public_item")}></th>
+                        <th data-options="field:'taketime',width:10,sortable:false"><{:l("content_api_start")}></th>
+                        <th data-options="field:'operatetime',width:10,sortable:false,formatter:setOperateTimeText"><{:l("public_collection_time")}></th>
+                        <th data-options="field:'recovery',width:10,sortable:false,formatter:setRecoveryText"><{:l("public_operation")}></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <!-- 恢复 -->
+    <div id="userinfoRecoveryBox" class="easyui-dialog" title='<{:l("public_cancellation_recovery")}>' data-options="modal:true,closed:true,iconCls:'icon-add',buttons:[{text:'<{:l("public_submit")}>',iconCls:'icon-ok',handler:function(){upUserinfoRecoverySave();}},{text:'<{:l("public_use_cancel")}>',iconCls:'icon-cancel',handler:function(){$('#userinfoRecoveryBox').dialog('close');}}]" style="width:265px; height: 270px;"></div>
+    <!-- 制裁解除 -->
+    <div id="unlockRoleRolBox" class="easyui-dialog" title='<{:l("user_account_sanction_release")}>' data-options="modal:true,closed:true,iconCls:'icon-add',buttons:[{text:'<{:l("public_submit")}>',iconCls:'icon-ok',handler:function(){unlockrole_rolSave();}},{text:'<{:l("public_use_cancel")}>',iconCls:'icon-cancel',handler:function(){$('#unlockRoleRolBox').dialog('close');}}]" style="width:265px; height: 270px;"></div>
+</div>
+<script type="text/javascript">
+    function funUserinfoRecovery() {
+        $('#userinfoRecoveryBox').dialog({ href: "/index.php?m=admin&c=GmTool&a=unlockrole<{:C('URL_MODEL_PARAS')}>delhistory=" + escape(delhistory) + "&roleid=" + $("#base_roleid").html() + "&rolecode=" + escape($("#base_rolecode").html()) });
+        $('#userinfoRecoveryBox').dialog('open');
+    }
+    function funUserinfoUnlock(isunlock) {
+        $('#unlockRoleRolBox').dialog({ href: "/index.php?m=admin&c=GmTool&a=setrequestunlock<{:C('URL_MODEL_PARAS')}>isunlock=" + isunlock + "&roleid=" + $("#game_roleid").html() + "&rolecode=" + escape($("#game_rolecode").html()) });
+        $('#unlockRoleRolBox').dialog('open');
+    }
+</script>
+<script type="text/javascript">
+    //删除排行榜
+    function funDeleteRanking() {
+        $.messager.confirm('<{:l("public_determine")}>', '<{:l("user_do_you_make_sure_to_delete_the_list_of_players")}>', function (r) {
+            if (r) {
+                ShowProgress('<{:l("public_loading")}>');
+                var p = { roleid: $("#game_roleid").html(), rolecode: $("#game_rolecode").html() }
+                $.post("<{:U('GmTool/deleteranking')}>", p, function (data) {
+                    HideProgress();
+                    var dataObj = eval("(" + data + ")");
+                    if (dataObj.code == "100") {
+                        ShowSuccessMsg('<{:l("public_prompt_information")}>', '<{:l("public_successful_operation")}>');
+                    } else {
+                        ShowErrorMsg('<{:l("public_prompt_information")}>', '<{:l("public_operation_failed")}>');
+                    }
+                });
+            }
+        });
+    }
+    //恢复玩家账号
+    function Huifuwan() {
+        var newroleid=$("#base_roleid").html();
+        var oldroleid=$("#oldaccount").val();
+        $.messager.confirm('<{:l("public_determine")}>', '<{:l("user_do_you_make_sure_to_recovery_the_list_of_account")}>'+'<br>'+newroleid+'=>'+oldroleid,function (r) {
+            if (r) {
+                ShowProgress('<{:l("public_loading")}>');
+                var p = { roleid: $("#base_roleid").html(),oldaccount: $("#oldaccount").val(),qiangzhi:Getcomboboxvalue('qiangzhi')};
+                console.log(p);
+                $.post("<{:U('GmTool/recovery')}>", p, function (data) {
+                    HideProgress();
+                    var dataObj = eval("(" + data + ")");
+                    if (dataObj.code == "100") {
+                        ShowSuccessMsg('<{:l("public_prompt_information")}>', '<{:l("public_successful_operation")}>');
+                    } else {
+                        ShowErrorMsg('<{:l("public_prompt_information")}>', '<{:l("public_operation_failed")}>');
+                    }
+                });
+            }
+        });
+    }
+    //回收邮件
+    function setRecovery(id,roleid) {
+        $.messager.confirm('<{:l("public_determine")}>', '<{:l("user_confirm_recycle_mail")}>', function (r) {
+            if (r) {
+                ShowProgress('<{:l("public_loading")}>');
+                var p = { id: id, roleid: roleid, rolecode: UInt10To32(roleid) }
+                $.post("<{:U('GmTool/setrecovery')}>", p, function (data) {
+                    HideProgress();
+                    if(data.status==0){
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                        return false;
+                    }
+                    var dataObj = eval("(" + data + ")");
+                    if (dataObj.code == "100") {
+                        ShowSuccessMsg('<{:l("public_prompt_information")}>','<{:l("public_recycling_success")}>!');
+                        Search();//刷新列表
+                    } else {
+                        ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_recovery_failure")}>!');
+                    }
+                });
+            }
+        });
+    }
+    //修改玩家游戏信息
+    function upGameUserInfo() {
+        var level_old = $("#game_level").html();
+        var level = Getinputvalue("txt_game_level");
+        var gold_old = $("#game_gold").html();
+        var gold = Getinputvalue("txt_game_gold");
+        var freediamond_old = $("#game_freediamond").html();
+        var freediamond = Getinputvalue("txt_game_freediamond");
+        var diamond_old = $("#game_diamond").html();
+        var diamond = Getinputvalue("txt_game_diamond");
+        var reason = Getinputvalue("txt_game_reason");
+        var roleid = $("#game_roleid").html();
+        var rolecode = $("#game_rolecode").html();
+        if (level == "" && gold == "" && freediamond == "" && diamond == "") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_fill_value")}>!');
+            return false;
+        }
+        if (reason == "") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_reason_for_input_modification")}>!');
+            return false;
+        }
+        $.messager.confirm('<{:l("public_determine")}>', '<{:l("user_confirm_character_game_information")}>', function (r) {
+            if (r) {
+                ShowProgress('<{:l("public_loading")}>');
+                var p = { roleid: roleid, rolecode: rolecode, level_old: level_old, level: level, gold_old: gold_old, gold: gold, freediamond_old: freediamond_old, freediamond: freediamond, diamond_old: diamond_old, diamond: diamond, reason: reason }
+                $.post("<{:U('GmTool/upgameuserinfo')}>", p, function (data) {
+                    HideProgress();
+                    if(data.status==0){
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                        return false;
+                    }
+                    var dataObj = eval("(" + data + ")");
+                    if (dataObj.code == "100") {
+                        Search();//刷新列表
+                        ShowSuccessMsg('<{:l("public_prompt_information")}>','<{:l("public_successful_modification")}>');
+                    } else {
+                        ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_modification_failed")}>');
+                    }
+                });
+            }
+        });
+    }
+    //提玩家下线
+    function playerOffline() {
+        $.messager.confirm('<{:l("public_determine")}>', '<{:l("user_confirm_play_the_role_offline")}>', function (r) {
+            if (r) {
+                ShowProgress('<{:l("public_loading")}>');
+                var p = { roleid: $("#game_roleid").html(), rolecode: $("#game_rolecode").html() }
+                $.post("<{:U('GmTool/kickplayerffline')}>", p, function (data) {
+
+                    HideProgress();
+                    if(data.status==0){
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                        return false;
+                    }
+
+                    var dataObj = eval("(" + data + ")");
+                    if (dataObj.code == "100") {
+                        $("#game_onlinestatus").html('<{:l("public_disconnect")}>');
+                        $("#linkonlinestatus").hide();
+                        ShowSuccessMsg('<{:l("public_prompt_information")}>','<{:l("public_successful_operation")}>');
+                    } else {
+                        ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_operation_failed")}>');
+                    }
+                });
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    //注销列表
+    var delhistory = "";
+    //搜索
+    function Search(istab) {
+        var flag = Getinputvalue("tabindex");
+        var acctype = Getcomboboxvalue('acctype');
+        var account = Getinputvalue("account");
+        if (acctype == "") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_please_select_number_or_id")}>');
+            return false;
+        }
+        if (account == "") {
+            if (istab == "1") {
+                return false;
+            }
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_please_enter_a_number_or_id")}>');
+            return false;
+        } else {
+            if (acctype == "1") {//编号
+                if (account.indexOf("#") < 0) {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_wrong_numbering_information")}>');
+                    return false;
+                }
+            } else {//ID
+                if (isNaN(account)) {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_wrong_id")}>');
+                    return false;
+                }
+            }
+        }
+        if (flag == "1" || flag == "2") {
+            ShowProgress('<{:l("public_loading")}>');
+            $.post("<{:U('GmTool/getUserInfo')}>", { flag: flag, acctype: acctype, account: account }, function (data) {
+                //var data = '{"code":100,"roleid":13000000,"rolecode":"#CCPT7","status":1,"regtime":"2017-07-26 17:33:34","logintime":"2017-09-28 10:25:28","deletetime":"2017-09-28 10:25:28","platform_account":[{"type":2,"account":"MTAwMTkw"}],"delhistory":[{"id":1111,"time":"2017-09-28 10:25:28"}]}';
+                var dataObj = eval("(" + data + ")");
+                if (flag == "1") {//基础信息
+                    if (dataObj.code == "100") {
+                        $("#base_normalid").val(dataObj.normalid);
+                        $("#base_rolecode").html(dataObj.rolecode);
+                        $("#base_regtime").html(dataObj.regtime);
+                        $("#base_userstatus").html(getUserStatusName(dataObj.status));
+                        $("#base_roleid").html(dataObj.roleid);
+                        $("#base_logintime").html(dataObj.logintime);
+                        $("#base_deletetime").html(dataObj.deletetime);
+                        $("#base_userstatus").html(getUserStatusName(dataObj.status));
+                        if (dataObj.status == 1) {
+                            $("#linkrecovery").show();
+                        } else {
+                            $("#linkrecovery").hide();
+                        }
+                        //$("#base_plat").html(getPlatName(dataObj.plat));
+                        $("#linkSelLog").show();
+                        $("#huifuwan").show();
+                        if (dataObj.platform_account.length > 0) {
+                            var base_gameCenter = 1;
+                            var base_googlePlay = 1;
+                            var base_facebook = 1;
+                            for (var i = 0; i < dataObj.platform_account.length; i++) {
+                                //switch (dataObj.platform_account[i].type) {
+                                //    case 3: $("#base_gameCenter").html(dataObj.platform_account[i].account); break;
+                                //    case 2: $("#base_googlePlay").html(dataObj.platform_account[i].account); break;
+                                //    case 4: $("#base_facebook").html(dataObj.platform_account[i].account); break;
+                                //}
+                                if (dataObj.platform_account[i].type == 3) {
+                                    $("#base_gameCenter").html(dataObj.platform_account[i].account);
+                                    base_gameCenter = 0;
+                                } else if (base_gameCenter){
+                                    $("#base_gameCenter").html("");
+                                }
+                                if (dataObj.platform_account[i].type == 2) {
+                                    $("#base_googlePlay").html(dataObj.platform_account[i].account);
+                                     base_googlePlay = 0;
+                                } else if (base_googlePlay){
+                                    $("#base_googlePlay").html("");
+                                }
+                                if (dataObj.platform_account[i].type == 4) {
+                                    $("#base_facebook").html(dataObj.platform_account[i].account);
+                                    base_facebook = 0;
+                                } else if (base_facebook){
+                                    $("#base_facebook").html("");
+                                }
+                            }
+                        } else {
+                            $("#base_gameCenter").html("");
+                            $("#base_googlePlay").html("");
+                            $("#base_facebook").html("");
+                        }
+                        delhistory = "["
+                        for (var i = 0; i < dataObj.delhistory.length; i++) {
+                            delhistory += '{"id":"' + dataObj.delhistory[i].id + '","time":"' + dataObj.delhistory[i].time + '","code":"' + UInt10To32(dataObj.delhistory[i].id) + '"},';
+                        }
+                        delhistory = (delhistory.length > 10 ? delhistory.substring(0, delhistory.length - 1) : "") + "]";
+                    } else {
+                        $("#base_rolecode").html("");
+                        $("#base_regtime").html("");
+                        $("#base_userstatus").html("");
+                        $("#base_roleid").html("");
+                        $("#base_logintime").html("");
+                        $("#base_deletetime").html("");
+                        $("#linkrecovery").hide();
+                        $("#linkSelLog").hide();
+                        $("#base_gameCenter").html("")
+                        $("#base_googlePlay").html("")
+                        $("#base_facebook").html("")
+                        //ShowErrorMsg('<{:l("public_prompt_information")}>','未查询到基础信息!');
+                        showMsg(acctype);
+                    }
+                } else if (flag == "2") {//游戏信息
+                    //var data = '{"code":100,"roleid":13000000,"rolecode":"#CCPT7","rolename":"ddd","OnlineStatus":1,"apptype":-1,"level":2,"gold":328,"diamond":0,"freediamond":2,"lockflag":0,"unlocktime":"1970-01-01 08:00:00"}';
+                    var dataObj = eval("(" + data + ")");
+                    if (dataObj.code == "100") {
+                        $("#game_rolename").html(dataObj.rolename);
+                        $("#game_level").html(dataObj.level);
+                        $("#game_rank").html(dataObj.rank);
+                        $("#game_hismaxrank").html(dataObj.hismaxrank);
+                        $("#game_score").html(dataObj.score);
+                        $("#game_hismaxscore").html(dataObj.hismaxscore);
+                        $("#game_apptype").html(getPlatName(dataObj.apptype));
+                        $("#game_roleid").html(dataObj.roleid);
+                        $("#game_gold").html(dataObj.gold);
+                        $("#game_userstate").html(getLockflagName(dataObj.lockflag));
+                        if (dataObj.lockflag == 0) {
+                            $("#linkdiprequestlockrol").show();
+                            $("#linkrequestunlockrole").hide();
+                        } else {
+                            $("#linkrequestunlockrole").show();
+                            $("#linkdiprequestlockrol").hide();
+                        }
+                        $("#linkdeleteranking").show();
+                        $("#game_rolecode").html(dataObj.rolecode);
+                        $("#game_freediamond").html(dataObj.freediamond);
+                        $("#game_unlocktime").html(dataObj.unlocktime);
+                        $("#game_userstate").html(getLockflagName(dataObj.lockflag));
+                        $("#game_onlinestatus").html(getStatusName(dataObj.OnlineStatus));
+                        if (dataObj.OnlineStatus == 1) {
+                            $("#linkonlinestatus").show();
+                        } else {
+                            $("#linkonlinestatus").hide();
+                        }
+                        $("#game_diamond").html(dataObj.diamond);
+
+
+                        if(dataObj.last_pass_stage!="***"){
+                            $("#game_last_clearance").html(dataObj.last_pass_stage);
+                            $("#game_friends_num").html(dataObj.friendcount);
+                            $("#game_legion_id").html(dataObj.legion.id);
+                            $("#game_legion_name").html(dataObj.legion.name);
+                            $("#game_complete_task").html(dataObj.complete);
+                            $("#game_activation_task").html(dataObj.active);
+
+                            $("#game_white_card_type").html(dataObj.cards.white[0]);
+                            $("#game_white_all_num").html(dataObj.cards.white[1]);
+                            $("#game_white_all_grade").html(dataObj.cards.white[2]);
+
+                            $("#game_blue_card_type").html(dataObj.cards.blue[0]);
+                            $("#game_blue_all_num").html(dataObj.cards.blue[1]);
+                            $("#game_blue_all_grade").html(dataObj.cards.blue[2]);
+
+                            $("#game_purple_card_type").html(dataObj.cards.purple[0]);
+                            $("#game_purple_all_num").html(dataObj.cards.purple[1]);
+                            $("#game_purple_all_grade").html(dataObj.cards.purple[2]);
+
+                            $("#game_orange_card_type").html(dataObj.cards.orange[0]);
+                            $("#game_orange_all_num").html(dataObj.cards.orange[1]);
+                            $("#game_orange_all_grade").html(dataObj.cards.orange[2]);
+
+                            var cahest = dataObj.box;
+
+                            for(var i = 1 ;i<=cahest.length;i++){
+                                $('#game_chest_'+i).show();
+                                $('#game_chest_type_'+i).html(cahest[i-1].type);
+                                $('#game_chest_id_'+i).html(cahest[i-1].id);
+                                $('#game_chest_on_time_'+i).html(cahest[i-1].unlocktime);
+                            }
+                        }else{
+
+                            $("#game_last_clearance").html("");
+                            $("#game_friends_num").html("");
+                            $("#game_legion_id").html("");
+                            $("#game_legion_name").html("");
+                            $("#game_complete_task").html("");
+                            $("#game_activation_task").html("");
+
+                            $("#game_white_card_type").html("");
+                            $("#game_white_all_num").html("");
+                            $("#game_white_all_grade").html("");
+
+                            $("#game_blue_card_type").html("");
+                            $("#game_blue_all_num").html("");
+                            $("#game_blue_all_grade").html("");
+
+                            $("#game_purple_card_type").html("");
+                            $("#game_purple_all_num").html("");
+                            $("#game_purple_all_grade").html("");
+
+                            $("#game_orange_card_type").html("");
+                            $("#game_orange_all_num").html("");
+                            $("#game_orange_all_grade").html("");
+
+
+                            for(var i = 1 ;i<=5;i++){
+                                $('#game_chest_'+i).hide();
+                            }
+
+                        }
+
+                        //显示修改
+                        $("#txt_game_level").show();
+                        $("#txt_game_gold").show();
+                        $("#txt_game_freediamond").show();
+                        $("#txt_game_diamond").show();
+                        $("#devgameuserinfo").show();
+
+                        $("#txt_game_level").val("");
+                        $("#txt_game_gold").val("");
+                        $("#txt_game_freediamond").val("");
+                        $("#txt_game_diamond").val("");
+                        $("#txt_game_reason").val("");
+                    } else {
+                        $("#game_rolename").html("");
+                        $("#game_level").html("");
+                        $("#game_rank").html("");
+                        $("#game_hismaxrank").html("");
+                        $("#game_score").html("");
+                        $("#game_hismaxscore").html("");
+                        $("#game_apptype").html("");
+                        $("#game_roleid").html("");
+                        $("#game_gold").html("");
+                        $("#game_userstate").html("");
+                        $("#linkrequestunlockrole").hide();
+                        $("#linkdiprequestlockrol").hide();
+                        $("#linkdeleteranking").hide();
+                        $("#game_rolecode").html("");
+                        $("#game_freediamond").html("");
+                        $("#game_unlocktime").html("");
+                        $("#game_onlinestatus").html("");
+                        $("#linkonlinestatus").hide();
+                        $("#game_diamond").html("");
+                        $("#txt_game_level").hide();
+                        $("#txt_game_gold").hide();
+                        $("#txt_game_freediamond").hide();
+                        $("#txt_game_diamond").hide();
+                        $("#devgameuserinfo").hide();
+                        //ShowErrorMsg('<{:l("public_prompt_information")}>','未查询到游戏数据!');
+
+
+                        $("#game_last_clearance").html("");
+                        $("#game_friends_num").html("");
+                        $("#game_legion_id").html("");
+                        $("#game_legion_name").html("");
+                        $("#game_complete_task").html("");
+                        $("#game_activation_task").html("");
+
+                        $("#game_white_card_type").html("");
+                        $("#game_white_all_num").html("");
+                        $("#game_white_all_grade").html("");
+
+                        $("#game_blue_card_type").html("");
+                        $("#game_blue_all_num").html("");
+                        $("#game_blue_all_grade").html("");
+
+                        $("#game_purple_card_type").html("");
+                        $("#game_purple_all_num").html("");
+                        $("#game_purple_all_grade").html("");
+
+                        $("#game_orange_card_type").html("");
+                        $("#game_orange_all_num").html("");
+                        $("#game_orange_all_grade").html("");
+
+
+                        for(var i = 1 ;i<=5;i++){
+                            $('#game_chest_'+i).hide();
+                        }
+
+                        showMsg(acctype);
+                    }
+                }
+                HideProgress();
+            });
+        } else if (flag == "3") {//操作记录
+            ShowProgress('<{:l("public_loading")}>');
+            var options = {
+                url: "<{:U('GmTool/getChangeLog')}>",
+                queryParams: { acctype: acctype, account: account },
+                loadMsg: '<{:l("public_is_Loading")}>'
+            };
+            rainGrid = $("#dgchangelog");
+            rainGrid.datagrid(options);
+            HideProgress();
+        } else if (flag == "4") {//邮件列表
+            ShowProgress('<{:l("public_loading")}>');
+            var options = {
+                url: "<{:U('GmTool/getUserEmailLog')}>",
+                queryParams: { acctype: acctype, account: account },
+                loadMsg: '<{:l("public_is_Loading")}>'
+            };
+            rainGrid = $("#usermaillist");
+            rainGrid.datagrid(options);
+            HideProgress();
+        }
+        
+    }
+    function showMsg(acctype) {
+        if (acctype == "1"){//编号
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_wrong_numbering_information")}>');
+        } else {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_wrong_id")}>');
+        }
+    }
+    ////踢下线
+    //function kickPlayerffline() {
+    //    $.messager.confirm("踢玩家下线确认", "玩家正在线上，确定要将玩家踢下线？", function (r) {
+    //        if (r) {
+    //            var roleid = $("#roleid").html();
+    //            if (roleid == "") {
+    //                ShowErrorMsg('<{:l("public_prompt_information")}>','玩家角色信息错误!');
+    //                return false;
+    //            }
+    //            ShowProgress("加载中...");
+    //            $.post("<{:U('GmTool/kickPlayerffline')}>", { roleid: roleid }, function (data) {
+    //                var dataObj = eval("(" + data + ")");
+    //                if (dataObj.code == "100") {
+    //                    $("#linkKickPlayerffline").hide();
+    //                    $("#rolestatus").html("断开连接");
+    //                } else {
+    //                    ShowErrorMsg('<{:l("public_prompt_information")}>','未查询到基础信息!');
+    //                }
+    //                HideProgress();
+    //            });
+    //        }
+    //    });
+    //    return false;
+    //}
+    //查看日志
+    function selLog() {
+        var acctype = Getcomboboxvalue('acctype');
+        var account = Getinputvalue("account");
+        //var tab = $('#index-index-layout-center-tabs').tabs('getSelected');  // get selected panel
+        //tab.panel('refresh', "<{:U('GmTool/getUserInfolog')}>&menuid=71&acctype=" + acctype + "&account=" + escape(account));
+        var title = "角色Log";
+        var thinklanguage = "<{$thinklanguage}>";
+        if (thinklanguage == "ko-kr") {
+            title = "유저Log";
+        }
+        var url = "/index.php?m=&c=gm_tool&a=getuserinfologs&menuid=71&acctype=" + acctype + "&account=" + escape(account);
+        var iconCls = "fa fa-puzzle-piece";
+        if ($('#index-index-layout-center-tabs').tabs('exists', title)) {
+            $('#index-index-layout-center-tabs').tabs('close', title);
+        }
+        var option = { title: title, href: url, iconCls: iconCls, closable: true, cache: false };
+        $('#index-index-layout-center-tabs').tabs('add', option);
+    }
+
+    function unlockrole_rolSave() {
+        if($('#selsanctiontimes').length < 1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_jurisdiction_error}>');
+        }
+        var cancellationtime = Getcomboboxvalue("selsanctiontimes");
+        var upsanctionreason = Getinputvalue("txtupsanctionreason");
+        var recovery_roleid = Getinputvalue("hidsanction_roleid");
+        var recovery_rolecode = Getinputvalue("hidrecovery_rolecode");
+        var isunlock = Getinputvalue("hidsanction_isunlock");
+        if (isunlock == "1") {
+            if (cancellationtime == "-2" || cancellationtime == "-3") {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_please_choose_sanctions_time")}>!');
+                return false;
+            }
+        }
+        if (upsanctionreason == "") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_please_input_the_reason")}>!');
+            return false;
+        }
+        var p = { roleid: recovery_roleid, rolecode: recovery_rolecode, timeid: cancellationtime, reason: upsanctionreason, isunlock: isunlock };
+        ShowProgress('<{:l("public_loading")}>');
+        $.post("<{:U('GmTool/setrequestunlock')}>", p, function (data) {
+            HideProgress();
+            var dataObj = eval("(" + data + ")");
+            if (dataObj.code == "100") {
+                if (isunlock == "1") {
+                    $("#linkdiprequestlockrol").hide();
+                    $("#linkrequestunlockrole").show();
+                    $("#game_userstate").html('<{:l("public_deactivated")}>');
+                } else {
+                    $("#linkdiprequestlockrol").show();
+                    $("#linkrequestunlockrole").hide();
+                    $("#game_userstate").html('<{:l("public_not_deactivated")}>');
+                }
+                Search();//刷新列表
+                ShowSuccessMsg('<{:l("public_prompt_information")}>','<{:l("public_successful_operation")}>!');
+            } else {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_operation_failed")}>!');
+            }
+            $('#unlockRoleRolBox').dialog('close');
+        });
+    }
+
+    function upUserinfoRecoverySave() {
+        if($('#selcancellationtime').length < 1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_jurisdiction_error}>');
+        }
+        var cancellationtime = Getcomboboxvalue("selcancellationtime");
+        var upRecoveryReason = Getinputvalue("txtupRecoveryReason");
+        var recovery_roleid = Getinputvalue("hidrecovery_roleid");
+        var recovery_rolerode = Getinputvalue("hidrecovery_rolecode");
+        var normalid = $("#base_normalid").val();
+        if (cancellationtime == "-1") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_please_choose_logout_time")}>!');
+            return false;
+        }
+        if (upRecoveryReason == "") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("user_please_input_the_reason")}>');
+            return false;
+        }
+        var p = { roleid: normalid, rodecode: recovery_rolerode, timeid: cancellationtime, reason: upRecoveryReason };
+        ShowProgress('<{:l("public_loading")}>');
+        $.post("<{:U('GmTool/unlockrole')}>", p, function (data) {
+            HideProgress();
+            var dataObj = eval("(" + data + ")");
+            if (dataObj.code == "100") {
+                //$("#base_userstatus").html("正常");
+                //$("#linkrecovery").hide();
+                Search();//刷新列表
+                ShowSuccessMsg('<{:l("public_prompt_information")}>','<{:l("public_recovery_was_successful")}>!');
+            } else {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_restore_failed")}>!');
+            }
+            $('#userinfoRecoveryBox').dialog('close');
+        });
+    }
+</script>
+<script type="text/javascript">
+    var isload = "0";
+    $('#tabmenu_userinfo').tabs({
+        border: false,
+        onSelect: function (title) {
+            var tindex = "";
+            switch (title) {
+                case '<{:l("public_basic_information")}>': tindex = "1"; break;
+                case '<{:l("public_game_information")}>': tindex = "2"; break;
+                case '<{:l("public_change_record")}>': tindex = "3"; break;
+                case '<{:l("public_mailing_list")}>': tindex = "4"; break;
+            }
+            $("#tabindex").val(tindex);
+            if (isload == "1") {
+                Search("1");
+            }
+            isload = "1";
+        }
+    });
+    function getPlatName(plat) {
+        switch (plat) {
+            case -1: return '<{:l("public_unknown")}>';
+            case 0: return "IOS";
+            case 1: return "Android"; 
+        }
+    }
+    function getStatusName(status) {
+        switch (status) {
+            case 0: return '<{:l("public_not_logged_in")}>';
+            case 1: return '<{:l("public_logged_in")}>';
+            case 2: return '<{:l("public_disconnect")}>';
+        }
+    }
+    function getUserStatusName(status) {
+        switch (status) {
+            case 0: $("#base_deletetime").html("——");return '<{:l("public_normal")}>';
+            case 1: return '<{:l("public_cancellation")}>';
+        }
+    }
+    function getLockflagName(lockflag) {
+        switch (lockflag) {
+            case 0: $("#game_unlocktime").html("——"); return '<{:l("public_not_deactivated")}>';
+            case 1: return '<{:l("public_deactivated")}>';
+        }
+    }
+    function getEmailStateName(val) {
+        var v = val.split("|");
+        if (v[1] == "0" || v[1] == "2") {
+            switch (v[0]) {
+                case "0": return '<{:l("public_unread")}>';
+                case "1": return '<{:l("public_read")}>';
+                case "2": return '<{:l("public_have_received")}>';
+            }
+        } else {
+            switch (v[0]) {
+                case "0": return '<{:l("public_not_received")}>';
+                case "1": return '<{:l("public_read")}>';
+                case "2": return '<{:l("public_have_received")}>';
+            }
+        }
+    }
+    function getEmailTypeName(typeid) {
+        switch (typeid) {
+            case 0: return '<{:l("public_text_mail")}>';
+            case 1: return '<{:l("public_accessory_mail")}>';
+            case 2: return '<{:l("public_text_id_common_mail")}>';
+            case 3: return '<{:l("public_attachment_mail_for_text_id")}>';
+        }
+    }
+    function setRecoveryText(val) {
+        var v = val.split("|");
+        if (v[3] == "1" || v[3] == "3") {//有附件的邮件才能回收
+            if (v[1] == "0" || v[1] == "1") {
+                return '<a href="javascript:void(0);" onclick="setRecovery(' + v[0] + ',' + v[2] + ')"><{:l("public_recovery_hs")}></a>';
+            }
+        }
+    }
+    function setOperateTimeText(val) {
+        var v = val.split("|");
+        if (v[0] == "0") {
+            return "——";
+        } else {
+            return v[1];
+        }
+    }
+</script>

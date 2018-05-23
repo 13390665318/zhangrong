@@ -1,0 +1,149 @@
+<form id="limitEditForm" method="post">
+    <table  class="tab_style_table" style="width:100%;text-align:left;">
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_limit_id}></td>
+            <td> <input name="activityid" value="0" type="text" id="activity_id"  class="easyui-numberbox" data-options="required:true" readonly="readonly"/></td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_show_order}></td>
+            <td> <input name="showorder"  type="text"  id="show_order" class="easyui-numberbox" data-options="min:1,required:true"/></td>
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_limit_lower_level}>（<{$Think.lang.public_info_steam_optional}>）</td>
+            <td> <input name="lowlevel" type="text"  id="low_level" class="easyui-numberbox" data-options="min:1"/></td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_limit_high_level}>（<{$Think.lang.public_info_steam_optional}>）</td>
+            <td> <input name="highlevel"  type="text" id="high_level"  class="easyui-numberbox" data-options="min:1" /></td>
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_limit_low_hisscore}><br/>（<{$Think.lang.public_info_steam_optional}>）</td>
+            <td> <input name="lowhisscore"  type="text" id="low_hisscore" class="easyui-numberbox" data-options="min:1" /></td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_limit_high_hisscore}><br/>（<{$Think.lang.public_info_steam_optional}>）</td>
+            <td> <input name="highhisscore"  type="text" id="high_hisscore" class="easyui-numberbox" data-options="min:1" /></td>
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor" style="width: 120px" ><{:l("preferential_time_start")}>(UTC<{:l("content_api_time")}>)</td>
+
+            <td> <input name="starttime" class="easyui-datetimebox" id="start_time" data-options="editable:false,showSeconds:true,required:true" style="width: 160px"/></td>
+
+            <td class="tab_style_bgcolor" style="width: 120px" ><{:l("preferential_time_end")}>(UTC<{:l("content_api_time")}>)</td>
+            <td> <input name="endtime" class="easyui-datetimebox" id="end_time" data-options="editable:false,showSeconds:true,required:true" style="width: 160px"/>
+
+        </tr>
+
+
+        <tr>
+            <td class="tab_style_bgcolor"  style="width: 120px"><{$Think.lang.activity_limit_title_text_id}></td>
+            <td>
+                <select  name="title"  id="titles_id" class="easyui-combobox" validtype=""  data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <option value="-1"><{$Think.lang.public_use_no_choice}></option>
+                    <foreach name="title_id" key="textid" item="textname" data-options="editable:false,panelHeight:'300'">
+                        <option value="<{$textname}>"><{$textid}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_limit_title}></td>
+            <td >
+                <textarea disabled="disabled" id="titles_content"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_limit_introduce_id}></td>
+            <td>
+                <select  name="introduce"  id="introduces_id" class="easyui-combobox" validtype=""  data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <option value="-1"><{$Think.lang.public_use_no_choice}></option>
+                    <foreach name="introduce_id" key="textid" item="textname" data-options="editable:false,panelHeight:'300'">
+                        <option value="<{$textname}>"><{$textid}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_limit_introduce}></td>
+            <td >
+                <textarea disabled="disabled" id="introduces_content"></textarea>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="tab_style_bgcolor" ><{$Think.lang.activity_limit_img}></td>
+            <td colspan="3">
+                <input name="picname"  type="text" id="pic_name" class="easyui-textbox" data-options="required:true" style="width: 100%"/>
+            </td>
+        </tr>
+
+        <for start="1" end="5" >
+            <tr>
+                <td class="tab_style_bgcolor" ><{$Think.lang.activity_exchange_id}>_<{$i*2-1}></td>
+                <td>
+                    <select  name="exchangeid<{$i*2-1}>"  id="exchange_id<{$i*2-1}>" class="easyui-combobox task-list-edit" validtype=""  data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    </select>
+                </td>
+
+                <td class="tab_style_bgcolor" ><{$Think.lang.activity_exchange_id}>_<{$i*2}></td>
+                <td >
+                    <select  name="exchangeid<{$i*2}>"  id="exchange_id<{$i*2}>" class="easyui-combobox task-list-edit" validtype=""  data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    </select>
+                </td>
+            </tr>
+        </for>
+    </table>
+</form>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#titles_id").combobox({
+            onChange: function (n, o) {
+                if (n == "") {
+                    $("#titles_content").val('');
+                } else {
+                    $("#titles_content").val(n);
+                }
+            }
+        });
+        $("#introduces_id").combobox({
+            onChange: function (n, o) {
+                if (n == "") {
+                    $("#introduces_content").val('');
+                } else {
+                    $("#introduces_content").val(n);
+                }
+            }
+        });
+    })
+
+    function limit_edit_fill(row) {
+        $('#activity_id').numberbox('setValue', row.activityid);
+        $('#show_order').numberbox('setValue', row.showorder);
+        if(row.lowlevel!=-1)$('#low_level').numberbox("setValue",row.lowlevel);
+        if(row.highlevel!=-1)$('#high_level').numberbox("setValue",row.highlevel);
+        if(row.lowhisscore!=-1)$('#low_hisscore').numberbox("setValue",row.lowhisscore);
+        if(row.highhisscore!=-1)$('#high_hisscore').numberbox("setValue",row.highhisscore);
+
+        $('#start_time').datetimebox("setValue",row.starttime);
+        $('#end_time').datetimebox("setValue",row.endtime);
+        $('#titles_id').combobox("select",row.title);
+        $("#titles_content").val($('#titles_id').combobox("getValue"));
+        $('#introduces_id').combobox("select",row.introduce);
+        $("#introduces_content").val($('#titles_id').combobox("getValue"));
+        $("#pic_name").textbox("setValue",row.picname);
+
+        $.ajax({
+            type:'post',
+            url:"<{:U('taskListPost')}>",
+            success:function (data) {
+                $('.task-list-edit').combobox({
+                    data:data,
+                    valueField:'value',
+                    textField:'text'
+                });
+                $('.task-list-edit').combobox("select",-1);
+                for(var i=1;i<9;i++){
+                    var str = "exchangeId"+i;
+                    $("#exchange_id"+i).combobox("select",row[str]);
+                }
+            }
+        });
+    }
+</script>

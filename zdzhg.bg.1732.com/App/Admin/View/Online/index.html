@@ -1,0 +1,672 @@
+<!--datagrid列表-->
+
+
+<div id="show" style="font-size: 18px;">
+    今日:<input type="checkbox" name="test" value="1" style="width: 30px;height: 20px;" checked="checked"/>
+    &nbsp;昨日:<input type="checkbox" value="2"style="width: 30px;height: 20px;"name="test" >
+    &nbsp;近3日:<input type="checkbox" value="3"style="width: 30px;height: 20px;" name="test"/>
+    &nbsp;近5日:<input type="checkbox" value="5" style="width: 30px;height: 20px;"name="test"/>
+    &nbsp;近7日:<input type="checkbox" value="7" style="width: 30px;height: 20px;"name="test"/>
+    <input type="button" value="<{:l("public_select")}>" onclick="online()"/>
+</div>
+    <!--<a href="javascript:void(0);" onclick=" Search();" id="butselemaillog" class="easyui-linkbutton" style="">&nbsp;&nbsp;<{:l("public_select")}>&nbsp;&nbsp;</a>-->
+<div class="canvas1_total">
+    <div id="chart3"></div>
+    <div id="chart33" style="display:none"></div>
+</div>
+<script type="text/javascript" src="__ROOT__/Public/yy/js/jQuery.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/yy/js/jqplot.js"></script>
+<!-- 上传文件 -->
+
+<!-- 搜索,绑定 -->
+
+<script type="text/javascript">
+    //搜索
+    function online(){
+        var obj=document.getElementsByName('test');
+        var s=new Array();
+
+        var obj3='<{$result}>';
+        var obj3 = eval(obj3);
+        var stu3=new Array();
+        var rus3= new Array();
+        var rus3s= new Array();
+        var rus5s= new Array();
+        var rus7s= new Array();
+        for (var i =0; i<obj3.length; i++) {
+            stu3[i]=obj3[i].num;
+            rus3[i]=obj3[i].nums;
+            rus3s[i]=obj3[i].numss;
+            rus5s[i]=obj3[i].numsss;
+            rus7s[i]=obj3[i].numssss;
+        }
+
+
+        $("#chart3").hide();
+        $("#chart33").show();
+        $("#chart33").html(" ");
+        var arr=new Array();
+        var arr2=new Array();
+        for(var i=0; i<obj.length; i++){
+            if(obj[i].checked) {
+                s=obj[i].value; //如果选中，将value添加到变量s中
+                if(s==1){
+                    arr[i]=stu3;
+                    arr2[i]="今日整点人数";
+                }else if(s==2){
+                    arr[i]=rus3;
+                    arr2[i]="昨日整点人数";
+                }else if(s==3){
+                    arr[i]= rus3s;
+                    arr2[i]="前3天人数";
+                }else if(s==5){
+                    arr[i]= rus5s;
+                    arr2[i]="前五天人数";
+                }else if(s==7){
+                    arr[i]= rus7s;
+                    arr2[i]="前7天人数";
+                }
+            }
+        }
+        for(var i=0,len=arr.length;i<len;i++){
+            if(!arr[i]||arr[i]==''||arr[i] === undefined){
+                arr.splice(i,1);
+                len--;
+                i--;
+            }
+        }
+
+        for(var i=0,len=arr.length;i<len;i++){
+            if(!arr2[i]||arr2[i]==''||arr2[i] === undefined){
+                arr2.splice(i,1);
+                len--;
+                i--;
+            }
+        }
+        if(arr.length==1){
+            var data = [arr[0]];
+            var line_title = [arr2[0]]; //曲线名称
+        }else if(arr.length==2){
+            var data = [arr[0],arr[1]];
+            var line_title = [arr2[0],arr2[1]]; //曲线名称
+        }else if(arr.length==3){
+            var data = [arr[0],arr[1],arr[2]];
+            var line_title = [arr2[0],arr2[1],arr2[2]]; //曲线名称
+        }else if(arr.length==4){
+            var data = [arr[0],arr[1],arr[2],arr[3]];
+            var line_title = [arr2[0],arr2[1],arr2[2],arr2[3]]; //曲线名称
+        }else if(arr.length==5){
+            var data = [arr[0],arr[2],arr[3],arr[4],arr[5]];
+            var line_title = [arr2[0],arr2[1],arr2[3],arr2[4],arr2[5]]; //曲线名称
+        }
+
+
+
+        console.log(data);
+
+
+        var data_max = 3000 ; //Y轴最大刻度
+
+        var y_label = "人数"; //Y轴标题
+        var x_label = "时间整点"; //X轴标题
+        var x3 = [00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23]; //定义X轴刻度值
+        var title = "这是标题"; //统计图标标题
+
+        j.jqplot.diagram.base("chart33", data, line_title, "整点在线人数", x3, x_label, y_label, data_max, 1);
+
+
+
+
+
+
+
+    }
+    function Search() {
+        alert(1);
+        GridReload("dgemailloglist", "form_dgemailloglist");
+    }
+    //编辑
+    function setEmailEdit(id, apptype) {
+        bindEmailInfo(id, apptype);
+        $("#isedit").val("2");//设置为编辑状态
+        isadd = "0";
+    }
+    //查看
+    function selEmailInfo(id, apptype) {
+        //查看隐藏按钮
+        $('#butaddenclosure').linkbutton({ disabled: true });
+        bindEmailInfo(id, apptype);
+        $("#isedit").val("3");//设置为查看状态
+    }
+    //绑定编辑,查看列表
+    function bindEmailInfo(id, apptype) {
+        $("#emailid").val(id);
+        $.post("<{:U('Email/getemailinfo')}>", { id: id }, function (data) {
+            var d = eval("(" + data + ")")
+            if (apptype == "3") {//编号发送
+                $("#tabmenu_sendemail").tabs("select", 1);
+                var senduser = d["roles"];
+                $("#senduser").val(senduser.replace(/,/g, "\r\n"));//按人员发送列表
+            } else {//通过条件发送
+                $("#tabmenu_sendemail").tabs("select", 0);
+                $('#selplatlist').combobox("select", d["apptype"]);
+                $('#levelbegin').numberbox('setValue', d["minlv"]);
+                $('#levelend').numberbox('setValue', d["maxlv"]);
+                $('#danbegin').numberbox('setValue', d["rankmin"]);
+                $('#danend').numberbox('setValue', d["rankmax"]);
+            }
+            $('#emailsendtime').datetimebox('setValue', d["sendtime"]);
+            $('#emaildeadline').datetimebox('setValue', d["deltime"]);
+            if (parseInt(d["expiretime"]) > 0) {
+                $("#storagePeriodDay").numberbox('setValue', d["expiretime"]);
+                $("input[name='storagePeriod'][value=1]").attr("checked", true);
+            } else {
+                $("input[name='storagePeriod'][value=" + d["expiretime"] + "]").attr("checked", true);
+            }
+            //$("#title").textbox("setValue", d["title"]);
+            //$("#sendcontent").textbox("setValue", d["content"]);
+
+            var data1 = $('#seltextemailtitlelist').combobox('getData');
+            for (var i = 0; i <= data1.length; i++) {
+                if (data1[i].text == d["title"]) {
+                    $('#seltextemailtitlelist').combobox('select', data1[i].value);
+                    break;
+                }
+            }
+            var data2 = $('#seltextemailcontentlist').combobox('getData');
+            for (var i = 0; i <= data2.length; i++) {
+                if (data2[i].text == d["content"]) {
+                    $('#seltextemailcontentlist').combobox('select', data2[i].value);
+                    break;
+                }
+            }
+            $("#operationreason").textbox("setValue", d["operationreason"]);
+            //添加附件
+            if (d["enclosurelist"] == "") {
+                $("input[name='enclosure'][value=0]").attr("checked", true);
+            } else {
+                $('#butaddenclosure').linkbutton({ disabled: false });
+                $("input[name='enclosure'][value=1]").attr("checked", true);
+            }
+            var enclosurelist = eval(d["enclosurelist"]);
+            $.each(enclosurelist, function (index, content) {
+                addRow(decodeURI(content.typename), content.type, decodeURI(content.itemname), content.id, content.count)
+            });
+        });
+    }
+    //重置表单
+    function resetFromConfirm(isPrompt) {
+        if (isPrompt) {
+            //$.messager.confirm("确认", "切换会清空填写内容,确认切换吗?", function (r) {
+            //    if (r) {
+            //        resetFrom();
+            //    }
+            //});
+            resetFrom();
+        } else {
+            resetFrom();
+        }
+    }
+    //重置表单
+    function resetFrom() {
+        rowCount = 0;
+        //$("#isedit").val("1");
+        $("#senduser").val("");
+        //$("#selplatlist").combobox("select", "2");
+        var data = $('#selplatlist').combobox('getData');
+        $('#selplatlist').combobox('select', data[0].value);
+        var data1 = $('#seltextemailtitlelist').combobox('getData');
+        $('#seltextemailtitlelist').combobox('select', data1[0].value);
+        var data2 = $('#seltextemailcontentlist').combobox('getData');
+        $('#seltextemailcontentlist').combobox('select', data2[0].value);
+        $('#levelbegin').numberbox('setValue', "");
+        $('#levelend').numberbox('setValue', "");
+        $('#danbegin').numberbox('setValue', "");
+        $('#danend').numberbox('setValue', "");
+        $('#emailsendtime').datetimebox('setValue', getsystemdate);
+        $('#emaildeadline').datetimebox('setValue', getsystemdate);
+        $("#storagePeriodDay").numberbox('setValue', "1");
+        //$("input[name='storagePeriod'][value='-1']").attr("checked", true);
+        //$("input[name='enclosure'][value=0]").attr("checked", true);
+        $("#title").textbox("setValue", "");
+        $("#operationreason").textbox("setValue", "");
+        $("#sendcontent").textbox("setValue", "");
+        $('#butaddenclosure').linkbutton({ disabled: false });
+        $("#butsendemail").show();
+        $('#enclosurelist').empty();
+    }
+    //判断是否填写了内容
+    function checkValue() {
+        var bl = false;
+        var isedit = Getinputvalue("isedit");//是否编辑 1添加,2编辑
+        var emailsendtime = Getdateboxvalue('emailsendtime');//发送时间
+        //var levelbegin = $("#levelbegin").numberbox('getValue');//Getinputvalue("levelbegin");//开始等级
+        //var levelend = $("#levelend").numberbox('getValue');//Getinputvalue("levelend");//结束等级
+        var emaildeadline = $("#emaildeadline").numberbox('getValue');//Getdateboxvalue('emaildeadline');//截止时间
+        //var danbegin = $("#danbegin").numberbox('getValue');//Getinputvalue('danbegin');//开始段位
+        //var danend = Getinputvalue('danend');//结束段位
+        var title = Getinputvalue("title");//邮件标题
+        var operationreason = Getinputvalue("operationreason");//操作原因
+        var sendcontent = Getinputvalue("sendcontent");//发送内容
+        //var awardcount = $("#enclosurelist").find("tr").length - 1;//附件数量
+        var senduser = Getinputvalue("senduser");//按人员发送列表
+        if (isedit == "2") {
+            bl = false;
+        } else {
+            if (emailsendtime != "" || emaildeadline != "" || title != "" || operationreason != "" || sendcontent != "" || parseInt(rowCount) > 0 || senduser != "") {
+                bl = true;
+            }
+        }
+        resetFromConfirm(bl);
+        if (isedit == "3") {
+            $("#butsendemail").hide();
+        }
+    }
+    //删除
+    function delEmail(id, apptype) {
+        $.messager.confirm('<{:l("public_determine")}>', '<{:l("email_confirm_deletion")}>?', function (r) {
+            if (r) {
+                ShowProgress('<{:l("public_loading")}>');
+                $.post("<{:U('Email/delemaillog')}>", { id: id, apptype: apptype }, function (data) {
+                    HideProgress();
+                    if(data.status==0){
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                        return false;
+                    }
+                    if (data["status"] == "1") {
+                        Search();
+                    }
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>',data["info"]);
+                });
+            }
+        });
+    }
+    //操作
+    function operatorText(val) {
+        var v = val.split("|");
+        switch (v[0]) {
+            case "0": return '<a href="javascript:void(0);" onclick="setEmailEdit(' + v[1] + ',' + v[2] + ')"><{:l("public_use_edit")}></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="delEmail(' + v[1] + ',' + v[2] + ')"><{:l("public_use_delete")}></a>';
+            case "1":
+            case "-1": return '<a href="javascript:void(0);" onclick="selEmailInfo(' + v[1] + ',' + v[2] + ')"><{:l("public_view")}></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="delEmail(' + v[1] + ',' + v[2] + ')"><{:l("public_use_delete")}></a>';
+        }
+    }
+    //状态
+    function stateText(val) {
+        switch (val) {
+            case "0": return '<{:l("public_waiting_for_sending")}>';
+            case "1": return '<{:l("public_send_successfully")}>';
+            case "-1": return '<{:l("public_fail_in_send")}>';
+        }
+    }
+    //发送范围
+    function apptypeText(val) {
+        switch (val) {
+            case "0": return "IOS";
+            case "1": return "AOS";
+            case "-1": return '<{:l("public_use_player_all")}>';
+            case "3": return '<{:l("public_use_platform_number")}>';
+        }
+    }
+</script>
+<!-- tab 切换 -->
+<script type="text/javascript">
+    var loadindex = "0";
+    var isadd = "0";
+    $('#tabmenu_sendemail').tabs({
+        border: false,
+        onSelect: function (title, index) {
+            switch (title) {
+                case '<{:l("email_send_by_condition")}>':
+                    $("#sendtype").val(1);
+                    $("#dsendemail").show();
+                    $("#tabcondition").show();
+                    $("#tabpersonnel").hide();
+                    $("tabmenu_sendemail").height("0");
+                    break;
+                case '<{:l("email_send_by_personnel")}>':
+                    $("#sendtype").val(2);
+                    $("#dsendemail").show();
+                    $("#tabcondition").hide();
+                    $("#tabpersonnel").show();
+                    $("tabmenu_sendemail").height("0");
+                    break;
+                case '<{:l("email_mail_record")}>':
+                    $("#dsendemail").hide();
+                    break;
+            }
+            if ((index == 0 || index == 1) && loadindex == "1") {
+                if (isadd == "0") {
+                    isadd = "1";
+                } else {
+                    $("#isedit").val("1");
+                }
+                checkValue();//重置表单
+            }
+            loadindex = "1";
+        }
+    });
+</script>
+<!-- 发送邮件 -->
+<script type="text/javascript">
+    function SendEmail() {
+        var id = Getinputvalue("emailid");//邮件ID，编辑邮件时使用
+        var isedit = Getinputvalue("isedit");//是否编辑 1添加,2编辑
+        var platid = Getcomboboxvalue("selplatlist");//平台
+        var emailsendtime = Getdateboxvalue('emailsendtime');//发送时间
+        var levelbegin = $("#levelbegin").numberbox('getValue');//Getinputvalue("levelbegin");//开始等级
+        var levelend = $("#levelend").numberbox('getValue');//Getinputvalue("levelend");//结束等级
+        var emaildeadline = Getdateboxvalue('emaildeadline');//截止时间
+        var danbegin = $("#danbegin").numberbox('getValue');//Getinputvalue('danbegin');//开始段位
+        var danend = $("#danend").numberbox('getValue');//Getinputvalue('danend');//结束段位
+        var expiretime = $("input[name='storagePeriod']:checked").val();//保管期限
+        var storagePeriodDay = Getinputvalue("storagePeriodDay");//保管天数
+        var title = Getcomboboxtext("seltextemailtitlelist");//Getinputvalue("title");//邮件标题
+        var operationreason = Getinputvalue("operationreason");//操作原因
+        var sendcontent = Getcomboboxtext("seltextemailcontentlist"); //Getinputvalue("sendcontent");//发送内容
+        //var awardcount = $("#enclosurelist").find("tr").length - 1;//附件数量
+        //if (awardcount < 0)
+        //    awardcount = 0;
+        var enclosure = $("input[name='enclosure']:checked").val();//是否有附件
+        var sendtype = Getinputvalue("sendtype");//发送类型1条件,2人员
+        var senduser = Getinputvalue("senduser");//按人员发送列表
+        senduser = senduser.replace(/\r/ig, "").replace(/\n/ig, ",");
+        if (sendtype == "1"){//按条件发送
+            if (levelbegin == "" && levelend == ""){
+                //ShowErrorMsg('<{:l("public_prompt_information")}>','等级不能为空!');
+                //return false;
+                if (levelbegin == "") {
+                    levelbegin = "1";
+                }
+                if (levelend == "") {
+                    levelend = "150"
+                }
+            } else {
+                if (levelbegin == "" || levelend == "") {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_level_cannot_be_empty")}>');
+                    return false;
+                }
+                if (parseInt(levelbegin) > parseInt(levelend)) {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_grade_filling_error")}>');
+                    return false;
+                }
+            }
+            if (danbegin == "" && danend == "") {
+                //ShowErrorMsg('<{:l("public_prompt_information")}>','段位不能为空!');
+                //return false;
+                if (danbegin == "") {
+                    danbegin = "1";
+                }
+                if (danend == "") {
+                    danend = "20"
+                }
+            } else {
+                if (danbegin == "" || danend == "") {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_dan_can_not_be_empty")}>');
+                    return false;
+                }
+                if (parseInt(danbegin) > parseInt(danend)) {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_dan_fill_in_error")}>');
+                    return false;
+                }
+            }
+        } else {//按人员发送
+            if (senduser == "") {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_sending_number_cannot_be_empty")}>');
+                return false;
+            } else {
+                if (senduser.split(",").length > 100) {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_the_sending_number_must_not_exceed_100")}>');
+                    return false;
+                }
+            }
+        }
+        //if (!($('#emailsendtime').datetimebox("isValid"))) {
+        //    ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_start}>");
+        //    return false;
+        //}
+
+        //if (!($('#emaildeadline').datetimebox("isValid"))) {
+        //    ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.notice_error_end}>");
+        //    return false;
+        //}
+        if (emailsendtime == "") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_sending_time_cannot_be_empty")}>');
+            return false;
+        } else {
+            var d = getsystemtime();
+            var sendtimedate_n = new Date(Date.parse(emailsendtime.replace(/-/g, "/")));
+            var sendtimedate = Date.UTC(sendtimedate_n.getUTCFullYear(), sendtimedate_n.getUTCMonth(), sendtimedate_n.getUTCDate(), sendtimedate_n.getUTCHours(), sendtimedate_n.getUTCMinutes(), sendtimedate_n.getUTCSeconds()) / 1000;
+            //var sendtimedate = Date.parse(emailsendtime.replace(/-/g, "/")) / 1000; //new Date(emailsendtime);
+            if (sendtimedate < d) {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_send_time_is_less_than_current_time")}>');
+                return false;
+            }
+        }
+        if (emaildeadline == "") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_the_deadline_should_not_be_empty")}>');
+            return false;
+        } else {
+            var d = getsystemtime();
+            //var deadlinedate = Date.parse(emaildeadline.replace(/-/g, "/")) / 1000;//new Date(emaildeadline);
+            var sendtimedate_n = new Date(Date.parse(emaildeadline.replace(/-/g, "/")));
+            var deadlinedate = Date.UTC(sendtimedate_n.getUTCFullYear(), sendtimedate_n.getUTCMonth(), sendtimedate_n.getUTCDate(), sendtimedate_n.getUTCHours(), sendtimedate_n.getUTCMinutes(), sendtimedate_n.getUTCSeconds()) / 1000;
+
+            if (deadlinedate < d) {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_end_time_is_less_than_current_time")}>');
+                return false;
+            } else {
+                //var sendtimedate = Date.parse(emailsendtime.replace(/-/g, "/"))/1000;//new Date(emailsendtime);
+                var sendtimedate_n = new Date(Date.parse(emailsendtime.replace(/-/g, "/")));
+                var sendtimedate = Date.UTC(sendtimedate_n.getUTCFullYear(), sendtimedate_n.getUTCMonth(), sendtimedate_n.getUTCDate(), sendtimedate_n.getUTCHours(), sendtimedate_n.getUTCMinutes(), sendtimedate_n.getUTCSeconds()) / 1000;
+
+                if (deadlinedate < sendtimedate) {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_end_less_than_sending_time")}>');
+                    return false;
+                }
+            }
+        }
+        if (expiretime == "1") {
+            if (storagePeriodDay == "") {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_no_specified_days")}>');
+                return false;
+            } else {
+                expiretime = parseInt(storagePeriodDay)*24*60*60;
+            }
+        }
+        if (title == "" || title == '<{:l("email_please_select_the_title_text_id")}>') {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_titles_cant_be_empty")}>');
+            return false;
+        }
+        if (sendcontent == "" || sendcontent == '<{:l("email_please_select_the_content_text_id")}>') {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_sending_content_cannot_be_empty")}>');
+            return false;
+        }
+        if (enclosure == "1") {
+            if (rowCount < 1) {
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_attachment_information_cannot_be_empty")}>');
+                return false;
+            }
+        }
+        if (operationreason == "") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_operation_can_not_be_empty")}>');
+            return false;
+        }
+        //附件信息
+        var enclosurecontent = "";
+        var enclosureJson = "[";
+
+        for (var i = 1; i <= rowCount; i++) {
+            enclosureJson += "{\"typename\":\"" + $("#enclosurelist").find("tr").eq(i).children("td").eq(0).text() + "\"";
+            enclosureJson += ",\"type\":\"" + $("#enclosurelist").find("tr").eq(i).children("td").eq(1).text() + "\"";
+            enclosureJson += ",\"itemname\":\"" + $("#enclosurelist").find("tr").eq(i).children("td").eq(2).text() + "\"";
+            enclosureJson += ",\"id\":\"" + $("#enclosurelist").find("tr").eq(i).children("td").eq(3).text() + "\"";
+            enclosureJson += ",\"count\":\"" + $("#enclosurelist").find("tr").eq(i).children("td").eq(4).text() + "\"},";
+            enclosurecontent += $("#enclosurelist").find("tr").eq(i).children("td").eq(2).text() + "_" + $("#enclosurelist").find("tr").eq(i).children("td").eq(4).text() + "<br />";
+        }
+        enclosureJson = (enclosureJson.length > 10 ? enclosureJson.substring(0, enclosureJson.length - 1) : enclosureJson) + "]";
+
+        $.messager.confirm('<{:l("email_send_mail_confirmation")}>', '<{:l("email_in")}> ' + emailsendtime + ' <{:l("email_send_this_mail")}>！<br /><{:l("email_confirm_send")}>?', function (r) {
+            if (r) {
+                var p = { id: id, isedit: isedit, sendtype: sendtype, senduser: senduser, platid: platid, sendtime: emailsendtime, levelbegin: levelbegin, levelend: levelend, deadline: emaildeadline, danbegin: danbegin, danend: danend, expiretime: expiretime, title: title, operationreason: operationreason, sendcontent: sendcontent, awardcount: rowCount, enclosure: enclosureJson, enclosurecontent: enclosurecontent };
+                ShowProgress('<{:l("public_loading")}>');
+                $.post("<{:U('Email/sendemail')}>", p, function (data) {
+                    HideProgress();
+                    if(data.status==0){
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                        return false;
+                    }
+                    if (data["status"] == "1") {
+                        ShowSuccessMsg('<{:l("public_prompt_information")}>','<{:l("public_send_successfully")}>');
+                        $("#isedit").val("1");//重置状态为添加状态
+                        $("#tabmenu_sendemail").tabs("select", 2);
+                        $('#selbegintime').datetimebox('setValue', "");
+                        $('#selendtime').datetimebox('setValue', "");
+                        Search();
+                    } else {
+                        ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("public_fail_in_send")}>');
+                    }
+                });
+            }
+        });
+    }
+</script>
+<!-- 附件管理 -->
+<script type="text/javascript">
+    //添加附件
+    function enclosureAdd() {
+        var typeid = Getcomboboxvalue('selitemtype');
+        var typename = Getcomboboxtext('selitemtype');
+        var itemid = Getcomboboxvalue('selitemlist');
+        var itemname = Getcomboboxtext('selitemlist');
+        var number = Getinputvalue("itemnumber");
+        if (typename == "" || typeid == "-1") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_please_select_categories")}>');
+            return false;
+        }
+        if (itemid == "" || itemname == "") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_please_select_items")}>');
+            return false;
+        }
+        if (number == "" || parseInt(number) < 1) {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_the_quantity_must_be_greater_than_1")}>');
+            return false;
+        }
+        addRow(typename, typeid, itemname, itemid, number);
+    }
+    //选择标题文本模板
+    $(document).ready(function () {
+        $("#seltextemailtitlelist").combobox({
+            onChange: function (n, o) {
+                if (n == "") {
+                    $("#title").textbox("setValue", "");
+                } else {
+                    $("#title").textbox("setValue", n);
+                }
+            }
+        });
+    })
+    //选择内容文本模板
+    $(document).ready(function () {
+        $("#seltextemailcontentlist").combobox({
+            onChange: function (n, o) {
+                if (n == "") {
+                    $("#sendcontent").textbox("setValue", "");
+                } else {
+                    $("#sendcontent").textbox("setValue", n);
+                }
+            }
+        });
+    })
+    //选择附件单选按钮
+    $('input:radio[name="enclosure"]').change(function () {
+        if ($(this).is(":checked")) {
+            if ($(this).attr("value") == "1") {
+                $('#butaddenclosure').linkbutton({ disabled: false });
+            } else {
+                $('#butaddenclosure').linkbutton({ disabled: true });
+            }
+        }
+    });
+    //选择分类
+    $(document).ready(function () {
+        $("#selitemtype").combobox({
+            onChange: function (n, o) {
+                binditem(n);
+            }
+        });
+    })
+    //绑定物品列表
+    function binditem(typeid) {
+        $.post("<{:U('Common/getitemlist')}>", { typeid: typeid }, function (data) {
+            $('#selitemlist').combobox('clear');
+            $('#selitemlist').combobox('loadData', eval(data));
+            var val = $('#selitemlist').combobox("getData");
+            if (val != "") {
+                $('#selitemlist').combobox("select", val[0].id);
+            }
+            if (typeid == "6" || typeid == "3") {
+                $("#itemnumber").numberbox({ disabled: true });
+                $("#itemnumber").numberbox('setValue', "1");
+            } else {
+                $("#itemnumber").numberbox({ disabled: false });
+                $("#itemnumber").numberbox('setValue', "");
+            }
+        });
+    }
+    //去掉边框
+    function delborder() {
+        var oTbl = $("#enclosurelist");
+        oTbl.find("tr:first >td").css("border-top", "none");//去掉上边框
+        oTbl.find("tr:last >td").css("border-bottom", "none");//去掉下边框
+        oTbl.find("tr >td:first-child").css("border-left", "none");//去掉左边框
+        oTbl.find("tr >td:last-child").css("border-right", "none");//去掉右边框
+    }
+    //添加行
+    function addRow(type,typeid,itemname,itemid,itemnumber) {
+        if (rowCount >= 4) {
+            //ShowErrorMsg('<{:l("public_prompt_information")}>','附件已满!');
+            ShowMsg('<{:l("public_prompt_information")}>', '<{:l("email_the_attachment_is_full")}>', "warning")
+            return false;
+        }
+        if (rowCount == 0) {
+            var newRowTitle = '<tr  id="enclosurelist_option_1"><td><{:l("public_type")}></td><td><{:l("public_type")}>ID</td><td><{:l("public_name_of_article")}></td><td><{:l("public_article")}>ID</td><td><{:l("public_count")}></td><td><{:l("public_operation")}></td></tr>';
+            $('#enclosurelist').append(newRowTitle);
+        }
+
+        if (typeid == "3") {
+            for (var i = 1; i <= rowCount; i++) {
+                if ($("#enclosurelist").find("tr").eq(i).children("td").eq(1).text() == "3") {
+                    ShowMsg('<{:l("public_prompt_information")}>', '<{:l("email_no_more_than_one_treasure_box_can_not_be_added")}>', "warning")
+                    return false;
+                }
+            }
+        }
+        rowCount++;
+        var newRow = '<tr id="enclosurelist_option' + rowCount + '"><td>' + type + '</td><td>' + typeid + '</td><td>' + itemname + '</td><td>' + itemid + '</td><td>' + itemnumber + '</td><td><a href="javascript:void(0);" onclick="return delRow(' + rowCount + ');" class="easyui-linkbutton">&nbsp;&nbsp;<{:l("public_use_delete")}>&nbsp;&nbsp;</a></td></tr>';
+        $('#enclosurelist').append(newRow);
+        delborder();
+    }
+
+    //删除行
+    function delRow(rowIndex) {
+        rowCount--;
+        $("#enclosurelist_option" + rowIndex).remove();
+        if (rowCount == 0) {
+            $("#enclosurelist_option_1").remove();
+        }
+    }
+    $(function(){
+        var oTbl = $("#tabcondition");
+        oTbl.find("tr:first >td").css("border-top", "none");//去掉上边框
+        oTbl.find("tr:last >td").css("border-bottom", "none");//去掉下边框
+        oTbl.find("tr >td:first-child").css("border-left", "none");//去掉左边框
+        oTbl.find("tr >td:last-child").css("border-right", "none");//去掉右边框
+    });
+    $(function () {
+        var oTbl = $("#tabpersonnel");
+        oTbl.find("tr:first >td").css("border-top", "none");//去掉上边框
+        oTbl.find("tr:last >td").css("border-bottom", "none");//去掉下边框
+        oTbl.find("tr >td:first-child").css("border-left", "none");//去掉左边框
+        oTbl.find("tr >td:last-child").css("border-right", "none");//去掉右边框
+    });
+</script>

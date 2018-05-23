@@ -1,0 +1,149 @@
+<h1><{$Think.lang.reward_goods_info_edit}></h1>
+
+<form id="rewardEditPost">
+    <table class="tab_style_table" style="width:100%">
+        <tr >
+            <td class="tab_style_bgcolor" ><{$Think.lang.reward_rank_award_id}></td>
+            <td style="text-align: center">
+                <input name="awardid" type="text" id="r_awardid" class="easyui-numberbox" data-options="min:1,required:true"  readonly="readonly"/>
+            </td>
+            <td class="tab_style_bgcolor" ><{$Think.lang.reward_rank_award_content}></td>
+            <td style="text-align: center">
+                <input name="comment" id="r_comment" class="easyui-textbox" data-options="required:true" value="<{$award['comment']}>" >
+            </td>
+        </tr>
+    </table>
+
+    <table class="tab_style_table" style="width:100%">
+        <for start="0" end="5" >
+            <tr>
+                <td class="tab_style_bgcolor" ><{$Think.lang.reward_rank_award_type}>_<{$i}></td>
+                <td style="text-align: center">
+                    <select name="type<{$i}>" class="easyui-combobox selitemtype" id="r_type_<{$i}>" data-options="editable:false,panelHeight:'300'" style="width:160px;">
+                        <option value="-1" ><{:l("email_goods_classification")}></option>
+                        <foreach name="itemtype" key="typeid" item="typename">
+                            <option value="<{$typeid}>" ><{$typename}></option>
+                        </foreach>
+                    </select>
+                </td>
+                <td class="tab_style_bgcolor" ><{$Think.lang.reward_rank_award_item}>_<{$i}></td>
+                <td style="text-align: center">
+                    <select name="id<{$i}>" class="easyui-combobox " id="r_id<{$i}>"   data-options="editable:false,panelHeight:'300',valueField:'id',textField:'text'" style="width: 160px;">
+                    </select>
+                </td>
+                <td class="tab_style_bgcolor" ><{$Think.lang.reward_rank_award_count}>_<{$i}></td>
+                <td style="text-align: center">
+                    <input name="count<{$i}>" id="r_count<{$i}>" class="easyui-numberbox"  data-options="min:1"  >
+                </td>
+            </tr>
+        </for>
+    </table>
+</form>
+
+<div style="text-align:center;padding: 20px">
+    <a id="reward_edit_post" href="javascript:void(0);" class="easyui-linkbutton" data-options="size:'large',iconAlign:'top'" style="width:250px;height:60px;"><span style="font-size:18px;">&nbsp;&nbsp;&nbsp;<{:l("public_use_determine")}>&nbsp;&nbsp;&nbsp;</></a>
+    <a id="reward_edit_return" href="javascript:void(0);" class="easyui-linkbutton" data-options="size:'large',iconAlign:'top'" style="width:250px;height:60px;"><span style="font-size:18px;">&nbsp;&nbsp;&nbsp;<{:l("public_but_return")}>&nbsp;&nbsp;&nbsp;</></a>
+</div>
+<script type="text/javascript">
+    var data = JSON.parse(localStorage.getItem('reward_data'));
+    console.log(data);
+    function binditems(typeid,listid) {
+        if(typeid==6||typeid==3){
+            $('#r_count'+listid).numberbox('setValue',1);
+            $('#r_count'+listid).textbox('textbox').attr('readonly',true);
+        }else {
+            $('#r_count'+listid).numberbox('setValue','');
+            $('#r_count'+listid).textbox('textbox').attr('readonly',false);
+        }
+        $.post("<{:U('Common/getitemlist')}>", { typeid: typeid }, function (datas) {
+            $('#r_id'+listid).combobox('clear');
+            $('#r_id'+listid).combobox('loadData', eval(datas));
+            if(data.items[listid]&&data.items[listid].id){
+                $('#r_id'+listid).combobox('select',data.items[listid].id);
+                data.items[listid].id = '';
+            }else if (eval(datas)[0].id==-1){
+                $('#r_id'+listid).combobox('select',-1);
+            }
+        });
+    }
+    $('#preferential_goods').tabs({
+        onLoad: function(title){
+            $('#r_awardid').numberbox("setValue", data.id);
+            $('#r_comment').textbox("setValue", data.comment);
+            for (var i=0; i<data['items'].length; i++){
+                    $('#r_type_'+i).combobox('select',data['items'][i]['type']);
+                    $('#r_count'+i).numberbox("setValue",data['items'][i]['count']);
+            }
+        }
+    });
+
+    $(function () {
+        $(".selitemtype").combobox({
+            onChange: function (n, o) {
+                var listid = $(this).attr('id').split("_");
+                binditems(n,listid[2]);
+            }
+        });
+
+        $('#reward_edit_post').bind('click', function(){
+            var data = $('#rewardEditPost').serializeArray();
+            var info = new Array();
+            for (var i =0 ;i<data.length;i++){
+                if(data[i].value!=""&&data[i].value!=-1){
+                    info[data[i].name] = data[i].value;
+                }else {
+                    data[i].value = -1;
+                }
+            }
+            if(!info['awardid']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.reward_rank_award_id_no_error}>");
+                return false;
+            }
+            if(!info['comment']){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.reward_rank_award_content_no_error}>");
+                return false;
+            }
+            var type_state = 0;
+            for (var i =0 ;i<5;i++){
+                var state = 0;
+                if(info['type'+i]) state++;
+                if(info['id'+i]) state++;
+                if(info['type'+i]==0||info['type'+i]==1) state++;
+                if(info['count'+i]) state++;
+                if(info['type'+i]==3) type_state++;
+                if(!(state==3||state==0)){
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.reward_rank_award_info_no_error}>");
+                    return false;
+                }
+            }
+            if(type_state>1){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.email_no_more_than_one_treasure_box_can_not_be_added}>");
+                return false;
+            }
+            ShowProgress("<{$Think.lang.notice_show_edit}>");
+            $.post(
+                "<{:U('rewardEditPost')}>",
+                data,
+                function (data) {
+                    HideProgress();
+                    var info  =  "<{$Think.lang.public_return_edit_error}>";
+                    switch  (data){
+                        case 2:info="<{$Think.lang.reward_rank_award_id_yes_error}>";break;
+                    }
+                    if(data==1){
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_edit_success}>');
+                        var tab = $('#preferential_goods').tabs('getSelected');
+                        tab.panel('refresh', "<{:U('rewardList')}>");
+                    }else {
+                        ShowErrorMsg('<{$Think.lang.public_prompt_information}>',info);
+                        return false;
+                    }
+                }
+            );
+        });
+        $('#reward_edit_return').bind('click', function(){
+            var tab = $('#preferential_goods').tabs('getSelected');
+            tab.panel('refresh', "<{:U('rewardList')}>");
+        });
+    });
+</script>

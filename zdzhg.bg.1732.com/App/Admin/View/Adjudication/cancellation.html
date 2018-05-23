@@ -1,0 +1,114 @@
+
+<select class="easyui-combobox" name="state" id="cancellation_state" data-options="editable:false,panelHeight:'auto'">
+    <option value="1"><{$Think.lang.adjudication_info_code}></option>
+    <option value="2">ID</option>
+</select>
+<input class="easyui-textbox" id="cancellation_search">
+
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="cancellation_query()" data-options="iconCls:'icon-search',plain:true"><{$Think.lang.public_search}></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:void(0);" class="easyui-linkbutton" onclick="cancellation_ok()" data-options="iconCls:'icon-reload',plain:true"><{$Think.lang.adjudication_info_recovery}></a>
+<!--数据表格 start-->
+<div style="height: 95%;width: 100%; min-width: 1400px;">
+    <table id="cancellation"></table>
+</div>
+<!--数据表格 end-->
+
+<script type="text/javascript">
+    $(function () {
+        $('#cancellation').datagrid({
+            url: "<{:U('accountCancellation')}>",
+            fitColumns: true,
+            fit: true,//自适应高度
+//            toolbar: '#tb',
+            columns:[[
+                {field:'code',title:'<{$Think.lang.adjudication_info_code}>',width:200,align:'center'},
+                {field:'id',title:'<{$Think.lang.adjudication_info_role_id}>',width:200,align:'center'},
+                {field:'normalid',title:'<{$Think.lang.adjudication_info_normal_id}>',width:200,align:'center'},
+                {field:'deltime',title:'<{$Think.lang.cancellation_info_deltime}>',width:200,align:'center'},
+                {field:'status',title:'<{$Think.lang.cancellation_info_status}>',width:200,align:'center'}
+            ]],
+            singleSelect:true,//设置为 true，则只允许选中一行。
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:10,   //表格中每页显示的行数
+            pageList:[10],
+            loadFilter: function(data){
+                var info = 0;
+                switch (data.rows){
+                    case 2:info="<{$Think.lang.adjudication_return_query_error}>";break;
+                    case 3:info="<{$Think.lang.adjudication_return_query_null}>";break;
+                }
+                if(info!=0){
+                    ShowErrorMsg('<{:l("public_prompt_information")}>',info);
+                }
+                for (var i=0;i<data.rows.length;i++){
+                    data.rows[i].code = UInt10To32(data.rows[i].id);
+                }
+
+                return data;
+            },
+            nowrap: false,
+            striped: true,  //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.public_data_load}>',
+            method:'post',
+        });
+    });
+
+    function cancellation_query(){
+        var name =$('#cancellation_state').combobox('getValue');
+        var value=$('#cancellation_search').textbox('getValue');
+        if(value==''){
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.cancellation_info_no}>');
+            return false;
+        }
+        $('#cancellation').datagrid({
+            queryParams: {
+                qtype: name,
+                qvalue: value
+            }
+        })
+    }
+
+    function cancellation_ok() {
+        var row = $('#cancellation').datagrid('getSelected');
+        if(row==null){
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.sanction_return_no}>');
+            return false;
+        }else if (row.status=="<{$Think.lang.public_use_normal}>"){
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.sanction_return_no_operation}>');
+            return false;
+        }
+        $.messager.prompt("<{$Think.lang.public_reason}>", "<{$Think.lang.cancellation_return_recovery_reason}>", function (data) {
+            if(data!=''&&typeof(data) != "undefined"){
+                ShowProgress("<{$Think.lang.public_show_recovery}>");
+                $.post(
+                    "<{:U('unlockrole')}>",
+                    {
+                        roleid:row.normalid,
+                        timeid:row.id,
+                        reason:data,
+                        rodecode:UInt10To32(row.id),
+                    },
+                    function (info) {
+                        HideProgress();
+                        if(info.status==0){
+                            ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',info.info);
+                            return false;
+                        }
+                        var state =  JSON.parse(info);
+                        if(state.code==100){
+                            $.messager.alert('Info', "<{$Think.lang.cancellation_return_recovery_success}>");
+                        }else {
+                            ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.cancellation_return_recovery_error}>');
+                        };
+                        $('#cancellation').datagrid('reload');
+                    }
+                );
+            }else {
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.email_operation_can_not_be_empty}>');
+                return false;
+            }
+        });
+    }
+
+</script>

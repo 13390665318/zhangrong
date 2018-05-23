@@ -1,0 +1,51 @@
+<form id="batch_add_form">
+    <table class="tab_style_table" style="width:100%;text-align: center">
+        <tr>
+            <td class="tab_style_bgcolor"><{$Think.lang.public_content}></td>
+            <td class="tab_style_bgcolor"><{$Think.lang.public_info_section}></td>
+            <td class="tab_style_bgcolor"><{$Think.lang.public_info_num}></td>
+        </tr>
+        <tr >
+            <td class="tab_style_bgcolor"><{$Think.lang.preferential_rank_price1k}></td>
+            <td style="width: 50%">
+                <select  name="rank_price1k_min"  id="rank_price1k_min" class="easyui-combobox"   data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <option value=""><{$Think.lang.public_use_no_choice}></option>
+                    <for start="1" end="21" >
+                        <option value="<{$i}>"><{$Think.lang.preferential_rank_price1k}><{$i}></option>
+                    </for>
+                </select>
+                &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+                <select  name="rank_price1k_max"  id="rank_price1k_max" class="easyui-combobox"  data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <option value=""><{$Think.lang.public_use_no_choice}></option>
+                    <for start="1" end="21" >
+                        <option value="<{$i}>"><{$Think.lang.preferential_rank_price1k}><{$i}></option>
+                    </for>
+                </select>
+            </td>
+            <td ><input name="rank_price1k_num" id="rank_price1k_num" class="easyui-numberbox"  data-options="min:0"></td>
+        </tr>
+        <tr>
+            <td class="tab_style_bgcolor"><{$Think.lang.preferential_rank_award}></td>
+            <td>
+                <select  name="rank_award1_min"  id="rank_award1_min" class="easyui-combobox"   data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <option value=""><{$Think.lang.public_use_no_choice}></option>
+                    <for start="1" end="21" >
+                        <option value="<{$i}>"><{$Think.lang.preferential_rank_award}><{$i}></option>
+                    </for>
+                </select>
+                &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+                <select  name="rank_award1_max"  id="rank_award1_max" class="easyui-combobox"  data-options="editable:false,panelHeight:'300'"  style="width: 100px" >
+                    <option value=""><{$Think.lang.public_use_no_choice}></option>
+                    <for start="1" end="21" >
+                        <option value="<{$i}>"><{$Think.lang.preferential_rank_award}><{$i}></option>
+                    </for>
+                </select>
+
+            </td>
+            <td>
+                <select  name="rank_award1_num"  id="rank_award1_num" class="easyui-combobox"  data-options="panelHeight:'300'"  style="width: 100px" >
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,118 @@
+<div style="text-align:left;">
+    <a id="reward_add_but" href="javascript:void(0);"><{$Think.lang.system_add_system}></a>
+    <a id="reward_edit_but" href="javascript:void(0);"><{$Think.lang.public_update}></a>
+    <a id="reward_delete_but" href="javascript:void(0);"><{$Think.lang.system_delete_system}></a>
+</div>
+
+<!--数据表格 start-->
+<div style="padding:10px;height: 94%;">
+    <table id="reward_list"></table>
+</div>
+<!--数据表格 end-->
+
+<script type="text/javascript">
+    $(function () {
+        $('#reward_add_but').linkbutton({
+            iconCls: 'icon-add',
+        });
+        $('#reward_edit_but').linkbutton({
+            iconCls: 'icon-edit'
+        });
+        $('#reward_delete_but').linkbutton({
+            iconCls: 'icon-remove'
+        });
+
+        $('#reward_list').datagrid({
+            url:"<{:U('rewardListPost')}>",
+            fitColumns:true,
+            columns:[[
+                {field:'fx',checkbox:true},
+                {field:'sumnum',title:'<{$Think.lang.public_use_sumnum}>',width:50,align:'center'},
+                {field:'id',title:'<{$Think.lang.preferential_rank_award}>',width:100,align:'center'},
+                {field:'comment',title:'<{$Think.lang.reward_rank_award_content}>',width:250,align:'center'},
+
+                {field:'awardtype0',title:'<{$Think.lang.reward_rank_award_type}>_1',width:100,align:'center'},
+                {field:'awarditem0',title:'<{$Think.lang.reward_rank_award_item}>_1',width:100,align:'center'},
+                {field:'awardcount0',title:'<{$Think.lang.reward_rank_award_count}>_1',width:100,align:'center'},
+
+                {field:'awardtype1',title:'<{$Think.lang.reward_rank_award_type}>_2',width:100,align:'center'},
+                {field:'awarditem1',title:'<{$Think.lang.reward_rank_award_item}>_2',width:100,align:'center'},
+                {field:'awardcount1',title:'<{$Think.lang.reward_rank_award_count}>_2',width:100,align:'center'},
+
+                {field:'awardtype2',title:'<{$Think.lang.reward_rank_award_type}>_3',width:100,align:'center'},
+                {field:'awarditem2',title:'<{$Think.lang.reward_rank_award_item}>_3',width:100,align:'center'},
+                {field:'awardcount2',title:'<{$Think.lang.reward_rank_award_count}>_3',width:100,align:'center'},
+
+                {field:'awardtype3',title:'<{$Think.lang.reward_rank_award_type}>_4',width:100,align:'center'},
+                {field:'awarditem3',title:'<{$Think.lang.reward_rank_award_item}>_4',width:100,align:'center'},
+                {field:'awardcount3',title:'<{$Think.lang.reward_rank_award_count}>_4',width:100,align:'center'},
+
+                {field:'awardtype4',title:'<{$Think.lang.reward_rank_award_type}>_5',width:100,align:'center'},
+                {field:'awarditem4',title:'<{$Think.lang.reward_rank_award_item}>_5',width:100,align:'center'},
+                {field:'awardcount4',title:'<{$Think.lang.reward_rank_award_count}>_5',width:100,align:'center'},
+            ]],
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:10,     //表格中每页显示的行数
+            pageList:[10],
+            nowrap: false,
+            singleSelect: true,
+            fit:true,//自适应高度
+            striped: true,  //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.notice_data_load}>',
+            method:'post',
+
+        });
+
+        $('#reward_add_but').bind('click', function(){
+            var tab = $('#preferential_goods').tabs('getSelected');
+            tab.panel('refresh', "<{:U('rewardAdd')}>");
+        });
+
+        $('#reward_edit_but').bind('click', function(){
+            var row = $('#reward_list').datagrid('getSelected');
+            if(row==null){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+            }
+            localStorage.setItem('reward_data', JSON.stringify(row));
+            var tab = $('#preferential_goods').tabs('getSelected');
+            tab.panel('refresh', "<{:U('rewardEdit')}>");
+        });
+
+        $('#reward_delete_but').bind('click', function(){
+            var row = $('#reward_list').datagrid('getSelected');
+
+            if(row==null){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+            }
+            $.messager.confirm("<{$Think.lang.public_use_determine}>", "<{$Think.lang.public_messager_delete}>", function (data) {
+                if(data){
+                    ShowProgress("<{$Think.lang.public_show_delete}>");
+                    $.post(
+                        "<{:U('rewardDeletePost')}>",
+                        {delid:row.id},
+                        function (data) {
+                            HideProgress();
+                            if(data.status==0){
+                                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                                return false;
+                            }
+                            if(data==1){
+                                ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_delete_success}>');
+                                $('#reward_list').datagrid('reload');
+                            }else {
+                                ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_delete_error}>');
+                                return false;
+                            }
+                        }
+                    );
+                }
+            });
+        });
+
+    });
+
+
+
+
+
+</script>

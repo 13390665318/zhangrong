@@ -1,0 +1,11 @@
+﻿<div style="padding:20px;">
+    <select class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" id="selcancellationtime" style="width:210px;height:24px">
+        <option value="-1"><{:l("user_please_choose_logout_time")}></option>
+        <foreach name="delhistory" key="id" item="time">
+            <option value="<{$id}>"><{$time}></option>
+        </foreach>
+    </select><br /><br />
+    <input type="hidden" id="hidrecovery_roleid" value="<{$roleid}>" />
+    <input type="hidden" id="hidrecovery_rolecode" value="<{$rolecode}>" />
+    <textarea rows="3" cols="20" id="txtupRecoveryReason" style="text-align: left; width: 200px; height: 100px;font-size:10pt;" placeholder='<{:l("public_input_modification")}>'></textarea>
+</div>

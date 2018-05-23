@@ -1,0 +1,97 @@
+<form id="compensateEditForm" method="post">
+    <table  class="tab_style_table" style="width:100%;text-align:left;">
+        <tr>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.order_search_role_code}></td>
+            <td><div id="c_role_code"></div></td>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.order_info_goods_code}></td>
+            <td><div id="c_goods_code"></div></td>
+        </tr>
+        <tr>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.order_info_pay_type}></td>
+            <td><div id="c_pay_type"></div></td>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.order_info_pay_time}></td>
+            <td><div id="c_pay_time"></div></td>
+        </tr>
+
+        <tr>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.content_api_region}></td>
+            <td>
+                <select class="easyui-combobox" data-options="editable:false,panelHeight:'300',required:true" validtype="comboxValidate['seltextemailtitlelist','<{:l("email_please_select_the_title_text_id")}>','<{:l("public_use_error_worldid")}>']" id="seltextordertitlelist" style="width:150px;height:24px">
+                    <option value="-1"><{:l("email_please_select_the_title_text_id")}></option>
+                    <foreach name="textemailtitlelist" key="textid" item="textname">
+                        <option value="<{$textname}>"><{$textid}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.email_mail_header}></td>
+            <td><input type="text" id="compensate_title" class="easyui-textbox" data-options="multiline:true,required:true" disabled="disabled" style="height: 40px; " /></td>
+        </tr>
+        <tr>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.content_api_region}></td>
+            <td>
+                <select class="easyui-combobox" data-options="editable:false,panelHeight:'300'" validtype="comboxValidate['seltextemailcontentlist','<{:l("email_please_select_the_content_text_id")}>','<{:l("public_use_error_worldid")}>']" id="seltextordercontentlist" style="width:150px;height:24px">
+                    <option value="-1"><{:l("email_please_select_the_content_text_id")}></option>
+                    <foreach name="textemailcontentlist" key="textid" item="textname">
+                        <option value="<{$textname}>"><{$textid}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.email_mail_content}></td>
+            <td><input class="easyui-textbox" data-options="multiline:true,required:true" id="compensate_sendcontent" disabled="disabled" style="height: 100px"></td>
+        </tr>
+        <tr>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.public_info_goods_compensate}></td>
+            <td >
+                <select readonly="readonly" class="easyui-combobox" data-options="editable:false,panelHeight:'300'" validtype="comboxValidate['seltextemailcontentlist','<{:l("public_use_no_choice")}>','<{:l("public_use_error_worldid")}>']" id="seltextgoodslist" style="width:150px;height:24px">
+                    <option value="-1"><{:l("public_use_no_choice")}></option>
+                    <foreach name="goods_type" key="textid" item="textname">
+                        <option value="<{$textid}>"><{$textname}></option>
+                    </foreach>
+                </select>
+            </td>
+            <td  class="tab_style_bgcolor" ><{$Think.lang.content_api_reason}></td>
+            <td >
+                <input type="text" id="compensate_reason"  class="easyui-textbox" data-options="multiline:true,required:true"  style="height: 40px;" />
+            </td>
+        </tr>
+    </table>
+    <!--<input name="purchaseid" id="order_purchaseid" hidden>-->
+    <!--<input name="gid" id="order_gid" hidden>-->
+</form>
+
+<script type="text/javascript">
+
+    $.extend($.fn.validatebox.defaults.rules, {
+        comboxValidate: {
+            validator: function (value, param, missingMessage) {
+                if (value != param[1] && value != null) {
+                    return true;
+                }
+                return false;
+            },
+            message: "{2}"
+        }
+    });
+
+    $('.easyui-combobox').combobox({
+        onSelect:function (n) {
+            if($(this).attr('id')=='seltextordertitlelist'){
+                $('#compensate_title').textbox('setValue',n.value);
+            }else  if($(this).attr('id')=='seltextordercontentlist'){
+                $('#compensate_sendcontent').textbox('setValue',n.value);
+            }
+        },
+    });
+
+    var data = JSON.parse(localStorage.getItem('one_order_data'));
+
+    $(function () {
+        console.log(UInt10To32(data['id']));
+        $('#c_role_code').html(UInt10To32(data['id']));
+        $('#c_goods_code').html(data['product']);
+        $('#c_pay_type').html(data['paytypename']);
+        $('#c_pay_time').html(data['time']);
+        console.log(data['goodsnamenum']);
+
+    });
+</script>

@@ -1,0 +1,31 @@
+﻿<?php
+
+namespace Admin\Controller;
+use Admin\Controller\CommonController;
+
+/**
+ * GM工具模块
+ * @author gongyun
+ */
+class GmToolController extends CommonController
+{
+    /**
+     * 查询用户信息
+     */
+	public function getUserInfo(){
+		if(IS_POST){
+            $acttype = $_POST["acttype"];
+            $account = $_POST["account"];
+			echo "请求POST".$acttype."|".$account;
+		}else{
+            //$data = array("type" => "130010", "qtype" => "1","qvalue"=>"#abcd");
+            //echo $this->GetGmToolApi($data);
+            
+            $menuid     = I('get.menuid');
+			$menu_db    = D('Menu');
+			$currentpos = $menu_db->currentPos($menuid);//栏目位置
+			$this->assign('title', $currentpos);
+			$this->display('userinfo');
+		}
+	}
+}

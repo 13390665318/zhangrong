@@ -1,0 +1,39 @@
+
+<!--datagrid列表-->
+<div class="panel-header panel-header-noborder" ><{$title}></div>
+<div class="panel-noscroll" title="" style="height: 96%; width: 100%; min-width: 1400px; ">
+    <div class="easyui-tabs" id="preferential_goods" style="width:100%;height:100%;">
+        <div title="<{$Think.lang.preferential_list}>" style="padding:10px;text-align:center;">
+            <include file="preferential_list" />
+        </div>
+
+        <div id="list" title="<{$Think.lang.reward_list}>" style="padding: 10px; text-align: center;">
+            <include file="reward_list" />
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+    $.extend($.fn.validatebox.defaults.rules, {
+        preferential: {
+            validator: function (value, param) {
+                if ($(param[0]).combobox('getText') != "<{$Think.lang.public_use_no_choice}>") {
+                    return true;
+                }
+                return false;
+            },
+            message: "<{$Think.lang.public_use_error_worldid}>"
+        }
+    });
+    $('#preferential_goods').tabs({
+        border:false,
+        onSelect:function(title,index){
+            console.log(title);
+           if(title=="<{$Think.lang.reward_list}>"){
+               $('#reward_list').datagrid('reload');
+           }else if (title=="<{$Think.lang.reward_list}>"){
+               $('#preferential_list').datagrid('reload');
+           }
+        }
+    });
+</script>

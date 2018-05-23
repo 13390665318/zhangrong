@@ -1,0 +1,118 @@
+﻿<form id="upLoadFrom" action='<{:U("Upload/image")}>' enctype="multipart/form-data" method="post">
+    <div style="padding:10px;">
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+                <td width="100"><{:l("public_file_upload")}>：</td>
+                <td>
+                    <!--<input name="firetxt" id="firetxt" type="file" value="aaaaaa"/>-->
+                    <input id="email_upload" name="email_upload">
+                </td>
+            </tr>
+        </table><br />
+        <span style="color:red;padding-top:20px;"><{:l("email_file_upload_describe")}>.</span>
+    </div>
+</form>
+<script type="text/javascript">
+    $(function () {
+        $('#email_upload').filebox({
+            buttonText: '<{$Think.lang.identifier_info_upload}>',
+            onChange: function (n, o) {
+                flie_upload(n);
+            }
+        });
+    });
+    require(['js-xlsx-full']);
+    function flie_upload(n) {
+        var files = $("input[name='email_upload']").prop('files');
+        var selectedFile = files[0];//获取读取的File对象
+
+        var name = selectedFile.name;//读取选中文件的文件名
+        var fileExtension = name.substring(name.lastIndexOf('.') + 1);
+        if (fileExtension != "txt"&& fileExtension != "xlsx") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.email_file_upload_limit}>');
+            return false;
+        }
+        var reader = new FileReader();//这里是核心！！！读取操作就是由它完成的。
+        if (fileExtension == "txt") {
+            reader.readAsText(selectedFile, "utf8");//读取文件的内容
+            reader.onload = function (e) {
+                var fileText = e.target.result;
+                $("#senduser").val(fileText);
+                $("#senduser").focus();
+                $('#uploadBox').dialog('close');
+            }
+        }else if (fileExtension == "xlsx"){
+
+            reader.onload = function (e) {
+                var data = e.target.result;
+                var wb = XLSX.read(data, { type: "binary" });
+                var excle = XLSX.utils.sheet_to_formulae(wb.Sheets[wb.SheetNames[0]]);
+                var type = "";var info =  new Array();;
+                for (var i = 0; i < excle.length; i++) {
+                    
+                    var arr = excle[i].replace(/.(?=[^0-9])/, "").replace(/'/g, "").split("=");
+                    if(i==0){
+                        type = arr[0];
+                    }
+                    if (type == arr[0]) {
+                        info.push(arr[1]);
+                    }
+                }
+                $("#senduser").val(info.join(','));
+                $("#senduser").focus();
+                $('#uploadBox').dialog('close');
+            };
+            reader.readAsBinaryString(selectedFile);
+        }
+
+
+        //var name = selectedFile.name;//读取选中文件的文件名
+        //var fileExtension = n.substring(n.lastIndexOf('.') + 1);
+        //if (fileExtension != "txt") {
+        //    ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.identifier_info_explain}>');
+        //    return false;
+        //}
+        //if (fileExtension == "txt") {
+        //    var reader = new FileReader();//这里是核心！！！读取操作就是由它完成的。
+        //    reader.readAsText(selectedFile, "utf8");//读取文件的内容
+        //    reader.onload = function (e) {
+        //        var fileText = e.target.result;
+        //        $("#"+id).val(fileText);
+        //    }
+        //}
+        //if(true){
+        //    var formFile = new FormData();
+        //    formFile.append("action", "UploadVMKImagePath");
+        //    formFile.append("file", selectedFile); //加入文件对象
+        //    $.ajax({
+        //        url: "<{:U('excelTurnData')}>",
+        //        data: formFile,
+        //        type: "Post",
+        //        dataType: "json",
+        //        cache: false,//<{$Think.lang.identifier_info_upload}>无需缓存
+        //        processData: false,//用于对data参数进行序列化处理 这里必须false
+        //        contentType: false, //必须
+        //        success: function (result) {
+        //            console.log(result);
+        //        },
+        //    });
+        }
+    function upLoadSave() {
+        var files = $('#firetxt').prop('files');
+        var selectedFile = files[0];//获取读取的File对象
+
+        var name = selectedFile.name;//读取选中文件的文件名
+        var fileExtension = name.substring(name.lastIndexOf('.') + 1);
+        if (fileExtension != "txt") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{:l("email_file_upload_limit")}>');
+            return false;
+        }
+        var reader = new FileReader();//这里是核心！！！读取操作就是由它完成的。
+        reader.readAsText(selectedFile, "utf8");//读取文件的内容
+        reader.onload = function (e) {
+            var fileText = e.target.result;
+            $("#senduser").val(fileText);
+            $('#uploadBox').dialog('close');
+        }
+    }
+</script>

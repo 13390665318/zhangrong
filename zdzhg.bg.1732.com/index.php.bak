@@ -1,0 +1,22 @@
+<?php
+if(version_compare(PHP_VERSION, '5.3.0','<'))  die('require PHP > 5.3.0 !');
+
+define('DS', DIRECTORY_SEPARATOR);
+define('SITE_DIR', dirname(__FILE__));
+define('ADDON_PATH', './Addons/');
+define('UPLOAD_PATH', './Public/upload/');
+
+define('HTTP_REFERER', (!empty($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : ''));
+define('SCRIPT_DIR', rtrim(dirname($_SERVER['SCRIPT_NAME'] ?: ''), '\/\\') );
+if(!empty($_SERVER['HTTP_HOST'])){
+	define('SITE_URL', 'http://' . $_SERVER['HTTP_HOST'] . SCRIPT_DIR);
+}else{
+	define('SITE_URL', SCRIPT_DIR);
+}
+
+define('APP_DEBUG', true);
+define('THINK_PATH', SITE_DIR . DS . 'Libs' . DS . 'ThinkPHP' . DS);
+define('APP_PATH', SITE_DIR . DS . 'App' . DS);
+define('RUNTIME_PATH', SITE_DIR . DS . '#Runtime' . DS);
+
+require(THINK_PATH.'ThinkPHP.php');

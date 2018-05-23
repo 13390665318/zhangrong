@@ -1,0 +1,105 @@
+<div class="panel-header panel-header-noborder"><{$title}></div>
+
+
+<!--数据表格 start-->
+<div style="height: 96%;width: 98%; min-width: 1400px;">
+    <table id="operationRecord" ></table>
+</div>
+<!--数据表格 end-->
+
+    <div id="operation" style="padding:3px">
+        <form id="name">
+            <span><{$Think.lang.operation_info_operator}>:</span>
+            <input id="username" name="username" style="border:1px solid #ccc">
+            <span><{$Think.lang.operation_info_platform}>:</span>
+            <input id="platform" name="platform"  style="border:1px solid #ccc">
+            <span><{$Think.lang.operation_info_appoint}>:</span>
+            <input id="rolecode" name="rolecode" style="border:1px solid #ccc">
+            <span><{:l("operation_info_time")}>(UTC<{:l("content_api_time")}>):</span>
+            <input id="start" name="start" style="border:1px solid #ccc;width:150px;">
+            <span><{$Think.lang.operation_info_to}></span>
+            <input id="end" name="end" style="border: 1px solid #ccc; width: 150px;">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="#" class="easyui-linkbutton" plain="true" onclick="doSearch()" data-options="iconCls:'icon-search',plain:true"><{$Think.lang.operation_info_search}></a>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <select  id="operation_type" class="easyui-combobox"  id="text-type" data-options="editable:false,panelHeight:'auto'" >
+                <option value="0"><{$Think.lang.system_info_all}></option>
+                <foreach  name="type" key="key" item="item">
+                    <option value="<{$key}>"><{$item}></option>
+                </foreach>
+            </select>
+        </form>
+    </div>
+
+<script type="text/javascript">
+    var getsystemdate = getsystemdata();
+    //$("#start").val(getsystemdate);
+    //$("#end").val(getsystemdate);
+    $(function () {
+        var timestamp = getsystemdata();
+        $('#operationRecord').datagrid({
+            url:"<{:U('operationRecordPost')}>",
+            fitColumns:true,
+            toolbar: $('#operation'),
+            columns:[[
+                {field:'time',title:'<{$Think.lang.operation_info_date}>',width:200,align:'center'},
+                {field:'rolecode',title:'<{$Think.lang.operation_info_object}>',width:200,align:'center'},
+                {field:'operationtype',title:'<{$Think.lang.operation_info_type}>',width:200,align:'center'},
+                {field:'operationcontent',title:'<{$Think.lang.operation_info_content}>',width:500,align:'center'},
+                {field:'operationreason',title:'<{$Think.lang.operation_info_reason}>',width:500,align:'center'},
+                {field:'username',title:'<{$Think.lang.operation_info_operator}>',width:200,align:'center'}
+            ]],
+            singleSelect:true,//设置为 true，则只允许选中一行。
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:20,   //表格中每页显示的行数
+            pageList:[20,40,60],
+            nowrap: false,
+            fit:true,//自适应高度
+            striped: true,  //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.public_data_load}>',
+            method:'post',
+        });
+
+        $('#username').combobox({
+            url:"<{:U('getSmallInfo',array('type'=>2))}>",
+            valueField:'username',
+            textField:'username'
+        });
+
+        $('#platform').combobox({
+            url:"<{:U('getSmallInfo',array('type'=>1))}>",
+            valueField:'label',
+            textField:'value'
+        });
+        $('#start').datetimebox({
+            showSeconds: true,
+            editable:false,
+            value: timestamp,
+        });
+        $('#end').datetimebox({
+            showSeconds: true,
+            editable:false,
+            value: timestamp,
+    });
+
+    });
+
+    $("#operation_type").combobox({
+        onChange: function (n, o) {
+            var data = [];
+            data[0] = {name:'type',value:n};
+            $('#operationRecord').datagrid('load',data);
+        }
+    });
+
+    function doSearch() {
+        var data = $('#name').serializeArray();
+        console.log(data);
+        for (var i=0; i<data.length ; i++){
+            if(data[i].name=='rolecode'&&!isNaN(data[i].value)){
+                data[i].value = UInt10To32(data[i].value);
+            }
+        }
+        $('#operationRecord').datagrid('load',data);
+    }
+</script>

@@ -1,0 +1,298 @@
+<div style="text-align:left;">
+    <a id="task_add_but" href="javascript:void(0);"><{$Think.lang.system_add_system}></a>
+    <a id="task_edit_but" href="javascript:void(0);"><{$Think.lang.public_update}></a>
+    <a id="task_delete_but" href="javascript:void(0);"><{$Think.lang.system_delete_system}></a>
+</div>
+
+<!--数据表格 start-->
+<div style="padding:10px;height: 94%;">
+    <table id="task_list" ></table>
+</div>
+
+
+<!--数据表格 end-->
+<script type="text/javascript">
+    var task = '';
+    $(function () {
+        $('#task_add_but').linkbutton({
+            iconCls: 'icon-add',
+        });
+        $('#task_edit_but').linkbutton({
+            iconCls: 'icon-edit'
+        });
+        $('#task_delete_but').linkbutton({
+            iconCls: 'icon-remove'
+        });
+        $('#task_list').datagrid({
+            url:"<{:U('taskActivityList')}>",
+            fitColumns:true,
+            columns:[[
+                {field:'fx',checkbox:true},
+                {field:'sumnum',title:'<{$Think.lang.public_use_sumnum}>',width:50,align:'center'},
+                {field:'id',title:'<{$Think.lang.activity_task_id}>',width:80,align:'center'},
+                {field:'type1',title:'<{$Think.lang.activity_task_reward_type}>_1',width:100,align:'center',hidden:true},
+                {field:'type_name1',title:'<{$Think.lang.activity_task_reward_type}>_1',width:100,align:'center'},
+//                {field:'id1',title:'<{$Think.lang.activity_task_reward_id}>_1',width:100,align:'center'},
+                {field:'ids1',title:'<{$Think.lang.activity_task_reward_id}>_1',width:100,align:'center'},
+                {field:'count1',title:'<{$Think.lang.activity_task_reward_num}>_1',width:100,align:'center'},
+                {field:'type2',title:'<{$Think.lang.activity_task_reward_type}>_2',width:100,align:'center',hidden:true},
+                {field:'type_name2',title:'<{$Think.lang.activity_task_reward_type}>_2',width:100,align:'center'},
+//                {field:'id2',title:'<{$Think.lang.activity_task_reward_id}>_2',width:100,align:'center'},
+                {field:'ids2',title:'<{$Think.lang.activity_task_reward_id}>_2',width:100,align:'center'},
+                {field:'count2',title:'<{$Think.lang.activity_task_reward_num}>_2',width:100,align:'center'},
+                {field:'limittotalnum',title:'<{$Think.lang.activity_task_reward_limit_count}>',width:100,align:'center'},
+                {field:'limiteverynum',title:'<{$Think.lang.activity_task_reward_limit_daily}>',width:100,align:'center'},
+                {field:'isshow',title:'<{$Think.lang.activity_task_reward_limit_show}>',width:100,align:'center'},
+                {field:'conditioncontent',title:'<{$Think.lang.activity_task_reward_content}>',width:150,align:'center'},
+                {field:'conditiontype',title:'<{$Think.lang.activity_task_reward_content}>',width:150,align:'center',hidden:true},
+                {field:'conditionvalue',title:'<{$Think.lang.activity_task_reward_demand_value}>',width:100,align:'center'}
+            ]],
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:20,//表格中每页显示的行数
+            pageList:[20,40,80],
+            nowrap:false,
+            singleSelect: true,
+            fit:true, //自适应高度
+            striped: true, //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.notice_data_load}>',
+            method:'post',
+            onLoadSuccess:function(data){
+                $("a[name='opera']").linkbutton({text:'<{$Think.lang.public_goods_info_detailed}>',plain:true,iconCls:'icon-more'});
+            },
+        });
+
+        $('#task_add_but').bind('click', function(){
+            $('body').append('<div id="taskAdd"></div>');
+            $('#taskAdd').dialog({
+                title: '<{$Think.lang.system_add_system}>',
+                width: 1100,
+                height: 300,
+                closed: false,
+                href:"<{:U('task_add')}>",
+                cache: false,
+                modal: true,
+                buttons:[{
+                    text:'<{$Think.lang.public_use_determine}>',
+                    handler:function(){
+                        taskAddPost();
+                    }
+                },{
+                    text:'<{$Think.lang.public_use_cancel}>',
+                    handler:function(){
+                        $('#taskAdd').dialog('close',true);
+                    }
+                }]
+            });
+
+        });
+
+        $('#task_edit_but').bind('click', function(){
+            var row = $('#task_list').datagrid('getSelected');
+            if(row==null){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+            }
+            $('body').append('<div id="taskEdit"></div>');
+            $('#taskEdit').dialog({
+                title: '<{$Think.lang.public_update}>',
+                width: 1100,
+                height: 300,
+                closed: false,
+                href:"<{:U('task_edit')}>",
+                cache: false,
+                modal: true,
+                buttons:[{
+                    text:'<{$Think.lang.public_use_determine}>',
+                    handler:function(){
+                         taskEditPost();
+                    }
+                },{
+                    text:'<{$Think.lang.public_use_cancel}>',
+                    handler:function(){
+                        $('#taskEdit').dialog('close',true);
+                    }
+                }],
+                onLoad:function () {
+                    task_edit_fill(row);
+                }
+            });
+        });
+
+        $('#task_delete_but').bind('click', function(){
+            var row = $('#task_list').datagrid('getSelected');
+            if(row==null){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+            }
+            $.messager.confirm("<{$Think.lang.public_use_determine}>", "<{$Think.lang.public_messager_delete}>", function (data) {
+                if(data){
+                    ShowProgress("<{$Think.lang.public_show_delete}>");
+                    $.post(
+                        "<{:U('taskDeletePost')}>",
+                        {awardid:row.id},
+                        function (data) {
+                            console.log(data);
+                            HideProgress();
+                            if(data.status==0){
+                                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                                return false;
+                            }
+                            if(data==1){
+                                ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_delete_success}>');
+                                $('#task_list').datagrid('reload');
+                                return false;
+                            }else {
+                                ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_delete_error}>');
+                                return false;
+                            }
+
+                        }
+                    );
+                }
+            });
+        });
+    });
+
+    function task_edit_fill(row) {
+        task =row;
+        $('#award_id').numberbox('setValue', row.id);
+        $('#condition_value').numberspinner('setValue', row.conditionvalue);
+        $('#limit_every_num').numberspinner("setValue",row.limiteverynum);
+        $('#limit_total_num').numberspinner("setValue",row.limittotalnum);
+        $('#isshow'+row.isshow).attr("checked","checked");
+        $('#condition_type').combobox("select",row.conditiontype);
+        if(row.type1!=-1){
+            $('#types_1').combobox("select",row.type1);
+            $('#counts1').numberbox("setValue",row.count1);
+        }
+        if(row.type2!=-1){
+            $('#types_2').combobox("select",row.type2);
+            $('#counts2').numberbox("setValue",row.count2);
+        }
+
+
+
+    }
+
+    function taskAddPost() {
+        var data = $('#taskAddForm').serializeArray();
+
+        var info = new Array();
+        for (var i =0 ;i<data.length;i++){
+            if(data[i].name=="conditiontype"&&data[i].value==-1){
+                console.log(data[i].name);
+                console.log(data[i].value);
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.task_award_content_error}>");
+                return false;
+            }
+            if(data[i].value!=""&&data[i].value!=-1){
+                info[data[i].name] = data[i].value;
+            }else {
+                data[i].value = -1;
+            }
+        }
+        if(!info['awardid']){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.task_award_id_error}>");
+            return false;
+        }
+        if(!info['conditionvalue']){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.task_award_condition_value_error}>");
+            return false;
+        }
+        var type_state = 0;
+        for (var i =1 ;i<3;i++){
+            var state = 0;
+            if(info['type'+i]) state++;
+            if(info['type'+i]==0||info['type'+i]==1) state++;
+            if(info['id'+i]) state++;
+            if(info['count'+i]) state++;
+            if(info['type'+i]==3) type_state++;
+            if(!(state==3||state==0)){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.reward_rank_award_info_no_error}>");
+                return false;
+            }
+        }
+        if(type_state>1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.email_no_more_than_one_treasure_box_can_not_be_added}>");
+            return false;
+        }
+        ShowProgress("<{$Think.lang.public_show_add}>");
+        $.post(
+            "<{:U('taskAddPost')}>",
+            data,
+            function (data) {
+                HideProgress();
+                if(data.status==0){
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                    return false;
+                }
+                if(data==1){
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_add_success}>');
+                    $('#taskAdd').dialog('close',true);
+                    $('#task_list').datagrid('reload');
+                    return false;
+                }
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_add_error}>');
+            }
+        );
+    }
+
+    function taskEditPost() {
+        var data = $('#taskEditForm').serializeArray();
+        var info = new Array(); var temporary = new Array();
+        for (var i =0 ;i<data.length;i++){
+            if(data[i].name=="conditiontype"&&data[i].value==-1){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.task_award_content_error}>");
+                return false;
+            }
+            if(data[i].value!=""&&data[i].value!=-1){
+                info[data[i].name] = data[i].value;
+            }else {
+                data[i].value = -1;
+            }
+        }
+        if(!info['exchangeid']){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.task_award_id_error}>");
+            return false;
+        }
+        if(!info['conditionvalue']){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.task_award_condition_value_error}>");
+            return false;   
+        }
+        var type_state = 0;
+        for (var i =1 ;i<3;i++){
+            var state = 0;
+            if(info['type'+i]) state++;
+            if(info['type'+i]==0||info['type'+i]==1) state++;
+            if(info['id'+i]) state++;
+            if(info['count'+i]) state++;
+            if(info['type'+i]==3) type_state++;
+            if(!(state==3||state==0)){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.reward_rank_award_info_no_error}>");
+                return false;
+            }
+        }
+        if(type_state>1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.email_no_more_than_one_treasure_box_can_not_be_added}>");
+            return false;
+        }
+        ShowProgress("<{$Think.lang.notice_show_edit}>");
+        $.post(
+            "<{:U('taskEditPost')}>",
+            data,
+            function (data) {
+                HideProgress();
+                if(data.status==0){
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                    return false;
+                }
+                console.log(data);
+                if(data==1){
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_edit_success}>');
+                    $('#taskEdit').dialog('close',true);
+                    $('#task_list').datagrid('reload');
+                    return false;
+                }
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_edit_error}>');
+            }
+        );
+    }
+</script>

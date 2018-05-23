@@ -1,0 +1,50 @@
+
+<!--datagrid列表-->
+<div class="panel-header panel-header-noborder" ><{$title}></div>
+<div class="panel-noscroll" title="" style="height: 96%; width: 100%;">
+    <div class="easyui-tabs" id="order_info" style="width:100%;height:100%;">
+        <div id="order_query" title="<{$Think.lang.order_query_list}>" style="padding:10px;text-align:center;">
+            1
+        </div>
+        <div id="compensate_record" title="<{$Think.lang.compensate_record_list}>" style="padding: 10px; text-align: center;">
+            2
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $('#order_info').tabs({
+        border:false,
+        onSelect:function(title,index){
+            if(title=="<{$Think.lang.order_query_list}>"){
+                order_query_list();
+            }else {
+                compensate_record_list();
+            }
+        }
+    });
+
+    //订单查询页面加载
+    function order_query_list() {
+        var tab = $('#order_info').tabs('getSelected');
+        $('#order_info').tabs('update', {
+            tab: tab,
+            options: {
+                title: "<{$Think.lang.order_query_list}>",
+                href: "<{:U('orderList')}>"
+            }
+        });
+    }
+
+    function compensate_record_list() {
+        var tab = $('#order_info').tabs('getSelected');
+        $('#order_info').tabs('update', {
+            tab: tab,
+            options: {
+                title: "<{$Think.lang.compensate_record_list}>",
+                href: "<{:U('compensateList')}>"
+            }
+        });
+
+    }
+</script>

@@ -1,0 +1,235 @@
+<div class="panel-header panel-header-noborder"><{$title}></div>
+
+<!--数据表格 start-->
+<div style="height: 96%;width: 98%; min-width: 1400px;">
+    <table id="propFrom"></table>
+</div>
+<!--数据表格 end-->
+<div id="prop_tb">
+    <a href="#" onclick="propEdit()" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true"><{$Think.lang.public_use_edit}></a>
+    <a href="#" onclick="propDelete()" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true"><{$Think.lang.public_use_delete}></a>
+    <a href="#" onclick="propAdd()" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true"><{$Think.lang.prop_info_new}></a>
+    <select class="easyui-combobox" name="porp_type" id="porp_type_select" style="width: 100px"  data-options="editable:false,panelHeight:'auto'" >
+        <option value=""><{$Think.lang.system_info_all}></option>
+        <foreach name="itemtype" key="item" item="itemname">
+            <option value="<{$item}>"><{$itemname}></option>
+        </foreach>
+    </select>
+
+    <form id="ff" action="<{:U('excelinto')}>" enctype="multipart/form-data" method="post">
+        <input type="file"name="photo" />
+        <input type="submit"value="导入数据">
+    </form>
+</div>
+
+
+<script type="text/javascript">
+    $('#porp_type_select').combobox({
+        onChange: function (n, o) {
+            $('#propFrom').datagrid({
+                queryParams: {type: $('#porp_type_select').combobox('getValue')},
+                loadFilter: function(data){
+                    if(data['rows']['code']==1){
+                        ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.public_search_data_no}>");
+                    }
+                    return data;
+                },
+            });
+        }
+    });
+
+    $(function () {
+        $('body').append('<div id="propBox"></div>');
+        $('#propFrom').datagrid({
+            url:"<{:U('propListPost')}>",
+            fitColumns:true,
+            fit:true,//自适应高度
+            toolbar: '#prop_tb',
+            columns:[[
+                {field:'itemname',title:'<{$Think.lang.prop_info_name}>',width:200,align:'center'},
+                {field:'itemid',title:'<{$Think.lang.prop_info_id}>',width:200,align:'center'},
+                {field:'itemtype',title:'<{$Think.lang.prop_info_type}>',width:200,align:'center'},
+//                {field:'maxnum',title:'<{$Think.lang.prop_info_sun}>',width:200,align:'center'},
+                {field:'operator',title:'<{$Think.lang.prop_info_operator}>',width:500,align:'center'}
+            ]],
+            singleSelect:true,//设置为 true，则只允许选中一行。
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:15,   //表格中每页显示的行数
+            pageList:[15,30,45],
+//            rownumbers:true,   //是否显示行号
+            nowrap: false,
+            striped: true,  //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.public_data_load}>',
+            method:'post',
+
+        });
+    });
+
+    function propDelete() {
+        var row = $('#propFrom').datagrid('getSelected');
+        if(row==null){
+            $.messager.alert('<{:l("public_prompt_information")}>',"<{$Think.lang.public_messager_operation}>");
+            return;
+        }
+        $.messager.confirm("<{$Think.lang.public_use_determine}>", "<{$Think.lang.public_messager_delete}>", function (r) {
+            if (r) {
+                $.post(
+                    "<{:U('propDeltePost')}>",
+                    {id:row.id},
+                    function (data) {
+                        var info = "<{$Think.lang.public_return_delete_error}>";
+                        switch (data){
+                            case 2:info="<{$Think.lang.public_return_delete_success}>"; $('#propFrom').datagrid('reload');break;
+                        }
+                        $.messager.alert('<{:l("public_prompt_information")}>', info,'info',function () {
+                            if(data==2){
+                               propClose()
+                            }
+                        });
+                        return;
+                    }
+                );
+            }
+        });
+    }
+
+    function propEdit() {
+        var row = $('#propFrom').datagrid('getSelected');
+        if(row==null){
+            $.messager.alert('<{:l("public_prompt_information")}>',"<{$Think.lang.public_messager_operation}>");
+            return;
+        }
+
+        $('#propBox').dialog({
+            title: '<{$Think.lang.prop_info_edit}>',
+            width: 350,
+            height: 280,
+            closed: false,
+            href:"<{:U('propEdit')}>"+"<{:C('URL_MODEL_PARAS')}>id="+row.id,
+            cache: false,
+            modal: true,
+            buttons:[{
+                text:'<{$Think.lang.public_use_determine}>',
+                handler:function(){
+                    editPost();
+                }
+            },{
+                text:'<{$Think.lang.public_use_cancel}>',
+                handler:function(){
+                   propClose()
+                }
+            }]
+        });
+    }
+    
+    function editPost() {
+        var data = $('#editFrom').serializeArray();
+        data.push({name:"maxnum",value:'0'});
+        for(var i=0;i<data.length;i++){
+            if(data[i].name=="itemname"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.prop_return_name_error}>');
+                return;
+            }
+            if(data[i].name=="itemid"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.prop_return_id_error}>');
+                return;
+            }
+            if(data[i].name=="maxnum"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.prop_return_maxnum_error}>');
+                return;
+            }
+            if(data[i].name=="itemtype"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.prop_return_item_type_error}>');
+                return;
+            }
+        }
+        $.post(
+            "<{:U('propEditPost')}>",
+            data,
+            function (data) {
+                var info = "<{$Think.lang.public_return_edit_error}>";
+                switch (data){
+                    case 2:info="<{$Think.lang.public_return_edit_success}>";break;
+                    case 4:info="<{$Think.lang.prop_return_id_error_repeat}>";break;
+                }
+                propClose();
+                if(data==2){
+                    ShowSuccessMsg('<{:l("public_prompt_information")}>',info);
+                    $('#propFrom').datagrid('reload');
+                }else {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>',info);
+                }
+                return false;
+            }
+        );
+    }
+    
+    function propAdd() {
+
+        $('#propBox').dialog({
+            title: '<{$Think.lang.prop_info_new}>',
+            width: 350,
+            height: 280,
+            closed: false,
+            href:"<{:U('propAdd')}>",
+            cache: false,
+            modal: true,
+            buttons:[{
+                text:'<{$Think.lang.public_use_determine}>',
+                handler:function(){
+                    addPost();
+                }
+            },{
+                text:'<{$Think.lang.public_use_cancel}>',
+                handler:function(){
+                   propClose()
+                }
+            }]
+        });
+    }
+
+    function addPost() {
+        var data = $('#addFrom').serializeArray();
+        data.push({name:"maxnum",value:'0'});
+        for(var i=0;i<data.length;i++){
+            if(data[i].name=="itemname"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.prop_return_name_error}>');
+                return;
+            }
+            if(data[i].name=="itemid"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.prop_return_id_error}>');
+                return;
+            }
+            if(data[i].name=="maxnum"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.prop_return_maxnum_error}>');
+                return;
+            }
+            if(data[i].name=="itemtype"&&data[i].value==""){
+                ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.prop_return_item_type_error}>');
+                return;
+            }
+        }
+        $.post(
+            "<{:U('propAddPost')}>",
+            data,
+            function (data) {
+                var info = "<{$Think.lang.public_return_add_error}>";
+                switch (data){
+                    case 2:info="<{$Think.lang.public_return_add_success}>";break;
+                    case 4:info="<{$Think.lang.prop_return_id_error_repeat}>";break;
+                }
+                if(data==2){
+                    ShowSuccessMsg('<{:l("public_prompt_information")}>',info);
+                    propClose();
+                    $('#propFrom').datagrid('reload');
+                }else {
+                    ShowErrorMsg('<{:l("public_prompt_information")}>',info);
+                }
+                return false;
+            }
+        );
+    }
+    function propClose() {
+        $('#propBox').dialog('close',true);
+    }
+</script>

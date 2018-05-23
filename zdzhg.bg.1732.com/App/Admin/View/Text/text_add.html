@@ -1,0 +1,74 @@
+<form id="textAddForm" method="post">
+    <table  class="tab_style_table" style="width:100%;text-align:left;">
+        <tr>
+            <td><{$Think.lang.text_info_type}>:</td>
+            <td style="text-align: center">
+                <select  name="type" class="easyui-combobox"  data-options="editable:false,panelHeight:'auto'" >
+                    <option value="1"><{$Think.lang.text_option_type_one}></option>
+                    <option value="2"><{$Think.lang.text_option_type_two}></option>
+                    <option value="3"><{$Think.lang.text_option_type_three}></option>
+                    <!--<option value="4"><{$Think.lang.text_option_type_four}></option>-->
+                    <option value="6"><{$Think.lang.text_option_type_six}></option>
+                    <option value="7"><{$Think.lang.text_option_type_seven}></option>
+                    <option value="8"><{$Think.lang.activity_limit_title}></option>
+                    <option value="9"><{$Think.lang.activity_limit_introduce}></option>
+                </select>
+            </td>
+            <td><{$Think.lang.text_info_explain}>:</td>
+            <td style="text-align: center"> <input class="easyui-textbox" type="text" name="explain" data-options="" /></td>
+        </tr>
+
+        <tr>
+            <td>Korean:</td>
+            <td> <input name="korean" value="" type="text"  class="easyui-textbox" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+            <td>Vietnamese:</td>
+            <td> <input name="vietnamese"  value="" type="text"  class="easyui-textbox" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+        </tr>
+        <tr>
+            <td>Eenglish:</td>
+            <td> <input name="english" id="english" value="" type="text"  class="easyui-textbox" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+
+        </tr>
+
+        <tr>
+            <td>Chinese:</td>
+            <td> <input name="chinese" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px" /></td>
+            <td>ChineseTraditional:</td>
+            <td> <input name="chinese_traditional" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px" /></td>
+        </tr>
+        <tr>
+            <td>Japanese:</td>
+            <td> <input name="japanese" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+            <td>Thai:</td>
+            <td> <input name="thai" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+        </tr>
+
+        <tr>
+            <td>Spanish:</td>
+            <td> <input name="spanish" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+            <td>Portuguese:</td>
+            <td> <input name="portuguese" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+        </tr>
+        <tr>
+            <td>Russian:</td>
+            <td> <input name="russian" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+            <td>French:</td>
+            <td> <input name="french" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+        </tr>
+
+        <tr>
+            <td>German:</td>
+            <td> <input name="german" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+            <td>Arabic:</td>
+            <td> <input name="arabic" value="" type="text"  class="easyui-textbox follow" data-options="multiline:true"  style="width: 200px;height: 70px"  /></td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javascript">
+    $('#english').textbox({
+        onChange:function (newValue, oldValue) {
+            $('.follow').textbox('setValue',newValue);
+        }
+    })
+</script>

@@ -1,0 +1,138 @@
+<div class="panel-header panel-header-noborder"><{$title}></div>
+
+<!--数据表格 start-->
+<div style="height: 96%;width: 98%; min-width: 1400px;">
+    <table id="serverFrom"></table>
+</div>
+<!--数据表格 end-->
+
+<script type="text/javascript">
+    $(function () {
+        $('#serverFrom').datagrid({
+            url: "<{:U('serverListPost')}>",
+            fitColumns: true,
+            fit: true,//自适应高度
+            toolbar: [{
+                text: '<{$Think.lang.public_use_delete}>',
+                iconCls: 'icon-remove',
+                handler: function() {
+                    serverDelete();
+                }
+            },'-',{
+                text: '<{$Think.lang.server_info_new}>',
+                iconCls: 'icon-add',
+                handler: function() {
+                    serverAdd();
+                }
+            }
+            ],
+            columns:[[
+                {field:'sumnum',title:'<{$Think.lang.public_use_sumnum}>',width:200,align:'center'},
+                {field:'id',title:'ID',width:200,align:'center',hidden:true},
+                {field:'serverid',title:'<{$Think.lang.server_info_id}>',width:200,align:'center'},
+                {field:'servername',title:'<{$Think.lang.server_info_name}>',width:200,align:'center'},
+                {field:'operator',title:'<{$Think.lang.public_use_operator}>',width:500,align:'center'}
+            ]],
+            singleSelect:true,//设置为 true，则只允许选中一行。
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:15,   //表格中每页显示的行数
+            pageList:[5,10,15],
+            nowrap: false,
+            striped: true,  //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.public_data_load}>',
+            method:'post',
+
+        });
+    });
+    
+    function serverDelete() {
+        var row = $('#serverFrom').datagrid('getSelected');
+        if(row==null){
+            ShowErrorMsg('<{:l("public_prompt_information")}>',"<{$Think.lang.public_messager_operation}>");
+            return;
+        }
+        $.messager.confirm("<{$Think.lang.public_use_determine}>", "<{$Think.lang.public_messager_delete}>", function (r) {
+            if (r) {
+                $.post(
+                    "<{:U('serverDeltePost')}>",
+                    {id:row.id},
+                    function (data) {
+                        var info = "<{$Think.lang.public_return_delete_error}>";
+                        switch (data){
+                            case 2:info="<{$Think.lang.public_return_delete_success}>";$('#serverFrom').datagrid('reload');break;
+                        }
+                        if(data==2){
+                            ShowSuccessMsg('<{:l("public_prompt_information")}>','<{:l("public_prompt_information")}>', info);
+                        }else {
+                            ShowErrorMsg('<{:l("public_prompt_information")}>',info);
+                        }
+                        return;
+                    }
+                );
+            }
+        });
+
+    }
+
+    function serverAdd() {
+        $('body').append('<div id="serverAdd"></div>');
+        $('#serverAdd').dialog({
+            title: '<{$Think.lang.server_info_new}>',
+            width: 380,
+            height: 180,
+            closed: false,
+            href:"<{:U('serverAdd')}>",
+            cache: false,
+            modal: true,
+            buttons:[{
+                text:'<{$Think.lang.public_use_determine}>',
+                handler:function(){
+                        serverAddPost();
+                }
+            },{
+                text:'<{$Think.lang.public_use_cancel}>',
+                handler:function(){
+                    serverClose();
+                }
+            }]
+        });
+    }
+
+    function serverAddPost() {
+        var data = $('#serverAddFrom').serializeArray();
+        console.log(data);
+        for(var i=0;i<data.length;i++){
+            if(data[i].name=="servername"&&data[i].value==""){
+                $.messager.alert('<{$Think.lang.public_prompt_information}>', "<{$Think.lang.server_return_name_error}>");
+                return;
+            }
+            if(data[i].name=="serverid"&&data[i].value==""){
+                $.messager.alert('<{$Think.lang.public_prompt_information}>', "<{$Think.lang.server_return_id_error}>");
+                return;
+            }
+        }
+        $.post(
+            "<{:U('serverAddPost')}>",
+            data,
+            function (data) {
+                console.log(data);
+                var info = "<{$Think.lang.public_return_add_error}>";
+                switch (data){
+                    case 2:info="<{$Think.lang.public_return_add_success}>";break;
+                    case 4:info="<{$Think.lang.server_return_id_error_repeat}>";break;
+                }
+                $.messager.alert('<{$Think.lang.public_prompt_information}>', info,'info',function () {
+                    if(data==2){
+                        serverClose();
+                        $('#serverFrom').datagrid('reload');
+                    }
+                });
+
+                return;
+            }
+        );
+    }
+    function serverClose() {
+        $('#serverAdd').dialog('close',true)
+    }
+</script>

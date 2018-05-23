@@ -1,0 +1,156 @@
+<div style="text-align:left;">
+    <a id="preferential_add_but" href="javascript:void(0);"><{$Think.lang.system_add_system}></a>
+    <a id="preferential_edit_but" href="javascript:void(0);"><{$Think.lang.public_update}></a>
+    <!--<a id="preferential_delete_but" href="javascript:void(0);"><{$Think.lang.system_delete_system}></a>-->
+    <a id="preferential_refresh_but" href="javascript:void(0);"><{$Think.lang.public_icon_mini_refresh}></a>
+</div>
+
+<!--数据表格 start-->
+<div style="padding:10px;height: 94%;">
+    <table id="preferential_list"></table>
+</div>
+<!--数据表格 end-->
+<script type="text/javascript">
+    function detaileds(index) {
+        var rows = $('#preferential_list').datagrid('getRows');
+        var row = rows[index];
+        localStorage.setItem('preferential_data', JSON.stringify(row));
+        var tab = $('#preferential_goods').tabs('getSelected');
+        tab.panel('refresh', "<{:U('preferentialInfo')}>");
+    }
+
+    $(function () {
+
+        $('#preferential_add_but').linkbutton({
+            iconCls: 'icon-add',
+        });
+
+        $('#preferential_edit_but').linkbutton({
+            iconCls: 'icon-edit'
+        });
+
+//        $('#preferential_delete_but').linkbutton({
+//            iconCls: 'icon-remove'
+//        });
+
+        $('#preferential_refresh_but').linkbutton({
+            iconCls: 'icon-reload'
+        });
+
+        $('#preferential_list').datagrid({
+            url:"<{:U('preferentialListPost')}>",
+            fitColumns:true,
+            columns:[[
+                {field:'fx',checkbox:true},
+                {field:'sumnum',title:'<{$Think.lang.public_use_sumnum}>',width:50,align:'center'},
+                {field:'goods',title:'<{$Think.lang.preferential_goods_id}>',width:80,align:'center'},
+                {field:'comment',title:'<{$Think.lang.preferential_goods_explain}>',width:180,align:'center'},
+                {field:'position',title:'<{$Think.lang.preferential_goods_position}>',width:50,align:'center'},
+                {field:'nameid',title:'<{$Think.lang.preferential_goods_name_text_id}>',width:100,align:'center'},
+                {field:'multipleid',title:'<{$Think.lang.preferential_goods_multiple_text_id}>',width:100,align:'center'},
+                {field:'moneytypename',title:'<{$Think.lang.preferential_money_type}>',width:50,align:'center'},
+                {field:'limitbuycount',title:'<{$Think.lang.preferential_limit_buy_count}>',width:50,align:'center'},
+                {field:'starttime',title:'<{$Think.lang.preferential_time_start}>',width:150,align:'center'},
+                {field:'endtime',title:'<{$Think.lang.preferential_time_end}>',width:150,align:'center'},
+                {field:'appstoreid',title:'appstoreid',width:150,align:'center',hide:true},
+                {field:'playstoreid',title:'playstoreid',width:150,align:'center',hide:true},
+                {field:'operate',title:'<{$Think.lang.public_goods_info_detailed}>',width:100,align:'center',formatter: function(value,row,index){
+                    return '<a name="opera" onclick="detaileds('+index+')" class="easyui-linkbutton"></a>';
+                }}
+            ]],
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:9,//表格中每页显示的行数
+            pageList:[3,6,9],
+            nowrap:false,
+            singleSelect: true,
+            fit:true, //自适应高度
+            striped: true, //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.notice_data_load}>',
+            method:'post',
+            onLoadSuccess:function(data){
+                $("a[name='opera']").linkbutton({text:'<{$Think.lang.public_goods_info_detailed}>',plain:true,iconCls:'icon-more'});
+            },
+        });
+
+        $('#preferential_add_but').bind('click', function(){
+            var tab = $('#preferential_goods').tabs('getSelected');
+            tab.panel('refresh', "<{:U('preferentialAdd')}>");
+        });
+
+        $('#preferential_edit_but').bind('click', function(){
+            var row = $('#preferential_list').datagrid('getSelected');
+            if(row==null){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+            }
+            localStorage.setItem('preferential_data', JSON.stringify(row));
+            var tab = $('#preferential_goods').tabs('getSelected');
+            tab.panel('refresh', "<{:U('preferentialEdit')}>");
+        });
+
+        $('#preferential_delete_but').bind('click', function(){
+            var row = $('#preferential_list').datagrid('getSelected');
+
+            if(row==null){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+            }
+            $.messager.confirm("<{$Think.lang.public_use_determine}>", "<{$Think.lang.public_messager_delete}>", function (data) {
+                if(data){
+                    ShowProgress("<{$Think.lang.public_show_delete}>");
+                    $.post(
+                        "<{:U('preferentialDeletePost')}>",
+                        {delid:row.goods},
+                        function (data) {
+                            HideProgress();
+                            if(data.status==0){
+                                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                                return false;
+                            }
+                            if(data==1){
+                                ShowSuccessMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_delete_success}>');
+                                $('#preferential_list').datagrid('reload');
+                            }else {
+                                ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.public_return_delete_error}>');
+                                return false;
+                            }
+                        }
+                    );
+                }
+
+            });
+        });
+
+        $('#preferential_refresh_but').bind('click', function(){
+            ShowProgress("<{$Think.lang.public_show_reload}>");
+            $.post(
+                "<{:U('shopReloadPost')}>",
+                {id:0},
+                function (data) {
+                    HideProgress();
+                    if(data.status==0){
+                        ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',data.info);
+                        return false;
+                    }
+                    var info = "<{$Think.lang.public_return_reload_error}>";
+                    switch (data){
+                        case 1:
+                            info="<{$Think.lang.public_return_reload_success}>";
+                            $('#textFrom').datagrid('reload');
+                            break;
+                        default:
+                            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',info);
+                            return false;
+                            break;
+                    }
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',info);
+                    return false;
+                }
+            );
+        });
+
+    });
+
+
+
+
+
+</script>

@@ -1,0 +1,347 @@
+<div style="text-align:center;">
+    <form id="order_search_data">
+        <select id="order_search_type" name="type" class="easyui-combobox" style="width:120px;" data-options="editable:false">
+            <!--<option value="0"><{$Think.lang.system_info_all}></option>-->
+            <option value="1"><{$Think.lang.order_search_role_code}></option>
+            <!--<option value="2"><{$Think.lang.order_search_payment_no}></option>-->
+            <!--<option value="3"><{$Think.lang.order_search_payment_yes}></option>-->
+            <!--<option value="4"><{$Think.lang.order_search_reissue_yes}></option>-->
+            <!--<option value="5"><{$Think.lang.order_search_refund_yes}></option>-->
+            <!--<option value="6"><{$Think.lang.order_search_google_platform}></option>-->
+            <!--<option value="7"><{$Think.lang.order_search_apple_platform}></option>-->
+        </select>
+        <input id="order_search_codeid" name="codeid" type="text" class="easyui-textbox" data-options="">
+        <input id="order_search_time" name="time" class="easyui-datebox" data-options="editable:false">
+        <a id="order_search_but" href="javascript:void(0);"><{$Think.lang.public_select}></a>
+        <a id="order_export_but" href="javascript:void(0);"><{$Think.lang.public_export}></a>
+    </form>
+</div>
+
+<!--数据表格 start-->
+<div style="padding:10px;height: 94%;">
+    <table id="order_list_data"></table>
+</div>
+
+
+<script type="text/javascript">
+    var getsystemdate = getsystemdata();
+    $('.easyui-datetimebox').datetimebox({
+        value: getsystemdate
+    });
+    require(['js-export-excel']);
+    $(function () {
+        $('#order_search_time').datebox().datebox('calendar').calendar({
+            validator: function(date){
+                var startTime = new Date();
+                return date<=startTime;
+            }
+        });
+
+        $('#order_search_but').bind('click',function () {
+            var data = $('#order_search_data').serializeArray();
+            var info = new Array();
+            for (var i =0 ;i<data.length;i++){
+                if(data[i].value!=""&&data[i].value!=-1){
+                    if(data[i].name=="codeid"){
+                        data[i].value = UInt32To10(data[i].value);
+                    }
+                    info[data[i].name] = data[i].value;
+                }else {
+                    data[i].value = -1;
+                }
+            }
+            if(info['type']==1&&isNaN(info['codeid'])){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.order_search_role_code_error}>");
+            }
+            var startTime = Date.parse(new Date());
+            var startTime2 = Date.parse(new Date(info['time']));
+            console.log(info['time']);
+            console.log(typeof(info['time']));
+            if(typeof(info['time'])=="undefined" ||startTime<startTime2){
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.order_search_time_error}>");
+            }
+
+            $('#order_list_data').datagrid({
+                queryParams: info,
+                loadFilter: function(data){
+                    if(data['rows']['code']==1){
+                        ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.public_search_data_no}>");
+                    }else {
+                        for (var i =0 ; i<data['rows'].length; i++){
+                            data['rows'][i]['rolecode'] = UInt10To32(data['rows'][i]['id']);
+                    }
+                    }
+                    return data;
+                },
+        });
+    });
+
+//        $('#order_search_type').combobox({
+//            onSelect:function (record){
+//                if(record.value==1){
+//                    $('#order_search_codeid').textbox({readonly:false});
+//                }else{
+//                    $('#order_search_codeid').textbox('setValue','');
+//                    $('#order_search_codeid').textbox({readonly:true});
+//                }
+//            }
+//        });
+
+        $('#order_search_but').linkbutton({
+            iconCls: 'icon-search'
+        });
+
+        $('#order_export_but').linkbutton({
+            iconCls: 'icon-print'
+        });
+
+        $('#order_list_data').datagrid({
+            url:"<{:U('orderListPost')}>",
+            fitColumns:true,
+            columns:[[
+                {field:'fx',checkbox:true},
+                {field:'sumnum',title:'<{$Think.lang.public_use_sumnum}>',width:50,align:'center'},
+                {field:'time',title:'<{$Think.lang.order_info_pay_time}>',width:250,align:'center'},
+                {field:'rolecode',title:'<{$Think.lang.order_search_role_code}>',width:150,align:'center'},
+                {field:'id',title:'<{$Think.lang.order_search_role_id}>',width:250,align:'center'},
+//                {field:'goods',title:'<{$Think.lang.order_info_goods_id}>',width:250,align:'center'},
+                {field:'goodsname',title:'<{$Think.lang.order_info_goods_name}>',width:250,align:'center'},
+                {field:'paytypename',title:'<{$Think.lang.order_info_pay_type}>',width:250,align:'center'},
+                {field:'product',title:'<{$Think.lang.order_info_goods_code}>',width:250,align:'center'},
+                {field:'statusname',title:'<{$Think.lang.order_info_type_state}>',width:250,align:'center'},
+                {field:'operate',title:'<{$Think.lang.public_operation}>',width:250,align:'center',formatter: function(value,row,index){
+                    return '<a name="opera" onclick="status_upload('+index+')" class="easyui-linkbutton"></a>' +
+                        '<a name="compensate" onclick="compensate_upload('+index+')" class="easyui-linkbutton"></a>';
+                }}
+            ]],
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:15,     //表格中每页显示的行数
+            pageList:[15,10,5],
+            nowrap: false,
+            singleSelect: true,
+            fit:true,//自适应高度
+            striped: true,  //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.notice_data_load}>',
+            method:'post',
+            loadFilter: function(data){
+                if(data['rows']['code']!=1){
+                    for (var i =0 ; i<data['rows'].length; i++){
+                        data['rows'][i]['rolecode'] = UInt10To32(data['rows'][i]['id']);
+                    }
+                }
+                return data;
+            },
+            onLoadSuccess:function(data){
+                $("a[name='opera']").linkbutton({text:'<{$Think.lang.public_update}>',plain:true,iconCls:'icon-remove'});
+                $("a[name='compensate']").linkbutton({text:'<{$Think.lang.public_info_goods_compensate}>',plain:true,iconCls:'icon-save'});
+
+            }
+        });
+
+
+        $('#order_export_but').bind('click',function () {
+            var data = $("#order_list_data").datagrid("getRows");
+            for(var i=0;i<data.length;i++){
+                data[i]={
+                    id:data[i]['id'],
+                    time:data[i]['time'],
+                    rolecode:data[i]['rolecode'],
+//                    goods:data[i]['goods'],
+                    goodsname:data[i]['goodsname'],
+                    paytypename:data[i]['paytypename'],
+                    product:data[i]['product'],
+                    statusname:data[i]['statusname']
+                };
+            }
+            var option={};
+            option.fileName = '<{$Think.lang.identifier_info_query}>'
+            option.datas=[
+                {
+                    sheetData:data,
+                    sheetName:'<{$Think.lang.identifier_info_transformation}>',
+                    sheetFilter:[
+                        'id',
+                        'time',
+                        'rolecode',
+//                        'goods',
+                        'goodsname',
+                        'paytypename',
+                        'product',
+                        'statusname',
+                    ],
+                    sheetHeader:[
+                        '<{$Think.lang.order_search_role_id}>',
+                        '<{$Think.lang.order_info_pay_time}>',
+                        '<{$Think.lang.order_search_role_code}>',
+//                        '<{$Think.lang.order_info_goods_id}>',
+                        '<{$Think.lang.order_info_goods_name}>',
+                        '<{$Think.lang.order_info_pay_type}>',
+                        '<{$Think.lang.order_info_goods_code}>',
+                        '<{$Think.lang.order_info_type_state}>',
+                    ]
+                }
+            ];
+            var toExcel=new ExportJsonExcel(option);
+            toExcel.saveExcel();
+
+        });
+
+    });
+
+    function status_upload(index) {
+        var rows = $('#order_list_data').datagrid('getRows');
+        localStorage.setItem('one_order_data', JSON.stringify(rows[index]));
+        $('body').append('<div id="orderEdit"></div>');
+        $('#orderEdit').dialog({
+            title: '<{$Think.lang.public_update}>',
+            width: 300,
+            height: 250,
+            closed: false,
+            href:"<{:U('orderEdit')}>",
+            cache: false,
+            modal: true,
+            buttons:[{
+                text:'<{$Think.lang.public_use_determine}>',
+                handler:function(){
+                    orderEditPost();
+                }
+            },{
+                text:'<{$Think.lang.public_use_cancel}>',
+                handler:function(){
+                    $('#orderEdit').dialog('close',true);
+                }
+            }]
+        });
+    }
+
+    function compensate_upload(index) {
+        var rows = $('#order_list_data').datagrid('getRows');
+        localStorage.setItem('one_order_data', JSON.stringify(rows[index]));
+        $('body').append('<div id="compensateEdit"></div>');
+        $('#compensateEdit').dialog({
+            title: '<{$Think.lang.public_info_goods_compensate}>',
+            width: 800,
+            height: 400,
+            closed: false,
+            href:"<{:U('compensateEdit')}>",
+            cache: false,
+            modal: true,
+            buttons:[{
+                text:'<{$Think.lang.public_use_determine}>',
+                handler:function(){
+                    compensateEditPost(index);
+                }
+            },{
+                text:'<{$Think.lang.public_use_cancel}>',
+                handler:function(){
+                    $('#compensateEdit').dialog('close',true);
+                }
+            }],
+            onLoad:function () {
+                $('#seltextgoodslist').combobox('select',data['goodsnamenum']);
+            }
+        });
+    }
+
+    function orderEditPost() {
+//        var columns = $('#order_list_data').datagrid("options").columns;
+//        var rows = $('#order_list_data').datagrid("getRows");
+//        var type = JSON.parse(localStorage.getItem('one_order_data'));
+//        var lastIndex='';
+//        for(var i=0;i<rows.length;i++){
+//            if(rows[i]['sumnum']==type['sumnum']){
+//                lastIndex = i;
+//            }
+//        }
+//
+//        $('#order_list_data').datagrid('updateRow',{
+//            index: lastIndex,
+//            row: {
+//                'statusname':'123'
+//            }
+//        });
+//        console.log(columns);
+//        console.log(rows);
+//
+//        console.log(type);
+//        return;
+       var order =  $('#orderEditForm').serializeArray();
+       var type_name = $('#order_status').combobox('getText');
+        ShowProgress("<{$Think.lang.notice_show_edit}>");
+       $.post(
+           "<{:U('orderEditPost')}>",
+           order,
+           function (data) {
+               HideProgress();
+               if(data==1){
+                   ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.public_successful_modification}>");
+                   $('#orderEdit').dialog('close',true);
+                   var type = JSON.parse(localStorage.getItem('one_order_data'));
+                       console.log(type);
+                       console.log(type_name);
+
+                   $('#order_list_data').datagrid('reload');
+                   return false;
+               }
+               ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.public_modification_failed}>");
+               console.log(data);
+           }
+       );
+    }
+
+    function compensateEditPost(index) {
+        var data = {};
+        if($('#c_role_code').html()==''){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.order_search_role_code_error}>");
+            return false;
+        }else {
+            data.roles = $('#c_role_code').html();
+        }
+        if($('#seltextordertitlelist').combobox('getValue')==-1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.email_please_select_the_title_text_id}>");
+            return false;
+        }else {
+            data.title =$('#seltextordertitlelist').combobox('getText');
+        }
+        if($('#seltextordercontentlist').combobox('getValue')==-1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.email_please_select_the_title_text_id}>");
+            return false;
+        }else {
+            data.content =$('#seltextordercontentlist').combobox('getText');
+        }
+        if($('#seltextgoodslist').textbox('getValue')==-1){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.order_info_goods_compensate_error}>");
+            return false;
+        }else {
+            data.count =$('#seltextgoodslist').textbox('getValue');
+        }
+        if($('#compensate_reason').textbox('getValue')==''){
+            ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.email_operation_can_not_be_empty}>");
+            return false;
+        }else {
+            data.reason =$('#compensate_reason').textbox('getValue');
+        }
+
+        data.goods_code = $('#c_goods_code').html();
+        data.compensate_name = $('#seltextgoodslist').combobox('getText');
+
+        ShowProgress("<{$Think.lang.notice_show_edit}>");
+        $.post(
+            "<{:U('compensateEditPost')}>",
+            data,
+            function (data) {
+                HideProgress();
+                if(data==1){
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.public_successful_modification}>");
+                    $('#compensateEdit').dialog('close',true);
+                    $('#order_list_data').datagrid('reload');
+                    status_upload(index);
+                    return false;
+                }
+                ShowErrorMsg('<{$Think.lang.public_prompt_information}>',"<{$Think.lang.public_modification_failed}>");
+                console.log(data);
+            }
+        );
+    }
+
+</script>

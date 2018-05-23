@@ -1,0 +1,197 @@
+<!--数据表格 start-->
+<div style="height: 96%;width: 98%">
+    <table id="dg"></table>
+</div>
+<!--数据表格 end-->
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#dg').datagrid({
+            url:"<{:U('noticeListPost')}>",
+            fitColumns:true,
+            toolbar: [{
+                text: '<{$Think.lang.notice_icon_undo}>',
+                iconCls: 'icon-undo',
+                handler: function() {
+                    getSelections(1,2);
+                }
+            }, '-', {
+                text: '<{$Think.lang.notice_icon_redo}>',
+                iconCls: 'icon-redo',
+                handler: function() {
+                    getSelections(1,3);
+                }
+            }, '-', {
+                text: '<{$Think.lang.notice_icon_edit}>',
+                iconCls: 'icon-edit',
+                handler: function() {
+                    getSelections(1,4);
+                }
+            }, '-', {
+                text: '<{$Think.lang.notice_icon_no}>',
+                iconCls: 'icon-no',
+                handler: function() {
+                    getSelections(1,5);
+                }
+            }, '-', {
+                text: '<{$Think.lang.notice_icon_remove}>',
+                iconCls: 'icon-remove',
+                handler: function() {
+                    getSelections(2,6);
+                }
+            }],
+            columns:[[
+                {field:'fx',checkbox:true},
+                {field:'id',title:'ID',width:100,align:'center',hidden:true},
+                {field:'start',title:'<{$Think.lang.notice_list_start}>',width:180,align:'center'},
+                {field:'end',title:'<{$Think.lang.notice_list_end}>',width:180,align:'center'},
+                {field:'interval',title:'<{$Think.lang.notice_list_interval}>',width:100,align:'center'},
+                {field:'platform',title:'<{$Think.lang.notice_list_platform}>',width:150,align:'center'},
+                {field:'target_player',title:'<{$Think.lang.notice_list_target_player}>',width:200,align:'center'},
+                {field:'content',title:'<{$Think.lang.notice_list_content}>',width:500,align:'center'},
+                {field:'reason',title:'<{$Think.lang.content_api_reason}>',width:400,align:'center'},
+                {field:'operator',title:'<{$Think.lang.notice_list_operator}>',width:100,align:'center'},
+                {field:'state',title:'<{$Think.lang.notice_list_state}>',width:100,align:'center'}
+            ]],
+            pagination:true,//如果表格需要支持分页，必须设置该选项为true
+            pageSize:20,   //表格中每页显示的行数
+            pageList:[20,40,80],
+//            rownumbers:true,   //是否显示行号
+            nowrap: false,
+            fit:true,//自适应高度
+            striped: true,  //奇偶行是否使用不同的颜色
+            loadMsg:'<{$Think.lang.notice_data_load}>',
+            method:'post',
+
+        });
+        $("#tabmenu").tabs({
+            onBeforeClose: function(title,index){
+                var target = this;
+                var opts = $(target).tabs('options');
+                var bc = opts.onBeforeClose;
+                opts.onBeforeClose = function(){};  // allowed to close now
+                $(target).tabs('close',index);
+                opts.onBeforeClose = bc;  // restore the event funct
+                $('#dg').datagrid('reload');
+                return false;	// prevent from closing
+            }
+        });
+    });
+    function getSelections(num,operation){
+        var rows = $('#dg').datagrid('getSelections');
+        if(num==1&&rows.length>1){
+            $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operations}>");return;
+        }
+        if(rows.length<1){
+            $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_operation}>");return;
+        }
+
+        if(operation==2||operation==3){
+            if(rows[0].state!="<{$Think.lang.public_use_notice_state_one}>"){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_move}>");return;
+            }
+            var url = "<{:U('noticeMove')}>";
+            var data = {id:rows[0].id,sort:operation}
+            ajaxRequest(url,data);
+        }
+        if(operation==4){
+            if(rows[0].state!="<{$Think.lang.public_use_notice_state_three}>"){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_edit}>");return;
+            }
+            $('#tabmenu').tabs('close','<{$Think.lang.public_use_edit}>');
+            $('#tabmenu').tabs('add',{
+                title:'<{$Think.lang.public_use_edit}>',
+                closable:true,
+                href:"<{:U('onticeEdit')}>"+"<{:C('URL_MODEL_PARAS')}>id="+rows[0].id  //如果路由模式被更改，可能会报错
+            });
+            
+        }
+        if(operation==5){
+            if(rows[0].state=="<{$Think.lang.public_use_notice_state_three}>"){
+                $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_end}>");return;
+            }
+
+            $.messager.prompt("<{$Think.lang.public_prompt_information}>", "<{$Think.lang.notice_messager_end_reason}>", function (data) {
+                if(data!=''&&typeof(data) != "undefined"){
+                    var url = "<{:U('noticeEnd')}>";
+                    var data = {id:rows[0].id,operationreason:data}
+                    ShowProgress("<{$Think.lang.notice_show_end}>");
+                    ajaxRequest(url,data);
+                }else {
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.email_operation_can_not_be_empty}>');
+                    return false;
+                }
+            });
+        }
+        if(operation==6){
+            var ss = [];
+            for(var i=0;i<rows.length;i++){
+                if(rows[i].state!="<{$Think.lang.public_use_notice_state_three}>"){
+                    $.messager.alert('<{:l("public_prompt_information")}>', "<{$Think.lang.notice_messager_delete_end}>");return;
+                }
+                ss[i]=rows[i]['id'];
+            }
+            $.messager.prompt("<{$Think.lang.public_prompt_information}>", "<{$Think.lang.notice_messager_delete_reason}>", function (data) {
+                if(data!=''&&typeof(data) != "undefined"){
+                    var url = "<{:U('noticeDelete')}>";
+                    var data = {id:ss,operationreason:data}
+                    ajaxRequest(url,data);
+                }else {
+                    ShowErrorMsg('<{$Think.lang.public_prompt_information}>','<{$Think.lang.email_operation_can_not_be_empty}>');
+                    return false;
+                }
+            });
+        }
+    }
+    function ajaxRequest(url,data) {
+        $.post(
+            url,
+            data,
+            function (state) {
+                HideProgress();
+                if(state.status==0){
+                    ShowSuccessMsg('<{$Think.lang.public_prompt_information}>',state.info);
+                    return false;
+                }
+                console.log(state);
+                var info = "<{$Think.lang.public_return_error}>";
+                switch(state)
+                {
+                    case 10:
+                        info = "<{$Think.lang.public_return_delete_error}>";
+                        break;
+                    case 11:
+                        info = "<{$Think.lang.public_return_delete_success}>";
+                        break;
+                    case 12:
+                        info = "<{$Think.lang.notice_messager_move_error}>";
+                        break;
+                    case 13:
+                        info = "<{$Think.lang.notice_messager_data_first}>";
+                        break;
+                    case 14:
+                        info = "<{$Think.lang.notice_messager_move_fail}>";
+                        break;
+                    case 15:
+                        info = "<{$Think.lang.notice_messager_move_success}>";
+                        break;
+                    case 16:
+                        info = "<{$Think.lang.notice_messager_data_no}>";
+                        break;
+                    case 17:
+                        info = "<{$Think.lang.notice_messager_data_delete}>";
+                        break;
+                }
+                $.messager.alert('<{:l("public_prompt_information")}>', info);
+                notice_refresh();
+            }
+        )
+    }
+    function notice_refresh() {
+        $('#dg').datagrid('reload');
+    }
+
+</script>
+
+

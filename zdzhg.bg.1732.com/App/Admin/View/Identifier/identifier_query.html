@@ -1,0 +1,144 @@
+<div class="panel-header panel-header-noborder" ><{$title}></div>
+
+<table  class="tab_style_table" style="width:98%; min-width: 1400px;">
+    <tr >
+        <td  style="text-align:center;"><{$Think.lang.identifier_info_code}></td>
+        <td  style="text-align:center;">ID</td>
+    </tr>
+    <tr>
+        <td style="text-align:center;" >
+            <textarea id="rolecode" name="identifier_rolecode" style="width:300px;height:400px;" placeholder="<{$Think.lang.identifier_info_explain}>"></textarea>
+        </td>
+        <td style="text-align:center;">
+            <textarea id="roleid" name="roleid" style="width:300px;height:400px;" placeholder="<{$Think.lang.identifier_info_explain}>"></textarea>
+        </td>
+
+    </tr>
+    <tr>
+        <td style="text-align:center;">
+            <a id="code" href="javascript:void(0);" class="easyui-linkbutton"  ><{$Think.lang.identifier_info_code}>->ID</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="code_upload"  name="code_upload" >
+        </td>
+        <td style="text-align:center;">
+            <a id="id" href="javascript:void(0);" class="easyui-linkbutton"  >ID-><{$Think.lang.identifier_info_code}></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="id_upload"  name="id_upload" >
+        </td>
+    </tr>
+</table>
+<div style="text-align:center;padding: 20px">
+    <a id="query" href="javascript:void(0);" class="easyui-linkbutton" data-options="size:'large',iconAlign:'top'">&nbsp;&nbsp;&nbsp;<{$Think.lang.identifier_info_export_query}>&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+<script type="text/javascript">
+    require(['js-export-excel','js-xlsx-full']);
+    var wb;//读取完成的数据
+    var rABS = true; //是否将文件读取为二进制字符串
+    $(function(){
+        $('#code').bind('click', function(){
+            convert(2)
+        });
+        $('#id').bind('click', function(){
+            convert(1)
+        });
+        $('#code_upload').filebox({
+            buttonText : '<{$Think.lang.identifier_info_upload}>',
+            onChange: function (n, o) {
+                flie_upload(n,1);
+            }
+        });
+        $('#id_upload').filebox({
+            buttonText : '<{$Think.lang.identifier_info_upload}>',
+            onChange: function (n, o) {
+                flie_upload(n,2);
+            }
+        });
+        $('#query').bind('click', function(){
+            var code = $('#rolecode').val().split(",");
+            var id = $('#roleid').val().split(",");
+            var data = new Array();
+            for(var i=0;i<code.length;i++){
+                data[i]={one:id[i],two:code[i]};
+            }
+            var option={};
+            option.fileName = '<{$Think.lang.identifier_info_query}>'
+            option.datas=[
+                {
+                    sheetData:data,
+                    sheetName:'<{$Think.lang.identifier_info_transformation}>',
+                    sheetFilter:['one','two'],
+                    sheetHeader:['ID','<{$Think.lang.identifier_info_code}>']
+                }
+            ];
+            var toExcel=new ExportJsonExcel(option);
+            toExcel.saveExcel();
+
+        });
+    });
+    
+    function flie_upload(n,type) {
+        if(type==1){
+            var files = $("input[name='code_upload']").prop('files');
+            var id="rolecode";
+        }else {
+            var files = $("input[name='id_upload']").prop('files');
+            var id="roleid";
+        }
+        var selectedFile = files[0];//获取读取的File对象
+        var name = selectedFile.name;//读取选中文件的文件名
+        var fileExtension = n.substring(n.lastIndexOf('.') + 1);
+
+        if (fileExtension != "txt"&& fileExtension != "xlsx") {
+            ShowErrorMsg('<{:l("public_prompt_information")}>','<{$Think.lang.email_file_upload_limit}>');
+            return false;
+        }
+        var reader = new FileReader();//这里是核心！！！读取操作就是由它完成的。
+
+        if (fileExtension == "txt") {
+            reader.readAsText(selectedFile, "utf8");//读取文件的内容
+            reader.onload = function (e) {
+                var fileText = e.target.result;
+                $("#"+id).val(fileText);
+            }
+        }else if (fileExtension == "xlsx"){
+
+            reader.onload = function (e) {
+                var data = e.target.result;
+                var wb = XLSX.read(data, { type: "binary" });
+               var excle = XLSX.utils.sheet_to_formulae(wb.Sheets[wb.SheetNames[0]]);
+               var type = "";var info =  new Array();;
+               for (var i=0;i<excle.length;i++){
+                   var arr=excle[i].replace(/.(?=[^0-9])/,"").split('=');
+                   if(i==0){
+                       type = arr[0];
+                   }
+                   if(type==arr[0]){
+                       info.push(arr[1]);
+                   }
+               }
+                $("#"+id).val(info.join(',').replace(/'/g, ""));
+            };
+            reader.readAsBinaryString(selectedFile);
+        }
+        if(true){
+            var formFile = new FormData();
+            formFile.append("action", "UploadVMKImagePath");
+            formFile.append("file", selectedFile); //加入文件对象
+            $.ajax({
+                url: "<{:U('excelTurnData')}>",
+                data: formFile,
+                type: "Post",
+                dataType: "json",
+                cache: false,//<{$Think.lang.identifier_info_upload}>无需缓存
+                processData: false,//用于对data参数进行序列化处理 这里必须false
+                contentType: false, //必须
+                success: function (result) {
+                    console.log(result);
+                },
+            });
+        }
+    }
+
+
+</script>
