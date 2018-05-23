@@ -13,21 +13,32 @@
             新增账号趋势（从今天0点到当前时间，总新增帐号数量） <div style="clear: both;"></div>
         </div>
 
-        从<input type="text" class="btn btn-default" id="bclothes" value="0" style="width: 3%">区-<input class="btn btn-default" type="text" id="eclothes" value="0" style="width: 3%">区
-        从<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
-        到<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="etime" value="{$etime}">
-        <div class="col-lg-10" style="width: 11%">
-        <div class="form-group">
-        <select id="maxOption2" class="selectpicker show-menu-arrow form-control" multiple >
-            <volist name="qudao" id="vo">
-                    <option value="{$vo.cid}">{$vo.name}</option>
-            </volist>
-                </select>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="dataTables_length" id="dataTables-example_length">
+                   <!-- <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                            class="btn btn-default">
+                        <option>...选择游戏服务器...</option>
+                        <volist name="clostu" id="vo">
+                            <eq name="vo.db_id" value="$db_id">
+                                <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                                <else/>
+                                <option value="{$vo.db_id}">{$vo.clothes}</option>
+                            </eq>
+                        </volist>
+                    </select>-->从<input class="btn btn-default"
+                                     onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"
+                                     id="stime" value="{$stime}">
+                    到<input class="btn btn-default"
+                            onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="etime"
+                            value="{$etime}">
+                    <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
+                </div>
             </div>
         </div>
 
-        <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
-        <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button>
+
+
 
 
 
@@ -90,19 +101,15 @@ var tmptxt=$(this).val();
     var www_url="{$www_url}";
 
     function idselect() {
-        var bclothes=$("#bclothes").val();
-        var eclothes=$("#eclothes").val();
-	if(bclothes>eclothes){
-	alert("开始区服必须小于结束区服");
-	return false;
-	}
-
-        var stime=$("#stime").val();
-        var etime=$("#etime").val();
-        var creator=$("#maxOption2").val();
-
-        location.href=www_url+"index.php?m=Home&c=NewCount&a=index&bclothes="+bclothes+"&eclothes="+eclothes+"&stime="+stime+"&etime="+etime+"&creator="+creator;
-
+        var clothes=$("#clothes").val();
+        var stime = $("#stime").val();
+        var etime = $("#etime").val();
+        if(clothes=="...选择游戏服务器..."){
+            alert("请选择游戏服务器");
+            return
+        }else{
+            location.href = "index.php?m=Home&c=NewCount&a=index&stime="+stime+ "&etime="+etime;
+        }
     }
  function exl(){
      var bclothes=$("#bclothes").val();

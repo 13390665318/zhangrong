@@ -1,0 +1,197 @@
+
+<include file="Public:header"/>
+<div id="page-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">订单日志</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            订单日志 <div style="clear: both;"></div>
+        </div>
+
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="dataTables_length" id="dataTables-example_length">
+                            <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes" class="btn btn-default">
+                                <option>...选择游戏服务器...</option>
+                                <volist name="clostu" id="vo">
+                                    <eq name="vo.db_id" value="$db_id">
+                                        <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                                        <else/>
+                                        <option value="{$vo.db_id}">{$vo.clothes}</option>
+                                    </eq>
+                                </volist>
+
+                            </select>从<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="start_time" value="{$Stime}">
+                            到<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="demo" value="{$Etime}">
+                            <div class="col-lg-10" style="width: 11%">
+                                <div class="form-group">
+                                    <select  class="selectpicker show-menu-arrow form-control" multiple  id="pingtai">
+
+                                        <volist name="Starr" id="vo">
+                                            <option value="{$vo.source}">{$vo.source}</option>
+                                        </volist>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6" style="width: 59%;">
+                        <div class="dataTables_length" id="dataTables-example_length">
+
+                            <label>玩家ID:
+                                <div class="form-group input-group">
+                                    <input class="form-control" id="game_user_id" type="text" placeholder="玩家ID">
+                                </div>
+                            </label>
+                            <label>角色名称:
+                            <div class="form-group input-group">
+                                <input class="form-control" id="game_user_name" type="text" placeholder="玩家ID">
+                            </div>
+                             </label>
+                            <label>充值号:
+                                <div class="form-group input-group">
+                                    <input class="form-control" id="pay_number" type="text" placeholder="玩家ID">
+                                </div>
+                            </label>
+                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
+                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 table-responsive">
+
+                        <table class="table table-striped  table-bordered table-hover dataTable " id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;" width="100%">
+                            <thead>
+                            <tr>
+                                <td colspan="2">首次付费统计</td>
+                            </tr>
+                            <tr>
+                                <td width="10%">玩家ID</td>
+                                <td width="10%">玩家名称</td>
+                                <td width="10%">玩家等级</td>
+                                <td width="30%">名称</td>
+                                <td width="15%">数值</td>
+                                <td width="10%">时间</td>
+                            </tr>
+                            </thead>
+                            <tbody id="ad">
+                            <volist name="arr" id="ko">
+                                <tr>
+                                    <td>{$ko.uid}</td>
+                                    <td>{$ko.uname}</td>
+                                    <td>{$ko.level}</td>
+                                    <td>{$ko.dec}</td>
+                                    <td>{$ko.value}</td>
+
+                                    <td>{$ko.time}</td>
+                                </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="pagination">{$page}</div>
+                </div>
+            </div>
+            <!-- /.table-responsive -->
+
+        </div>
+        <!-- /.panel-body -->
+    </div>
+
+
+
+
+</div>
+<script type="text/javascript">
+    var url="{$urls}";
+    function money_type(a){
+        location.href=url+"index.php?m=Home&c=Manual&a=index&value="+a;
+    }
+    function Cuselect(){
+        var value="{$value}"
+        var clothes=$("#clothes").val();
+        var start_time=$("#start_time").val();
+        var end_time=$("#end_time").val();
+
+        var game_user_id=$("#game_user_id").val();
+        var game_user_name=$("#game_user_name").val();
+        var dec=$("#dec").val();
+        location.href=url+"index.php?m=Home&c=Manual&a=index&value="+value+"&db_id="+clothes+"&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&dec="+dec;
+
+    }
+    function exl(){
+        var value="{$value}"
+        var clothes=$("#clothes").val();
+        var start_time=$("#start_time").val();
+        var end_time=$("#end_time").val();
+        var game_user_id=$("#game_user_id").val();
+        var game_user_name=$("#game_user_name").val();
+        var dec=$("#dec").val();
+        location.href=url+"Home/Manual&a=exl&value="+value+"&db_id="+clothes+"&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&dec="+dec;
+
+    }
+</script>
+<script>
+
+    var num= parseInt("{$value}");
+
+    $(function(){
+        var arr=new Array();
+        if(num==-1){
+            $('.bt_con ul li').eq(0).addClass("active")
+
+        }else if(num==1){
+            $('.bt_con ul li').eq(1).addClass("active")
+        }
+
+    })
+
+</script>
+
+
+<script>
+    $(function() {
+        $(window).bind("load resize", function() {
+            var topOffset = 50;
+            var width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
+            if (width < 768) {
+                $('div.navbar-collapse').addClass('collapse');
+                topOffset = 100; // 2-row-menu
+            } else {
+                $('div.navbar-collapse').removeClass('collapse');
+            }
+            var height = ((this.window.innerHeight > 0) ? this.window.innerHeight : this.screen.height) - 1;
+            height = height - topOffset;
+            if (height < 1) height = 1;
+            if (height > topOffset) {
+                $("#page-wrapper").css("min-height", (height) + "px");
+            }
+        });
+
+        $("#side-menu>li").each(function () {
+            $(this).click(function(){
+                $(this).find('ul').slideDown();
+                $(this).siblings().find('ul').slideUp();
+            })
+        })
+    });
+</script>
+
+
+
+</body>
+</html>

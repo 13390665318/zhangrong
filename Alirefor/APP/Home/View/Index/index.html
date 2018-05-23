@@ -168,7 +168,7 @@
     <script>
         function online(){
             var obj=document.getElementsByName('test');
-            var s=new Array();;
+            var s=new Array();
 
             var obj3='{$result}';
             var obj3 = eval(obj3);
@@ -276,7 +276,7 @@
 
         }
         //  var a={$Stime};
-        var maxN = eval("Math.max(" + stu.toString() + ")")+5000;
+        var maxN =5000;
         stu=stu.reverse();
         var data = [stu];
         var data_max = maxN; //Y轴最大刻度
@@ -383,7 +383,7 @@ console.log(obj3 );
         }
         },50000)
     </script>
--
+
 
 
     <script>
@@ -399,11 +399,11 @@ console.log(obj3 );
                 $(".canvas1 .canvas1_total").eq(0).siblings().animate({height:'0',opacity:0});
                 if(num%2==0){
 
-                    $(".btn1").html("收起")
+                    $(".btn1").html("收起");
                     $(".canvas1").show	();
 
                 }else{
-                    $(".btn1").html("展开")
+                    $(".btn1").html("展开");
                     $(".canvas1").hide();
 
                 }

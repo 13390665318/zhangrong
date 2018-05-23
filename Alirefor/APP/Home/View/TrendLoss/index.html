@@ -14,8 +14,8 @@
 ）<div style="clear: both;"></div>
         </div>
 
-        从<input type="text" class="btn btn-default" id="bclothes" value="0" style="width: 3%">区-<input class="btn btn-default" type="text" id="eclothes" value="0" style="width: 3%">区
-        从<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
+        <!--从<input type="text" class="btn btn-default" id="bclothes" value="0" style="width: 3%">区-<input class="btn btn-default" type="text" id="eclothes" value="0" style="width: 3%">区-->
+        <input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
 
 
         <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
@@ -89,12 +89,14 @@
 
     var obj='{$jsoBj}';
     var obj = eval(obj);
+
     var stu=new Array();
 
     var rus= new Array();
     for (var i =0; i<obj.length; i++) {
         stu[i]=obj[i].week;
     }
+
     //  var a={$Stime};
     var maxN = eval("Math.max(" + stu.toString() + ")")+5000;
     stu=stu.reverse();

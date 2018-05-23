@@ -12,8 +12,6 @@ class BaseController extends Controller
 
         parent::__construct();
 
-
-
 //  菜单筛选
 
 
@@ -27,7 +25,6 @@ class BaseController extends Controller
             $username=$user_name=$_SESSION["username"];
             $_SESSION['username'];
             $password=$_SESSION['password'];
-
             $ru=D("admin")->where("user_name='$user_name' and password='$password'")->find();
             $urls="http://127.0.0.1/Alirefor/";
             $this->assign("urls",$urls);
@@ -35,6 +32,8 @@ class BaseController extends Controller
                 //  $this->redirect('Login/index');
                 $this->error("尚未登录", U("Login/index"));
             }else {
+
+
 
 
 //$game_id=1;
@@ -68,18 +67,14 @@ class BaseController extends Controller
                     $id = $arr[$i];
                     $where = $where . " id = $id or ";
                 }
+
                 $con = substr($where, 0, strlen($where) - 3);
+
                 $redis = new \Redis();
                 $redis->connect('127.0.0.1', 6379);
-                if ($redis->get('Mune2')) {
-                    $Mune2 = $redis->get('Mune2');
-                    $Mune2 = json_decode($Mune2, 1);
-                } else {
+
                     $Mune2 = D("admin_auth_rule")->where($con)->select();
-                    $Mune2 = json_encode($Mune2);
-                    $redis->set('Mune2', $Mune2);
-                    $Mune2 = json_decode($Mune2, 1);
-                }
+
                 $Mune2 = array_filter($Mune2);
                 $Mune2 = array_values($Mune2);
 
@@ -87,27 +82,23 @@ class BaseController extends Controller
 
 
 //var_dump($data);
-                if ($redis->get('type-1')) {
-                    $ku = $redis->get('type-1');
-                    $ku = json_decode($ku, 1);
-                } else {
+
                 $ku = D("admin_auth_rule")->where("type=-1")->order("status asc")->select();
-                $ku=json_encode($ku);
-                $redis->set('type-1',$ku);
-                $ku=json_decode($ku,1);
-            }
+
                 for($i=0;$i<count($ku);$i++){
                     for($j=0;$j<count($Mune2);$j++){
-
                         if($ku[$i]["status"]==$Mune2[$j]["type"]){
-
                             $Mune1[$i]=$ku[$i];break;
                         }
                     }
                 }
-
+                ;
 //var_dump($Mune1);
                 $this->assign("Mune1",$Mune1);
+
+
+
+
                 $this->assign("Mune2",$Mune2);
 
 
@@ -126,6 +117,9 @@ class BaseController extends Controller
                 //   var_dump($con_name);exit;
                 if ($con_name != "Index/index") {
                     $rus = D("admin_auth_rule")->where("name='$con_name'")->find();
+
+
+
                     $id = $rus["id"];
                     for ($i = 0; $i < count($arr); $i++) {
                         if ($arr[$i] == $id) {

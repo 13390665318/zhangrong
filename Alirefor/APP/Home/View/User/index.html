@@ -38,7 +38,6 @@
 								<td>ID</td>
 								<td>用户名</td>
 								<td>帐号</td>
-								<td>使用人</td>
 								<td>权限列表</td>
 								<td>是否禁用</td>
 								<td>操作</td>
@@ -51,7 +50,6 @@
 									<td>{$vo.id}</td>
 									<td>{$vo.name}</td>
 									<td>{$vo.user_name}</td>
-									<td>{$vo.user}</td>
 									<td style="width: 60%">{$vo.auto_name}</td>
 									<td>
 										<if condition="$vo.status eq 1">
@@ -161,6 +159,7 @@
      * 编辑
      */
     function edit(){
+
         var obj=document.getElementsByName('num');
         var ids='';
         for(var i=0; i<obj.length; i++){
@@ -170,7 +169,8 @@
         if(ids==""){
             alert("你还没有选择任何内容！")
         }else{
-            location.href=url+"index.php?m=Home&c=User&a=edit&id="+ids;
+
+            location.href="index.php?m=Home&c=User&a=edit&id="+ids;
         }
     }
     /**

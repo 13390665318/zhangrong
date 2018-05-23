@@ -1,0 +1,89 @@
+<include file="Public:header"/>
+<style>
+    .bar {
+        height: 18px;
+        background: green;
+    }
+</style>
+<div id="page-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">增加副本</h1>
+        </div>
+    </div>
+    <a href="{:U('fubencon/index')}"><button class="btn btn-primary" >返回</button></a>
+    <hr>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <font color="red">注</font>:副本名称必填  若副本没有参与条件则不填写
+            <div style="clear: both;"></div>
+        </div>
+        <!-- /.panel-heading -->
+
+            <!-- /.table-responsive -->
+        <div class="container">
+            <form class="xq" action="{:U('Fubencon/add')}" method="post" enctype="multipart/form-data" onsubmit="return toVaild()" >
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>副本名称：</label>
+                        <input class ="sr" type="text"  name="fuben_name" value=""   style="width: 25%;"id="maintaskid"/>
+
+                    </p>
+
+                </div>
+
+                <div class="lei">
+                    <p>
+                        <label>要求达到任务等级：</label>
+                        <input class ="sr" type="text"  name="maintaskid" value=""  style="width: 25%;" id=""/>
+
+                    </p>
+
+                </div>
+                <div class="lei">
+                    <p>
+                        <label>要求转生等级：</label>
+                        <input class ="sr" type="text"  name="role_ChangeLife" value=""  style="width: 25%;" id="chezhu"/>
+                    </p>
+
+                </div>
+                <div class="lei">
+                    <p>
+                        <label>要求等级：</label>
+                        <input class ="sr" type="text"  name="level" value=""   style="width: 25%;" id="danci"/>
+                    </p>
+
+                </div>
+                <button type="submit"class="btn btn-primary" style="margin:20px auto;display: block;">确定</button>
+            </form>
+
+
+        </div>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+
+
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+    function toVaild(){
+        /*var start_time=$("#start_time").val();*/
+        var chepai=$("#maintaskid").val();
+        var pinpai=$("#pinpai").val();
+        var chezhu=$("#chezhu").val();
+        var danci=$("#danci").val();
+        var danjia=$("#danjia").val();
+        var jine=$("#jine").val();
+        var licheng=$("#licheng").val();
+        if(chepai==""){
+            alert("副本名称不能为空");
+            return false;
+        }
+
+    }
+</script>

@@ -1,0 +1,156 @@
+<include file="Public:header"/>
+<style>
+    .bar {
+        height: 18px;
+        background: green;
+    }
+</style>
+<div id="page-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">任务流失</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            任务统计
+            <div style="clear: both;"></div>
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="dataTables_length" id="dataTables-example_length">
+                            <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                                    class="btn btn-default">
+                                <option>...选择游戏服务器...</option>
+                                <volist name="clostu" id="vo">
+                                    <eq name="vo.db_id" value="$db_id">
+                                        <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                                        <else/>
+                                        <option value="{$vo.db_id}">{$vo.clothes}</option>
+                                    </eq>
+                                </volist>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-12 table-responsive">
+
+                        <table class="table table-striped  table-bordered table-hover dataTable "
+                               id="dataTables-example" role="grid" aria-describedby="dataTables-example_info"
+                               style="width: 100%;" width="100%">
+                            <thead>
+                            <tr>
+                                <td>任务ID</td>
+                                <td>任务类型</td>
+                                <td>任务名称</td>
+                                <td>在做人数</td>
+                                <td>完成人数</td>
+                                <td>完成率</td>
+                            </tr>
+                            </thead>
+                            <tbody id="ad">
+                            <volist name="data" id="vo">
+                                <tr>
+                                   <td>{$vo.ID}</td>
+                                    <td> <if condition="$vo.TaskClass eq '0'">
+                                        主线任务
+                                        <elseif condition="$vo.TaskClass eq 8"/>
+                                        日常任务
+                                    </if></td>
+                                    <td>{$vo.Title}</td>
+                                   <td>{$vo.dnum}</td>
+                                   <td>{$vo.num}</td>
+                                   <td>{$vo.complete}%</td>
+
+                                </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="b-page">{$page}</div>
+                </div>
+            </div>
+            <!-- /.table-responsive -->
+
+        </div>
+        <!-- /.panel-body -->
+    </div>
+
+
+</div>
+
+<script>
+    function exl() {
+        var value = "{$value}"
+        var clothes = $("#clothes").val();
+        var start_time = $("#start_time").val();
+        var end_time = $("#end_time").val();
+        var game_user_id = $("#game_user_id").val();
+        var game_user_name = $("#game_user_name").val();
+        var goods_name = $("#goods_name").val();
+        location.href = url + "index.php?m=Home&c=Prop&a=exl&value=" + value + "&db_id=" + clothes + "&start_time=" + start_time + "&end_time=" + end_time + "&game_user_id=" + game_user_id + "&game_user_name=" + game_user_name + "&goods_name=" + goods_name;
+
+    }
+</script>
+
+
+
+
+
+</body>
+</html>
+<script>
+    $(function() {
+        $(window).bind("load resize", function() {
+            var topOffset = 50;
+            var width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
+            if (width < 768) {
+                $('div.navbar-collapse').addClass('collapse');
+                topOffset = 100; // 2-row-menu
+            } else {
+                $('div.navbar-collapse').removeClass('collapse');
+            }
+            var height = ((this.window.innerHeight > 0) ? this.window.innerHeight : this.screen.height) - 1;
+            height = height - topOffset;
+            if (height < 1) height = 1;
+            if (height > topOffset) {
+                $("#page-wrapper").css("min-height", (height) + "px");
+            }
+        });
+
+        $("#side-menu>li").each(function () {
+            $(this).click(function(){
+                $(this).find('ul').slideDown();
+                $(this).siblings().find('ul').slideUp();
+            })
+        })
+    });
+</script>
+<script>
+    function Cuselect() {
+        var clothes=$("#clothes").val();
+        var start_time = $("#start_time").val();
+        var end_time = $("#end_time").val();
+        var game_user_id = $("#game_user_id").val();
+        var game_user_name = $("#game_user_name").val();
+        var goods_name = $("#type").val();
+        if(clothes=="...选择游戏服务器..."){
+            alert("请选择游戏服务器");
+            return
+        }else{
+            location.href = "index.php?m=Home&c=Loglog&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name;
+        }
+    }
+
+
+</script>

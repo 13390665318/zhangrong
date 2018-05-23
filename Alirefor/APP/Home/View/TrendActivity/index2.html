@@ -15,7 +15,7 @@
 
         从<input type="text" class="btn btn-default" id="bclothes" value="0" style="width: 3%">区-<input class="btn btn-default" type="text" id="eclothes" value="0" style="width: 3%">区
         从<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
-       <div class="col-lg-10" style="width: 11%">
+       <!--<div class="col-lg-10" style="width: 11%">
             <div class="form-group">
                 <select id="maxOption2" class="selectpicker show-menu-arrow form-control" multiple >
                     <volist name="qudao" id="vo">
@@ -23,7 +23,7 @@
                     </volist>
                 </select>
             </div>
-        </div>
+        </div>-->
 
         <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
         <!--  <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button>-->
@@ -43,14 +43,14 @@
                             <thead>
                             <tr>
                                 <td>日期</td>
-                                <td>活跃用户(占比)</td>
+                                <td>活跃用户</td>
                             </tr>
                             </thead>
                             <tbody id="ad">
                             <volist name="data" id="vo">
                                 <tr>
                                     <td width="10%">{$vo.time}</td>
-                                    <td>{$vo.num}({$vo.nums}%)</td>
+                                    <td>{$vo.num}</td>
 
                                 </tr>
                             </volist>

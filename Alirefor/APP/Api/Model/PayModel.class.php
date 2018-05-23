@@ -13,7 +13,7 @@ use Think\Model;
 
 class PayModel extends Model
 {
-    public function _initialize(){
+    /*public function _initialize(){
 
         $need_params     = array('game_id','clothes');
         $optional_params = array();
@@ -31,5 +31,5 @@ class PayModel extends Model
 
 
 
-    }
+    }*/
 }

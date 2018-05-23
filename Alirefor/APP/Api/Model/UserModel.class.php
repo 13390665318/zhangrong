@@ -13,7 +13,7 @@ use Think\Model;
 
 class UserModel extends Model
 {
-    public function _initialize(){
+    /*public function _initialize(){
        // var_dump($_POST);
         $need_params     = array('game_id','clothes');
         $optional_params = array();
@@ -29,5 +29,5 @@ class UserModel extends Model
             $this->dbName=$db_name;
         }
 
-    }
+    }*/
 }

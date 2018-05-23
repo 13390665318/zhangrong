@@ -1,0 +1,131 @@
+<include file="Public:header"/>
+<style>
+    .bar {
+        height: 18px;
+        background: green;
+    }
+</style>
+<div id="page-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">增加记录</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            增加
+            <div style="clear: both;"></div>
+        </div>
+        <!-- /.panel-heading -->
+
+            <!-- /.table-responsive -->
+        <div class="container">
+            <form class="xq" action="{:U('Oiladd/index')}" method="post" enctype="multipart/form-data" onsubmit="return toVaild()" >
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>加油时间：</label>
+
+                        <input class="btn btn-default"
+                               onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"
+                               name="start_time" value="{$Stime}" style="width: 25%;">
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>车牌号：</label>
+                        <input class ="sr" type="text"  name="chepai" value=""   style="width: 25%;"id="chepai"/>
+
+                    </p>
+
+                </div>
+
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>车主：</label>
+                        <input class ="sr" type="text"  name="chezhu" value=""  style="width: 25%;" id="chezhu"/>
+
+                    </p>
+
+                </div>
+                <div class="lei">
+
+
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>单次加油量(L)：</label>
+                        <input class ="sr" type="text"  name="danci" value=""   style="width: 25%;" id="danci"/>
+                    </p>
+
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>单价/L：</label>
+                        <input class ="sr" type="text"  name="danjia" value=""  style="width: 25%;" id="danjia"/>
+                    </p>
+
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>总加油金额/L：</label>
+                        <input class ="sr" type="text"  name="jine" value=""   style="width: 25%;" id="jine"/>
+                    </p>
+
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>备注：</label>
+                        <input class ="sr" type="text"  name="beizhu" value=""   style="width: 25%;" id="jine"/>
+                    </p>
+
+                </div>
+
+
+
+
+                <button type="submit"class="btn btn-primary" style="margin:20px auto;display: block;">确定</button>
+            </form>
+
+
+        </div>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+
+
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+    function toVaild(){
+        /*var start_time=$("#start_time").val();*/
+        var chepai=$("#chepai").val();
+        var pinpai=$("#pinpai").val();
+        var chezhu=$("#chezhu").val();
+        var danci=$("#danci").val();
+        var danjia=$("#danjia").val();
+        var jine=$("#jine").val();
+        var licheng=$("#licheng").val();
+        if(chepai==""){
+            alert("车牌不可为空");
+            return false;
+        }else if(chezhu==""){
+            alert("车主不可为空");
+            return false;
+        }
+        else if((danci=="")&&(jine=="")){
+            alert("单次加油量、总加油金额必须填一个");
+            return false;
+        } else if(danjia==""){
+            alert("单价不可为空");
+            return false;
+        } else{
+            return true
+        }
+
+
+    }
+</script>

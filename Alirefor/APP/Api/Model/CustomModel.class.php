@@ -13,9 +13,9 @@ use Think\Model;
 
 class CustomModel extends Model
 {
-    public function _initialize(){
+    /*public function _initialize(){
 
-        $need_params     = array('game_id','clothes');
+       $need_params     = array('game_id','clothes');
         $optional_params = array();
         $data            = get_param($need_params, $optional_params);
         $game_id=$data["game_id"];
@@ -31,6 +31,6 @@ class CustomModel extends Model
 
 
 
-    }
+    }*/
 
 }

@@ -42,7 +42,7 @@ function echo_success($data = array(), $errcode = 0)
  */
 function get_param($need_params, $optional_params)
 {
-    $access_token = I('get.access_token');
+    /*$access_token = I('get.access_token');
     $timestamp = I('get.timestamp');
     $platform = I('get.platform');
     $data = $_POST['data'];
@@ -106,7 +106,7 @@ function get_param($need_params, $optional_params)
     $add['ip'] = get_client_ip();
     $add['remark'] =1213;
     M('params_log')->add($add);
-    return $params;
+    return $params;*/
 }
 
 

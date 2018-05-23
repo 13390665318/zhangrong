@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <LINK href="__ROOT__/public/admin/css/admin.css" type="text/css" rel="stylesheet">
+    <LINK href="__ROOT__/public/admin/css/sp.css" type="text/css" rel="stylesheet">
+    <script src="__ROOT__/public/js/jquery-1.7.2.min.js"></script>
+    <script src="__ROOT__/public/laydate/laydate.js"></script>
+
+</HEAD>
+<style>
+    .lei p {
+        display:inline-block;
+        text-align: right;
+        width:256px;
+    }
+
+</style>
+<BODY>
+<div class="headr_bottom">
+
+    <div class="header_place"><img src="__ROOT__/public/admin/images/p_11.jpg">您当前所处位置：
+        <span>客服管理</span>-&gt;<span>邀请码增加</span></div>
+</div>
+<div class="container">
+    <h4>基础信息</h4>
+
+    <form class="xq" action="{:U('Invitation/codeadd')}" method="post" enctype="multipart/form-data">
+
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>礼包类别：</span>
+            </p>
+            <select class ="sr" name="code_type_id">
+                <volist name="stu" id="vo">
+                <option value="{$vo.code_type_id}">{$vo.code_type_name}</option>
+                </volist>
+            </select>
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>开始时间：</span>
+            </p>
+            <input onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="start_time" name="begin_time" class ="sr">
+
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>结束时间：</span>
+            </p>
+            <input onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="end_time" name="end_time"  class ="sr">
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>卡数量 ：</span>
+            </p>
+            <input type="text" name="number" class ="sr">
+        </div>
+        <div class="qdtj">
+            <input class="ztj" type="submit" name="sub" value="确定"/>
+        </div>
+    </form>
+</div>
+</BODY>
+</HTML>

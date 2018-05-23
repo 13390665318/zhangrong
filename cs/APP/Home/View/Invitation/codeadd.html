@@ -1,0 +1,75 @@
+
+<include file="Public:header"/>
+<div id="page-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">客服管理</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            邀请码增加 <div style="clear: both;"></div>
+        </div>
+
+        <div class="container">
+            <form class="xq" action="{:U('Invitation/codeadd')}" method="post" enctype="multipart/form-data" onsubmit="return toVaild()">
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>礼包类别：：</label>
+                        <select class ="dx" name="code_type_id">
+                            <volist name="stu" id="vo">
+                                <option value="{$vo.code_type_id}">{$vo.code_type_name}</option>
+                            </volist>
+                        </select>
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>开始时间：</label>
+                        <input onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="start_time" name="begin_time" class ="sr">
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>结束时间：</label>
+                        <input onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="end_time" name="end_time"  class ="sr">
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>卡数量：</label>
+                        <input type="text" name="number" id="number" class ="sr" placeholder="不可大于20000个"> </p>
+                </div>
+
+                <button type="submit" name ="sub"class="btn btn-primary" style="margin:20px auto;display: block;">确定</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+<script type="text/javascript">
+    function toVaild(){
+        var number=$("#number").val();
+       
+
+        if(number==""){
+            alert("数量不可为空");
+            return false;
+        }else if(number>20000){
+alert("数量不可大于20000");
+            return false;
+	}else{
+            return true;
+        }
+
+
+    }
+</script>
+<include file="Public:footer"/>

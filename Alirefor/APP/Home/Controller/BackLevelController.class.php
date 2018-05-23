@@ -46,7 +46,7 @@ class BackLevelController extends BaseController
         $begin_time=date('Y-m-d 00:00:00', strtotime ("+7day", strtotime($stime)));
 //查询是有登录的玩家
         $connection=db($game_id,$db_id);
-        $Userbase = M('San_userbase','',$connection);
+        $Userbase = M('sign');
         $arr = $Userbase->where("regtime>='$start_time' and regtime<='$end_time' and lastupdtime >= '$begin_time'")->order("uid desc")->select();
 //判断是否是回流玩家
         for($i=0;$i<count($arr);$i++){

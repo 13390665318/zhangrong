@@ -1,14 +1,20 @@
 <?php
+
 namespace Home\Controller;
 
-class IndexController extends BaseController {
+class IndexController extends BaseController
+{
+    /**
+     *by ZHANG
+     **/
     public function index()
     {
-        $a = exec("D:/copy.bat");
+
+
         //新增用户
         $ip = $_SERVER['REMOTE_ADDR'];
 //echo $ip;exit;
-        $game_id = 1;
+
         $db = D("db")->select();
         // 默认7天
         $stime = date("Y-m-d", strtotime("-6 day"));
@@ -165,17 +171,18 @@ class IndexController extends BaseController {
 
 
         $this->assign("uonline", $uonline);
+
         $this->assign("result", $result);
 // ARPU  今日  付费/登录用户
         // ARPPU   总金额/ 付费用户
         // 累计充值金额
         // 付费率   付费/登录
         // 人均砖石金额
-        $sum_money = D("order")->sum(amount) / 100;
+        $sum_money = D("pay")->sum(pay_number);
         $begin_time = date('Y-m-d 00:00:00', time());
         $end_time = date('Y-m-d 23:59:59', time());
         $day_money = D("order")->where("time>='$begin_time' and time<='$end_time'")->sum(amount) / 100; // 今日付费总金额
-        $day_people = D("order")->where("time>='$begin_time' and time<='$end_time'")->group('uid')->select(); // 今日付费用户
+        $day_people = D("pay")->where("pay_time>='$begin_time' and pay_time<='$end_time'")->group('game_user_id')->select(); // 今日付费用户
         $day_people = count($day_people);
         $sign_people = $data2[0]["num"];// 活跃用户
         $fufeilv = round($day_people / $sign_people, 4) * 100;
@@ -195,138 +202,30 @@ class IndexController extends BaseController {
         // $Userbase = M('San_userbase','', $connection);
         $Strtime = date('Y-m-d 00:00:00', strtotime("+0 day", strtotime($stime)));
         $Endtime = date('Y-m-d 23:59:59', strtotime("+0 day", strtotime($stime)));
-        $add_people = $users->where("register_time>='$Strtime' and register_time<='$Endtime'  and game_id=1 and db_id=1 ")->count();
+        $add_people = $users->where("register_time>='$Strtime' and register_time<='$Endtime' ")->count();
+
 //echo $add_people;
         //2ri
         $Strtime2 = date('Y-m-d 00:00:00', strtotime("+1 day", strtotime($Strtime)));
         $Endtime2 = date('Y-m-d 23:59:59', strtotime("+1 day", strtotime($Strtime)));
-        $save_people = $users->where("register_time>='$Strtime' and register_time<='$Endtime' and end_time>='$Strtime2' and end_time<='$Endtime2' and game_id=1 and db_id=1 and source!=' '")->count();
+        $todaypeople = D('sign')->where("start_time>='$Strtime2' and start_time<='$Endtime2'")->group('game_user_id')->select();
+        $lastpeople = M('user')->where("register_time>='$Strtime' and register_time<='$Endtime'")->group('game_user_id')->select();
+        $liucun = array_intersect(array_column($todaypeople, 'game_user_id'), array_column($lastpeople, 'game_user_id'));
+        $save_people = count($liucun);
         $saves = round($save_people / $add_people, 4) * 100;
-        $this->assign("saves", $saves);
 
+        $this->assign("saves", $saves);
         $this->display();
 
-        $date=date('Y-m-d H:i:s',time());
-
-        $miao=substr($date,11,5);
-
-        if($miao==="00:00"){
-            $ym=date('Y-m-d',strtotime("-1 day"));
-        }else{
-            $ym=date('Y-m-d',strtotime($date));
-        }
-
-
-            $ym = str_replace('-', '',$ym);
-            $ymlog = "public/Log/" . $ym . ".log";
-
-            $json = file_get_contents($ymlog);
-            $json = explode(PHP_EOL, $json);
-
-            foreach ($json as $v) {
-                $datar[] = json_decode($v, 1);
-            }
-
-
-
-            foreach ($datar as $k => $value) {
-                if ($value['Operation'] == 'OnlineRoleNum') {
-                    $linestatus[] = $value;
-                } elseif ($value['Operation'] == 'LoginRole') {
-                    $LoginRole[] = $value;
-                } elseif ($value['Operation'] == 'CreateRole') {
-                    $CreateRole[] = $value;
-                }elseif($value['Operation']=='Prepaid'){
-                    $Prepaid[]=$value;
-                }elseif($value['Operation']=='backpack'){
-                    $backpack[]=$value;
-                }
-            }
-          //  dump($backpack);exit;
-        foreach ($Prepaid as $k=>$value){
-            $Prepaid[$k]['pay_number']=$value['cash'];
-            $Prepaid[$k]['game_user_name']=$value['role_name'];
-            $Prepaid[$k]['db_id']=$value['serverID'];
-            $Prepaid[$k]['game_user_id']=$value['role_id'];
-            $Prepaid[$k]['level']=$value['role_level'];
-            $Prepaid[$k]['user_id']=$value['account_id'];
-            unset($Prepaid[$k]['cash']);
-            unset($Prepaid[$k]['role_name']);
-            unset($Prepaid[$k]['serverID']);
-            unset($Prepaid[$k]['role_id']);
-            unset($Prepaid[$k]['role_level']);
-            unset($Prepaid[$k]['account_id']);
-        }
-
-            $model=D('Playeronline');
-            $model->payadd($Prepaid);
-
-            foreach ($CreateRole as $k => $value) {
-                $CreateRole[$k]['register_time'] = $value['create_time'];
-                $CreateRole[$k]['game_user_name'] = $value['role_name'];
-                $CreateRole[$k]['db_id'] = $value['serverID'];
-                $CreateRole[$k]['game_user_id'] = $value['role_id'];
-                unset($CreateRole[$k]['create_time']);
-                unset($CreateRole[$k]['role_name']);
-                unset($CreateRole[$k]['serverID']);
-                unset($CreateRole[$k]['role_id']);
-            }
-
-            $model = D('Playeronline');
-            $model->createadd($CreateRole);
-            /*  foreach ($data as $k=>$value){
-                  if(isset($value['account_id'])){
-                      $account[]=$value;
-                  }
-              }*/
-
-            foreach ($LoginRole as $k => $value) {
-                $LoginRole[$k]['start_time'] = $value['LogTime'];
-                $LoginRole[$k]['game_user_id'] = $value['role_id'];
-                $LoginRole[$k]['level'] = $value['role_level'];
-                unset($LoginRole[$k]['LogTime']);
-                unset($LoginRole[$k]['role_id']);
-                unset($LoginRole[$k]['role_level']);
-            }
-
-            $model = D('Playeronline');
-            $model->loginadd($LoginRole);
-
-
-
-            //dump($LoginRole);exit;
-
-            /*foreach ($LoginRole as $k=>$value){
-                $new_array[$k]=$value['account_id'];
-            }
-            $account_id=array_unique($new_array);
-            foreach ($account_id as $k=>$value){
-                $last_array[]=$LoginRole[$k];
-            }*/
-
-
-            //dump($last_array);exit;
-
-
-            foreach ($linestatus as $key => $value) {
-                $linestatus[$key]['time'] = substr($value['LogTime'],0, 11);
-                $linestatus[$key]['db_id'] = $value['serverID'];
-                $linestatus[$key]['num'] = $value['OnLinePlayerNum'];
-                unset($linestatus[$key]['OnLinePlayerNum']);
-                unset($linestatus[$key]['serverID']);
-                $linestatus[$key]['f_time'] = substr($linestatus[$key]['LogTime'], 11, 5);
-            }
-
-            $model = D('Playeronline');
-            $model->onlineadd($linestatus);
-        }
-    function sendSms($phone,$code){
+    }
+    function sendSms($phone, $code)
+    {
 
         // 基于TP3.2开发
 
         //引进阿里的配置文件
 
-        Vendor ('api_sdk.vendor.autoload');
+        Vendor('api_sdk.vendor.autoload');
 
 
         // 加载区域结点配置
@@ -367,8 +266,4 @@ class IndexController extends BaseController {
     //config配置文件中要写上参数
 
 
-
-
-  
-    
 }

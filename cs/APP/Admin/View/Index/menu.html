@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <LINK href="__ROOT__/public/admin/css/admin.css" type="text/css" rel="stylesheet">
+    <style>
+        .td_bg{
+            background-color: #2a75af;
+            position: relative;
+        }
+
+        .td_bg a{
+            color:#fff
+        }
+        .lt_icon{
+            position:absolute;
+            left:8px;
+            top:9px;
+        }
+        body{
+            background-color:#DCEDFA;
+            padding-left:7px;
+            box-sizing: border-box;
+
+        }
+        table#child0 td:hover,table#child1 td:hover,table#child2 td:hover,table#child3 td:hover,table#child4 td:hover,table#child5 td:hover,table#child6 td:hover,table#child7 td:hover{
+            width: 260px;
+            box-sizing: border-box;
+            padding-left: 14%;
+            background: #FACD89;
+            color:#000;
+            padding-bottom: 1%;
+            padding-top: 1%;
+
+        }
+        table#child0 td,table#child1 td,table#child2 td,table#child3 td,table#child4 td,table#child5 td,table#child6 td,table#child7 td{
+            width: 260px;
+            box-sizing: border-box;
+            padding-left: 14%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+
+        }
+
+        .clickk {
+            color: red!important;
+        }
+    </style>
+    <SCRIPT language=javascript>
+        function expand(el)
+        {
+            childObj = document.getElementById("child" + el);
+
+
+
+            if (childObj.style.display == 'none')
+            {
+
+                childObj.style.display = 'block';
+            }
+            else
+            {
+                childObj.style.display = 'none';
+            }
+            return;
+
+        }
+    </SCRIPT>
+</HEAD>
+<BODY tyle="overflow-x:hidden;">
+<!--
+<TABLE cellSpacing=0 cellPadding=0 width=260 border=0>
+        <TR height=34>
+          <TD class="td_bg" style="PADDING-LEFT: 38px" ><a class="lt_icon" onclick=expand(3) href="javascript:void(0);">
+            <img src="__ROOT__/public/admin/images/left_icon.png"></a><A
+            class=menuParent onclick=expand(3)
+            href="javascript:void(0);">应用概况</A></TD></TR>
+        <TR height=4>
+          <TD></TD></TR></TABLE>
+<TABLE id=child3 style="DISPLAY: none" cellSpacing=0 cellPadding=0
+      width=260 border=0>
+        <TR height=20>
+
+          <TD><A class=menuChild
+            href="{:U('General/index')}"
+            target=main>应用概况</A></TD></TR>
+        <TR height=4>
+          <TD colSpan=2></TD></TR></TABLE>
+-->
+<volist name="rus" id="vo">
+<TABLE cellSpacing=0 cellPadding=0 width=260 border=0>
+    <TR height=34>
+        <TD class="td_bg" style="PADDING-LEFT: 38px" ><a class="lt_icon" onclick=expand({$key})
+                                                         href="javascript:void(0);">
+            <img src="__ROOT__/public/admin/images/left_icon.png"></a><A
+                class=menuParent onclick=expand({$key})
+                href="javascript:void(0);">{$vo.name}</A></TD></TR>
+    <TR height=4>
+        <TD></TD></TR></TABLE>
+<TABLE id=child{$key} style="DISPLAY: none" cellSpacing=0 cellPadding=0
+       width=260 border=0>
+    <volist name="ru" id="ko">
+        <eq name="vo['type_id']" value="$ko['type']">
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{$ko['condition']}" target=main>{$ko.title}</A></TD></TR>
+        </eq>
+    </volist>
+    
+
+
+
+    <TR height=4>
+        <TD colSpan=2></TD></TR>
+</TABLE>
+</volist>
+<!--
+<TABLE cellSpacing=0 cellPadding=0 width=260 border=0>
+    <TR height=34>
+        <TD class="td_bg" style="PADDING-LEFT: 38px" ><a class="lt_icon" onclick=expand(6)
+                                                         href="javascript:void(0);">
+            <img src="__ROOT__/public/admin/images/left_icon.png"></a><A
+                class=menuParent onclick=expand(6)
+                href="javascript:void(0);">玩家管理</A></TD></TR>
+    <TR height=4>
+        <TD></TD></TR></TABLE>
+<TABLE id=child6 style="DISPLAY: none" cellSpacing=0 cellPadding=0
+       width=260 border=0>
+    <TR height=20>
+
+        <TD><A class=menuChild
+               href="{:U('Playeronline/index')}" target=main>玩家在线</A></TD></TR>
+    <TR height=20>
+
+        <TD><A class=menuChild
+               href="{:U('Playtable/index')}"
+               target=main>玩家列表</A></TD></TR>
+
+    <TR height=20>
+
+        <TD><A class=menuChild
+               href="{:U('PlayRMB/index')}"
+               target=main>RMB玩家管理</A></TD></TR>
+    <TR height=4>
+        <TD colSpan=2></TD></TR>
+</TABLE>
+
+
+<TABLE cellSpacing=0 cellPadding=0 width=260 border=0>
+    <TR height=34>
+        <TD class="td_bg" style="PADDING-LEFT: 38px" ><a class="lt_icon" onclick=expand(7)
+                                                         href="javascript:void(0);">
+            <img src="__ROOT__/public/admin/images/left_icon.png"></a><A
+                class=menuParent onclick=expand(7)
+                href="javascript:void(0);">客服管理</A></TD></TR>
+    <TR height=4>
+        <TD></TD></TR></TABLE>
+<TABLE id=child7 style="DISPLAY: none" cellSpacing=0 cellPadding=0
+       width=260 border=0>
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Goods/index')}"
+               target=main>物品管理</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Notice/index')}"
+               target=main>系统公告</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Reward/index')}"
+               target=main>全服补偿奖励</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Email/index')}"
+               target=main>管理员发送邮件</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Invitation/index')}"
+               target=main>邀请码</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Sysnotice/index')}"
+               target=main>系统通知</A></TD></TR>
+
+       <TR height=20>
+               <TD><A class=menuChild
+                      href="{:U('TimeLoss/index')}"
+                      target=main>头条-话题</A></TD></TR>
+
+               <TR height=20>
+                   <TD><A class=menuChild
+                          href="{:U('Game/index')}"
+                          target=main>积分墙</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Renotice/index')}"
+               target=main>公告配置</A></TD></TR>
+
+
+    <TR height=4>
+        <TD colSpan=2></TD></TR>
+</TABLE>
+
+<TABLE cellSpacing=0 cellPadding=0 width=260 border=0>
+    <TR height=34>
+        <TD class="td_bg" style="PADDING-LEFT: 38px" ><a class="lt_icon" onclick=expand(3)
+                                                         href="javascript:void(0);">
+            <img src="__ROOT__/public/admin/images/left_icon.png"></a><A
+                class=menuParent onclick=expand(3)
+                href="javascript:void(0);">日志查询</A></TD></TR>
+    <TR height=4>
+        <TD></TD></TR></TABLE>
+<TABLE id=child3 style="DISPLAY: none" cellSpacing=0 cellPadding=0
+       width=260 border=0>
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Currency/index')}"
+               target=main>玩家货币日志</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Onlinechart/index')}"
+               target=main>聊天日志</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Prop/index')}"
+               target=main>道具日志</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Wujiang/index')}"
+               target=main>武将日志</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Levelloss/index')}"
+               target=main>邮件日志</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Pay/index')}"
+               target=main>订单日志</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Manual/index')}"
+               target=main>体力日志</A></TD></TR>
+
+
+
+
+
+
+
+
+    <TR height=4>
+        <TD colSpan=2></TD></TR>
+</TABLE>
+
+<TABLE cellSpacing=0 cellPadding=0 width=260 border=0>
+    <TR height=34>
+        <TD class="td_bg" style="PADDING-LEFT: 38px" ><a class="lt_icon" onclick=expand(2)
+                                                         href="javascript:void(0);">
+            <img src="__ROOT__/public/admin/images/left_icon.png"></a><A
+                class=menuParent onclick=expand(2)
+                href="javascript:void(0);">渠道统计</A></TD></TR>
+    <TR height=4>
+        <TD></TD></TR></TABLE>
+<TABLE id=child2 style="DISPLAY: none" cellSpacing=0 cellPadding=0
+       width=260 border=0>
+    <!--  <TR height=20>
+          <TD><A class=menuChild
+                 href="{:U('Onlinecount/index')}"
+                 target=main>渠道日报</A></TD></TR>
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Channel/index')}"
+               target=main>渠道列表</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Onlinechart/index')}"
+               target=main>玩家注册统计</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Registe/lists')}"
+               target=main>设备注册统计</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('UserLive/index')}"
+               target=main>玩家留存率</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('UserLive/index')}"
+               target=main>设备留存率</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Ltv/index')}"
+               target=main>玩家ITV</A></TD></TR>
+
+    <TR height=20>
+        <TD><A class=menuChild
+               href="{:U('Pay/lists')}"
+               target=main>充值统计</A></TD></TR>
+
+
+
+    <TR height=4>
+        <TD colSpan=2></TD></TR>
+</TABLE>
+
+-->
+<!--
+<TABLE cellSpacing=0 cellPadding=0 width=260 border=0>
+    <TR height=34>
+        <TD class="td_bg" style="PADDING-LEFT: 38px" ><a class="lt_icon" onclick=expand(4)
+                                                         href="javascript:void(0);">
+            <img src="__ROOT__/public/admin/images/left_icon.png"></a><A
+                class=menuParent onclick=expand(4)
+                href="javascript:void(0);">系统管理</A></TD></TR>
+    <TR height=4>
+        <TD></TD></TR></TABLE>
+<TABLE id=child4 style="DISPLAY: none" cellSpacing=0 cellPadding=0
+       width=260 border=0>
+    <TR height=20>
+
+        <TD><A class=menuChild
+               href="{:U('Game/index')}"
+               target=main>游戏列表</A></TD></TR>
+
+    <TR height=20>
+
+        <TD><A class=menuChild
+               href="{:U('Clothes/index')}"
+               target=main>区/服 列表</A></TD></TR>
+    <TR height=20>
+
+        <TD><A class=menuChild
+               href="{:U('User/index')}"
+               target=main>用户管理</A></TD></TR>
+
+    <TR height=4>
+        <TD colSpan=2></TD></TR>
+</TABLE>
+
+-->
+
+
+
+
+</BODY>
+<script src="__ROOT__/public/admin/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $(".menuChild").click(function(){
+        $(".menuChild").removeClass("clickk");
+        $(this).addClass("clickk");
+    })
+</script>
+</HTML>

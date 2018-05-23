@@ -14,7 +14,7 @@ use Think\Model;
 class PeriodModel extends  Model{
     protected $dbName = '';
 
-        public function _initialize(){
+        /*public function _initialize(){
 
             $need_params     = array('game_id','clothes');
             $optional_params = array();
@@ -32,6 +32,6 @@ class PeriodModel extends  Model{
 
 
 
-    }
+    }*/
 
 }

@@ -1,25 +1,31 @@
-
 <include file="Public:header"/>
+<style>
+    .bar {
+        height: 18px;
+        background: green;
+    }
+</style>
 <div id="page-wrapper">
 
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">新手引导流失</h1>
+            <h1 class="page-header">帮派人员变动</h1>
         </div>
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            新手引导流失 <div style="clear: both;"></div>
+            人员变动
+            <div style="clear: both;"></div>
         </div>
-
         <!-- /.panel-heading -->
         <div class="panel-body">
             <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_length" id="dataTables-example_length">
-                            <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes" class="btn btn-default">
+                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                                    class="btn btn-default">
                                 <option>...选择游戏服务器...</option>
                                 <volist name="clostu" id="vo">
                                     <eq name="vo.db_id" value="$db_id">
@@ -28,101 +34,107 @@
                                         <option value="{$vo.db_id}">{$vo.clothes}</option>
                                     </eq>
                                 </volist>
-                            </select>
-                            <input onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"  value="{$time}" id="time">
-                            <label>流失标准:
-                                <!--<input class="form-control input-sm" id="search-user-input"  placeholder="" aria-controls="dataTables-example" type="search">-->
-                                <div class="form-group input-group">
-                                    <select class="btn btn-default" id="cesa" >
-                                        <option value="24" selected="selected">24小时内未登录</option>
-                                        <option value="48" >48小时内未登录</option>
-                                        <option value="72">72小时内未登录</option>
-
-
-                                    </select>
-
-                                </div>
-                            </label>
-                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="choice(2)"><i class="fa fa-search"></i>搜索</button>
-                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button>
-
+                            </select>-->从<input class="btn btn-default"
+                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                             id="start_time" value="{$Stime}">
+                            到<input class="btn btn-default"
+                                    onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time"
+                                    value="{$Etime}">
                         </div>
-                        </label>
                     </div>
                 </div>
-            </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6" style="width: 70%;">
+                        <div class="dataTables_length" id="dataTables-example_length">
+                            <label>目标玩家ID:
+                                <div class="form-group input-group">
+                                    <input class="form-control" id="game_user_id" type="text" placeholder="玩家ID">
+                                </div>
+                            </label>
+                            <label>目标角色名称:
+                                <div class="form-group input-group">
+                                    <input class="form-control" id="game_user_name" type="text" placeholder="角色名称">
+                                </div>
+                            </label>
+                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                                <i class="fa fa-search"></i>搜索
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 table-responsive">
 
-
-            <div class="row">
-                <div class="col-sm-12 table-responsive">
-
-                    <table class="table table-striped  table-bordered table-hover dataTable " id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;" width="100%">
-                        <thead>
-                        <tr>
-                            <td width="15%">指引阶段</td>
-                            <td width="15%">流失人数</td>
-                            <td width="15%">流失率</td>
-                        </tr>
-                        </thead>
-                        <tbody id="ad">
-                        <volist name="arr" id="vo">
+                        <table class="table table-striped  table-bordered table-hover dataTable "
+                               id="dataTables-example" role="grid" aria-describedby="dataTables-example_info"
+                               style="width: 100%;" width="100%">
+                            <thead>
                             <tr>
-                                <td>{$vo.zhiyinid}</td>
-                                <td>{$vo.loss}</td>
-                                <td>{$vo.loss_num}%</td>
-
+                                <td>帮派ID</td>
+                                <td>帮派名称</td>
+                                <td>操作类型</td>
+                                <td>操作人</td>
+                                <td>操作人名字</td>
+                                <td>目标角色ID</td>
+                                <td>目标角色名称</td>
+                                <td>目标角色重生等级</td>
+                                <td>目标角色等级</td>
+                                <td>角色VIP等级</td>
                             </tr>
-                        </volist>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody id="ad">
+                            <volist name="guide" id="ko">
+                                <tr>
+                                    <td>{$ko.union_id}</td>
+                                    <td>{$ko.union_name}</td>
+                                    <td>{$ko.union_membe_reasom}</td>
+                                    <td>{$ko.role_id}</td>
+                                    <td>{$ko.role_name}</td>
+                                    <td>{$ko.target_role_id}</td>
+                                    <td>{$ko.target_role_name}</td>
+                                    <td>{$ko.role_ChangeLife}</td>
+                                    <td>{$ko.role_level}</td>
+                                    <td>{$ko.vip}</td>
+                                </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="b-page">{$page}</div>
                 </div>
             </div>
-            <div class="row">
-                <div class="b-page">{$page}</div>
-            </div>
+            <!-- /.table-responsive -->
+
         </div>
-        <!-- /.table-responsive -->
-
+        <!-- /.panel-body -->
     </div>
-    <!-- /.panel-body -->
-</div>
-
-
 
 
 </div>
-<script type="text/javascript">
-    var url="{$urls}";
-    function choice(a) {
 
-        var time=$("#time").val()
-        var clothes=$("#clothes").val();
-        var cesa=$("#cesa").val();
-        if(clothes=="...选择游戏服务器..."){
-            alert("请选择游戏服务器");
-            return
-        }else{
-            //     location.href="http://106.15.137.174/Ali/Admin/Levelloss/index/db_id/"+clothes+"/time/"+time
-            location.href=url+"index.php?m=Home&c=Guide&a=index&time="+time+"&db_id="+clothes+"&cesa="+cesa;
-
-        }
-
-    }
-    function exl(){
-        var time=$("#time").val()
-        var clothes=$("#clothes").val();
-        var cesa=$("#cesa").val();
-        if(clothes=="...选择游戏服务器..."){
-            alert("请选择游戏服务器");
-            return
-        }else{
-            //     location.href="http://106.15.137.174/Ali/Admin/Levelloss/index/db_id/"+clothes+"/time/"+time
-            location.href=url+"index.php?m=Home&c=Guide&a=exl&time="+time+"&db_id="+clothes+"&cesa="+cesa;
-
-        }
+<script>
+    function exl() {
+        var value = "{$value}"
+        var clothes = $("#clothes").val();
+        var start_time = $("#start_time").val();
+        var end_time = $("#end_time").val();
+        var game_user_id = $("#game_user_id").val();
+        var game_user_name = $("#game_user_name").val();
+        var goods_name = $("#goods_name").val();
+        location.href = url + "index.php?m=Home&c=Prop&a=exl&value=" + value + "&db_id=" + clothes + "&start_time=" + start_time + "&end_time=" + end_time + "&game_user_id=" + game_user_id + "&game_user_name=" + game_user_name + "&goods_name=" + goods_name;
 
     }
 </script>
+
+
+
+
+
+</body>
+</html>
 <script>
     $(function() {
         $(window).bind("load resize", function() {
@@ -150,8 +162,21 @@
         })
     });
 </script>
+<script>
+    function Cuselect() {
+        var clothes=$("#clothes").val();
+        var start_time = $("#start_time").val();
+        var end_time = $("#end_time").val();
+        var game_user_id = $("#game_user_id").val();
+        var game_user_name = $("#game_user_name").val();
+        var goods_name = $("#type").val();
+        if(clothes=="...选择游戏服务器..."){
+            alert("请选择游戏服务器");
+            return
+        }else{
+            location.href = "index.php?m=Home&c=Guide&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name;
+        }
+    }
 
 
-
-</body>
-</html>
+</script>

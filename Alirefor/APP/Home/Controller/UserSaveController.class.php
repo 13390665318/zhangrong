@@ -57,6 +57,7 @@ class UserSaveController extends BaseController
             //判定 是否 使用计时器  20 分钟刷新一次
             $time=time();// 当前时间
             $usersave=D("usersave")->find();
+
             $savetime=$usersave["savetime"];
             $chatime=floor(($time-$savetime)%86400);
 
@@ -75,10 +76,10 @@ class UserSaveController extends BaseController
 
 
                 if($r){
-
                     // 更新数据
                    // $db=D("db")->find();
-                    $BeginTime="2018-01-01 00:00:00";  // 查询开服时间
+                    $db=D("db")->where("db_id=$db_id")->find();
+                    $BeginTime=$db["start_time"];  // 查询开服时间
                     $etime=date("Y-m-d H:i:s",time());
 
                     $day=count_days($BeginTime,$etime); //
@@ -103,7 +104,11 @@ class UserSaveController extends BaseController
 
                         $result2 = array_intersect(array_column($adduser, 'game_user_id'), array_column($sign2, 'game_user_id'));
                         $arr["day2"] = count($result2);
-                        $arr["day2s"] = (int)round($arr["day2"] / $arr["adduser"], 4) * 100;
+                        if($arr["day2"]===0){
+                            $arr["day2s"]=(int)round($arr["day2"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day2s"] =round($arr["day2"] / $arr["adduser"], 4) * 100;
+                        }
 
 
                         //3日留存
@@ -112,54 +117,84 @@ class UserSaveController extends BaseController
                         $sign3 = D("sign")->where(" start_time>='$Strtime3' and start_time<='$Endtime3' ")->group("game_user_id")->field("game_user_id")->select();
                         $result3 = array_intersect(array_column($adduser, 'game_user_id'), array_column($sign3, 'game_user_id'));
                         $arr["day3"] = count($result3);
-                        $arr["day3s"] = (int)round($arr["day3"] / $arr["adduser"], 4) * 100;
+                        if($arr["day3"]==0){
+                            $arr["day3s"]=(int)round($arr["day3"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day3s"] =round($arr["day3"] / $arr["adduser"], 4) * 100;
+                        }
                         //4日
                         $Strtime4 = date('Y-m-d 00:00:00', strtotime("+3 day", strtotime($Strtime)));
                         $Endtime4 = date('Y-m-d 23:59:59', strtotime("+3 day", strtotime($Strtime)));
                         $sign4 = D("sign")->where(" start_time>='$Strtime4' and start_time<='$Endtime4'  ")->group("game_user_id")->field("game_user_id")->select();
                         $result4 = array_intersect(array_column($adduser, 'game_user_id'), array_column($sign4, 'game_user_id'));
                         $arr["day4"] = count($result4);
-                        $arr["day4s"] = (int)round($arr["day4"] / $arr["adduser"], 4) * 100;
+                        if($arr["day4"]==0){
+                            $arr["day4s"]=(int)round($arr["day4"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day4s"] =round($arr["day4"] / $arr["adduser"], 4) * 100;
+                        }
                         //5
                         $Strtime5 = date('Y-m-d 00:00:00', strtotime("+4 day", strtotime($Strtime)));
                         $Endtime5 = date('Y-m-d 23:59:59', strtotime("+4 day", strtotime($Strtime)));
                         $sign5 = D("sign")->where(" start_time>='$Strtime5' and start_time<='$Endtime5' ")->group("game_user_id")->field("game_user_id")->select();
                         $result5 = array_intersect(array_column($adduser, 'game_user_id'), array_column($sign5, 'game_user_id'));
                         $arr["day5"] = count($result5);
-                        $arr["day5s"] = (int)round($arr["day5"] / $arr["adduser"], 4) * 100;
+                        if($arr["day5"]==0){
+                            $arr["day5s"]=(int)round($arr["day5"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day5s"] =round($arr["day5"] / $arr["adduser"], 4) * 100;
+                        }
                         //6
                         $Strtime6 = date('Y-m-d 00:00:00', strtotime("+5 day", strtotime($Strtime)));
                         $Endtime6 = date('Y-m-d 23:59:59', strtotime("+5 day", strtotime($Strtime)));
                         $sign6 = D("sign")->where(" start_time>='$Strtime6' and start_time<='$Endtime6' ")->group("game_user_id")->field("game_user_id")->select();
                         $result6 = array_intersect(array_column($adduser, 'game_user_id'), array_column($sign6, 'game_user_id'));
                         $arr["day6"] = count($result6);
-                        $arr["day6s"] = (int)round($arr["day6"] / $arr["adduser"], 4) * 100;
+                        if($arr["day6"]==0){
+                            $arr["day6s"]=(int)round($arr["day6"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day6s"] =round($arr["day6"] / $arr["adduser"], 4) * 100;
+                        }
                         //7
                         $Strtime7 = date('Y-m-d 00:00:00', strtotime("+6 day", strtotime($Strtime)));
                         $Endtime7 = date('Y-m-d 23:59:59', strtotime("+6 day", strtotime($Strtime)));
                         $sign7 = D("sign")->where(" start_time>='$Strtime7' and start_time<='$Endtime7'")->group("game_user_id")->field("game_user_id")->select();
                         $result7 = array_intersect(array_column($adduser, 'game_user_id'), array_column($sign7, 'game_user_id'));
                         $arr["day7"] = count($result7);
-                        $arr["day7s"] = (int)round($arr["day7"] / $arr["adduser"], 4) * 100;
+                        if($arr["day7"]==0){
+                            $arr["day7s"]=(int)round($arr["day7"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day7s"] =round($arr["day7"] / $arr["adduser"], 4) * 100;
+                        }
                         //15
                         $Strtime15 = date('Y-m-d 00:00:00', strtotime("+14 day", strtotime($Strtime)));
                         $Endtime15 = date('Y-m-d 23:59:59', strtotime("+14 day", strtotime($Strtime)));
                         $sign15 = D("sign")->where(" start_time>='$Strtime15' and start_time<='$Endtime15'  ")->group("game_user_id")->field("game_user_id")->select();
                         $result15 = array_intersect(array_column($adduser, 'game_user_id'), array_column($sign15, 'game_user_id'));
                         $arr["day15"] = count($result15);
-                        $arr["day15s"] =(int) round($arr["day15"] / $arr["adduser"], 4) * 100;
+                        if($arr["day15"]==0){
+                            $arr["day15s"]=(int)round($arr["day15"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day15s"] =round($arr["day15"] / $arr["adduser"], 4) * 100;
+                        }
                         //30
                         $Strtime30 = date('Y-m-d 00:00:00', strtotime("+29 day", strtotime($Strtime)));
                         $Endtime30 = date('Y-m-d 23:59:59', strtotime("+29 day", strtotime($Strtime)));
                         $sign30 = D("sign")->where(" start_time>='$Strtime30' and start_time<='$Endtime30'  ")->group("game_user_id")->field("game_user_id")->select();
                         $result30 = array_intersect(array_column($adduser, 'game_user_id'), array_column($sign30, 'game_user_id'));
                         $arr["day30"] = count($result30);
-                        $arr["day30s"] = (int)round($arr["day30"] / $arr["adduser"], 4) * 100;
+                        if($arr["day30"]==0){
+                            $arr["day30s"]=(int)round($arr["day30"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day30s"] =round($arr["day30"] / $arr["adduser"], 4) * 100;
+                        }
                         $arr["savetime"] = time();
 
                         $res = D("usersave")->where("time='$addtime'")->find();
+
                         if ($res) {
                             $ru = D("usersave")->where("time='$addtime'")->save($arr);
+
                         } else {
                             $ru = D("usersave")->add($arr);
                         }
@@ -168,24 +203,11 @@ class UserSaveController extends BaseController
 
 
 
-                        //
-//echo $ru;
-//echo D("usersave")->getLastSql();exit;
-
-
-
-//dump($ru);
-//exit;
-
-
-
-
-
-
 
 
 
                 }else{
+
 
                     // 新服 需要新增
                     //$db=D("db")->where("db_id=$db_id")->find();
@@ -210,7 +232,11 @@ class UserSaveController extends BaseController
                         $sign2=D("sign")->where(" start_time>='$Strtime2' and start_time<='$Endtime2' ")->group("game_user_id")->field("game_user_id")->select();
                         $result2=array_intersect(array_column($adduser, 'game_user_id'),array_column($sign2, 'game_user_id'));
                         $arr["day2"]=count($result2);
-                        $arr["day2s"]=(int)round($arr["day2"]/$arr["adduser"],4)*100;
+                        if($arr["day2"]===0){
+                            $arr["day2s"]=(int)round($arr["day2"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day2s"] =round($arr["day2"] / $arr["adduser"], 4) * 100;
+                        }
 
 
                         //3日留存
@@ -219,49 +245,77 @@ class UserSaveController extends BaseController
                         $sign3=D("sign")->where(" start_time>='$Strtime3' and start_time<='$Endtime3' ")->group("game_user_id")->field("game_user_id")->select();
                         $result3=array_intersect(array_column($adduser, 'game_user_id'),array_column($sign3, 'game_user_id'));
                         $arr["day3"]=count($result3);
-                        $arr["day3s"]=(int)round($arr["day3"]/$arr["adduser"],4)*100;
+                        if($arr["day3"]==0){
+                            $arr["day3s"]=(int)round($arr["day3"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day3s"] =round($arr["day3"] / $arr["adduser"], 4) * 100;
+                        }
                         //4日
                         $Strtime4=date('Y-m-d 00:00:00', strtotime ("+3 day", strtotime($Strtime)));
                         $Endtime4=date('Y-m-d 23:59:59', strtotime ("+3 day", strtotime($Strtime)));
                         $sign4=D("sign")->where(" start_time>='$Strtime4' and start_time<='$Endtime4'  ")->group("game_user_id")->field("game_user_id")->select();
                         $result4=array_intersect(array_column($adduser, 'game_user_id'),array_column($sign4, 'game_user_id'));
                         $arr["day4"]=count($result4);
-                        $arr["day4s"]=(int)round($arr["day4"]/$arr["adduser"],4)*100;
+                        if($arr["day4"]==0){
+                            $arr["day4s"]=(int)round($arr["day4"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day4s"] =round($arr["day4"] / $arr["adduser"], 4) * 100;
+                        }
                         //5
                         $Strtime5=date('Y-m-d 00:00:00', strtotime ("+4 day", strtotime($Strtime)));
                         $Endtime5=date('Y-m-d 23:59:59', strtotime ("+4 day", strtotime($Strtime)));
                         $sign5=D("sign")->where(" start_time>='$Strtime5' and start_time<='$Endtime5' ")->group("game_user_id")->field("game_user_id")->select();
                         $result5=array_intersect(array_column($adduser, 'game_user_id'),array_column($sign5, 'game_user_id'));
                         $arr["day5"]=count($result5);
-                        $arr["day5s"]=(int)round($arr["day5"]/$arr["adduser"],4)*100;
+                        if($arr["day5"]==0){
+                            $arr["day5s"]=(int)round($arr["day5"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day5s"] =round($arr["day5"] / $arr["adduser"], 4) * 100;
+                        }
                         //6
                         $Strtime6=date('Y-m-d 00:00:00', strtotime ("+5 day", strtotime($Strtime)));
                         $Endtime6=date('Y-m-d 23:59:59', strtotime ("+5 day", strtotime($Strtime)));
                         $sign6=D("sign")->where(" start_time>='$Strtime6' and start_time<='$Endtime6' ")->group("game_user_id")->field("game_user_id")->select();
                         $result6=array_intersect(array_column($adduser, 'game_user_id'),array_column($sign6, 'game_user_id'));
                         $arr["day6"]=count($result6);
-                        $arr["day6s"]=(int)round($arr["day6"]/$arr["adduser"],4)*100;
+                        if($arr["day6"]==0){
+                            $arr["day6s"]=(int)round($arr["day6"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day6s"] =round($arr["day6"] / $arr["adduser"], 4) * 100;
+                        }
                         //7
                         $Strtime7=date('Y-m-d 00:00:00', strtotime ("+7 day",strtotime($Strtime)));
                         $Endtime7=date('Y-m-d 23:59:59', strtotime ("+7 day", strtotime($Strtime)));
                         $sign7=D("sign")->where(" start_time>='$Strtime6' and start_time<='$Endtime7'")->group("game_user_id")->field("game_user_id")->select();
                         $result7=array_intersect(array_column($adduser, 'game_user_id'),array_column($sign7, 'game_user_id'));
                         $arr["day7"]=count($result7);
-                        $arr["day7s"]=(int)round($arr["day7"]/$arr["adduser"],4)*100;
+                        if($arr["day7"]==0){
+                            $arr["day7s"]=(int)round($arr["day7"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day7s"] =round($arr["day7"] / $arr["adduser"], 4) * 100;
+                        }
                         //15
                         $Strtime15=date('Y-m-d 00:00:00', strtotime ("+14 day", strtotime($Strtime)));
                         $Endtime15=date('Y-m-d 23:59:59', strtotime ("+14 day", strtotime($Strtime)));
                         $sign15=D("sign")->where(" start_time>='$Strtime15' and start_time<='$Endtime15'  ")->group("game_user_id")->field("game_user_id")->select();
                         $result15=array_intersect(array_column($adduser, 'game_user_id'),array_column($sign15, 'game_user_id'));
                         $arr["day15"]=count($result15);
-                        $arr["day15s"]=(int)round($arr["day15"]/$arr["adduser"],4)*100;
+                        if($arr["day15"]==0){
+                            $arr["day15s"]=(int)round($arr["day15"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day15s"] =round($arr["day15"] / $arr["adduser"], 4) * 100;
+                        }
                         //30
                         $Strtime30=date('Y-m-d 00:00:00', strtotime ("+29 day", strtotime($Strtime)));
                         $Endtime30=date('Y-m-d 23:59:59', strtotime ("+29 day", strtotime($Strtime)));
                         $sign30=D("sign")->where(" start_time>='$Strtime30' and start_time<='$Endtime30'  ")->group("game_user_id")->field("game_user_id")->select();
                         $result30=array_intersect(array_column($adduser, 'game_user_id'),array_column($sign30, 'game_user_id'));
                         $arr["day30"]=count($result30);
-                        $arr["day30s"]=(int)round($arr["day30"]/$arr["adduser"],4)*100;
+                        if($arr["day30"]==0){
+                            $arr["day30s"]=(int)round($arr["day30"]/$arr["adduser"],4)*100;
+                        }else {
+                            $arr["day30s"] =round($arr["day30"] / $arr["adduser"], 4) * 100;
+                        }
                         $arr["savetime"]=time();
                         $ru=D("usersave")->add($arr);
 
@@ -270,6 +324,7 @@ class UserSaveController extends BaseController
                         // dump($arr);
 
                     }
+
 
                 }
 

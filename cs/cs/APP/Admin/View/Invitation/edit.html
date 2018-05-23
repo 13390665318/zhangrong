@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <LINK href="__ROOT__/public/admin/css/admin.css" type="text/css" rel="stylesheet">
+    <LINK href="__ROOT__/public/admin/css/sp.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="__ROOT__/public/admin/kindeditor/themes/default/default.css" />
+    <link rel="stylesheet" href="__ROOT__/public/admin/kindeditor/plugins/code/prettify.css" />
+    <script src="__ROOT__/public/js/jquery-1.7.2.min.js"></script>
+
+</HEAD>
+<style>
+    .lei p {
+        display:inline-block;
+        text-align: right;
+        width:256px;
+    }
+
+</style>
+<BODY>
+<div class="headr_bottom">
+
+    <div class="header_place"><img src="__ROOT__/public/admin/images/p_11.jpg">您当前所处位置：
+        <span>客服管理</span>-&gt;<span>礼包类别编辑</span></div>
+</div>
+<div class="container">
+    <h4>基础信息</h4>
+
+    <form class="xq" action="{:U('Invitation/edit')}" method="post" enctype="multipart/form-data">
+
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>礼包类别名称 ：</span>
+            </p>
+            <input class ="sr" type="text" placeholder="" name="code_type_name" value='{$arr["code_type_name"]}'/>
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>道具ID <b style="font-size: 6px;color: red">（道具ID之间请用","隔开）</b>：</span>
+            </p>
+            <input class ="sr" type="text" placeholder="" name="goods_ids" value='{$arr["goods_ids"]}'/>
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>道具数量 <b style="font-size: 6px;color: red">（道具数量之间请用","隔开）</b>：</span>
+            </p>
+            <input class ="sr" type="text" placeholder="" name="goods_nums" value='{$arr["goods_nums"]}'/>
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>礼包类别 ：</span>
+            </p>
+            <if condition="$arr['type'] eq 1">
+                <input  type="radio" name="type" value="1" checked="checked"/>通用
+                <input  type="radio" name="type" value="2"/>
+                <else/>
+                <input  type="radio" name="type" value="1" />通用
+                <input  type="radio" name="type" value="2" checked="checked"/>唯一
+            </if>
+
+        </div>
+        <div class="qdtj">
+            <input type="hidden" id="code_type_id" name="code_type_id" value="{$arr['code_type_id']}">
+            <input class="ztj" type="submit" name="sub" value="确定"/>
+        </div>
+    </form>
+</div>
+</BODY>
+</HTML>

@@ -13,12 +13,6 @@ class NoticeController extends BaseController
 {
     public function index(){
 
-$redis = new \Redis();
-  /** $redis->connect("127.0.0.1","6379");
-          //  $redis->set('test','hello world!');
-            $notice=$redis->keys("noticeAlirefor"."*");   
-var_dump($notice);     
-$redis->delete("noticeAlirefor_1727375215883386");   **/        
         $count      =D("notice")->count();// 查询满足要求的总记录数
         $Page       = new \Think\Page($count,20);// 实例化分页类 传入总记录数和每页显示的记录数(20)
         $show       = $Page->show();// 分页显示输出
@@ -189,15 +183,21 @@ $redis->delete("noticeAlirefor_1727375215883386");   **/
     }
 
     public function nostop(){
-        if(isset($_GET["notice_id"])){
+
+
+        if(!isset($_GET["notice_id"])){
+
             $notice_id=I("get.notice_id");
+            $notice_id=35;
             $rus=D("notice")->where("notice_id=$notice_id")->find();
+            $rus["type"]=1;
             if($rus["type"]!=2){
                 $clothes=$rus["clothes"];
                 if($clothes==null){
                     //全服
                     $db=D("db")->select();
                 }else{
+
                     //选定服务器
                     $dclothes=explode(",",$clothes);
                     $dclothes=array_filter($dclothes);
@@ -206,6 +206,8 @@ $redis->delete("noticeAlirefor_1727375215883386");   **/
                     }
 
                 }
+
+
                 // var_dump($db);
                 for($i=0;$i<count($db);$i++){
                     $ip=$db[$i]["ip"];
@@ -215,15 +217,17 @@ $redis->delete("noticeAlirefor_1727375215883386");   **/
                     $jsData= json_encode($content,JSON_UNESCAPED_UNICODE);
                     $ruSdata=base64_encode($jsData);
                     $ruSdata = str_replace(array('+','/'),array('-','_'),$ruSdata);
-$token=$_SESSION["token"];
+                    $token=$_SESSION["token"];
                     $md=md5($token);
                     $url="http://$ip:$port/notice?context=$ruSdata&type=$type&token=$md";
+                    dump($url);exit;
                     //$url="http://$ip:$port/notice?context=$ruSdata&type=$type";
                     $ch = curl_init();
                     curl_setopt($ch, CURLOPT_URL, $url);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
                     curl_setopt($ch, CURLOPT_HEADER, 0);
                     $output = curl_exec($ch);
+
                     curl_close($ch);
                     $a=json_decode($output);
                     if($a->code==0){

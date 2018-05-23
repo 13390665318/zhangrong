@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 use Org\Util\String;
 
+
 class ApiController extends Controller
 {
  //   private $prefix = 'baimifan-api_api_';  //cookie前缀

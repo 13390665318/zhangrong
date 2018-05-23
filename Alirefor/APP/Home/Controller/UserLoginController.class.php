@@ -11,18 +11,21 @@ header("Content-type: text/html; charset=utf-8");
 class UserLoginController extends BaseController
 {
     public function index(){
-        $game_id = 1;
-        /*if(isset($_GET["bclothes"]) && isset($_GET["eclothes"])){
-            $bclothes=I("get.bclothes");
-            $eclothes=I("get.eclothes");
-            if( $bclothes==0 && $eclothes==0 ){
-                $db=D("db")->select();
-            }else{
-                $db=D("db")->where("game_id=$game_id and clothes_num>=$bclothes and clothes_num<=$eclothes ")->order("db_id asc")->select();
-            }
-        }else{
-            $db=D("db")->select();
-        }*/
+        $game_id = 2;
+        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
+
+        // 图标 默认 最新服
+        if (isset($_GET["db_id"])) {
+            $db_id = I("get.db_id");
+            $_SESSION["db_id"] = $db_id;
+        } else {
+            $db_id = $clostu[0]["db_id"];
+            $_SESSION["db_id"] = $db_id;
+        }
+        $nowtime = date("Y-m-d H:i:s", time());
+        $this->assign("db_id", $db_id);
+
         if(isset($_GET["stime"])&&isset($_GET["etime"])){
             $stime=I("get.stime");
             $etime=I("get.etime");

@@ -12,36 +12,31 @@ header("Content-type: text/html; charset=utf-8");
 class PayMoneyController extends BaseController
 {
     public function index(){
-        $game_id = 1;
-        if(isset($_GET["bclothes"]) && isset($_GET["eclothes"])){
-            $bclothes=I("get.bclothes");
-            $eclothes=I("get.eclothes");
-            if( $bclothes==0 && $eclothes==0 ){
-                $db=D("db")->select();
-            }else{
-                $db=D("db")->where("game_id=$game_id and clothes_num>=$bclothes and clothes_num<=$eclothes ")->order("db_id asc")->select();
-            }
-        }else{
-            $db=D("db")->select();
-        }
-        if(isset($_GET["stime"])&&isset($_GET["etime"])){
-            $stime=I("get.stime");
-            $etime=I("get.etime");
-        }else{
-            // 默认 当月
-            $stime=date("Y-m-d",strtotime("-6 day"));
-            $etime=date("Y-m-d",time());
-        }
-        $this->assign("stime",$stime);
-        $this->assign("etime",$etime);
+        $game_id = 2;
+        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
 
-        $where=null;
-        for($i=0;$i<count($db);$i++){
-            $name=$db[$i]["db_id"];
-            $where = "db_id = '$name' or "  .$where;
+        // 图标 默认 最新服
+        if (isset($_GET["db_id"])) {
+            $db_id = I("get.db_id");
+            $_SESSION["db_id"] = $db_id;
+        } else {
+            $db_id = $clostu[0]["db_id"];
+            $_SESSION["db_id"] = $db_id;
+        }
+        $nowtime = date("Y-m-d H:i:s", time());
+        $this->assign("db_id", $db_id);
+        if (isset($_GET["stime"]) && isset($_GET["etime"])) {
+            $stime = I("get.stime");
+            $etime = I("get.etime");
+        } else {
+            $stime = date("Y-m-d ", strtotime("-6 day"));
+            $etime = date("Y-m-d ", time());
         }
 
-        $con=substr($where,0,strlen($where)-3);
+
+        $this->assign('stime',$stime);
+        $this->assign('etime',$etime);
         $num=count_days($stime,$etime);
     //   var_dump($con);//exit;
         $Stime=null;
@@ -74,36 +69,31 @@ class PayMoneyController extends BaseController
         $this->display();
     }
     public function index2(){
-        $game_id = 1;
-        if(isset($_GET["bclothes"]) && isset($_GET["eclothes"])){
-            $bclothes=I("get.bclothes");
-            $eclothes=I("get.eclothes");
-            if( $bclothes==0 && $eclothes==0 ){
-                $db=D("db")->select();
-            }else{
-                $db=D("db")->where("game_id=$game_id and clothes_num>=$bclothes and clothes_num<=$eclothes ")->order("db_id asc")->select();
-            }
-        }else{
-            $db=D("db")->select();
+        $game_id = 2;
+        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
+        if (isset($_GET["db_id"])) {
+            $db_id = I("get.db_id");
+            $_SESSION["db_id"] = $db_id;
+        } else {
+            $db_id = $clostu[0]["db_id"];
+            $_SESSION["db_id"] = $db_id;
         }
-        if(isset($_GET["stime"])&&isset($_GET["etime"])){
-            $stime=I("get.stime");
-            $etime=I("get.etime");
-        }else{
-            // 默认 当月
-            $stime=date("Y-m-d",strtotime("-6 day"));
-            $etime=date("Y-m-d",time());
+        $nowtime = date("Y-m-d H:i:s", time());
+        $this->assign("db_id", $db_id);
+        if (isset($_GET["stime"]) && isset($_GET["etime"])) {
+            $stime = I("get.stime");
+            $etime = I("get.etime");
+        } else {
+            $stime = date("Y-m-d ", strtotime("-6 day"));
+            $etime = date("Y-m-d ", time());
         }
         $this->assign("stime",$stime);
         $this->assign("etime",$etime);
 
         $where=null;
-        for($i=0;$i<count($db);$i++){
-            $name=$db[$i]["db_id"];
-            $where = "db_id = '$name' or "  .$where;
-        }
 
-        $con=substr($where,0,strlen($where)-3);
+
         $num=count_days($stime,$etime);
         //   var_dump($con);//exit;
         $Stime=null;
@@ -113,13 +103,13 @@ class PayMoneyController extends BaseController
             $arr[$i]["time1"]=date('Y-m-d 00:00:00', strtotime ("-$i day", strtotime($etime)));
             $arr[$i]["time2"]=date('Y-m-d 23:59:59', strtotime ("-$i day", strtotime($etime)));
         }
-
+       // dump($con);exit;
         $user=0;
         for($i=0;$i<count($arr);$i++){
             $data[$i]["time"]=$arr[$i]["time"];
             $Strtime=$arr[$i]["time1"];
             $Endtime=$arr[$i]["time2"];
-            $ru['_string']="(".$con.") and pay_time>='$Strtime' and pay_time<='$Endtime'";
+            $ru['_string']="pay_time>='$Strtime' and pay_time<='$Endtime'";
             $data[$i]["num"]=(int)M("pay")->where($ru)->sum(pay_number);
             $user=$user+$data[$i]["num"];
         }

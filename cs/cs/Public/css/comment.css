@@ -1,0 +1,390 @@
+* {
+				margin: 0px;
+				padding: 0px;
+				border: 0;
+				font-family: "微软雅黑";
+				box-sizing: border-box;
+			}
+			
+			html,
+			body,
+			div,
+			p,
+			h1,
+			h2,
+			span,
+			img {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			body {
+				width: 100%;
+				overflow-x: hidden;
+			}
+			
+			.main {
+				width: 100%;
+				margin: 0 auto;
+			}
+			
+			.title {
+				height: 1.82rem;
+				text-align: center;
+				border-bottom: solid 0.03rem #F5F5F5;
+				position: relative;
+			}
+			.title a {
+				display: inline-block;
+			}
+			.title a img {
+				width: 0.6rem;
+				height: 0.6rem;
+			}
+			
+			.title h1 {
+				display: inline-block;
+				font-size: 0.48rem;	
+				margin-top: 6%;
+				width: 50%;
+				overflow:hidden;
+				text-overflow:ellipsis; 
+				-o-text-overflow:ellipsis;
+				white-space:nowrap;
+			}
+			
+			.back {
+				position: absolute;
+				left: 0.4rem;
+				top: 37%;
+			}
+			
+			/*.content {}*/
+			
+			.content_1 {
+				padding-left: 0.54rem;
+				padding-right: 0.44rem;
+				padding-bottom: 0.75rem;
+			}
+			
+			.content_1_title:after {
+				clear: both;
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				visibility: hidden;
+			}
+			.content_1_title {
+				font-size: 0.46rem;
+				color: rgb(52,52,52);
+				padding-top: 0.65rem;
+			}
+			
+			.content_1_title span{
+				font-size: 0.46rem;
+				color: rgb(52,52,52);
+				padding-top: 0.65rem;
+				font-weight: bold;
+			}
+			.content_1 img {
+				width: 0.6rem;
+				float: right;
+				margin-right: 4px;
+			}
+			
+			.content_1_date {
+				padding-top: 0.25rem;
+				padding-bottom: 0.45rem;
+				font-size: 0.36rem;
+				color: rgb(193,193,193);
+			}
+			
+			.content_1 p {
+				font-size: 0.44rem;
+				color: rgb(143,143,143);
+				/*line-height: 23px;*/
+			}
+			.gap {
+				width: 100%;
+				height: 0.32rem;
+				background: #F5F5F5;
+				padding-left: -0.54rem;
+			}
+			
+			
+			.content_2 {
+				width: 100%;	
+			}
+			
+			.com:after {
+				clear: both;
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				visibility: hidden;
+			}
+			
+			.com {
+				line-height: 0.36rem;
+				padding-top: 0.25rem;
+				padding-bottom: 0.25rem;
+				padding-left: 0.54rem;
+				padding-right: 0.44rem;
+				border-bottom: solid 0.03rem #F5F5F5;
+			}
+			.com span {
+				font-size: 0.36rem;
+				color: rgb(56,56,56);
+			}
+			
+			.com img {
+				width: 0.6rem;
+				height: 0.6rem;
+				float: right;
+				margin-right: 5px;
+				margin-top: 0.05rem;
+				/*margin-left: 50%;*/
+				/*vertical-align: bottom;*/
+			}
+			
+			
+			.pl:after {
+				clear: both;
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				visibility: hidden;
+			}
+			
+			.pl {
+				*zoom: 1;
+			}
+			
+			.pl_text {
+				border: 1px solid #eee;
+				display: block;
+				height: 30px;
+				width: 100%;
+				padding: 5px;
+				resize: none;
+				color: #ccc;
+				font-size: 0.44rem;
+			}
+			
+			/*.pl_on .pl-text {
+				height: 50px;
+				color: #333;
+				border: 1px solid #ff8140;
+			}*/
+			
+			.pl-btn {
+				float: right;
+				width: 15%;
+				/*height: 0.55rem;*/
+				height: 26px;
+				/*background: #ff8140;*/
+				/*color: white;*/
+				background: #f7f7f7;
+				color: #ccc;
+				font-size: 0.40rem;
+				display: none;
+				
+			}
+			
+			/*评论区*/
+			
+			#pn {
+				width: 100%;
+				padding-left: 0.54rem;
+				padding-right: 0.44rem;
+				margin: 0 auto;
+			}
+			
+			.list0 {
+				position: relative;
+				padding-top: 0.55rem;
+			}
+			
+			.head {
+				width: 1rem;
+				height: 1rem;
+				float: left;
+				/*圆形*/
+			}
+			
+			.head img {
+				border-radius: 50%;
+				width: 1rem;
+				height: 1rem;
+			}
+			
+			.content {
+			    width: 89%;
+			    /*line-height: 20px;*/
+			    font-size: 0.40rem;
+			    margin-left: 9.3%;
+			    padding-left: 10px;
+			}
+			
+			.name {
+				color: #eb7350;
+				font-size: 0.44rem;
+			}
+			
+			.good:after {
+				clear: both;
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				visibility: hidden;
+			}
+			
+			.good {
+				*zoom: 1;
+			}
+			.date {
+				float: left;
+				color: #808080;
+			}
+			.good a {
+				float: right;
+				color: #808080;
+				margin-right: 5px;
+				/*margin-right: 17px;*/
+			}
+			
+			.people {
+				background: #F7F7F7;
+				height: 28px;
+				line-height: 28px;
+				padding-left: 10px;
+				margin: 8px 0;
+			}
+			
+			.comment:after {
+				clear: both;
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				visibility: hidden;
+			}
+			
+			.comment {
+				*zoom: 1;
+				padding: 10px 0;
+				border-top: 1px solid #eee;
+			}
+			
+			.comment-left {
+				float: left;
+				display: inline;
+				margin-right: 10px;
+			}
+			
+			.comment-left img {
+				border-radius: 50%;
+				width: 0.7rem;
+				height: 0.7rem;
+			}
+			
+			.comment-right {
+				float: left;
+				width: 88%;
+			}
+			
+			.comment-text {
+				/*line-height: 18px;*/
+			}
+			
+			.comment-text span {
+				color: #eb7350;
+			}
+			.comment-date {
+				/*font-size: 12px;*/
+				/*line-height: 14px;*/
+				color: #ccc;
+				position: relative;
+			}
+			
+			.comment-dele {
+				position: absolute;
+				right: -8px;
+				bottom: 0;
+				color: #808080;
+			}
+			
+			.hf:after {
+				clear: both;
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				visibility: hidden;
+			}
+			
+			.hf {
+				*zoom: 1;
+			}
+			
+			.hf-text {          
+				border: 1px solid #eee;
+				display: block;
+				height: 30px;
+				/*height: 0.75rem;*/
+				width: 100%;
+				padding: 5px;
+				resize: none;
+				color: #ccc;
+				font-size: 0.44rem;
+			}
+			
+			.hf-on .hf-text {
+				height: 1.2rem;
+				color: #333;
+				border: 1px solid #ff8140;
+			}
+			
+			
+			.hf-btn {
+				float: right;
+				width: 15%;
+				height: 25px;
+				/*height: 0.55rem;*/
+				background: #f7f7f7;
+				color: #ccc;
+				font-size: 0.40rem;
+				display: none;
+			}
+			
+			.hf-btn-on {
+				background: #ff8140;
+				color: #fff;
+			}
+			
+			.hf-nub {
+				float: right;
+				padding: 3px 5px;
+				color: #666;
+				display: none;
+			}
+			
+			.hf-on .hf-btn {
+				display: inline;
+			}
+			
+			.hf-on .hf-nub {
+				display: inline;
+			}

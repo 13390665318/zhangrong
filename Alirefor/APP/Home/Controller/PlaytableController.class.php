@@ -15,7 +15,7 @@ class PlaytableController extends BaseController
 
 
 
-        $game_id = 1;
+        $game_id = 2;
 
         $clostu=D("db")->where("game_id=$game_id")->order("db_id asc")->select();
         $this->assign("clostu",$clostu);
@@ -44,7 +44,7 @@ class PlaytableController extends BaseController
         }
         $this->assign("stime",$stime);
         $this->assign("etime",$etime);
-        $Userbase = M('San_userbase','',$connection);
+        /*$Userbase = M('San_userbase','',$connection);
         $Account = M('San_account','',$connection);
         $User=M("User",'',$connection2);
 
@@ -82,7 +82,7 @@ class PlaytableController extends BaseController
 
 //var_dump($arr);
 
-        $this->assign("arr",$arr);
+        $this->assign("arr",$arr);*/
         $this->display();
     }
 

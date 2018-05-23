@@ -1,0 +1,168 @@
+
+<include file="Public:header"/>
+<div id="page-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">客服管理</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            添加跑马灯 <div style="clear: both;"></div>
+        </div>
+
+        <div class="container">
+            <form class="xq" action="{:U('Sysnotice/add')}" method="post" enctype="multipart/form-data"  onsubmit="return toVaild()">
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>服务器：：</label>
+                        起始区:<input class ="sr" style="width: 100px" type="text" name="begin_clothes" id="begin_clothes" value="0"/>-终止区:<input class ="sr" id="end_clothes" style="width: 100px" type="text" name="end_clothes" value="0">
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>类别：</label>
+                        <select name="type" class ="dx">
+                            <option value="1" selected="selected">定时播报</option>
+                            <option value="0">临时播报</option>
+
+                        </select>
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>开始时间：</label>
+                       <!-- <input onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="start_time" name="begin_time" class ="sr">-->
+			<input class="datainp" id="dateinfo" type="text" placeholder="请选择"  readonly id="start_time" name="begin_time" class ="sr" >
+
+		</p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>播报次数：</label>
+                        <input name="num" id="num" class ="sr">
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>间隔时长：</label>
+                        <input type="text" name="systime" class ="sr" value="60" id="systime">秒
+                    </p>
+                </div>
+
+
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>公告内容：</label>
+                        <textarea name="content" style="width:500px;height:300px;position: relative;" id="content"></textarea>
+                    </p>
+                </div>
+
+                <button type="submit" name ="sub"class="btn btn-primary" style="margin:20px auto;display: block;">确定</button>
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+<style>
+body{ padding:50px 0 0 50px;}
+.datainp{ width:200px; height:30px; border:1px #ccc solid;}
+.datep{ margin-bottom:40px;}
+</style>
+<script type="text/javascript">
+    //jeDate.skin('gray');
+	
+    jeDate({
+		dateCell:"#dateinfo",
+		format:"YYYY-MM-DD hh:mm:ss",
+		isinitVal:true,
+		isTime:true, //isClear:false,
+		minDate:"2014-09-19 00:00:00",
+		okfun:function(val){alert(val)}
+	})
+
+    //alert("YYYY/MM".match(/\w+|d+/g).join("-"))
+</script>
+
+
+<script type="text/javascript">
+$("#begin_clothes").change(function() {
+var tmptxt=$(this).val();       
+        $(this).val(tmptxt.replace(/\D|^0/g,''));   
+
+              
+ });
+$("#end_clothes").change(function() {
+var tmptxt=$(this).val();       
+        $(this).val(tmptxt.replace(/\D|^0/g,''));   
+
+              
+ });
+
+$("#num").change(function() {
+var tmptxt=$(this).val();       
+        $(this).val(tmptxt.replace(/\D|^0/g,''));   
+
+              
+ });
+
+$("#systime").change(function() {
+var tmptxt=$(this).val();       
+        $(this).val(tmptxt.replace(/\D|^0/g,''));   
+
+              
+ });
+  function toVaild(){
+      
+ var end_clothes=$("#end_clothes").val();
+ var begin_clothes=$("#begin_clothes").val();
+ var start_time=$("#dateinfo").val();
+var num=$("#num").val();
+ var systime=$("#systime").val();	
+var content=$("#content").val();
+      
+
+
+        if(end_clothes<begin_clothes){
+            alert("结束区服不可小于开始区服");
+            return false;
+        }else if(!content){
+            alert("内容不可为空");
+            return false;
+        }else if(!start_time){
+		alert("开始时间不可为空");
+            return false;
+	}else if(!num){
+	alert("播放次数不可为空");
+            return false;	
+	}else if(num==0){
+alert("播放次数不可为0");
+            return false;
+	}else if(systime==0){
+alert("间隔时长不可为0");
+            return false;
+	}else if(systime<15){
+alert("间隔时长不可小于15秒");
+            return false;
+	}else if(!systime){
+alert("间隔时长不可为空");
+            return false;
+	}else if(aa>200){
+alert("内容长度过大");
+            return false;
+	}else{
+            return false;
+        }
+
+
+    }
+</script>
+<include file="Public:footer"/>

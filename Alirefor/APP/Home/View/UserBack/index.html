@@ -12,7 +12,7 @@
         <div class="panel-heading">
             回流用户趋势（7天之前有登录，最近7天无登录，今天有登录的用户） <div style="clear: both;"></div>
         </div>
-        <select style="margin-left: 0px; width: 10%;" onchange="choice(1)" id="clothes" class="btn btn-default">
+       <!-- <select style="margin-left: 0px; width: 10%;" onchange="choice(1)" id="clothes" class="btn btn-default">
             <option>...选择游戏服务器...</option>
             <volist name="clostu" id="vo">
                 <eq name="vo.db_id" value="$db_id">
@@ -21,6 +21,7 @@
                     <option value="{$vo.db_id}">{$vo.clothes}</option>
                 </eq>
             </volist>
+        </select>-->
        从<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
         到<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="etime" value="{$etime}">
 

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <LINK href="__ROOT__/public/admin/css/admin.css" type="text/css" rel="stylesheet">
+    <LINK href="__ROOT__/public/admin/css/sp.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="__ROOT__/public/admin/kindeditor/themes/default/default.css" />
+    <link rel="stylesheet" href="__ROOT__/public/admin/kindeditor/plugins/code/prettify.css" />
+    <script src="__ROOT__/public/js/jquery-1.7.2.min.js"></script>
+
+</HEAD>
+<BODY>
+<div class="headr_bottom">
+
+    <div class="header_place"><img src="__ROOT__/public/admin/images/p_11.jpg">您当前所处位置：
+        <span>系统管理</span>-&gt;<span>游戏编辑</span></div>
+</div>
+<div class="container">
+    <h4>基础信息</h4>
+
+    <form class="xq" action="{:U('Game/edit')}" method="post" enctype="multipart/form-data">
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>游戏名称：</span>
+            </p>
+            <input class ="sr" type="text" placeholder="" name="game_name" value="{$arr['game_name']}"/>
+        </div>
+        <div class="lei">
+            <p>
+                <span>*</span>
+                <span>上线设置 ：</span>
+            </p>
+            <if condition="$arr['status'] eq 1">
+                <input name ="status" class="dx" type="radio" value="1" checked="checked"/>上线<input name="status" class="dx" type="radio" value="0"/>下线
+
+                <else/>
+                <input name ="status" class="dx" type="radio" value="1" />上线<input name="status" class="dx" type="radio" value="0" checked="checked"/>下线
+
+            </if>
+
+
+        </div>
+
+
+        <div class="qdtj">
+            <input type="hidden" name="id" value="{$id}">
+            <input class="ztj" type="submit" name="sub" value="确定"/>
+        </div>
+    </form>
+</div>
+</BODY>
+</HTML>

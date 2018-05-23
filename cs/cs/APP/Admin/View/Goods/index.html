@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <LINK href="http://106.15.137.174/Alirefor/public/admin/css/admin.css" type="text/css" rel="stylesheet">
+    <script src="http://106.15.137.174/Alirefor/public/js/jquery-1.7.2.min.js"></script>
+    <LINK href="http://106.15.137.174/Alirefor/public/admin/css/sp.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="http://106.15.137.174/Alirefor/public/js/jQuery.js"></script>
+    <script type="text/javascript" src="http://106.15.137.174/Alirefor/public/js/jqplot.js"></script>
+    <script src="http://106.15.137.174/Alirefor/public/laydate/laydate.js"></script>
+    <link rel="stylesheet" href="http://106.15.137.174/Alirefor/public/admin/css/pagination.css">
+    <style>
+        .headr_bottom {
+            overflow: hidden;
+            width: 100%;
+            height: 27px;
+            background: #dcedfa;
+            border-bottom: 1px solid #CADAE6;
+        }
+
+        .header_place {
+            float: left;
+            height: 27px;
+            line-height: 26px;
+        }
+        .header_container{
+            overflow: hidden;
+        }
+        body{
+            background-color: #DCEDFA;
+        }
+        .sel{
+            box-sizing: border-box;
+            padding:2%;
+            padding-left:1.5%;
+            border-bottom: 1px solid #CADAE6;
+        }
+        #sel_1{
+            padding:5px;
+            width:140px;
+            margin-left:1%;
+        }
+        .mc{
+            margin-left: 1%;
+        }
+        .sr{
+            padding:5px;
+            margin-left: 1%;
+        }
+        .cx,.cz{
+            color:#fff;
+            background-color: #006DCC;
+            border: none;
+            padding:6px;
+            padding-left:8px;
+            padding-right:8px;
+            cursor:pointer;
+        }
+        .cx{
+            margin-left: 5%;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+            padding:0px;
+            padding-left: 13px;
+        }
+        ul li{
+            display:inline-block;
+            margin-right:10px;
+        }
+        ul img{
+            vertical-Alireforgn: -18%;
+        }
+        table{border-right:1px solid #CCD5DE;border-bottom:1px solid #CCD5DE;width:100%;text-Alireforgn: center;}
+        table  td{border-left:1px solid #CCD5DE;border-top:1px solid #CCD5DE;}
+        table thead td{background-color: #BDE1FC;}
+        table thead tr,table tbody tr{
+            width:100%;
+            height:40px;
+        }
+
+        table tbody tr:nth-child(odd){
+            background-color: #fff;
+        }
+        table tbody tr:nth-child(even){
+            background-color: #F0F7FC;
+        }
+
+        .jqplot-table-legend{display:none}
+
+    </style>
+
+
+</HEAD>
+<BODY>
+<table  border="0" cellspacing="0" cellpadding="10">
+    <thead>
+    <tr><td colspan="7">
+        <div style="font-size: 12px;float: left"><b>
+            <span>
+             物品管理
+          </span>
+
+        </b></div>
+    </td></tr>
+    </thead>
+    </tbody>
+</table>
+<table  border="0" cellspacing="0" cellpadding="10">
+    <thead>
+    <tr><td colspan="7">
+        <div style="font-size: 12px;float: left"><b>
+            <span>物品类型
+               <select><option>不限</option></select>
+                子类型:<select><option>不限</option></select>
+                物品名称（支持模糊查询）:<input type="text" name="" id="itemname"/>
+                物品ID:<input type="text" name="" id="itemid"/>
+
+                <input type="button" name="" value="&nbsp;查询&nbsp;" onclick="choice()"/>
+
+        </span>
+        </b></div>
+    </td></tr>
+
+    </thead>
+    </tbody>
+</table>
+<div style="width: 100%;">
+    <table  border="0" cellspacing="0" cellpadding="10">
+        <thead>
+
+        <tr>
+            <td>物品ID</td>
+            <td>物品名称</td>
+            <td>物品类型</td>
+            <td>物品描述</td>
+            <td>品质</td>
+            <td>等级</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody id="paytitle">
+        <volist name="arr" id="vo">
+            <tr>
+                <td>{$vo.itemid}</td>
+                <td>{$vo.itemname}</td>
+                <td>物品类型</td>
+                <td>{$vo.itemdescription}</td>
+                <td>品质</td>
+                <td>等级</td>
+                <td>操作</td>
+            </tr>
+
+        </volist>
+        </tbody>
+        <tr><td colspan="7" Alireforgn="center"><div class="pagination">{$page}</div></td></tr>
+    </table>
+
+</div>
+
+<script type="text/javascript">
+    /**
+     * 时间选择
+     * @param a 1：昨天 2 今天 3 近7天 4 近30天 5 月份  6 一年  7 时间选择
+     */
+    function choice() {
+            var itemname=$("#itemname").val()
+            var itemid=$("#itemid").val();
+        location.href="http://106.15.137.174/Alirefor/Admin/Goods/index/itemname/"+itemname+"/itemid/"+itemid
+      }
+
+
+</script>
+
+
+
+</BODY></HTML>

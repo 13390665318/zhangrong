@@ -27,7 +27,7 @@ return array(
     'DB_SQL_BUILD_QUEUE'    => 'file',   // SQL缓存队列的缓存方式 支持 file xcache和apc
     'DB_SQL_BUILD_LENGTH'   => 20, // SQL缓存的队列长度
     'DB_SQL_LOG'            => false, // SQL执行日志记录
-
+    'DEFAULT_FILTER'         =>'srtip_tags,stripslashes',
 
 
 

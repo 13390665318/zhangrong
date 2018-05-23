@@ -23,7 +23,7 @@ class LoginController extends Controller {
             $status=$num["status"];
             if($status==-1){
                 echo "<script>alert('该账号已禁用')</script>";
-                echo "<script>javascript:parent.window.location.href= 'http://106.15.137.174/index.php?m=Admin&c=Login&a=login'</script>";
+                echo "<script>javascript:parent.window.location.href= 'http://localhost/index.php?m=Admin&c=Login&a=login'</script>";
             }else{
                 if($num !=null){
                     $_SESSION["userID"]=$num["id"];

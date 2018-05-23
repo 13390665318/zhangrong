@@ -12,7 +12,7 @@ namespace Api\Controller;
 class CountryController extends BaseController
 {
     public function add(){
-        $need_params     = array('game_user_id','game_id','clothes','country');
+        /*$need_params     = array('game_user_id','game_id','clothes','country');
         $optional_params = array('mobile_model');
         $data            = get_param($need_params, $optional_params);
         $game_id = $data["game_id"];
@@ -46,7 +46,7 @@ class CountryController extends BaseController
                     }
                 }
             }
-        }
+        }*/
     }
 
 }
