@@ -1,0 +1,266 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	font-family: "微软雅黑";
+	box-sizing: border-box;
+}	
+html,
+body,
+div,
+p,
+h1,
+h2,
+span {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	/*width: 10.8rem;*/
+	width: 100%;
+	overflow-x: hidden;
+}
+.main {
+	width: 100%;
+	/*width: 10.8rem;*/
+	margin: 0 auto;
+}
+.title {
+			height: 1.82rem;
+			/*padding: 0.5rem;*/
+			text-align: center;
+			border-bottom: solid 0.03rem #F5F5F5;
+			position: relative;
+		}
+		.title a {
+			display: inline-block;
+		}
+		.title a img {
+			width: 0.55rem;
+			height: 0.55rem;
+		}
+		
+		.title h1 {
+			display: inline-block;
+			font-size: 0.44rem;	
+			margin-top: 6%;
+			width: 50%;
+			overflow:hidden;
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis;
+			white-space:nowrap;
+		}
+		
+		.back {
+			position: absolute;
+			left: 0.4rem;
+			top: 37%;
+		}
+.content {}
+.content_1 {
+	padding-left: 0.54rem;
+	padding-right: 0.44rem;
+	/*padding-top: 0.25rem;*/
+	
+	padding-bottom: 0.75rem;
+	
+}
+
+.content1_1 {
+	padding-left: 0.54rem;
+	padding-right: 0.44rem;
+	padding-top: 0.4rem;
+	padding-bottom: 0.45rem;
+	border-top: solid 0.03rem #F5F5F5;
+	border-bottom: solid 0.03rem #F5F5F5;
+	line-height: 0.4rem;
+	position: relative;
+	vertical-align: middle;
+}
+
+.content1_1 img {
+	width: 0.68rem;
+	height: 0.68rem;
+	position: absolute;
+	left: 0.54rem;
+	top: 35%;   
+}	
+
+.content1_1 span {
+	font-size: 0.40rem;
+	color: #929292;
+	margin-left: 1.08rem;
+}	
+
+
+.content1_1 p {
+	line-height: 0.5rem;
+	font-size: 0.40rem;
+	color: #929292;
+	margin-left: 1.08rem;
+}	
+
+
+
+.content_1 div {
+	margin-top: 0.45rem;
+	line-height: 0.4rem;
+}
+.content_1 div h1 {
+	display: inline-block;
+	font-size: 0.4rem;
+	font-weight: 500;
+	color: rgb(52, 52, 52);
+}
+.content_1 div span {
+	font-size: 0.4rem;
+	font-weight: 500;
+	color: #929292;
+}
+.gap {
+	/*width: 10.8rem;*/
+	width: 100%;
+	height: 0.32rem;
+	background: #F5F5F5;
+	padding-left: -0.54rem;
+}
+/*第二部分*/
+.content_2 {
+	/*width: 10.8rem;*/
+	width: 100%;
+}
+.con_title {
+	line-height: 0.4rem;
+	padding-left: 0.54rem;
+	padding-right: 0.45rem;
+	padding-top: 0.21rem;
+	padding-bottom: 0.42rem;
+	border-bottom: solid 0.03rem #F5F5F5;
+}
+.con_title h1 {
+	display: inline-block;
+	font-size: 0.4rem;
+	font-weight: 600;
+	color: rgb(51, 51, 51);
+}
+.con_title img {
+	width: 0.48rem;
+	height: 0.48rem;
+	/*margin-left: 7.3rem;*/
+	margin-left: 73%;
+}
+.con_detail_1 {
+	/*padding-left:0.65rem ;*/
+	
+	padding-top: 0.42rem;
+}
+.con_detail_1_left {
+	width: 50%;
+	height: 2.82rem;
+	line-height: 0.34rem;
+	border-right: solid 0.03rem #F5F5F5;
+	padding-right: 0.88rem;
+	padding-left: 1.33rem;
+	padding-top: 0.1rem;
+	float: left;
+}
+.con_detail_1_left h2 {
+	font-size: 0.34rem;
+	color: rgb(52, 52, 52);
+	font-weight: 500;
+	margin-top: 0.16rem;
+	margin-bottom: 0.1rem;
+}
+.con_detail_1_left span {
+	font-size: 0.34rem;
+	color: #929292;
+	font-weight: 500;
+	word-wrap: break-word;
+}
+.con_detail_1_right {
+	border: none;
+	float: left;
+	padding-right: 0.68rem;
+	padding-left: 1.33rem;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+.clearfix {
+	zoom: 1
+}
+.con_detail_1_bottom {
+	clear: both;
+	/*width: 10.8rem;*/
+	width: 100%;
+	line-height: 0.34rem;
+	padding-left: 1.33rem;
+	padding-top: 0.18rem;
+	padding-bottom: 0.36rem;
+	padding-right: 0.45rem;
+	border-bottom: solid 0.03rem #F5F5F5;
+}
+.con_detail_1_bottom h2 {
+	font-size: 0.34rem;
+	color: rgb(52, 52, 52);
+	font-weight: 500;
+	margin-bottom: 0.1rem;
+}
+.con_detail_1_bottom span {
+	font-size: 0.34rem;
+	color: #929292;
+	font-weight: 500;
+	word-wrap: break-word;
+}
+.con_detail_2 {
+	/*width: 10.8rem;*/
+	width: 100%;
+	padding-left: 0.54rem;
+	padding-right: 0.45rem;
+	line-height: 0.36rem;
+	padding-top: 0.48rem;
+}
+.con_detail_2_text h2 {
+	font-size: 0.36rem;
+	color: rgb(53, 53, 53);
+	font-weight: 500;
+	margin-top: 0.92rem;
+	margin-bottom: 0.12rem;
+}
+.con_detail_2_text span {
+	font-size: 0.34rem;
+	color: #929292;
+	font-weight: 500;
+	word-wrap: break-word;
+	margin-bottom: 0.34rem;
+}
+.con3_detail_1 {
+	/*width: 10.8rem;*/
+	width: 100%;
+	padding-left: 1.33rem;
+}
+.con3_detail_1 div {
+	margin-top: 0.25rem;
+	line-height: 0.4rem;
+}
+.con3_detail_1 div h1 {
+	display: inline-block;
+	font-size: 0.36rem;
+	font-weight: 500;
+	color: rgb(53, 53, 53);
+}
+.con3_detail_1 div span {
+	font-size: 0.36rem;
+	font-weight: 500;
+	color: #929292;
+}

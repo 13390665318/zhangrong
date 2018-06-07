@@ -1,0 +1,46 @@
+	.ke-container{
+		position: relative;
+		left: 100px;
+		top: -20px;
+		width: 680px;
+	}
+	#ggsub{
+		width: 82px;
+		margin-top: 0;
+		margin-left: 20px;
+	}
+	.myform6_table tbody tr td:last-child{
+		cursor: pointer;
+	}
+	.myform6_table tbody tr td:last-child a{
+		margin-right: 10px;
+	}
+	.myform6_table tbody tr td:last-child a.green{
+		color: forestgreen;
+	}
+	.myform6_table tbody tr td:last-child a.red{
+		color: red;
+	}
+	.qxy{
+		width: 90%;
+	    padding-bottom: 15px;
+	    line-height: 29px;
+	    font-size: 13px;
+	    overflow: hidden;
+	    margin: 0 auto;
+	}
+	.qxy_title{
+		text-align: center;
+	}
+	.qxy h2{
+		width: 100%;
+	    padding: 6px 0;
+	    line-height: 27px;
+	    color: #111;
+	    font-size: 21px;
+	    text-align: center;
+	    border-bottom: 1px #d5d5d5 solid;
+	    overflow: hidden;
+	    margin: 10px 0;
+	}
+	

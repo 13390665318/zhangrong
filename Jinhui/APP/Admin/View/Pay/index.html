@@ -1,0 +1,399 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <LINK href="http://106.15.137.174/Alirefor/public/admin/css/admin.css" type="text/css" rel="stylesheet">
+    <script src="http://106.15.137.174/Alirefor/public/js/jquery-1.7.2.min.js"></script>
+    <LINK href="http://106.15.137.174/Alirefor/public/admin/css/sp.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="http://106.15.137.174/Alirefor/public/js/jQuery.js"></script>
+    <script type="text/javascript" src="http://106.15.137.174/Alirefor/public/js/jqplot.js"></script>
+    <script src="http://106.15.137.174/Alirefor/public/laydate/laydate.js"></script>
+    <style>
+        .headr_bottom {
+            overflow: hidden;
+            width: 100%;
+            height: 27px;
+            background: #dcedfa;
+            border-bottom: 1px solid #CADAE6;
+        }
+
+        .header_place {
+            float: left;
+            height: 27px;
+            line-height: 26px;
+        }
+        .header_container{
+            overflow: hidden;
+        }
+        body{
+            background-color: #DCEDFA;
+        }
+        .sel{
+            box-sizing: border-box;
+            padding:2%;
+            padding-left:1.5%;
+            border-bottom: 1px solid #CADAE6;
+        }
+        #sel_1{
+            padding:5px;
+            width:140px;
+            margin-left:1%;
+        }
+        .mc{
+            margin-left: 1%;
+        }
+        .sr{
+            padding:5px;
+            margin-left: 1%;
+        }
+        .cx,.cz{
+            color:#fff;
+            background-color: #006DCC;
+            border: none;
+            padding:6px;
+            padding-left:8px;
+            padding-right:8px;
+            cursor:pointer;
+        }
+        .cx{
+            margin-left: 5%;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+            padding:0px;
+            padding-left: 13px;
+        }
+        ul li{
+            display:inline-block;
+            margin-right:10px;
+        }
+        ul img{
+            vertical-align: -18%;
+        }
+        table{border-right:1px solid #CCD5DE;border-bottom:1px solid #CCD5DE;width:100%;text-align: center;}
+        table  td{border-left:1px solid #CCD5DE;border-top:1px solid #CCD5DE;}
+        table thead td{background-color: #BDE1FC;}
+        table thead tr,table tbody tr{
+            width:100%;
+            height:40px;
+        }
+
+        table tbody tr:nth-child(odd){
+            background-color: #fff;
+        }
+        table tbody tr:nth-child(even){
+            background-color: #F0F7FC;
+        }
+
+        .jqplot-table-legend{display:none}
+
+    </style>
+
+
+</HEAD>
+<BODY>
+<table  border="0" cellspacing="0" cellpadding="10">
+    <thead>
+    <tr><td colspan="7">
+        <div style="font-size: 12px;margin-left: -82%"><b>
+            <span>
+                <select style="margin-left: 0px; width: 5%;height: 1.5%" onchange="choice(1)" id="clothes">
+                    <option>...选择游戏服务器...</option>
+                    <volist name="clostu" id="vo">
+                      <eq name="vo.db_id" value="$db_id">
+                    <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                         <else/>
+                          <option value="{$vo.db_id}">{$vo.clothes}</option>
+                      </eq>
+                    </volist>
+                </select>
+                充值报表 , 充值统计
+          </span>
+
+        </b></div>
+    </td></tr>
+    </thead>
+    </tbody>
+</table>
+<table  border="0" cellspacing="0" cellpadding="10">
+    <thead>
+    <tr><td colspan="7">
+        <div style="font-size: 12px;margin-left: -12%"><b>
+            <span>
+               <b>玩家充值记录查询 平台</b>
+                <select style="margin-left: 0px; width: 5%;height: 1.5%" id="pingtai">
+                    <option  selected="selected">...全部...</option>
+                    <volist name="Starr" id="vo">
+                     <option value="{$vo.source}">{$vo.source}</option>
+                    </volist>
+                </select>
+                从<input placeholder="请输入日期" class="laydate-icon" onclick="laydate()" id="start_time">
+                到<input class="laydate-icon" id="demo" value="">
+                角色名称:<input type="text" name="" id="game_user_name"/>
+                角色ID:<input type="text" name="" id="game_user_id"/>
+                充值号:<input type="text" name="" id="pay_number"/>
+                <input type="button" name="" value="&nbsp;查询&nbsp;" onclick="goselect()"/>
+                <b style="display: none" id="exl" onclick="exl()">导出</b>
+         </span>
+        </b></div>
+    </td></tr>
+    </thead>
+    </tbody>
+</table>
+<div style="width: 100%;display:block" id="top1">
+    <div style="width: 10%;float: left">
+        <table  border="0" cellspacing="0" cellpadding="10">
+            <thead>
+            <tr>
+               <td colspan="2">首次付费统计</td>
+            </tr>
+            </thead>
+            <tbody id="ad">
+            <tr>
+                <td width="5%">注册后</td>
+                <td width="5%">充值人数</td>
+
+            </tr>
+            <tr>
+                <td>1天</td>
+                <td>{$day1_num}</td>
+            </tr>
+            <tr>
+                <td>4天</td>
+                <td>{$day4_num}</td>
+            </tr>
+            <tr>
+                <td>5天</td>
+                <td>{$day5_num}</td>
+            </tr>
+            <tr>
+                <td>15天</td>
+                <td>{$day15_num}</td>
+            </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+    <div style="width: 40%;float: left">
+    <table  border="0" cellspacing="0" cellpadding="10">
+        <thead>
+        <tr>
+            <td colspan="2">充值月报表</td>
+            <td colspan="2"><select onchange="choice(2)" id="time">
+                    <volist name="TimeStu" id="vo">
+                        <eq name="vo.time" value="$time">
+                                <option value="{$vo.time}" selected="selected">{$vo.time}</option>
+                                <else/>
+                                <option value="{$vo.time}">{$vo.time}</option>
+                            </eq>
+                    </volist>
+                </select></td>
+            <td colspan="2">{$time}月金额&nbsp;{$sum_money}</td>
+        </tr>
+        </thead>
+        <tbody id="ad">
+        <tr>
+            <td>日期</td>
+            <td>充值人数</td>
+            <td>充值次数</td>
+            <td>金额总数</td>
+            <td>ARPU</td>
+            <td>操作</td>
+
+        </tr>
+        <volist name="arr" id="vo">
+        <tr>
+            <td>{$vo.time}</td>
+            <td>{$vo.user_num}</td>
+            <td>{$vo.num}</td>
+            <td>{$vo.money}</td>
+            <td>{$vo.arpu}</td>
+            <td><b style="color: red" onclick="show('{$vo.time}')">查看</b></td>
+        </tr>
+        </volist>
+
+        </tbody>
+
+    </table>
+    </div>
+    <div style="width: 40%;float: left">
+        <table  border="0" cellspacing="0" cellpadding="10">
+            <thead>
+            <tr>
+                <td colspan="8"><b id="timeid">{$time}</b>  金币充值详细报表</td>
+            </tr>
+            <tr>
+                <td>平台</td>
+                <td>充值方式</td>
+                <td>角色ID</td>
+                <td>角色名称</td>
+                <td>等级</td>
+                <td>购买元宝</td>
+                <td>金额</td>
+                <td>充值时间</td>
+
+            </tr>
+            </thead>
+            <tbody id="show">
+             </tbody>
+
+        </table>
+
+    </div>
+</div>
+<div style="width: 100%;display: none" id="top2">
+    <table  border="0" cellspacing="0" cellpadding="10">
+        <thead>
+        <tr>
+            <td colspan="8"><b id="timeid">{$time}</b>  金币充值详细报表</td>
+        </tr>
+        <tr>
+            <td>平台</td>
+            <td>角色ID</td>
+            <td>角色名称</td>
+            <td>等级</td>
+            <td>充值方式</td>
+            <td>充值号</td>
+            <td>人民币</td>
+            <td>购买元宝</td>
+            <td>充值时间</td>
+
+        </tr>
+        </thead>
+        <tbody id="paytitle">
+        </tbody>
+
+    </table>
+
+</div>
+<script type="text/javascript">
+    function exl() {
+        var pingtai=$("#pingtai").val();
+        if(pingtai=="...全部..."){
+            pingtai="";
+        }
+        var start_time=$("#start_time").val();
+        var end_time=$("#demo").val();
+        var game_user_name=$("#game_user_name").val();
+        var game_user_id=$("#game_user_id").val();
+        var pay_number=$("#pay_number").val();
+        location.href="http://106.15.137.174/Alirefor/Admin/Pay/exl/pingtai/"+pingtai+"/start_time/"+start_time+"/end_time/"+end_time+"/game_user_name/"+game_user_name+"/game_user_id/"+game_user_id+"/pay_number/"+pay_number;
+    }
+    function goselect() {
+        $("#top1").hide();
+        $("#top2").show();
+        $("#exl").show();
+        var pingtai=$("#pingtai").val();
+        if(pingtai=="...全部..."){
+            pingtai="";
+        }
+        var start_time=$("#start_time").val();
+        var end_time=$("#demo").val();
+        var game_user_name=$("#game_user_name").val();
+         var game_user_id=$("#game_user_id").val();
+        var pay_number=$("#pay_number").val();
+        var aj = $.ajax( {
+            url:'{:U("Pay/goselect")}',
+            data:{
+                pingtai:pingtai,
+                start_time:start_time,
+                end_time:end_time,
+                game_user_name:game_user_name,
+                game_user_id:game_user_id,
+                pay_number:pay_number,
+            },
+            type:'get',
+            cache:false,
+            dataType:'text',
+            success:function(data) {
+
+                if(data) {
+                    $("#timeid").html(time)
+                    var obj=eval(data);
+                    var arr=new Array();
+                    $('#paytitle').html("");
+                    for(var i=0;i<obj.length;i++){
+                        arr[i]="<tr><td>"+obj[i].source+"</td><td>"+obj[i].game_user_id+"</td><td>"+obj[i].game_user_name+"</td><td>"+obj[i].level+"</td><td>"+obj[i].pay_type+"</td><td>"+obj[i].pay_number+"</td><td>"+obj[i].money+"</td><td>"+obj[i].acer+"</td><td>"+obj[i].pay_time+"</td></tr>"
+                    }
+                    for (var i = 0; i < obj.length; i++) {
+                        {
+                            $("#paytitle").append(arr[i]);
+                        }
+                    }
+                }}
+        })
+
+
+    }
+</script>
+<script type="text/javascript">
+    function show(a) {
+        var time=a;
+        var aj = $.ajax( {
+            url:'{:U("Pay/show")}',
+            data:{
+                time:time,
+            },
+            type:'get',
+            cache:false,
+            dataType:'text',
+            success:function(data) {
+                if(data) {
+                    $("#timeid").html(time)
+                    var obj=eval(data);
+                    var arr=new Array();
+                    $('#show').html("");
+                    for(var i=0;i<obj.length;i++){
+                         arr[i]="<tr><td>"+obj[i].source+"</td><td>"+obj[i].pay_type+"</td><td>"+obj[i].game_user_id+"</td><td>"+obj[i].game_user_name+"</td><td>"+obj[i].level+"</td><td>"+obj[i].acer+"</td><td>"+obj[i].money+"</td><td>"+obj[i].pay_time+"</td></tr>"
+                    }
+                    for (var i = 0; i < obj.length; i++) {
+                        {
+                            $("#show").append(arr[i]);
+                        }
+                    }
+                }}
+        })
+    }
+</script>
+<script type="text/javascript">
+    /**
+     * 时间选择
+     * @param a 1：昨天 2 今天 3 近7天 4 近30天 5 月份  6 一年  7 时间选择
+     */
+    function choice(a) {
+        var num =a;
+        if(num==1){
+            var clothes=$("#clothes").val();
+            if(clothes=="...选择游戏服务器..."){
+                return
+            }else{
+
+                location.href="http://106.15.137.174/Alirefor/Admin/Pay/index/db_id/"+clothes;
+            }
+        }else if(num==2){
+            var time=$("#time").val()
+            var clothes=$("#clothes").val();
+            if(clothes=="...选择游戏服务器..."){
+                alert("请选择游戏服务器");
+                return
+            }else{
+                location.href="http://106.15.137.174/Alirefor/Admin/Pay/index/db_id/"+clothes+"/time/"+time
+            }
+        }
+    }
+</script>
+<script>
+    ;!function(){
+        laydate({
+            elem: '#demo'
+        })
+
+    }();
+</script>
+
+
+</BODY></HTML>

@@ -1,0 +1,116 @@
+<include file="Public:header"/>
+
+<div id="page-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">修改密码</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            修改密码<div style="clear: both;"></div>
+        </div>
+
+        <div class="container">
+            <form class="xq" action="{:U('Password/index')}" method="post" enctype="multipart/form-data" onsubmit="return toVaild()" >
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>用户名：</label>
+
+                        <input class ="sr" type="text" placeholder="" name="user_name" value="{$data.user_name}" readonly/>
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>原密码：</label>
+                        <input class ="sr" type="text"  name="password1" value="" id="password1"/>
+
+                    </p>
+
+                </div>
+
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>新密码：</label>
+                        <input class ="sr" type="text"  name="password2" value="" id="password2"/>
+
+                    </p>
+
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>确认密码：</label>
+                        <input class ="sr" type="text"  name="password3" value="" id="password3"/>
+                    </p>
+
+                </div>
+
+
+
+                <input type="hidden" value="{$data.id}"  name="userID"/>
+                <button type="submit" name ="sub"class="btn btn-primary" style="margin:20px auto;display: block;">确定</button>
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+<script type="text/javascript">
+    function toVaild(){
+        var password1=$("#password1").val();
+        var password2=$("#password2").val();
+        var password3=$("#password3").val();
+        if(password1==""){
+            alert("原密码不可为空");
+            return false;
+        }else if(password2!=password3){
+            alert("两次新密码不一致");
+            return false;
+        }else if(password2==""){
+            alert("新密码不可为空");
+        }else if(password3==""){
+            alert("新确认密码不可为空");
+        }else{
+            return true;
+        }
+
+
+    }
+</script>
+
+<script>
+    $(function() {
+        $(window).bind("load resize", function() {
+            var topOffset = 50;
+            var width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
+            if (width < 768) {
+                $('div.navbar-collapse').addClass('collapse');
+                topOffset = 100; // 2-row-menu
+            } else {
+                $('div.navbar-collapse').removeClass('collapse');
+            }
+            var height = ((this.window.innerHeight > 0) ? this.window.innerHeight : this.screen.height) - 1;
+            height = height - topOffset;
+            if (height < 1) height = 1;
+            if (height > topOffset) {
+                $("#page-wrapper").css("min-height", (height) + "px");
+            }
+        });
+
+        $("#side-menu>li").each(function () {
+            $(this).click(function(){
+                $(this).find('ul').slideDown();
+                $(this).siblings().find('ul').slideUp();
+            })
+        })
+    });
+</script>
+</body>
+</html>

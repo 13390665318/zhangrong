@@ -1,0 +1,109 @@
+
+<include file="Public:header"/>
+<div id="page-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">客服管理</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            系统公告修改 <div style="clear: both;"></div>
+        </div>
+
+        <div class="container">
+            <form class="xq" action="{:U('Notice/edit')}" method="post" enctype="multipart/form-data"onsubmit="return toVaild()" >
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>服务器列表：：</label>
+                        起始区:<input type="text" style="width: 50px;" name="begin_clothes" value="{$arr.begin_clothes}" class ="sr"/>-终止区:<input type="text" style="width: 50px;"  name="end_clothes" value="{$arr.end_clothes}" class ="sr">
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>类别：：</label>
+                        <select name="type" class="dx">
+                            <if condition="$arr.type eq 2 ">
+                                <option value="2" selected="selected">系统公告</option>
+                                <option value="1">跑马灯</option>
+                                <option value="0">聊天公告</option>
+                                <elseif condition="$arr.type eq 1"/>
+                                <option value="2" >系统公告</option>
+                                <option value="1" selected="selected">跑马灯</option>
+                                <option value="0">聊天公告</option>
+                                <else />
+                                <option value="2" selected="selected">系统公告</option>
+                                <option value="1">跑马灯</option>
+                                <option value="0" selected="selected">聊天公告</option>
+                            </if>
+                        </select>
+
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>开始时间：</label>
+                        <input onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"  name="begin_time" class ="sr" value="{$arr['begin_time']}">
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>结束时间：</label>
+                        <input onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"  name="end_time"  class ="sr" value="{$arr['end_time']}">
+                    </p>
+                </div>
+
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>标题：</label>
+                        <input class ="sr" type="text" name="title" value="{$arr['title']}"/>
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>内容：</label>
+                        <textarea name="content" style="width:500px;height:150px;position: relative;" id="content">{$arr["content"]}</textarea>
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>公告连接：</label>
+                        <input class ="sr" type="text" name="url" value="{$arr['url']}"/>
+                    </p>
+                </div>
+                <div class="lei">
+                    <p>
+                        <label><font>*</font>公告优先级：</label>
+                        <select name="priority" class="dx">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+
+
+                        </select>
+                    </p>
+                </div>
+                <input class="ztj" type="hidden" name="notice_id" value="{$arr['notice_id']}"/>
+                <button type="submit" name ="sub"class="btn btn-primary" style="margin:20px auto;display: block;">确定</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+<include file="Public:footer"/>

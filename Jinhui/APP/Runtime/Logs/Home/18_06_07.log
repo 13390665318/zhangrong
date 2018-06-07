@@ -1,0 +1,263 @@
+[ 2018-06-07T15:35:45+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SELECT * FROM `article` WHERE ( type=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=1 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `article` WHERE ( type=2 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001121s ]
+
+[ 2018-06-07T17:45:33+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+SQL: SELECT * FROM `article` WHERE ( type=0 )  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `article` WHERE ( type=1 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `article` WHERE ( type=2 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000823s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2018-06-07T17:45:36+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+SQL: SELECT * FROM `article` WHERE ( type=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `article` WHERE ( type=1 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=2 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000787s ]
+
+[ 2018-06-07T17:45:36+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SELECT * FROM `article` WHERE ( type=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=1 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `article` WHERE ( type=2 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001231s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001324s ]
+
+[ 2018-06-07T17:45:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+SQL: SELECT * FROM `article` WHERE ( type=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=1 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `article` WHERE ( type=2 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014123s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001012s ]
+
+[ 2018-06-07T17:51:13+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SELECT * FROM `article` WHERE ( type=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=1 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=2 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000753s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000787s ]
+
+[ 2018-06-07T17:51:17+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SELECT * FROM `article` WHERE ( type=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=1 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=2 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010565s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2018-06-07T17:52:05+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000801s ]
+SQL: SELECT * FROM `article` WHERE ( type=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `article` WHERE ( type=1 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=2 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 571 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010356s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000704s ]
+
+[ 2018-06-07T17:52:15+08:00 ] 127.0.0.1 /index.php?m=Home&c=Company&a=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001435s ]
+
+[ 2018-06-07T17:52:17+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SELECT * FROM `article` WHERE ( type=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=1 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `article` WHERE ( type=2 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\89f74b2eb80e06ead3e2bd70bd799a8e.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\89f74b2eb80e06ead3e2bd70bd799a8e.php 第 571 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' D:\Jinhui\APP\Runtime\Cache\Home\89f74b2eb80e06ead3e2bd70bd799a8e.php 第 571 行.
+NOTIC: [8] Undefined offset: 0 D:\Jinhui\APP\Runtime\Cache\Home\89f74b2eb80e06ead3e2bd70bd799a8e.php 第 571 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000833s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000911s ]
+

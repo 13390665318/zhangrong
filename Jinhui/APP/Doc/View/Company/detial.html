@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"  />
+		<title>公司信息</title>
+		<script src="__ROOT__/Public/js/jquery-1.7.2.min.js"></script>
+		<script>
+			(function (){
+				var rootHtml = $(":root");// 选择器选取文档的根元素
+				//console.log(rootHtml);
+				var rootResize = function (){
+					var fontSize = document.documentElement.clientWidth / 10.8 + 'px';
+					console.log(document.documentElement.clientWidth);
+					console.log(fontSize);
+					rootHtml.css("font-size",fontSize);	
+					}
+				rootResize();
+				$(window).resize(function (){
+					rootResize();
+				});	
+			})();
+	</script>
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/companyInf.css"/>
+	</head>
+	<body>
+		<div class="main">
+			<div class="title" style="font-size:20px;text-align:center;padding-top:0.6rem">{$list.company_name}</div>
+			<div class="content">
+				<!--第一部分-->
+				<div class="content_1">
+					<div>
+						<h1>法定代表人：</h1>
+						<span>{$list.law_man}</span>
+					</div>
+					<div>
+						<h1>注册资本：</h1>
+						<span>{$list.zhucejin}元</span>
+					</div>
+					<div>
+						<h1>成立日期：</h1>
+						<span>{$list.setup_time}</span>
+					</div>
+				</div>
+				<div class="content1_1">
+					<img class="phone" src="__ROOT__/Public/img/phone.png" alt="" />
+					<span>{$list.company_tel}</span>
+				</div>
+				<div class="content1_1">
+					<img class="mail" src="__ROOT__/Public/img/mail.png" alt="" />
+					<span>{$list.company_email}</span>
+				</div>
+				<div class="content1_1">
+					<img class="position" src="__ROOT__/Public/img/position.png" alt="" style="top: 23%;"/>
+					<p>{$list.sheng}{$list.shi}{$list.qu}{$list.address}</p>
+				</div>
+
+				<div class="gap"></div>
+				
+				<!--第二部分-->
+				<div class="content_2">
+					<div class="con_title">
+						<h1>登记信息</h1>
+						<img class="more" src="__ROOT__/Public/img/companyInf/more_unfold.png"/>
+					</div>
+					
+					<div class="con_detail" style="display: none;">
+						<div class="clearfix con_detail_1">
+							<div class="con_detail_1_left">
+								<h2>注册号</h2>
+								<span>{$list.zhucehao}</span>
+								<h2 style="margin-top: 0.36rem;">社会信用代码</h2>
+								<span>{$list.shehuixinyongdaima}</span>
+							</div>
+							<div class="con_detail_1_left con_detail_1_right">
+								<h2>组织机构代码号</h2>
+								<span>{$list.zuzhijigoudaima}</span>
+								<h2 style="margin-top: 0.36rem;">经营状态</h2>
+								<span>{$list.jingying_status}</span>
+							</div>
+							<div class="con_detail_1_bottom">
+								<h2>企业类型</h2>
+								<span>{$list.company_quality}</span>
+							</div>
+						</div>
+						
+						<div class="con_detail_2">
+							<div class="con_detail_2_text">
+								<h2 style="margin-top: 0;">经营范围</h2>
+								<span>{$list.jingying_fanwei}</span>
+								<h2>营业期限</h2>
+								<span>{$list.jingying_qixian}</span>
+								
+								
+								
+								<div class="clearfix con_detail_1" style="padding-top:0.92rem; padding-bottom: 0.54rem;">
+									<div class="con_detail_1_left" style="padding-left: 0rem; height: inherit;">
+										<h2 style="margin-top: 0;">发照日期</h2>
+										<span>{$list.fazhao_time}</span>	
+									</div>
+									<div class="con_detail_1_left con_detail_1_right" style="height: inherit;">
+										<h2 style="margin-top: 0;">登记机关</h2>
+										<span>{$list.dengji}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<if condition="$data neq null">
+			
+				<!--第三部分-->
+				<div class="content_2">
+					<div class="con_title">
+						<h1>股东信息</h1>
+						<img class="more" src="__ROOT__/Public/img/companyInf/more_unfold.png"/>
+					</div>
+					<volist name="data" id="vo">
+					<div class="con3_detail" style="display: none;">
+						<div class="con3_detail_1">
+							<div>
+								<h1>自然人股东：</h1>
+								<span>{$vo.name}</span>
+							</div>
+							<div>
+								<h1>认缴出资额：</h1>
+								<span>{$vo.rmoney}元人民币</span>
+							</div>
+							<div>
+								<h1>认缴时间：</h1>
+								<span>{$vo.rtime}</span>
+							</div>
+							<div>
+								<h1>实缴出资额：</h1>
+								<span>{$vo.smoney}</span>
+							</div>
+							<div>
+								<h1 style="margin-bottom: 0.45rem;">实缴时间：</h1>
+								<span>{$vo.stime}</span>
+							</div>
+						</div>
+					</volist>	
+					</div>
+				</div>
+			</if>
+				<div class="gap"></div>
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//console.log($(".more"));
+		
+		$(document).ready(function(){ 
+		　　console.log("====================");
+			function fixFontSize() {
+			  var $html = $('html');
+			  var remBase = document.documentElement.clientWidth / 10.8 + 'px';
+			  console.log(remBase);
+			  var fontSize = remBase;
+			  while (true) {
+			    var actualSize = parseInt( $html.css('font-size') );
+			    console.log(actualSize);
+			    if (actualSize > remBase && fontSize > 10) {
+			      fontSize--;
+			      $html.attr('style', 'font-size:' + fontSize + 'px!important');
+			    } else {
+			      break;
+			    }
+			  }
+			}
+			fixFontSize()
+		}); 
+
+
+		$(".more").click(function(){
+			//console.log($(this));
+			//console.log($(this).parents(".con_title").next());
+			if ($(this).parents(".con_title").next().get(0).style.display == "none") {
+				$(this).attr("src","__ROOT__/Public/img/companyInf/less.png");
+				//$(this).parents(".con_title").next().get(0).style.display = "block";
+				$(this).parents(".con_title").next().slideToggle("slow");
+			} else{
+				$(this).attr("src","__ROOT__/Public/img/companyInf/more_unfold.png");
+				//$(this).parents(".con_title").next().get(0).style.display = "none";
+				$(this).parents(".con_title").next().slideToggle("slow");
+			}
+			
+		});
+		
+	</script>
+	
+</html>

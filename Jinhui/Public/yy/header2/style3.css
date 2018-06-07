@@ -1,0 +1,88 @@
+/*每页公用*/
+body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,code,em,img,q,small,strong,dd,dl,dt,li,ol,ul,fieldset,form,label,table,tbody,tr,th,td,input,button{margin:0;padding:0;border:0}
+body{font-size:12px;margin:0 auto;background:#FFFFFF;font-family:'Microsoft YaHei',Helvetica,Arial,sans-serif;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+a,a:active,a:hover,a:focus,a:visited{text-decoration:none}
+
+ol,ul,li{list-style:none}
+.fl{float:left}
+.fr{float:right}
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+
+@media (min-width: 768px) {
+    .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 250px;
+        margin-top: 51px;
+    }
+}
+.navbar-color{background:#3294DD }
+.navbar-color2{background: #DCEDFA}
+.logo{
+    height: 50px;
+    padding: 10px 15px;
+}
+.navbar-default .logo img{width:150px;}
+
+.icon-tu{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: #FFffff;
+    margin-top:4px;
+}
+.navbar-collapse{padding:0}
+.sidebar ul li {
+    border-bottom: 1px solid #e7e7e7;
+}
+.sidebar .nav-second-level li, .sidebar .nav-third-level li {
+    border-bottom: none !important;
+}
+.header_right{
+    margin-top:5px;
+}
+.header_right li{
+    float: left;
+    width:40px;
+    text-align: center;
+    margin-right:5px;
+}
+.header_right li img{width:18px;}
+.header_right li span{display:block;font-size:14px;color:#FFffff;padding-top:3px; }
+/*首页*/
+@media (min-width: 768px){
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+    #side-sy{display:none}
+    .header_right{display:block}
+}
+#page-wrapper {
+    padding: 0 15px;
+    background-color: white;
+}
+@media (max-width: 768px){
+    #side-sy{display:block}
+
+    .header_right{display:none}
+}
+.nav>li>a{font-size:14px;}
+.nav>li ul li a{padding-left:45px;}
+
+.panel-body tr td{text-align: center}
+
+.btn_css{margin: 10px 0 0 15px}
+
+.now_time{width:95%;margin:0 auto 20px;}
+.now_time ul li {width:20%;padding:10px 0;float: left;border:1px solid #999;text-align: center;border-radius: 5px;cursor:pointer}
+.now_time ul li h2{font-size:16px;color:#333;line-height: 24px;}
+.now_time ul li p{font-size:14px;color:#666}
+.canvas1,.canvas2{margin-top:30px;overflow: hidden;}
+.canvas1 .canvas1_total{height:0;opacity: 0}
+.canvas2 .canvas2_total{height:0;opacity: 0}
+.now_time1 ul li.active{background: #dddddd}
+.now_time2 ul li.active{background: #dddddd}

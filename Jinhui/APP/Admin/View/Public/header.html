@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运营数据</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="__ROOT__/Public/yy/mobile/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__ROOT__/Public/css/ssi-uploader.css">
+    <script src="__ROOT__/Public/js/ssi-uploader.js"></script>
+    <script src="__ROOT__/Public/js/jquery-2.1.1.min.js"></script>
+    <script src="__ROOT__/Public/yy/mobile/html5shiv.js"></script>
+    <script src="__ROOT__/Public/yy/mobile/respond.min.js"></script>
+    <script src="__ROOT__/Public/yy/mobile/jquery.min.js"></script>
+    <script src="__ROOT__/Public/yy/mobile/bootstrap.min.js"></script>
+
+    <link href="__ROOT__/Public/yy/mobile/style.css" rel="stylesheet">
+   <script src="__ROOT__/Public/yy/laydate/laydate.js"></script>
+   <link rel="stylesheet" href="__ROOT__/Public/yy/mobile/pagination.css">
+    <script type="text/javascript" src="__ROOT__/Public/yy/js/jqplot.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/jedate/jedate.js"></script>
+    <link rel="stylesheet" href="__ROOT__/Public/yy/select/bootstrap-3.3.4.css">
+    <link rel="stylesheet" href="__ROOT__/Public/yy/select/dist/css/bootstrap-select.css">
+<script src="__ROOT__/Public/yy/select/dist/js/bootstrap-select.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-color navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;background:#3294DD" >
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-tu"></span>
+            <span class="icon-tu"></span>
+            <span class="icon-tu"></span>
+        </button>
+        <a class="logo fl" href="index.html"><img src="http://qpht.hbyouyou.com/txyx/Public/admin/images/logo1.png"></a>
+
+    </div>
+    <div class="header_right fr">
+        <ul>
+            <li>
+                <a href="{:U('Index/index')}" class="selected">
+
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Login/dologin')}">
+
+                    <span>注销</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-top-links -->
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+
+            <ul class="nav in" id="side-sy">
+                <li>
+                    <a href="{:U('Index/index')}" class="active"><i class="fa fa-dashboard fa-fw"></i> 主页</a>
+                </li>
+                <li>
+                    <a href="{:U('Login/index')}" class="active"><i class="fa fa-spinner fa-fw"></i> 注销</a>
+                </li>
+            </ul>
+          
+
+
+
+
+
+
+  <ul class="nav in" id="side-menu">
+<li>
+                    <a href="{:U('Index/index')}"><i class="fa fa-bar-chart fa-fw"></i>首页<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                    </ul>
+                </li>
+
+<volist name="Mune1" id="vo">
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart fa-fw"></i> {$vo.title}<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <volist name="Mune2" id="ko">
+                            <eq name="vo['status']" value="$ko['type']">
+			
+			<eq name="ko['id']" value="$id">
+                                <li style="background-color: #00A1EC">
+                            	<a href="{$ko.condition}">{$ko.title}</a>
+                        		</li>       
+                             <else/>
+				<li>
+                            	<a href="{$ko.condition}">{$ko.title}</a>
+                        		</li>
+			</eq>         
+				 
+							
+
+
+                       
+                            </eq>
+     </volist>
+
+               
+
+
+                    </ul>
+                </li>
+</volist>
+
+
+
+
+
+
+
+
+       
+
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<script>
+  var index = '{$num}';
+console.log(index);
+  $("#side-menu>li").find('ul').eq(index).slideDown();
+</script>

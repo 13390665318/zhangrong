@@ -1,0 +1,93 @@
+
+<include file="Public:header"/>
+<div id="page-wrapper">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">元宝消耗</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            区域时间内元宝消耗 <div style="clear: both;"></div>
+        </div>
+
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6" style="width: 70%;">
+                        <div class="dataTables_length" id="dataTables-example_length">
+                            <!--<label>转生等级:
+                                <div class="form-group input-group">
+                                    <input class="form-control" id="changelevel" type="text" value="{$role_ChangeLife}" placeholder="请输入玩家转生等级">
+                                </div>
+                            </label>
+                            <label>VIP等级:
+                                <div class="form-group input-group">
+                                    <input class="form-control" id="viplevel" type="text" value="{$vip}" placeholder="请输入VIP等级">
+                                </div>
+                            </label>
+                            <label>项目:
+                                <div class="form-group input-group">
+                                    <input class="form-control" id="resource" type="text" value="{$reason}" placeholder="请输入来源">
+                                </div>
+                            </label>-->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 table-responsive">
+                        <form action="{:U('add')}" method="post">
+                            <select style="margin-left: 0px; width: 20%;"  name="type"
+                                    class="btn btn-default" autocomplete="off">
+                                <option value="0">.发布类型.</option>
+                                <option value="1" >公告</option>
+                                <option value="2" >新闻</option>
+                            </select>
+                            <input class="form-control" name="title" type="text"   style="width: 70%;" placeholder="请输入文章标题 ">
+                        <textarea  type="text"  name="content" id="EditorId" placeholder="请输入内容"></textarea>
+                            <input type="submit" value="提交" align="center" style="text-align:center;"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="b-page">{$page}</div>
+                </div>
+            </div>
+            <!-- /.table-responsive -->
+
+        </div>
+        <!-- /.panel-body -->
+    </div>
+
+
+
+
+</div>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.js"></script>
+<script type="text/javascript" charset="utf-8">//初始化编辑器
+window.UEDITOR_HOME_URL = "__PUBLIC__/ueditor/";//配置路径设定为UEditor所放的位置
+window.onload=function(){
+    window.UEDITOR_CONFIG.initialFrameHeight=600;//编辑器的高度
+    window.UEDITOR_CONFIG.initialFrameWidth=1200;//编辑器的宽度
+    var editor = new UE.ui.Editor({
+        imageUrl : '',
+        fileUrl : '',
+        imagePath : '',
+        filePath : '',
+        imageManagerUrl:'', //图片在线管理的处理地址
+        imageManagerPath:'__ROOT__/'
+    });
+    editor.render("EditorId");//此处的EditorId与<textarea name="content" id="EditorId">的id值对应 </textarea>
+}
+</script>
+
+
+</body>
+</html>

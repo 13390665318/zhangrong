@@ -1,0 +1,837 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="/Public/libs/common.css">
+    <title>首页</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .pages-home {
+        width: 100%;
+        height: 100%;
+        background: #CAE8FF;
+    }
+
+    .pages-home-content {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* 轮播图和新闻列表等模块 */
+
+    .home-detail-content {
+        width: 100%;
+        height: 860px;
+    }
+
+    .home-detail-content .home-detail-left {
+        width: 70%;
+        height: 860px;
+        float: left;
+    }
+    /* 轮播图 */
+    .home-detail-left .home-lunbo {
+        width: 100%;
+        height: 430px;
+        background: #fff;
+        float: left;
+        border: 1px solid #ccc;
+    }
+
+    .home-lunbo .home-lunbo-left {
+        width: 85%;
+        height: 430px;
+        float: left;
+    }
+
+    .home-lunbo .home-lunbo-left img {
+        width: 96%;
+        height: 409px;
+        margin-top: 7px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .home-lunbo .home-lunbo-right {
+        width: 13%;
+        height: 438px;
+        float: right;
+        margin-right: 10px;
+    }
+
+    .home-lunbo .home-lunbo-right .lunbo-right-item {
+        width: 100%;
+        height: 75px;
+        margin-bottom: 7px;
+        margin-top: 8px;
+    }
+
+    .home-lunbo .home-lunbo-right .lunbo-right-item img {
+        width: 100%;
+        height: 75px;
+    }
+
+    .home-detail-content .home-detail-right {
+        float: right;
+        width: 28%;
+    }
+
+    /* 轮播图结束 */
+
+    /*集团 新闻开始 */
+
+    .home-detail-left .home-news {
+        width: 100%;
+        height: 380px;
+        margin-top: 443px;
+        border: 1px solid #ccc;
+        background:#fff;
+    }
+
+    .newsList-left {
+        width: 100%;
+        height: 360px;
+        border-right: 1px solid #ccc;
+    }
+
+    .newsList-title {
+        height: 40px;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+
+    .newsList-title .title-name {
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background: #6BC4CD;
+        border-radius: 5%;
+        margin-top: 5px;
+        color: #fff;
+        float: left;
+        font-size: 12px;
+        margin-left: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 60px;
+    }
+
+    .newsList-title .title-more {
+        width: 60px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        float: right;
+        font-size: 12px;
+        margin-top: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid #ccc;
+        background: #eee;
+        border-radius: 10%;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .newsList-title .title-more a {
+        text-decoration: none;
+        color: #6BC4CD;
+    }
+
+    .newsList-left .news-list {
+        width: 100%;
+        margin-top: 4px;
+        border-right: 1px solid #ccc;
+    }
+
+    .news-list .news-listItem {
+        width: 50%;
+        height: 30px;
+        float: left;
+    
+    
+    }
+
+    .news-list .news-listItem .listItem-text {
+        height: 30px;
+        width: 70%;
+        float: left;
+        background-image: url(/Public/images/news.png);
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 5px 6px;
+        border-bottom: 1px dotted #ccc;
+
+    }
+
+    .news-list .news-listItem .listItem-text a {
+        width: 90%;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+        text-decoration: none;
+        color: #000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+       margin-left: 25px;
+    }
+
+    .news-list .news-listItem .listItem-text a:hover {
+        color: red;
+    }
+
+    .news-list .news-listItem .listItem-time {
+        width: 30%;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+        text-decoration: none;
+        color: #000;
+        float: right;
+        text-align: center;
+    }
+
+    /* 集团新闻结束 */
+
+    /* 右侧模块 */
+
+    .home-detail-right {
+        width: 30%;
+        height: 860px;
+        float: right;
+    }
+   /* 公司公告 */
+    .home-right-gonggao {
+        width: 100%;
+        height: 430px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        background:#fff;
+    }
+
+    .home-right-gonggao .news-list-right {
+        width: 100%;
+        height: 430px;
+    }
+
+    .news-list-right .news-listItem {
+        width: 100%;
+        height: 30px;
+        float: left;
+        background-image: url(/Public/images/laba.png);
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 5px 6px;
+        border-bottom: 1px dotted #ccc;
+        padding-left:18px;
+    }
+
+    .news-list-right .news-listItem .listItem-text {
+        height: 30px;
+        width: 90%;
+    }
+
+    .news-list-right .news-listItem .listItem-text a {
+        width: 98%;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+        text-decoration: none;
+        color: #000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right:5px;
+    }
+
+    .news-list-right .news-listItem .listItem-text a:hover {
+        color: red;
+    }
+
+    /* 右边图片列表 */
+
+    .home-right-picList {
+        width: 100%;
+        height: 380px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+    }
+
+    .picList-detail {
+        width: 100%;
+        height: 380px;
+    }
+
+    .detail-left-picList {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .detail-left-picList .picList-item {
+        width: 95%;
+        margin: 0 auto;
+        height: 60px;
+        margin-top: 10px;
+    }
+
+    .detail-left-picList .picList-item img {
+        width: 100%;
+        height: 74px;
+
+    }
+
+    .detail-left-picList .picList-item img:hover {
+        transform: scale(1.3)
+    }
+
+    /* 风景展示 */
+
+    .home-piclist-show {
+        width: 100%;
+        height: 460px;
+    }
+
+    .home-picList-title {
+        width: 160px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 30px;
+        background: #6BC4CD;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+        border-radius: 40%;
+        cursor: pointer;
+
+    }
+
+    .home-picList-title:hover {
+        color: red;
+
+    }
+
+    .home-picList {
+        width: 93%;
+        padding-left: 5%;
+        padding-right: 2%;
+        margin: 0 auto;
+        height: 430px;
+        background: #343643;
+        margin-top: 15px;
+    }
+
+    .home-picList .picList-item {
+        width: 30%;
+        margin: 0 auto;
+        height: 110px;
+        float: left;
+        margin-top: 25px;
+        margin-left: 15px;
+    }
+
+    .home-picList .picList-item img {
+        width: 100%;
+        height: 110px;
+    }
+
+    .home-picList .picList-item img:hover {
+        transform: scale(2.5);
+        transition: all 1.6s;
+    }
+
+      /* 无缝滚动模块 */
+
+    @-webkit-keyframes move {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: -500px;
+        }
+    }
+
+    .home-gundong {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .home-gundong .home-lunbo-content {
+        width: 100%;
+        height: 150px;
+        margin-top: 10px;
+        position: relative;
+        overflow: hidden;
+        background: lightcyan;
+    }
+
+    #piclist {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        -webkit-animation: 3s move infinite linear;
+        width: 200%;
+    }
+
+    #piclist li {
+        list-style: none;
+        width: 250px;
+        height: 150px;
+        float: left;
+    }
+
+    .home-lunbo-content:hover #piclist {
+        -webkit-animation-play-state: paused;
+    }
+
+    .home-gundong .home-gundong-title {
+        width: 160px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 30px;
+        background: #6BC4CD;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+        border-radius: 40%;
+        cursor: pointer;
+    }
+
+    .home-gundong .home-gundong-title:hover {
+        color: red;
+    }
+
+    /* 底部 */
+
+    .home-footer {
+        width: 100%;
+        height: 150px;
+        background: #6BC4CD;
+        margin-top: 15px;
+    }
+
+    .home-footer .company-adress {
+        font-size: 14px;
+        margin: 0 auto;
+        color: #fff;
+        text-align: left;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 30px;
+        padding-top: 30px;
+
+    }
+   /* 新模块 */
+   .home-newbox{
+       width:100%;
+       height:300px;
+   }
+   .home-newbox .home-newbox-left{
+      width:70%;
+      height:300px;
+      float: left;
+      background:#fff;
+      border:1px solid #ccc;
+   }
+   .home-newbox .home-newbox-left .newbox-title{
+       height:40px;
+       background: lightslategray;
+       color:#fff;
+       font-size:14px;
+       font-weight: bold;
+       padding-left:30px;
+       line-height:40px;
+   }
+
+   .home-newbox .home-newbox-left  .news-listItem{
+       width:100%;
+   }
+   .home-newbox .home-newbox-left  .news-listItem:hover{
+       background: #6BC4CD;
+   }
+   .home-newbox .home-newbox-left  .news-listItem .listItem-text{
+       width:96%;
+   }
+   .home-newbox .home-newbox-left  .news-listItem .listItem-text a:hover{
+       color:#fff;
+   }
+   .home-newbox .home-newbox-right{
+       width:28%;
+       height:300px;
+       float: right;
+       border:1px solid #ccc;
+       background:#fff;
+   }
+   .home-newbox .home-newbox-right .newbox-title{
+       height:40px;
+       color:#fff;
+       font-size:14px;
+       font-weight: bold;
+       padding-left:30px;
+       background: lightslategray;
+       line-height:40px;
+   }
+
+   .home-newbox .home-newbox-right  .news-listItem{
+       width:100%;
+   }
+   .home-newbox .home-newbox-right  .news-listItem:hover{
+       background: #6BC4CD;
+   }
+   .home-newbox .home-newbox-right .news-listItem .listItem-text{
+       width:96%;
+       background-image: none;
+   }
+   .home-newbox .home-newbox-right  .news-listItem .listItem-text a:hover{
+       color:#fff;
+   }
+</style>
+<body>
+    <div class="pages-home">
+        <div class="pages-home-content">
+            <!-- 头部登陆 -->
+            <div class="home-head">
+                <form class="home-head-form">
+                    <p>
+                        <label for="name">账号: </label>
+                        <input type="text" id="name" />
+                    </p>
+                    <p>
+                        <label for="pw">密码: </label>
+                        <input type="password" id="pw" />
+                    </p>
+                    <input type="submit" value="登录" class="subBtn" />
+                </form>
+            </div>
+
+            <!-- banner图部分开始 -->
+            <div class="home-banner"></div>
+            <!-- banner图部分结束 -->
+
+            <!-- tab栏开始 -->
+            <div class="home-tabs">
+                <div class="tabs-menu">
+                    <p>
+                        <a href="home.html" title="首页">首页</a>
+                    </p>
+                    <p>
+                        <a href="<?php echo U('Company/Index');?>" title="城投动态">城投动态</a>
+                    </p>
+                    <p>
+                        <a href="" title="党建工作">党建工作</a>
+                    </p>
+                    <p>
+                        <a href="" title="项目工程">项目工程</a>
+                    </p>
+                    <p>
+                        <a href="" title="重点招商">重点招商</a>
+                    </p>
+                </div>
+            </div>
+            <!-- tab栏结束 -->
+
+            <!-- 轮播图和新闻列表等模块   -->
+            <div class="home-detail-content">
+                <!-- 左侧模块 -->
+                <div class="home-detail-left">
+                    <!-- 轮播图 -->
+                    <div class="home-lunbo">
+                        <div class="home-lunbo-left">
+                            <img src="/Public/images/dushiniang.jpg" id="imgshow" />
+                        </div>
+                        <div class="home-lunbo-right">
+                            <div class="lunbo-right-item">
+                                <img src="/Public/images/wenquan.jpg" alt="" onclick="showimg('/Public/images/wenquan.jpg');">
+                            </div>
+                            <div class="lunbo-right-item">
+                                <img src="/Public/images/niaokan.jpg" alt="" onclick="showimg('/Public/images/niaokan.jpg');">
+                            </div>
+                            <div class="lunbo-right-item">
+                                <img src="/Public/images/dushiniang.jpg" alt="" onclick="showimg('/Public/images/dushiniang.jpg');">
+                            </div>
+                            <div class="lunbo-right-item">
+                                <img src="<?php echo ($image[0][content]); ?>" alt="" onclick="showimg('<?php echo ($image[0][content]); ?>');">
+                            </div>
+                            <div class="lunbo-right-item">
+                                <img src="/Public/images/shouye3.jpg" alt="" onclick="showimg('/Public/images/shouye3.jpg');">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 新闻 -->
+                    <div class="home-news">
+                        <div class="newsList-left">
+                            <div class="newsList-title">
+                                <div class="title-name">集团新闻</div>
+                                <div class="title-more">
+                                   <a href="<?php echo U('Article/index');?>">更多
+                                        <<</a>
+                                </div>
+                            </div>
+                            <div class="news-list">
+                                <?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="news-listItem">
+                                    <span class="listItem-text">
+                                        <a href="<?php echo U('Article/index');?>&id=<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
+                                    </span>
+                                    <span class="listItem-time"><?php echo ($vo["time"]); ?></span>
+                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧模块 -->
+                <div class="home-detail-right">
+                    <div class="home-right-gonggao">
+                        <div class="newsList-right">
+                            <div class="newsList-title">
+                                <div class="title-name">公司公告</div>
+                                <div class="title-more">
+                                   <a href="<?php echo U('Article/index');?>">更多<<</a>
+                                </div>
+                            </div>
+                            <div class="news-list-right">
+                                <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="news-listItem">
+                                    <span class="listItem-text">
+                                       <a href="<?php echo U('Article/index');?>&id=<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
+                                    </span>
+                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-right-picList">
+                        <div class="picList-detail">
+                            <div class="detail-left-picList">
+                                <div class="picList-item">
+                                    <img src="/Public/images/pic33.jpg" alt="">
+                                </div>
+                                <div class="picList-item">
+                                    <img src="/Public/images/pic22.jpg" alt="">
+                                </div>
+                                <div class="picList-item">
+                                    <img src="/Public/images/pic11.jpg" alt="">
+                                </div>
+                                <div class="picList-item">
+                                    <img src="/Public/images/pic4.jpg" alt="">
+                                </div>
+                                <div class="picList-item">
+                                    <img src="/Public/images/pic5.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 风景展示 -->
+            <div class="home-piclist-show">
+                <div class="home-picList-title">风景展示</div>
+                <div class="home-picList">
+                    <div class="picList-item">
+                        <img src="/Public/images/pic1.jpg" alt="">
+                    </div>
+                    <div class="picList-item">
+                        <img src="/Public/images/pic2.jpg" alt="">
+                    </div>
+                    <div class="picList-item">
+                        <img src="/Public/images/pic3.jpg" alt="">
+                    </div>
+                    <div class="picList-item">
+                        <img src="/Public/images/pic4.jpg" alt="">
+                    </div>
+                    <div class="picList-item">
+                        <img src="/Public/images/pic5.jpg" alt="">
+                    </div>
+                    <div class="picList-item">
+                        <img src="/Public/images/pic44.jpg" alt="">
+                    </div>
+                    <div class="picList-item">
+                        <img src="/Public/images/pic55.jpg" alt="">
+                    </div>
+                    <div class="picList-item">
+                        <img src="/Public/images/pic66.jpg" alt="">
+                    </div>
+                    <div class="picList-item">
+                        <img src="/Public/images/pic77.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- 无缝滚动部分开始 -->
+            <div class="home-gundong">
+                <div class="home-gundong-title">经典回放</div>
+                <div class="home-lunbo-content">
+                    <ul id="piclist">
+                        <li>
+                            <img src="/Public/images/pic1.jpg" alt="" style="width:95%;height:145px">
+                        </li>
+                        <li>
+                            <img src="/Public/images/pic2.jpg" alt="" style="width:95%;height:145px">
+                        </li>
+                        <li>
+                            <img src="/Public/images/pic3.jpg" alt="" style="width:95%;height:145px">
+                        </li>
+                        <li>
+                            <img src="/Public/images/pic4.jpg" alt="" style="width:95%;height:145px">
+                        </li>
+                        <li>
+                            <img src="/Public/images/pic5.jpg" alt="" style="width:95%;height:145px">
+                        </li>
+                        <li>
+                            <img src="/Public/images/pic3.jpg" alt="" style="width:95%;height:145px">
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- 无缝滚动部分结束 -->
+            
+            <!-- 新板块 -->
+            <div class="home-newbox">
+                <div class="home-newbox-left">
+                    <div class="newbox-title">城投动态</div>
+                    <div class="newbox-content">
+                        <div class="news-list">
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">集团第一学习小组举行第五次专题学,集团第一学习小组举行第五次专题学集团积极开展5.19慈善一日捐活动开始启动</a>
+                                </span>
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">集团第一学习小组举行第五次专题学集团积极开展5.19慈善一日捐活动开行第五次专题学小组举行第五次专访问座谈</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">文化和旅游部:严查丑化恶搞英烈等违法违规经营行为浙江在线 - 	7小时前文化和旅游部指导陕西省文化厅、西安市文化广电新闻出版局依法立案查处,将从快从...标签:文化旅游部;丑化;经营 责任编辑:冯一</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">集团积极开展5.19慈善一日捐活动开平山堂上，集团第一学习小组举行第五次专题学,集团第一学习小组举行第五次专题学....</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">交汇点讯中国旅游日来临之际,江苏游客又获大礼包。5月17日,浙江丽水在扬州推介“高铁周末游”,这也是该旅游产品首次开启江苏江北城市的旅游市场。随着连淮扬镇铁路</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">州,美成画卷的扬州有很多故事等你来光明网 - 	5天前雨中的扬州,俨然美成了一幅画卷。... 地方新闻源 » 江苏 五月烟雨蒙蒙唱扬州,美成画卷的扬州有很多...来源 扬州市旅游局微信 版权声明:如涉及版权问题,请作者持..</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">截至昨晚8点半,原本应降落在扬州泰州国际机场的两架航班相继备降虹桥和浦东两大机场。 以上由东广记者车润宇报道 热点新闻: 上海十条旅游新线路开通 可直达郊野... </a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">文化和旅游部:严查丑化恶搞英烈等违法违规经营行为浙江在线 - 	7小时前文化和旅游部指导陕西省文化厅、西安市文化广电新闻出版局依法立案查处,将从快从...标签:文化旅游部;丑化;经营 责任编辑:冯一</a>
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="home-newbox-right">
+                    <div class="newbox-title">合作公司</div>
+                    <div class="newbox-content">
+                        <div class="news-list">
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">扬州瓜洲锦汇旅游投资发展有限公司</a>
+                                </span>
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">扬州瓜洲锦汇旅游投资发展有限公司</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">扬州瓜洲锦汇旅游投资发展有限公司</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">扬州瓜洲锦汇旅游投资发展有限公司</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">扬州瓜洲锦汇旅游投资发展有限公司</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">扬州瓜洲锦汇旅游投资发展有限公司</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">扬州瓜洲锦汇旅游投资发展有限公司</a>
+                                </span>
+
+                            </div>
+                            <div class="news-listItem">
+                                <span class="listItem-text">
+                                   <a href="<?php echo U('Article/index');?>">扬州瓜洲锦汇旅游投资发展有限公司</a>
+                                </span>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+            <div class="home-footer">
+                <div class="company-adress">
+                    公司邮箱：123@qq.com
+                    <br> 联系方式：123455764
+                    <br> 公司地址：江苏省南京市啦啦啦啦啦啦啦啦啦
+    
+                </div>
+            </div>
+        </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    function showimg(str) {
+        document.getElementById("imgshow").src = str;
+    }
+</script>
+</html>

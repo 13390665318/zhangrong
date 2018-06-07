@@ -1,0 +1,82 @@
+[ 2018-06-07T15:34:59+08:00 ] 127.0.0.1 /Admin/Index/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+
+[ 2018-06-07T15:35:08+08:00 ] 127.0.0.1 /Admin/Index/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0121s ]
+SQL: INSERT INTO `article` (`type`,`title`,`content`,`image`,`time`) VALUES ('2','扬州瓜洲锦汇旅游投资发展有限公司简介','&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/ueditor/php/upload/image/20180607/1528356803.jpg&quot; title=&quot;1528356803.jpg&quot; alt=&quot;瓜洲LOGO.jpg&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;text-indent:43px&quot;&gt;&lt;span style=&quot;;font-family:宋体;color:rgb(51,51,51);font-size:21px;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;扬州瓜洲锦汇旅游投资发展有限公司成立于&lt;/span&gt;2014年7月11日， 由扬州市邗江区人民政府国有资产监督管理办公室和扬州市邗江区瓜洲镇农工商总公司共同出资1亿元成立了国有平台企业——扬州瓜洲锦汇旅游投资发展有限公司。&lt;/span&gt;&lt;span style=&quot;;font-family:宋体;color:rgb(51,51,51);font-size:21px;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;公司自成立以来相继投建了瓜洲温泉地热井、杜十娘主题文化广场以及扬州（南）瓜洲游客服务中心等重点项目&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;;font-family:宋体;color:rgb(51,51,51);font-size:21px;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;。主要负责主要从事对旅游业进行投资；游览景区管理；公园景点管理；在区政府授权范围内进行国有资产经营管理及投资；旅游景点基础设施建设、城市基础设施建设；市政公共设施管理；环境保护工程、建筑安装、装饰装潢、园林建筑工程设计、施工；花木种植、销售；植物保护、病虫害防治；自有房屋租赁；自有场地停车管理服务；建材销售；营业性演出；文化艺术交流活动策划；展示展览服务；体育赛事组织、策划；旅行社业务；房地产开发、销售；自营和代理各类商品及技术的进出口业务等。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-indent:43px&quot;&gt;&lt;span style=&quot;;font-family:宋体;color:rgb(51,51,51);font-size:21px;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;公司本着&lt;/span&gt;“一流质量、一流服务、一流设施、一流管理”的经营宗旨，致力于瓜洲旅游资源、&lt;/span&gt;&lt;a href=&quot;https://www.baidu.com/s?wd=%E6%97%85%E6%B8%B8%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnHRvuWTYrj9-mWbLnhm40ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3En10knjR4n1mL&quot;&gt;&lt;span style=&quot;;font-family:宋体;color:rgb(51,51,51);font-size:21px;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;旅游基础设施&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;;font-family:宋体;color:rgb(51,51,51);font-size:21px;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;的开发和建设，不断完善公司内部管理，加速公司发展，以&lt;/span&gt;“科学管理、团结协作、求真务实、开拓创新”为经营理念，在社会中树立起良好的企业形象。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','/ueditor/php/upload/image/20180607/1528356803.jpg','2018-06-07') [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2018-06-07T15:35:09+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined variable: Mune1 D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 84 行.
+NOTIC: [8] Undefined variable: num D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 118 行.
+NOTIC: [8] Undefined variable: role_ChangeLife D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 145 行.
+NOTIC: [8] Undefined variable: vip D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 150 行.
+NOTIC: [8] Undefined variable: reason D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 155 行.
+NOTIC: [8] Undefined variable: page D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009579s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2018-06-07T17:51:10+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined variable: Mune1 D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 84 行.
+NOTIC: [8] Undefined variable: num D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 118 行.
+NOTIC: [8] Undefined variable: role_ChangeLife D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 145 行.
+NOTIC: [8] Undefined variable: vip D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 150 行.
+NOTIC: [8] Undefined variable: reason D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 155 行.
+NOTIC: [8] Undefined variable: page D:\Jinhui\APP\Runtime\Cache\Admin\4d73593ea9413cb83b430e59017e71c1.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+

@@ -1,0 +1,114 @@
+/*每页公用*/
+body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,code,em,img,q,small,strong,dd,dl,dt,li,ol,ul,fieldset,form,label,table,tbody,tr,th,td,input,button{margin:0;padding:0;border:0}
+body{font-size:12px;margin:0 auto;background:#FFFFFF;font-family:'Microsoft YaHei',Helvetica,Arial,sans-serif;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+a,a:active,a:hover,a:focus,a:visited{text-decoration:none}
+
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+ol,ul,li{list-style:none}
+.fl{float:left}
+.fr{float:right}
+
+@media (min-width: 768px) {
+    .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 250px;
+        margin-top: 51px;
+    }
+}
+.navbar-color{background:#3294DD }
+.navbar-color2{background: #DCEDFA}
+.logo{
+    height: 50px;
+    padding: 10px 15px;
+}
+.navbar-default .logo img{width:150px;}
+
+.icon-tu{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: #FFffff;
+    margin-top:4px;
+}
+.navbar-collapse{padding:0}
+.sidebar ul li {
+    border-bottom: 1px solid #e7e7e7;
+}
+.sidebar .nav-second-level li, .sidebar .nav-third-level li {
+    border-bottom: none !important;
+}
+.header_right{
+    margin-top:5px;
+}
+.header_right li{
+    float: left;
+    width:40px;
+    text-align: center;
+    margin-right:5px;
+}
+.header_right li img{width:18px;}
+.header_right li span{display:block;font-size:14px;color:#FFffff;padding-top:3px; }
+/*首页*/
+@media (min-width: 768px){
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+    #side-sy{display:none}
+    .header_right{display:block}
+}
+#page-wrapper {
+    padding: 0 15px;
+    background-color: white;
+}
+@media (max-width: 768px){
+    #side-sy{display:block}
+
+    .header_right{display:none}
+}
+.nav>li>a{font-size:14px;}
+.nav>li ul li a{padding-left:45px;}
+
+.panel-body tr td{text-align: center}
+
+.btn_css{margin: 10px 0 0 15px}
+
+
+.panel{width:50%;margin:0 auto}
+@media (max-width: 768px){
+    .panel{width:100%;}
+}
+.nav_title li{width:50%;float:left;height:40px;text-align: center;font-size:18px;line-height: 40px;background: #dddddd}
+.nav_title li.active{background: #337ab7;}
+.nav_title li a{color:#FFffff;}
+.zi{font-size:14px;color:#FF0000;padding:0 15px;}
+.zi2{font-size:14px;color:#000;padding:10px 15px;}
+    .toux{padding:20px 10px;border-top:1px solid #f1f1f1;border-bottom:1px solid #f1f1f1;height:100px}
+.toux_left img{width:60px;height:60px;}
+.toux_right p{padding-left:10px;font-size:16px;color:#999;}
+.gouka p{font-size:16px;color:#999;line-height: 24px;padding-left:10px;padding-top:20px;}
+.gouka ul{padding:10px 40px;}
+.gouka ul li{width:150px;height:40px;border:1px solid #dddddd;font-size:16px;line-height: 40px;color:#999;text-align: center;margin:10px auto 0;border-radius:2px; }
+.div{display: none}
+.gouka ul li.active{border-color:#337ab7;color:#337ab7}
+
+.back_top{position:fixed;right:0;top:30%;padding:5px 10px;background: #3294DD;border-radius: 5px;text-align: center;z-index:10001}
+.back_top p{font-size:16px;line-height: 20px;color:#FFffff;padding-top:5px;}
+.back_top span{padding:0 5px;border-radius:5px;background: #FF0000;font-size:12px;color:#FFffff;position:absolute;right:0px;top:-8px;}
+.reminder{width:30%;position:fixed;z-index:1000;display:none;left:50%;margin-left:-15%;top:40%;background: #fff;border-radius: 5px;border:2px solid #999;}
+.reminder ul li{border-bottom:1px solid #f1f1f1;position:relative;padding:5px 0}
+.reminder ul li h1{font-size:14px;color:#00a0e9;line-height: 24px;padding-left:20px;}
+.reminder ul li p{font-size:14px;color:#00a0e9;line-height: 20px;padding-left:40px;}
+.reminder ul li span{font-size:12px;color:#dddddd;line-height: 20px;position:absolute;right:20px;bottom:0px;}
+
+@media (max-width: 768px){
+    .reminder{width:80%;margin-left:-40%;}
+}
+.article{width:80%;margin:0 auto;overflow: hidden}
+.article h1{font-size:18px;color:#000;text-align: center;}
+.article span{font-size:14px;color:#999;float:right;}
+.article p{font-size:16px;color:#333;padding-top:20px;}

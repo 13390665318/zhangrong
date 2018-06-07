@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <LINK href="http://106.15.137.174/Alirefor/public/admin/css/admin.css" type="text/css" rel="stylesheet">
+    <script src="http://106.15.137.174/Alirefor/public/js/jquery-1.7.2.min.js"></script>
+    <LINK href="http://106.15.137.174/Alirefor/public/admin/css/sp.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="http://106.15.137.174/Alirefor/public/js/jQuery.js"></script>
+    <script type="text/javascript" src="http://106.15.137.174/Alirefor/public/js/jqplot.js"></script>
+    <script src="http://106.15.137.174/Alirefor/public/laydate/laydate.js"></script>
+    <style>
+        .headr_bottom {
+            overflow: hidden;
+            width: 100%;
+            height: 27px;
+            background: #dcedfa;
+            border-bottom: 1px solid #CADAE6;
+        }
+
+        .header_place {
+            float: left;
+            height: 27px;
+            line-height: 26px;
+        }
+        .header_container{
+            overflow: hidden;
+        }
+        body{
+            background-color: #DCEDFA;
+        }
+        .sel{
+            box-sizing: border-box;
+            padding:2%;
+            padding-left:1.5%;
+            border-bottom: 1px solid #CADAE6;
+        }
+        #sel_1{
+            padding:5px;
+            width:140px;
+            margin-left:1%;
+        }
+        .mc{
+            margin-left: 1%;
+        }
+        .sr{
+            padding:5px;
+            margin-left: 1%;
+        }
+        .cx,.cz{
+            color:#fff;
+            background-color: #006DCC;
+            border: none;
+            padding:6px;
+            padding-left:8px;
+            padding-right:8px;
+            cursor:pointer;
+        }
+        .cx{
+            margin-left: 5%;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+            padding:0px;
+            padding-left: 13px;
+        }
+        ul li{
+            display:inline-block;
+            margin-right:10px;
+        }
+        ul img{
+            vertical-align: -18%;
+        }
+        table{border-right:1px solid #CCD5DE;border-bottom:1px solid #CCD5DE;width:100%;text-align: center;}
+        table  td{border-left:1px solid #CCD5DE;border-top:1px solid #CCD5DE;}
+        table thead td{background-color: #BDE1FC;}
+        table thead tr,table tbody tr{
+            width:100%;
+            height:40px;
+        }
+
+        table tbody tr:nth-child(odd){
+            background-color: #fff;
+        }
+        table tbody tr:nth-child(even){
+            background-color: #F0F7FC;
+        }
+
+        .jqplot-table-legend{display:none}
+
+    </style>
+
+
+</HEAD>
+
+<BODY>
+
+
+<table  border="0" cellspacing="0" cellpadding="10">
+    <thead>
+    <tr><td colspan="7">
+        <div style="font-size: 12px;margin-left: -85%"><b>
+            <span>
+                <select style="margin-left: 0px; width: 5%;height: 1.5%" onchange="choice(1)" id="clothes">
+                    <option>...选择游戏服务器...</option>
+                    <volist name="clostu" id="vo">
+                      <eq name="vo.db_id" value="$db_id">
+                    <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                         <else/>
+                          <option value="{$vo.db_id}">{$vo.clothes}</option>
+                      </eq>
+                    </volist>
+                </select>
+                服务器TOP10
+         </span>
+        </b></div>
+    </td></tr>
+    </thead>
+    </tbody>
+
+</table>
+<div style="width: 100%">
+    <volist name="stu" id="ko">
+  <div style="width: 16.3%;float: left ;margin-top: 0.5% ;height: 59%">
+      <table  border="0" cellspacing="0" cellpadding="10">
+          <thead>
+          <tr>
+              <td  colspan="3">{$ko.title}</td>
+          </tr>
+          </thead>
+          <tbody id="ad">
+          <tr>
+              <td width="15%">{$ko.num}</td>
+              <td width="15%">{$ko.name}</td>
+              <td width="10%">{$ko.type}</td>
+          </tr>
+
+          <volist name="arr[$key]" id="vo">
+              <tr>
+                  <td>{$vo.num}</td>
+                  <td>{$vo.name}</td>
+                  <td>{$vo.type}</td>
+
+              </tr></volist>
+          </tbody>
+
+      </table>
+    </div>
+    </volist>
+</div>
+
+
+
+
+<script type="text/javascript">
+    /**
+     * 时间选择
+     * @param a 1：昨天 2 今天 3 近7天 4 近30天 5 月份  6 一年  7 时间选择
+     */
+    function choice(a) {
+        var num =a;
+        if(num==1){
+            var clothes=$("#clothes").val();
+            if(clothes=="...选择游戏服务器..."){
+                return
+            }else{
+                 location.href="http://106.15.137.174/Alirefor/Admin/Top/index/db_id/"+clothes;
+            }
+        }else if(num==2){
+            var time=$("#time").val()
+            var clothes=$("#clothes").val();
+            if(clothes=="...选择游戏服务器..."){
+                alert("请选择游戏服务器");
+                return
+            }else{
+                location.href="http://106.15.137.174/Alirefor/Admin/Top/index/db_id/"+clothes+"/time/"+time
+            }
+        }
+    }
+</script>
+
+
+
+</BODY></HTML>
