@@ -568,7 +568,7 @@
                                 <img src="/Public/images/dushiniang.jpg" alt="" onclick="showimg('/Public/images/dushiniang.jpg');">
                             </div>
                             <div class="lunbo-right-item">
-                                <img src="<?php echo ($image[0][content]); ?>" alt="" onclick="showimg('<?php echo ($image[0][content]); ?>');">
+                                <img src="<?php echo ($news[3][image]); ?>" alt="" onclick="showimg('<?php echo ($news[3][image]); ?>');">
                             </div>
                             <div class="lunbo-right-item">
                                 <img src="/Public/images/shouye3.jpg" alt="" onclick="showimg('/Public/images/shouye3.jpg');">

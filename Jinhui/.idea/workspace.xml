@@ -25,16 +25,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APP/Home/View/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1555">
-              <caret line="705" lean-forward="true" selection-start-line="705" selection-end-line="705" />
+            <state relative-caret-position="430">
+              <caret line="570" column="108" lean-forward="true" selection-start-line="570" selection-start-column="108" selection-end-line="570" selection-end-column="108" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/libs/common.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="562">
@@ -69,8 +69,8 @@
       <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APP/Home/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="225">
+              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -192,10 +192,10 @@
         <option value="$PROJECT_DIR$/APP/Home/View/Article/index.html" />
         <option value="$PROJECT_DIR$/Public/ueditor/php/config.json" />
         <option value="$PROJECT_DIR$/APP/Home/Controller/ArticleController.class.php" />
-        <option value="$PROJECT_DIR$/APP/Home/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/APP/Admin/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/APP/Home/View/Index/index.html" />
         <option value="$PROJECT_DIR$/Public/libs/common.css" />
+        <option value="$PROJECT_DIR$/APP/Home/Controller/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/APP/Home/View/Index/index.html" />
       </list>
     </option>
   </component>
@@ -420,12 +420,12 @@
       <workItem from="1528164448179" duration="6690000" />
       <workItem from="1528216609921" duration="2567000" />
       <workItem from="1528301501878" duration="5951000" />
-      <workItem from="1528350851233" duration="5018000" />
+      <workItem from="1528350851233" duration="6313000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273798000" />
+    <option name="totallyTimeSpent" value="275093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -753,17 +753,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APP/Home/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/APP/Home/View/Article/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6425">
           <caret line="257" column="8" selection-start-line="257" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/libs/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -774,17 +774,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APP/Home/View/Index/index.html">
+    <entry file="file://$PROJECT_DIR$/APP/Home/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1555">
-          <caret line="705" lean-forward="true" selection-start-line="705" selection-end-line="705" />
+        <state relative-caret-position="225">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/libs/common.css">
+    <entry file="file://$PROJECT_DIR$/APP/Home/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+        <state relative-caret-position="430">
+          <caret line="570" column="108" lean-forward="true" selection-start-line="570" selection-start-column="108" selection-end-line="570" selection-end-column="108" />
         </state>
       </provider>
     </entry>
