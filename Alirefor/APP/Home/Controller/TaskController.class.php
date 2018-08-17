@@ -12,26 +12,29 @@ header ( "Content-type:text/html;charset=utf-8" );
 class TaskController extends BaseController
 {
     public function index(){
-        $game_id = 2;
-        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
-        $this->assign("clostu", $clostu);
+        /*$game_id = 2;
+       $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+       $this->assign("clostu", $clostu);
 
-        // 图标 默认 最新服
-        if (isset($_GET["db_id"])) {
-            $db_id = I("get.db_id");
-            $_SESSION["db_id"] = $db_id;
-        } else {
-            $db_id = $clostu[0]["db_id"];
-            $_SESSION["db_id"] = $db_id;
-        }
-        $nowtime = date("Y-m-d H:i:s", time());
-        $this->assign("db_id", $db_id);
+       // 图标 默认 最新服
+       if (isset($_GET["db_id"])) {
+           $db_id = I("get.db_id");
+           $_SESSION["db_id"] = $db_id;
+       } else {
+           $db_id = $clostu[0]["db_id"];
+           $_SESSION["db_id"] = $db_id;
+       }
+       $nowtime = date("Y-m-d H:i:s", time());
+       $this->assign("db_id", $db_id);*/
         //获取传参角色id
         if ($_GET['roleid']) {
             $roleid = I('get.roleid');
         }
         $this->assign('roleid',$roleid);
-        $connection=db2($game_id,$db_id);
+        //获取翅膀信息
+        $game_id="loong_game";
+        $db_id=$_SESSION['db_id'];
+        $connection = db($game_id, $db_id);
         $model=M('t_tasks','',$connection);
         $task=$model->where("rid='$roleid'")->select();
         foreach ($task as $value) {

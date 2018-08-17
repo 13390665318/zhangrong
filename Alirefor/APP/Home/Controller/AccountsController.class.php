@@ -11,22 +11,15 @@ header ( "Content-type:text/html;charset=utf-8" );
 
 class AccountsController extends BaseController
 {
+    /**
+     *
+     */
     public function index(){
+        $clostu=D("db")->order("db_id")->select();
 
-        $game_id = 2;
-        $clostu=D("db")->where("game_id=$game_id")->order("db_id desc")->select();
         $this->assign("clostu",$clostu);
 
         // 图标 默认 最新服
-        if(isset($_GET["db_id"])){
-            $db_id=I("get.db_id");
-            $_SESSION["db_id"]=$db_id;
-        }else{
-                $db_id=$clostu[0]["db_id"];
-                $_SESSION["db_id"]=$db_id;
-            }
-
-
         if(isset($_GET["start_time"]) && isset($_GET["end_time"])){
             $stime=I("get.start_time");
             $etime=I("get.end_time");
@@ -34,28 +27,40 @@ class AccountsController extends BaseController
             $stime=date("Y-m-01 00:00:00",time());
             $etime=date("Y-m-d H:i:s",time());
         }
-        $this->assign("db_id",$db_id);
+        //判断是否选服
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+        } else {
+            $db_id=$clostu[0]['db_id'];
+        }
+        $this->assign('db_id',$db_id);
         if($_GET['userid']){
             $userid=I('get.userid');
         }
+        $game_id="loong_user";
+        //$db_id=$_SESSION['db_id'];
 
         $connection=db($game_id,$db_id);
+
         $model=M('t_users','',$connection);
         $acounts=$model->where("userid='$userid'")->select();
+
         $acounts=$acounts[0]['regtime'];
-        $connection=db2($game_id,$db_id);
+        $game_id="loong_game";
+        $connection=db($game_id,$db_id);
         $model=M('t_roles','',$connection);
-        $roles=$model->where("userid='$userid'AND isdel=0")->select();
-        foreach ($roles as $k=>$value){
-            if($value['lasttime']>$value['logofftime']){
+
+        $roles = $model->where("userid='$userid'AND isdel=0")->select();
+        foreach ($roles as $k => $value) {
+            if ($value['lasttime'] > $value['logofftime']) {
                 $roles[$k]['online'] = 1;
-            }else{
+            } else {
                 $roles[$k]['online'] = 0;
             }
         }
-        $this->assign('roles',$roles);
+        $this->assign('roles', $roles);
 
-        $this->assign('acounts',$acounts);
+        $this->assign('acounts', $acounts);
 
 
 

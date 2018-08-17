@@ -10,16 +10,17 @@ class IndexController extends BaseController
     public function index()
     {
 
-
         //新增用户
         $ip = $_SERVER['REMOTE_ADDR'];
 //echo $ip;exit;
-
+        
         $db = D("db")->select();
+		
         // 默认7天
         $stime = date("Y-m-d", strtotime("-6 day"));
         $etime = date("Y-m-d", time());
         $num = count_days($stime, $etime);
+
         $Stime = null;
         for ($i = 0; $i <= $num; $i++) {
             $Stime = '" ' . date('m-d', strtotime("-$i day", strtotime($etime))) . '" ' . "," . $Stime;
@@ -38,7 +39,7 @@ class IndexController extends BaseController
             $ru2['_string'] = "start_time>='$Strtime' and start_time<='$Endtime'";//活跃用户
             $ru3["_string"] = "pay_time>='$Strtime' and pay_time<='$Endtime'";//充值用户
             //$pay_user = D("order")->where($ru3)->group('uid')->select(); // 今日充值用户
-            $pay_user = D("pay")->where($ru3)->group('game_user_id')->select(); // 今日充值用户
+            $pay_user = D("pay")->where($ru3)->group('user_id')->select(); // 今日充值用户
             $data4[$i]["num"] = count($pay_user);
             $amount = (int)D("pay")->where($ru3)->sum(pay_number);
             $data5[$i]["num"] = $amount;
@@ -47,18 +48,17 @@ class IndexController extends BaseController
             // for($j=0;$j<count($db);$j++){
             // $db_id=$db[$j]["db_id"];
             // $connection=db2($game_id,$db_id);
-            $sum = M('user')->where($ru)->count();
+            $sum =count(M('user')->group('game_id')->having("register_time>='$Strtime' and register_time<='$Endtime'")->select());
             $data[$i]["num"] = $data[$i]["num"] + $sum;
             $user = $user + $sum;
 
 
-            $sum2 = M('sign')->where($ru2)->group('game_user_id')->select();
+            $sum2 = M('sign')->where($ru2)->group('user_id')->select();
             $data2[$i]["num"] = $data2[$i]["num"] + count($sum2);
             $user2 = $user2 + count($sum2);
 
             // }
         }
-
 
         $Stime = substr($Stime, 0, strlen($Stime) - 1);
         $this->assign("user", $data[0]["num"]);
@@ -80,6 +80,7 @@ class IndexController extends BaseController
         $this->assign("paymoney", $data5[0]["num"]);
         // var_dump($jsoBj5);
 // 在线人数
+
         $Stime2 = null;
         $time = date("Y-m-d", time());
         $time1 = date('Y-m-d', strtotime("-0 day", strtotime($time)));
@@ -88,6 +89,7 @@ class IndexController extends BaseController
         $time4 = date('Y-m-d', strtotime("-4 day", strtotime($time)));
         $time5 = date('Y-m-d', strtotime("-6 day", strtotime($time)));
 //echo $time5;
+
         for ($j = 0; $j < 24; $j++) {
             if ($j < 10) {
                 $f_time = "0$j:00";
@@ -104,36 +106,125 @@ class IndexController extends BaseController
             //  for($i=0;$i<count($db);$i++){
             //  $db_id=$db[$i]["db_id"];
             // $connection=db2($game_id,$db_id);
-            $sum3 = M('period')->where("time='$time' and f_time='$f_time'")->find();
+
+            $sum3 = M('period')->where("time='$time' and f_time='$f_time'")->sum('num');
+            $sql="select sum(a.num) as o from(SELECT * FROM `period` where(time='$time' and f_time='$f_time')  GROUP BY db_id) as a";
+            $sum3=M('period')->query($sql);
+            $sum3=$sum3[0]['o'];
+
+
+
+            //if($sum3==null){
+           //     $f_time=substr($f_time,0,strlen($f_time)-2);
+          //      $sum3=M('period')->where("time='$time'and f_time like '$f_time%'")->sum('num');
+         //   }
             //echo $sum3["num"];exit;
-            $sum4 = M('period')->where("time='$time2' and f_time='$f_time'")->find();
-            $sum33 = M('period')->where("time='$time3' and f_time='$f_time'")->find();
-            $sum35 = M('period')->where(" time='$time4' and f_time='$f_time'")->find();
-            $sum37 = M('period')->where("time='$time5' and f_time='$f_time'")->find();
-            $data3[$j]["num"] = $data3[$j]["num"] + $sum3["num"];
-            $data3[$j]["nums"] = $data3[$j]["nums"] + $sum4["num"];
-            $data3[$j]["numss"] = $data3[$j]["numss"] + $sum33["num"];
-            $data3[$j]["numsss"] = $data3[$j]["numsss"] + $sum35["num"];
-            $data3[$j]["numssss"] = $data3[$j]["numssss"] + $sum37["num"];
+            $sum4 = M('period')->where("time='$time2' and f_time ='$f_time'")->sum('num');
+            $sql="select sum(a.num) as o from(SELECT * FROM `period` where(time='$time2' and f_time ='$f_time')  GROUP BY db_id) as a";
+            $sum4=M('period')->query($sql);
+            $sum4=$sum4[0]['o'];
+
+		//
+          //  if($sum4==null){
+         //       $f_time=substr($f_time,0,strlen($f_time)-2);
+        //        $sum4=M('period')->where("time='$time2'and f_time ='$f_time'")->sum('num');
+        //    }
+            $sum33 = M('period')->where("time='$time3' and f_time = '$f_time'")->sum('num');
+            $sql="select sum(a.num) as o from(SELECT * FROM `period` where(time='$time3' and f_time = '$f_time')  GROUP BY db_id) as a";
+            $sum33=M('period')->query($sql);
+            $sum33=$sum33[0]['o'];
+			
+         //   if($sum33==null){
+         //       $f_time=substr($f_time,0,strlen($f_time)-2);
+         //       $sum33=M('period')->where("time='$time3'and f_time like '$f_time%'")->sum('num');
+         //   }
+            $sum35 = M('period')->where(" time='$time4' and f_time = '$f_time'")->sum('num');
+            $sql="select sum(a.num) as o from(SELECT * FROM `period` where(time='$time4' and f_time = '$f_time')  GROUP BY db_id) as a";
+            $sum35=M('period')->query($sql);
+            $sum35=$sum35[0]['o'];
+			
+       //     if($sum35==null){
+        //        $f_time=substr($f_time,0,strlen($f_time)-2);
+        //        $sum35=M('period')->where("time='$time4'and f_time  = '$f_time%'")->sum('num');
+        //    }
+            $sum37 = M('period')->where("time='$time5' and f_time = '$f_time'")->sum('num');
+            $sql="select sum(a.num) as o from(SELECT * FROM `period` where(time='$time5' and f_time = '$f_time')  GROUP BY db_id) as a";
+            $sum37=M('period')->query($sql);
+            $sum37=$sum37[0]['o'];
+
+		
+         //   if($sum37==null){
+         //       $f_time=substr($f_time,0,strlen($f_time)-2);
+        //        $sum37=M('period')->where("time='$time5'and f_time  like '$f_time%'")->sum('num');
+        //    }
+
+            $data3[$j]["num"] = $data3[$j]["num"] +$sum3;
+            $data3[$j]["nums"] = $data3[$j]["nums"] +$sum4;
+            $data3[$j]["numss"] = $data3[$j]["numss"]+ $sum33;
+            $data3[$j]["numsss"] = $data3[$j]["numsss"]+ $sum35;
+            $data3[$j]["numssss"] =  $data3[$j]["numssss"]+$sum37;
+
+
 //var_dump($data3);exit;
             // }
             //
-
         }
 
 
-        $today = date("Y-m-d", time());
-        $lastupdtime = date("Y-m-d H:i:s", time() - 12 * 3600);
-        $uonline = M('period')->field('num')->order('f_time desc')->where("time='$today'")->limit(1)->select();
-        $uonline = $uonline[0]['num'];
+        $today = date("Y-m-d ", time());//当天的时间年月日
+        $todays =time();//现在的时间戳
+       // $lastupdtime = date("Y-m-d H:i:s", time() - 12 * 3600);
+        $uonline = M('period')->order('f_time desc')->where("time='$today'")->limit(1)->getField('LogTime');//最后一次系统获取的时间
+        //获取前一分钟的时间
+        $today1=date("Y-m-d H:i:00",strtotime('-1 Minute',time()));//一分钟前的整点
+        $uonlines=strtotime($uonline);//最后一次系统获取的时间戳
+        $time=$todays-$uonlines;//与最后一次系统时间取差
+        //$uonline=M('period')->where("LogTime='$uonline'")->group('db_id')->sum('num');
+        $server=M('db')->field('db_id')->select();
+        $servercount=count($server);//服务器数量
+        for($i=0;$i<$servercount;$i++){
+            $db_id=$server[$i]['db_id'];
+            $where="LogTime='$today1'and db_id='$db_id'";//条件为一分钟前的时间和区服ID
+            $server[$i]['nums']=M('period')->field('LogTime,num')->order('LogTime desc')->where($where)->group('db_id')->select();//搜索前一分钟的在线人数
+            if($server[$i]['nums']==null ){//如果没有搜到
+                $server[$i]['nums']=M('period')->field('LogTime,num')->where("db_id='$db_id'")->order('LogTime desc')->limit(1)->select();//将在线人数设置为0
+                $time2=$todays-(strtotime($server[$i]['nums'][0]['LogTime']));
+                if($time2>60){//大于5分钟将标识符0并且显示最后一次在线时间
+                    $server[$i]['confirm']=0;
+                }
+            }else{
+                $server[$i]['confirm']=1;
+            }
+        }
+        $this->assign('server',$server);
+       $uonline=0;
+        foreach ($server as $key =>$value){
+            if($value['confirm']==1){
+                $uonline=$value['nums'][0]['num']+$uonline;
+            }
+        }
+
+
+
+
+
+
+
+      /*  $sql="select *  from(SELECT * FROM `period`  where (LogTime='$uonline')  GROUP BY db_id) as a";
+        $uonline=M('period')->query($sql);
+        dump($uonline);exit;
+        $uonline=$uonline[0]['o'];*/
+
         $adds = 0;
+
         //$ip:$port/serverstatus?
         // for($i=0;$i<count($db);$i++) {
         // $db_id=$db[$i]["db_id"];
         //   $connection = db($game_id, $db_id);
 //dump($connection );exit;
         $Userbase = M('User');
-        $add2s = $Userbase->count();
+        $add2s = count($Userbase->group('game_id')->select());
+
         $adds = $adds + $add2s; // 新增
 
         /*
@@ -162,7 +253,6 @@ class IndexController extends BaseController
         // }
 
         //  $data3= array_reverse($data3);
-
         $result = array_merge($data3);
         $this->assign("adds", $adds);
         $result = json_encode($result);
@@ -181,13 +271,13 @@ class IndexController extends BaseController
         $sum_money = D("pay")->sum(pay_number);
         $begin_time = date('Y-m-d 00:00:00', time());
         $end_time = date('Y-m-d 23:59:59', time());
-        $day_money = D("order")->where("time>='$begin_time' and time<='$end_time'")->sum(amount) / 100; // 今日付费总金额
-        $day_people = D("pay")->where("pay_time>='$begin_time' and pay_time<='$end_time'")->group('game_user_id')->select(); // 今日付费用户
+        $day_money = D("pay")->where("pay_time>='$begin_time' and pay_time<='$end_time'")->sum(pay_number) / 100; // 今日付费总金额
+        $day_people = D("pay")->field('user_id')->where("pay_time>='$begin_time' and pay_time<='$end_time'")->group('user_id')->select(); // 今日付费用户
         $day_people = count($day_people);
         $sign_people = $data2[0]["num"];// 活跃用户
         $fufeilv = round($day_people / $sign_people, 4) * 100;
-        $ARPU = round($day_money / $sign_people, 4);
-        $ARPPU = round($day_money / $day_people, 4);
+        $ARPU = round($day_money / $sign_people, 4)* 100;
+        $ARPPU = round($day_money / $day_people, 4)* 100;
         $this->assign("sum_money", $sum_money);
         $this->assign("fufeilv", $fufeilv);
         $this->assign("ARPU", $ARPU);
@@ -202,19 +292,20 @@ class IndexController extends BaseController
         // $Userbase = M('San_userbase','', $connection);
         $Strtime = date('Y-m-d 00:00:00', strtotime("+0 day", strtotime($stime)));
         $Endtime = date('Y-m-d 23:59:59', strtotime("+0 day", strtotime($stime)));
-        $add_people = $users->where("register_time>='$Strtime' and register_time<='$Endtime' ")->count();
+        $add_people =count(M('user')->group('game_id')->having("register_time>='$Strtime' and register_time<='$Endtime'")->select());
 
 //echo $add_people;
         //2ri
         $Strtime2 = date('Y-m-d 00:00:00', strtotime("+1 day", strtotime($Strtime)));
         $Endtime2 = date('Y-m-d 23:59:59', strtotime("+1 day", strtotime($Strtime)));
-        $todaypeople = D('sign')->where("start_time>='$Strtime2' and start_time<='$Endtime2'")->group('game_user_id')->select();
-        $lastpeople = M('user')->where("register_time>='$Strtime' and register_time<='$Endtime'")->group('game_user_id')->select();
-        $liucun = array_intersect(array_column($todaypeople, 'game_user_id'), array_column($lastpeople, 'game_user_id'));
+        $todaypeople = D('sign')->where("start_time>='$Strtime2' and start_time<='$Endtime2'")->group('user_id')->select();
+        $lastpeople = M('user')->where("register_time>='$Strtime' and register_time<='$Endtime'")->group('game_id')->select();
+        $liucun = array_intersect(array_column($todaypeople, 'user_id'), array_column($lastpeople, 'game_id'));
         $save_people = count($liucun);
         $saves = round($save_people / $add_people, 4) * 100;
 
         $this->assign("saves", $saves);
+
         $this->display();
 
     }

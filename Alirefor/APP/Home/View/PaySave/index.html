@@ -13,38 +13,30 @@
             付费留存用户趋势 <div style="clear: both;"></div>
         </div>
 
-        <!--<select style="margin-left: 0px; width: 10%;height: 1.5%" onchange="choice(1)" id="clothes" class="btn btn-default">
-            <option>...选择游戏服务器...</option>
-            <volist name="clostu" id="vo">
-                <eq name="vo.db_id" value="$db_id">
-                    <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
-                    <else/>
-                    <option value="{$vo.db_id}">{$vo.clothes}</option>
-                </eq>
-            </volist>
-        </select>-->从<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
-        到<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="etime" value="{$etime}">
-
-        <!--
-                <div class="col-lg-10" style="width: 11%">
-                    <div class="form-group">
-                       <select id="maxOption2" class="selectpicker show-menu-arrow form-control" multiple >
-                            <volist name="Souarr" id="vo">
-                                <option value="{$vo.cid}">{$vo.name}</option>
-                            </volist>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="radio" style="float: left">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked>时间
-                    </label>
-
-                </div>
-        -->
-        <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
-        <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button>
+       <div class="row">
+        <div class="col-sm-6">
+            <div class="dataTables_length" id="dataTables-example_length">
+                <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                        class="btn btn-default">
+                    <option>...选择游戏服务器...</option>
+                    <option value="0">全服</option>
+                    <volist name="clostu" id="vo">
+                        <eq name="vo.db_id" value="$db_id">
+                            <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                            <else/>
+                            <option value="{$vo.db_id}">{$vo.clothes}</option>
+                        </eq>
+                    </volist>
+                </select>从<input class="btn btn-default"
+                                 onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"
+                                 id="stime" value="{$stime}">
+                到<input class="btn btn-default"
+                        onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="etime"
+                        value="{$etime}">
+                <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
+            </div>
+        </div>
+    </div>
 
 
 

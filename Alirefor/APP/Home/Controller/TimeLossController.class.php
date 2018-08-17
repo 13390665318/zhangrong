@@ -22,18 +22,11 @@ class TimeLossController extends  BaseController
         $clostu=D("db")->where("game_id=$game_id")->order("db_id asc")->select();
         $this->assign("clostu",$clostu);
         // 图标 默认 最新服
-       if(isset($_GET["db_id"])){
-            $db_id=I("get.db_id");
-            $_SESSION["db_id"]=$db_id;
-        }else{
-            if(isset($_SESSION["db_id"])){
-                
-                $db_id= $_SESSION["db_id"];
-            }else{
-                $db_id=$clostu[0]["db_id"];
-                $_SESSION["db_id"]=$db_id;
-            }
-
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
+        } else {
+            $db_id = $_SESSION['db_id'];
         }
         $this->assign("db_id",$db_id);
       //  $_GET["time"]="2017-06-08";

@@ -13,19 +13,20 @@ class PayMoneyController extends BaseController
 {
     public function index(){
         $game_id = 2;
-        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+        $clostu = D("db")->order("db_id desc")->select();
         $this->assign("clostu", $clostu);
 
         // 图标 默认 最新服
         if (isset($_GET["db_id"])) {
-            $db_id = I("get.db_id");
-            $_SESSION["db_id"] = $db_id;
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
         } else {
-            $db_id = $clostu[0]["db_id"];
-            $_SESSION["db_id"] = $db_id;
+            $db_id = $_SESSION['db_id'];
+        }
+        if($db_id!=0){
+            $ru['db_id']=$db_id;
         }
         $nowtime = date("Y-m-d H:i:s", time());
-        $this->assign("db_id", $db_id);
         if (isset($_GET["stime"]) && isset($_GET["etime"])) {
             $stime = I("get.stime");
             $etime = I("get.etime");
@@ -70,17 +71,18 @@ class PayMoneyController extends BaseController
     }
     public function index2(){
         $game_id = 2;
-        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+        $clostu = D("db")->order("db_id desc")->select();
         $this->assign("clostu", $clostu);
         if (isset($_GET["db_id"])) {
-            $db_id = I("get.db_id");
-            $_SESSION["db_id"] = $db_id;
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
         } else {
-            $db_id = $clostu[0]["db_id"];
-            $_SESSION["db_id"] = $db_id;
+            $db_id = $_SESSION['db_id'];
+        }
+        if($db_id!=0){
+            $ru['db_id']=$db_id;
         }
         $nowtime = date("Y-m-d H:i:s", time());
-        $this->assign("db_id", $db_id);
         if (isset($_GET["stime"]) && isset($_GET["etime"])) {
             $stime = I("get.stime");
             $etime = I("get.etime");

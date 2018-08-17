@@ -14,7 +14,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">系统管理</h1>
+            <h1 class="page-header">区服管理</h1>
         </div>
     </div>
     <div class="panel panel-default">
@@ -34,60 +34,21 @@
                         <table class="table table-striped  table-bordered table-hover dataTable " id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;" width="100%">
                             <thead>
                             <tr>
-                                <td colspan="17" align="left">从<input type="text" id="begin">区-<input type="text" id="end">区进行维护<input type="button" value="确定" onclick="weihu(-1)"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="17" align="left">从<input type="text" id="begins">区-<input type="text" id="ends">区解除维护<input type="button" value="确定" onclick="weihu(1)"></td>
-                            </tr>
-                            <tr>
                             <td><p style="font-size:9px">全选</p><input type="checkbox" name="" id="" value=""  onclick="selectAll()" style="width: 20px; height: 55px;padding: 0 5px 0 0;"/></td>
-                            <td>序号</td>
-                            <td>游戏名称</td>
-                            <td>区/服号</td>
-                            <td>区/服名称</td>
-                            <td>本地数据库名称</td>
-                            <!--    <td>外接数据库名称</td>
-                                <td>外接数据库地址</td>
-                                <td>外接数据库端口号</td>
-
-                                <td>外接数据库用户</td>
-                                <td>外接数据库密码</td>
-                                <td>ip</td>-->
-                            <td>是否推荐</td>
-                            <td>端口</td>
-                            <td>状态</td>
+                            <td>游戏名</td>
+                            <td>区号</td>
+                            <td>服务器名</td>
                             <td>开服时间</td>
-                            <td>增加时间</td>
                             </tr>
                             </thead>
                             <tbody id="ad">
                             <volist name="list" id="vo">
                                 <tr>
                                     <td><input type="checkbox" name="num"  value="{$vo.db_id}" style="width: 20px; height: 55px;padding: 0 5px 0 0;" /></td>
+                                    <td>寻龙记</td>
                                     <td>{$vo.db_id}</td>
-                                    <td>{$vo.game_name}</td>
-                                    <td>{$vo.clothes_num}</td>
                                     <td>{$vo.clothes}</td>
-                                    <td>{$vo.localhost_db_name}</td>
-                                    <!--  <td>{$vo.game_db_name}</td>
-                                      <td>{$vo.game_db_host}</td>
-                                      <td>{$vo.game_db_port}</td>
-                                      <td>{$vo.game_db_user}</td>
-                                      <td>{$vo.game_db_pwd}</td>
-                                      <td>{$vo.ip}</td>-->
-                                    <td><if condition="$vo.type eq 1">
-                                        是<else/>否</if></td>
-                                    <td>{$vo.db_port}</td>
-                                    <td><if condition="$vo.status eq 1">
-                                        火爆
-                                        <elseif condition="$vo.status eq 0"/>
-                                        维护中
-                                        <else/>
-                                        新服
-                                    </if></td>
                                     <td>{$vo.start_time}</td>
-                                    <td>{$vo.time}</td>
-
                                 </tr>
                             </volist>
                         </table>
@@ -149,18 +110,18 @@
 
     function selectAll(){
         var a = document.getElementsByTagName("input");
-        if(a[1].checked){
+        if(a[0].checked){
             for(var i = 1;i<a.length;i++){
                 if(a[i].type == "checkbox")
                 {
-                    a[i].checked = false;
+                    a[i].checked = true;
                 }
             }
         }else{
             for(var i = 1;i<a.length;i++){
                 if(a[i].type == "checkbox")
                 {
-                    a[i].checked = true;
+                    a[i].checked = false;
                 }
             }
         }
@@ -180,7 +141,7 @@
         if(ids==""){
             alert("你还没有选择任何内容！")
         }else{
-            location.href=url+"index.php?m=Home&c=Clothes&a=edit&edit&id="+ids;
+            location.href="index.php?m=Home&c=Clothes&a=edit&edit&id="+ids;
         }
     }
 

@@ -18,23 +18,28 @@
             <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
-                                    class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
-                                <volist name="clostu" id="vo">
-                                    <eq name="vo.db_id" value="$db_id">
-                                        <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
-                                        <else/>
-                                        <option value="{$vo.db_id}">{$vo.clothes}</option>
-                                    </eq>
-                                </volist>
-                            </select>-->从<input class="btn btn-default"
-                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
-                                             id="start_time" value="{$Stime}">
-                            到<input class="btn btn-default"
-                                    onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time"
-                                    value="{$Etime}">
+                        <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                                class="btn btn-default">
+                            <option>..选服务器..</option>
+                            <option value="0">全服</option>
+                            <volist name="clostu" id="vo">
+                                <eq name="vo.db_id" value="$db_id">
+                                    <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                                    <else/>
+                                    <option value="{$vo.db_id}">{$vo.clothes}</option>
+                                </eq>
+                            </volist>
+                        </select>&nbsp&nbsp&nbsp<label>选择日志时间</label>&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                                                           onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                                                           id="start_time" value="{$Stime}">
+                        &nbsp&nbsp至&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                               onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                               id="end_time" value="{$Etime}">
+                        &nbsp&nbsp&nbsp
+                        <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                            <i class="fa fa-search"></i>搜索
+                        </button>
+                        <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button><font color="red">（导出最大数量不得超过2万条）</font>
                         </div>
                     </div>
                 </div>
@@ -44,22 +49,33 @@
                         <div class="dataTables_length" id="dataTables-example_length">
                             <label>玩家ID:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_id" type="text" placeholder="请输入玩家ID">
+                                    <input class="form-control" id="game_user_id" type="text" value="{$role_id}" placeholder="请输入玩家ID">
                                 </div>
                             </label>
                             <label>角色名称:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_name" type="text" placeholder="请输入角色名称">
+                                    <input class="form-control" id="game_user_name" type="text" value="{$role_name}" placeholder="请输入角色名称">
                                 </div>
                             </label>
                             <label>来源:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="resource" type="text" placeholder="请输入来源">
+                                    <input class="form-control" id="resource" type="text" value="{$currency_reason}" placeholder="请输入来源">
                                 </div>
                             </label>
-                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
-                                <i class="fa fa-search"></i>搜索
-                            </button>
+                            <label>资源:
+                                <div class="form-group input-group">
+                                    <input class="form-control" id="resource2" type="text" value="{$resource2}" placeholder="请输入来源">
+                                </div>
+                            </label>
+                            <label>方式</label>
+                            <select style="margin-left: 0px; width: 10%;"  id="method"
+                                    class="btn btn-default" autocomplete="off">
+                                <option value="0" <if condition ="$value eq '0'">selected</if>>...请选择...</option>
+                                <option value="1" <if condition ="$value eq '1'">selected</if>>产出</option>
+                                <option value="-1" <if condition ="$value eq '-1'">selected</if>>消耗</option>
+                            </select>
+
+
                         </div>
                     </div>
                 </div>
@@ -85,11 +101,15 @@
                                     <td>{$ko.role_id}</td>
                                     <td>{$ko.role_name}</td>
                                     <td>{$ko.currency_reason}</td>
-                                    <td>{$ko.currency}</td>
+                                    <td><if condition="$ko.value eq 1">
+                                        {$ko.currency_get.0.MoneyTypes}
+                                    <else/>
+                                        {$ko.currency_use.0.MoneyTypes}
+                                    </if></td>
                                     <td><if condition="$ko.value eq 1"><font color="green">产出</font>
-                                        <td><font color="green">{$ko.get_num}</font></td>
+                                        <td><font color="green">{$ko.currency_get.0.count}</font></td>
                                         <else/><font color="red">消耗</font>
-                                        <td><font color="red">{$ko.use_num}</font></td>
+                                        <td><font color="red">{$ko.currency_use.0.count}</font></td>
                                     </if></td>
                                 </tr>
                             </volist>
@@ -121,19 +141,25 @@
         var game_user_name = $("#game_user_name").val();
         var goods_name = $("#type").val();
         var resource=$("#resource").val();
+        var resource2=$("#resource2").val();
+        var method=$("#method").val();
         if(clothes=="...选择游戏服务器..."){
             alert("请选择游戏服务器");
             return
         }else{
-            location.href = "index.php?m=Home&c=Resources&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&resource="+resource;
+            location.href = "index.php?m=Home&c=Resources&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&resource="+resource+"&method="+method+'&db_id='+clothes+"&resource2="+resource2;
         }
     }
     function exl(){
         var clothes=$("#clothes").val();
-        var start_time=$("#start_time").val();
-        var value=$("#value").val();
-        location.href=url+"index.php?m=Home&c=Resources&a=exl&db_id="+clothes+"&start_time="+start_time+"&value="+value;
-
+        var start_time = $("#start_time").val();
+        var end_time = $("#end_time").val();
+        var game_user_id = $("#game_user_id").val();
+        var game_user_name = $("#game_user_name").val();
+        var goods_name = $("#type").val();
+        var resource=$("#resource").val();
+        var method=$("#method").val();
+        location.href = "index.php?m=Home&c=Resources&a=exl&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&resource="+resource+"&method="+method+'&db_id='+clothes;
     }
 </script>
 <script>

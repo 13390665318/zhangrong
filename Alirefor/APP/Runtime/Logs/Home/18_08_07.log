@@ -1,0 +1,1523 @@
+[ 2018-08-07T11:05:49+09:00 ] ::1 /index.php?m=Home&c=Resources&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002392s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0348s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218 or  id = 219  ) ORDER BY id  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Resources/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 47 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 53 行.
+NOTIC: [8] Undefined index: resource E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 58 行.
+NOTIC: [8] Undefined index: resource2 E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 64 行.
+NOTIC: [8] Undefined index: method E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE ( `LogTime` > '2018-08-07 09:05:49' AND `LogTime` < '2018-08-07 11:05:49'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `currency` WHERE ( `LogTime` > '2018-08-07 09:05:49' AND `LogTime` < '2018-08-07 11:05:49'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 167 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 172 行.
+NOTIC: [8] Undefined variable: currency_reason E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 177 行.
+NOTIC: [8] Undefined variable: resource2 E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 182 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 188 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 189 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2018-08-07T15:42:18+09:00 ] ::1 /index.php?m=Home&c=Resources&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.018962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019568s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Resources/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 47 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 53 行.
+NOTIC: [8] Undefined index: resource E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 58 行.
+NOTIC: [8] Undefined index: resource2 E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 64 行.
+NOTIC: [8] Undefined index: method E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0137s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE ( `LogTime` > '2018-08-07 13:42:18' AND `LogTime` < '2018-08-07 15:42:18'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `currency` WHERE ( `LogTime` > '2018-08-07 13:42:18' AND `LogTime` < '2018-08-07 15:42:18'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 167 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 172 行.
+NOTIC: [8] Undefined variable: currency_reason E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 177 行.
+NOTIC: [8] Undefined variable: resource2 E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 182 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 188 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 189 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000664s ]
+
+[ 2018-08-07T16:57:04+09:00 ] ::1 /index.php?m=Home&c=Resources&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002366s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0028s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Resources/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 47 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 53 行.
+NOTIC: [8] Undefined index: resource E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 58 行.
+NOTIC: [8] Undefined index: resource2 E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 64 行.
+NOTIC: [8] Undefined index: method E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE ( `LogTime` > '2018-08-07 14:57:04' AND `LogTime` < '2018-08-07 16:57:04'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `currency` WHERE ( `LogTime` > '2018-08-07 14:57:04' AND `LogTime` < '2018-08-07 16:57:04'  ) LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 167 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 172 行.
+NOTIC: [8] Undefined variable: currency_reason E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 177 行.
+NOTIC: [8] Undefined variable: resource2 E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 182 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 188 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 189 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011817s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2018-08-07T18:03:32+09:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.036825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037520s ]
+
+[ 2018-08-07T17:03:32+08:00 ] ::1 /index.php?m=Home&c=Login&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001984s ]
+SQL: SHOW COLUMNS FROM `log` [ RunTime:0.0742s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.023019s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.023147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.112493s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008970s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009056s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001875s ]
+
+[ 2018-08-07T17:03:34+08:00 ] ::1 /index.php?m=Home&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002036s ]
+SQL: SHOW COLUMNS FROM `log` [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `log` [ RunTime:0.0108s ]
+SQL: INSERT INTO `log` (`name`,`ip`,`time`) VALUES ('admin','0.0.0.0','2018-08-07 17:03:34') [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021662s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021699s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2018-08-07T18:03:36+09:00 ] ::1 /index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003064s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0032s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `db`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `pay` [ RunTime:0.0249s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-08-07 00:00:00' and pay_time<='2018-08-07 23:59:59' ) GROUP BY user_id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-08-07 00:00:00' and pay_time<='2018-08-07 23:59:59' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0339s ]
+SQL: SELECT * FROM `user` GROUP BY game_id HAVING register_time>='2018-08-07 00:00:00' and register_time<='2018-08-07 23:59:59'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sign` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-08-07 00:00:00' and start_time<='2018-08-07 23:59:59' ) GROUP BY user_id  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-08-06 00:00:00' and pay_time<='2018-08-06 23:59:59' ) GROUP BY user_id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-08-06 00:00:00' and pay_time<='2018-08-06 23:59:59' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` GROUP BY game_id HAVING register_time>='2018-08-06 00:00:00' and register_time<='2018-08-06 23:59:59'  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-08-06 00:00:00' and start_time<='2018-08-06 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-08-05 00:00:00' and pay_time<='2018-08-05 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-08-05 00:00:00' and pay_time<='2018-08-05 23:59:59' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` GROUP BY game_id HAVING register_time>='2018-08-05 00:00:00' and register_time<='2018-08-05 23:59:59'  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-08-05 00:00:00' and start_time<='2018-08-05 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-08-04 00:00:00' and pay_time<='2018-08-04 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-08-04 00:00:00' and pay_time<='2018-08-04 23:59:59' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` GROUP BY game_id HAVING register_time>='2018-08-04 00:00:00' and register_time<='2018-08-04 23:59:59'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-08-04 00:00:00' and start_time<='2018-08-04 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-08-03 00:00:00' and pay_time<='2018-08-03 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-08-03 00:00:00' and pay_time<='2018-08-03 23:59:59' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` GROUP BY game_id HAVING register_time>='2018-08-03 00:00:00' and register_time<='2018-08-03 23:59:59'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-08-03 00:00:00' and start_time<='2018-08-03 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-08-02 00:00:00' and pay_time<='2018-08-02 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-08-02 00:00:00' and pay_time<='2018-08-02 23:59:59' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` GROUP BY game_id HAVING register_time>='2018-08-02 00:00:00' and register_time<='2018-08-02 23:59:59'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-08-02 00:00:00' and start_time<='2018-08-02 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `pay` WHERE ( pay_time>='2018-08-01 00:00:00' and pay_time<='2018-08-01 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-08-01 00:00:00' and pay_time<='2018-08-01 23:59:59' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` GROUP BY game_id HAVING register_time>='2018-08-01 00:00:00' and register_time<='2018-08-01 23:59:59'  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-08-01 00:00:00' and start_time<='2018-08-01 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `period` [ RunTime:0.0126s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='00:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='00:00')  GROUP BY db_id) as a [ RunTime:0.0012s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='00:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='00:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '00:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '00:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '00:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '00:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '00:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '00:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='01:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='01:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='01:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='01:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '01:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '01:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '01:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '01:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '01:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '01:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='02:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='02:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='02:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='02:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '02:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '02:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '02:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '02:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '02:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '02:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='03:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='03:00')  GROUP BY db_id) as a [ RunTime:0.0004s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='03:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='03:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '03:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '03:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '03:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '03:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '03:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '03:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='04:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='04:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='04:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='04:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '04:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '04:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '04:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '04:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '04:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '04:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='05:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='05:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='05:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='05:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '05:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '05:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '05:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '05:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '05:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '05:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='06:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='06:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='06:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='06:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '06:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '06:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '06:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '06:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '06:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '06:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='07:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='07:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='07:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='07:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '07:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '07:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '07:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '07:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '07:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '07:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='08:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='08:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='08:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='08:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '08:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '08:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '08:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '08:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '08:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '08:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='09:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='09:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='09:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='09:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '09:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '09:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '09:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '09:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '09:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '09:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='10:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='10:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='10:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='10:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '10:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '10:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '10:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '10:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '10:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '10:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='11:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='11:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='11:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='11:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '11:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '11:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '11:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '11:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '11:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '11:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='12:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='12:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='12:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='12:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '12:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '12:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '12:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '12:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '12:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '12:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='13:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='13:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='13:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='13:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '13:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '13:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '13:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '13:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '13:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '13:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='14:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='14:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='14:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='14:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '14:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '14:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '14:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '14:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '14:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '14:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='15:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='15:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='15:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='15:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '15:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '15:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '15:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '15:00')  GROUP BY db_id) as a [ RunTime:0.0004s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '15:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '15:00')  GROUP BY db_id) as a [ RunTime:0.0004s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='16:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='16:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='16:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='16:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '16:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '16:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '16:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '16:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '16:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '16:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='17:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='17:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='17:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='17:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '17:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '17:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '17:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '17:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '17:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '17:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='18:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='18:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='18:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='18:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '18:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '18:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '18:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '18:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '18:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '18:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='19:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='19:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='19:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='19:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '19:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '19:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '19:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '19:00')  GROUP BY db_id) as a [ RunTime:0.0004s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '19:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '19:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='20:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='20:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='20:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='20:00')  GROUP BY db_id) as a [ RunTime:0.0004s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '20:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '20:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '20:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '20:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '20:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '20:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='21:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='21:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='21:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='21:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '21:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '21:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '21:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '21:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '21:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '21:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='22:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='22:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='22:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='22:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '22:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '22:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '22:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '22:00')  GROUP BY db_id) as a [ RunTime:0.0004s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '22:00' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '22:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-07' and f_time='23:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-07' and f_time='23:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-06' and f_time ='23:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-06' and f_time ='23:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-05' and f_time = '23:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-05' and f_time = '23:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE (  time='2018-08-03' and f_time = '23:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-03' and f_time = '23:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `period` WHERE ( time='2018-08-01' and f_time = '23:00' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select sum(a.num) as o from(SELECT * FROM `period` where(time='2018-08-01' and f_time = '23:00')  GROUP BY db_id) as a [ RunTime:0.0003s ]
+SQL: SELECT `LogTime` FROM `period` WHERE ( time='2018-08-07 ' ) ORDER BY f_time desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0120s ]
+SQL: SELECT `db_id` FROM `db`  [ RunTime:0.0002s ]
+SQL: SELECT `LogTime`,`num` FROM `period` WHERE ( LogTime='2018-08-07 18:02:00'and db_id='1' ) GROUP BY db_id ORDER BY LogTime desc  [ RunTime:0.0002s ]
+SQL: SELECT `LogTime`,`num` FROM `period` WHERE ( db_id='1' ) ORDER BY LogTime desc LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 191 行.
+SQL: SELECT `LogTime`,`num` FROM `period` WHERE ( LogTime='2018-08-07 18:02:00'and db_id='2' ) GROUP BY db_id ORDER BY LogTime desc  [ RunTime:0.0002s ]
+SQL: SELECT `LogTime`,`num` FROM `period` WHERE ( db_id='2' ) ORDER BY LogTime desc LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 191 行.
+SQL: SELECT `LogTime`,`num` FROM `period` WHERE ( LogTime='2018-08-07 18:02:00'and db_id='3' ) GROUP BY db_id ORDER BY LogTime desc  [ RunTime:0.0002s ]
+SQL: SELECT `LogTime`,`num` FROM `period` WHERE ( db_id='3' ) ORDER BY LogTime desc LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 191 行.
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `user` GROUP BY game_id  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 271 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant pay_number - assumed 'pay_number' E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SELECT SUM(pay_number) AS tp_sum FROM `pay` WHERE ( pay_time>='2018-08-07 00:00:00' and pay_time<='2018-08-07 23:59:59' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `user_id` FROM `pay` WHERE ( pay_time>='2018-08-07 00:00:00' and pay_time<='2018-08-07 23:59:59' ) GROUP BY user_id  [ RunTime:0.0001s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 278 行.
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 279 行.
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 280 行.
+SQL: SELECT * FROM `user` GROUP BY game_id HAVING register_time>='2018-08-06 00:00:00' and register_time<='2018-08-06 23:59:59'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sign` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `sign` WHERE ( start_time>='2018-08-07 00:00:00' and start_time<='2018-08-07 23:59:59' ) GROUP BY user_id  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `user` WHERE ( register_time>='2018-08-06 00:00:00' and register_time<='2018-08-06 23:59:59' ) GROUP BY game_id  [ RunTime:0.0002s ]
+NOTIC: [2] Division by zero E:\Alirefor\APP\Home\Controller\IndexController.class.php 第 305 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 96 行.
+NOTIC: [8] Undefined variable: id E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 101 行.
+NOTIC: [8] Undefined variable: num E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 131 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 157 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 157 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 157 行.
+NOTIC: [8] Undefined variable: data E:\Alirefor\APP\Runtime\Cache\Home\a59b5e3d0bfe1e0eebc9ef04a084f7b9.php 第 259 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2018-08-07T18:03:45+09:00 ] ::1 /index.php?m=Home&c=Resources&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001853s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0019s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Resources/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 47 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 53 行.
+NOTIC: [8] Undefined index: resource E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 58 行.
+NOTIC: [8] Undefined index: resource2 E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 64 行.
+NOTIC: [8] Undefined index: method E:\Alirefor\APP\Home\Controller\ResourcesController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE ( `LogTime` > '2018-08-07 16:03:45' AND `LogTime` < '2018-08-07 18:03:45'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `currency` WHERE ( `LogTime` > '2018-08-07 16:03:45' AND `LogTime` < '2018-08-07 18:03:45'  ) LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 167 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 172 行.
+NOTIC: [8] Undefined variable: currency_reason E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 177 行.
+NOTIC: [8] Undefined variable: resource2 E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 182 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 188 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 189 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\eef8a9d7aaa8655021cd0b53745f72ef.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2018-08-07T18:04:01+09:00 ] ::1 /index.php?m=Home&c=Mapchange&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002025s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0019s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Mapchange/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\MapchangeController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\MapchangeController.class.php 第 49 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\MapchangeController.class.php 第 55 行.
+NOTIC: [8] Undefined index: fubenid E:\Alirefor\APP\Home\Controller\MapchangeController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `mapchange` [ RunTime:0.1041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mapchange` WHERE ( `LogTime` > '2018-08-07 16:04:00' AND `LogTime` < '2018-08-07 18:04:00'  ) LIMIT 1   [ RunTime:0.0127s ]
+SQL: SELECT * FROM `mapchange` WHERE ( `LogTime` > '2018-08-07 16:04:00' AND `LogTime` < '2018-08-07 18:04:00'  ) LIMIT 0,20   [ RunTime:0.0065s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\ce1f513db5f1ed0fcec74ec9472d1ba5.php 第 166 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\ce1f513db5f1ed0fcec74ec9472d1ba5.php 第 171 行.
+NOTIC: [8] Undefined variable: fuben_id E:\Alirefor\APP\Runtime\Cache\Home\ce1f513db5f1ed0fcec74ec9472d1ba5.php 第 176 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\ce1f513db5f1ed0fcec74ec9472d1ba5.php 第 251 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\ce1f513db5f1ed0fcec74ec9472d1ba5.php 第 264 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\ce1f513db5f1ed0fcec74ec9472d1ba5.php 第 278 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031233s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2018-08-07T18:04:05+09:00 ] ::1 /index.php?m=Home&c=Prop&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001987s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Prop/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\PropController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\PropController.class.php 第 47 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\PropController.class.php 第 52 行.
+NOTIC: [8] Undefined index: goods_name E:\Alirefor\APP\Home\Controller\PropController.class.php 第 57 行.
+NOTIC: [8] Undefined index: cause E:\Alirefor\APP\Home\Controller\PropController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `backpack` [ RunTime:0.0486s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `backpack` WHERE ( `LogTime` > '2018-08-07 16:04:05' AND `LogTime` < '2018-08-07 18:04:05'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM backpack a left join prop b on b.ID=a.prop  WHERE ( `LogTime` > '2018-08-07 16:04:05' AND `LogTime` < '2018-08-07 18:04:05'  ) LIMIT 0,25   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+NOTIC: [8] Undefined variable: prop E:\Alirefor\APP\Runtime\Cache\Home\4a23ad6b3ae29ea6777e2298938159f1.php 第 165 行.
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\4a23ad6b3ae29ea6777e2298938159f1.php 第 168 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\4a23ad6b3ae29ea6777e2298938159f1.php 第 171 行.
+NOTIC: [8] Undefined variable: item_reason E:\Alirefor\APP\Runtime\Cache\Home\4a23ad6b3ae29ea6777e2298938159f1.php 第 174 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\4a23ad6b3ae29ea6777e2298938159f1.php 第 232 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\4a23ad6b3ae29ea6777e2298938159f1.php 第 245 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\4a23ad6b3ae29ea6777e2298938159f1.php 第 259 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2018-08-07T18:04:08+09:00 ] ::1 /index.php?m=Home&c=Checkpoints&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001807s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0019s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Checkpoints/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\CheckpointsController.class.php 第 24 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\CheckpointsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\CheckpointsController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `treasure` [ RunTime:0.0396s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `treasure` WHERE ( `LogTime` > '2018-08-07 16:04:08' AND `LogTime` < '2018-08-07 18:04:08'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `treasure` WHERE ( `LogTime` > '2018-08-07 16:04:08' AND `LogTime` < '2018-08-07 18:04:08'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.021914s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.021960s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\eb37219199dce109754cd322b732f6f2.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\eb37219199dce109754cd322b732f6f2.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001718s ]
+
+[ 2018-08-07T18:05:42+09:00 ] ::1 /index.php?m=Home&c=Checkpoints&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002219s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0122s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0019s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Checkpoints/index' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\CheckpointsController.class.php 第 24 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\CheckpointsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\CheckpointsController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `treasure` [ RunTime:0.0102s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `treasure` WHERE ( `LogTime` > '2018-08-07 16:05:42' AND `LogTime` < '2018-08-07 18:05:42'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `treasure` WHERE ( `LogTime` > '2018-08-07 16:05:42' AND `LogTime` < '2018-08-07 18:05:42'  ) LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\eb37219199dce109754cd322b732f6f2.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\eb37219199dce109754cd322b732f6f2.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000751s ]
+
+[ 2018-08-07T18:05:43+09:00 ] ::1 /index.php?m=Home&c=Winglog&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001802s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Winglog/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `winglog` [ RunTime:0.0378s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:05:43' AND `LogTime` < '2018-08-07 18:05:43'  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:05:43' AND `LogTime` < '2018-08-07 18:05:43'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030990s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2018-08-07T18:07:13+09:00 ] ::1 /index.php?m=Home&c=Winglog&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001975s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0021s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Winglog/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `winglog` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:07:13' AND `LogTime` < '2018-08-07 18:07:13'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:07:13' AND `LogTime` < '2018-08-07 18:07:13'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009351s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009383s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2018-08-07T18:08:11+09:00 ] ::1 /index.php?m=Home&c=Roleexp&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002080s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Roleexp/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 52 行.
+NOTIC: [8] Undefined index: level E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `roleexp` [ RunTime:0.0316s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `roleexp` WHERE ( `LogTime` > '2018-08-07 16:08:11' AND `LogTime` < '2018-08-07 18:08:11'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `roleexp` WHERE ( `LogTime` > '2018-08-07 16:08:11' AND `LogTime` < '2018-08-07 18:08:11'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\8b61b2f218cb5ae4d206890cbd388f96.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\8b61b2f218cb5ae4d206890cbd388f96.php 第 177 行.
+NOTIC: [8] Undefined variable: check E:\Alirefor\APP\Runtime\Cache\Home\8b61b2f218cb5ae4d206890cbd388f96.php 第 183 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029861s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2018-08-07T18:09:17+09:00 ] ::1 /index.php?m=Home&c=Checkpoints&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001850s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0021s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Checkpoints/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\CheckpointsController.class.php 第 24 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\CheckpointsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\CheckpointsController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `treasure` [ RunTime:0.0108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `treasure` WHERE ( `LogTime` > '2018-08-07 16:09:17' AND `LogTime` < '2018-08-07 18:09:17'  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `treasure` WHERE ( `LogTime` > '2018-08-07 16:09:17' AND `LogTime` < '2018-08-07 18:09:17'  ) LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\eb37219199dce109754cd322b732f6f2.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\eb37219199dce109754cd322b732f6f2.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2018-08-07T18:09:24+09:00 ] ::1 /index.php?m=Home&c=Winglog&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001988s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Winglog/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `winglog` [ RunTime:0.0099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:09:24' AND `LogTime` < '2018-08-07 18:09:24'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:09:24' AND `LogTime` < '2018-08-07 18:09:24'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008933s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2018-08-07T18:15:34+09:00 ] ::1 /index.php?m=Home&c=Winglog&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002282s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0154s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0157s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0025s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Winglog/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `winglog` [ RunTime:0.0099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:15:34' AND `LogTime` < '2018-08-07 18:15:34'  ) LIMIT 1   [ RunTime:0.0603s ]
+SQL: SELECT * FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:15:34' AND `LogTime` < '2018-08-07 18:15:34'  ) LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000657s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000697s ]
+
+[ 2018-08-07T18:15:43+09:00 ] ::1 /index.php?m=Home&c=Winglog&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001840s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Winglog/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\WinglogController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `winglog` [ RunTime:0.0098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:15:43' AND `LogTime` < '2018-08-07 18:15:43'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `winglog` WHERE ( `LogTime` > '2018-08-07 16:15:43' AND `LogTime` < '2018-08-07 18:15:43'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\2bb145b28d894c7d53f73eaf1e44b8ef.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2018-08-07T18:15:44+09:00 ] ::1 /index.php?m=Home&c=Roleexp&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001811s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Roleexp/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 52 行.
+NOTIC: [8] Undefined index: level E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `roleexp` [ RunTime:0.0096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `roleexp` WHERE ( `LogTime` > '2018-08-07 16:15:44' AND `LogTime` < '2018-08-07 18:15:44'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `roleexp` WHERE ( `LogTime` > '2018-08-07 16:15:44' AND `LogTime` < '2018-08-07 18:15:44'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\8b61b2f218cb5ae4d206890cbd388f96.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\8b61b2f218cb5ae4d206890cbd388f96.php 第 177 行.
+NOTIC: [8] Undefined variable: check E:\Alirefor\APP\Runtime\Cache\Home\8b61b2f218cb5ae4d206890cbd388f96.php 第 183 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000623s ]
+
+[ 2018-08-07T18:16:03+09:00 ] ::1 /index.php?m=Home&c=Roleexp&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001950s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Roleexp/index' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 46 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 52 行.
+NOTIC: [8] Undefined index: level E:\Alirefor\APP\Home\Controller\RoleexpController.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `roleexp` [ RunTime:0.0097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `roleexp` WHERE ( `LogTime` > '2018-08-07 16:16:03' AND `LogTime` < '2018-08-07 18:16:03'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `roleexp` WHERE ( `LogTime` > '2018-08-07 16:16:03' AND `LogTime` < '2018-08-07 18:16:03'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\8b61b2f218cb5ae4d206890cbd388f96.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\8b61b2f218cb5ae4d206890cbd388f96.php 第 177 行.
+NOTIC: [8] Undefined variable: check E:\Alirefor\APP\Runtime\Cache\Home\8b61b2f218cb5ae4d206890cbd388f96.php 第 183 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011425s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000776s ]
+
+[ 2018-08-07T18:16:26+09:00 ] ::1 /index.php?m=Home&c=Emaillog&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001763s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Emaillog/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\EmaillogController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\EmaillogController.class.php 第 44 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\EmaillogController.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `emaillog` [ RunTime:0.0339s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `emaillog` WHERE ( `LogTime` > '2018-08-07 16:16:26' AND `LogTime` < '2018-08-07 18:16:26'  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `emaillog` WHERE ( `LogTime` > '2018-08-07 16:16:26' AND `LogTime` < '2018-08-07 18:16:26'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 166 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 171 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 234 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 251 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2018-08-07T18:17:19+09:00 ] ::1 /index.php?m=Home&c=Emaillog&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001895s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0132s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Emaillog/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\EmaillogController.class.php 第 25 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\EmaillogController.class.php 第 44 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\EmaillogController.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `emaillog` [ RunTime:0.0096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `emaillog` WHERE ( `LogTime` > '2018-08-07 16:17:19' AND `LogTime` < '2018-08-07 18:17:19'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `emaillog` WHERE ( `LogTime` > '2018-08-07 16:17:19' AND `LogTime` < '2018-08-07 18:17:19'  ) LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 166 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 171 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 234 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 251 行.
+NOTIC: [8] Undefined variable: value E:\Alirefor\APP\Runtime\Cache\Home\f194aa98fce7e2c4fb461cd2383517ff.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009046s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2018-08-07T18:17:21+09:00 ] ::1 /index.php?m=Home&c=Union&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001833s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0386s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0209s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0215s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0042s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Union/index' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\UnionController.class.php 第 24 行.
+NOTIC: [8] Undefined index: union_id E:\Alirefor\APP\Home\Controller\UnionController.class.php 第 54 行.
+NOTIC: [8] Undefined index: union_name E:\Alirefor\APP\Home\Controller\UnionController.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `union` [ RunTime:0.0312s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `union` WHERE ( `LogTime` > '2018-08-07 16:17:20' AND `LogTime` < '2018-08-07 18:17:20'  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `union` WHERE ( `LogTime` > '2018-08-07 16:17:20' AND `LogTime` < '2018-08-07 18:17:20'  ) LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: union_id E:\Alirefor\APP\Runtime\Cache\Home\f08965289e0d2120395ef8d682b20e6c.php 第 171 行.
+NOTIC: [8] Undefined variable: union_name E:\Alirefor\APP\Runtime\Cache\Home\f08965289e0d2120395ef8d682b20e6c.php 第 176 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056373s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001590s ]
+
+[ 2018-08-07T18:19:33+09:00 ] ::1 /index.php?m=Home&c=Union&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002034s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Union/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\UnionController.class.php 第 24 行.
+NOTIC: [8] Undefined index: union_id E:\Alirefor\APP\Home\Controller\UnionController.class.php 第 54 行.
+NOTIC: [8] Undefined index: union_name E:\Alirefor\APP\Home\Controller\UnionController.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `union` [ RunTime:0.0098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `union` WHERE ( `LogTime` > '2018-08-07 16:19:33' AND `LogTime` < '2018-08-07 18:19:33'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `union` WHERE ( `LogTime` > '2018-08-07 16:19:33' AND `LogTime` < '2018-08-07 18:19:33'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined variable: union_id E:\Alirefor\APP\Runtime\Cache\Home\f08965289e0d2120395ef8d682b20e6c.php 第 171 行.
+NOTIC: [8] Undefined variable: union_name E:\Alirefor\APP\Runtime\Cache\Home\f08965289e0d2120395ef8d682b20e6c.php 第 176 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009936s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2018-08-07T18:23:39+09:00 ] ::1 /index.php?m=Home&c=Guide&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001975s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Guide/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\GuideController.class.php 第 24 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\GuideController.class.php 第 47 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\GuideController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `guide` [ RunTime:0.0375s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `guide` WHERE ( `LogTime` > '2018-08-07 16:23:39' AND `LogTime` < '2018-08-07 18:23:39'  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `guide` WHERE ( `LogTime` > '2018-08-07 16:23:39' AND `LogTime` < '2018-08-07 18:23:39'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000324s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000420s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\570fb4a1f0d5f0c35c326ef37076edba.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\570fb4a1f0d5f0c35c326ef37076edba.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046940s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2018-08-07T18:27:35+09:00 ] ::1 /index.php?m=Home&c=Equiplog&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001931s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\BaseController.class.php 第 34 行.
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Equiplog/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: db_id E:\Alirefor\APP\Home\Controller\EquiplogController.class.php 第 26 行.
+NOTIC: [8] Undefined index: game_user_id E:\Alirefor\APP\Home\Controller\EquiplogController.class.php 第 48 行.
+NOTIC: [8] Undefined index: game_user_name E:\Alirefor\APP\Home\Controller\EquiplogController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `equiplog` [ RunTime:0.0458s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `equiplog` WHERE ( `LogTime` > '2018-08-07 16:27:35' AND `LogTime` < '2018-08-07 18:27:35'  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `equiplog` WHERE ( `LogTime` > '2018-08-07 16:27:35' AND `LogTime` < '2018-08-07 18:27:35'  ) LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\6f04bef1a7475ee9e2ce429ff0d96ab8.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\6f04bef1a7475ee9e2ce429ff0d96ab8.php 第 177 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073372s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+

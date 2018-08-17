@@ -13,9 +13,10 @@
             活跃用户等级分布趋势 <div style="clear: both;"></div>
         </div>
 
-        <!--<select style="margin-left: 0px; width: 8%;" onchange="choice(1)" id="clothes"
+        <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
                 class="btn btn-default">
             <option>...选择游戏服务器...</option>
+            <option value="0">全服</option>
             <volist name="clostu" id="vo">
                 <eq name="vo.db_id" value="$db_id">
                     <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -23,7 +24,7 @@
                     <option value="{$vo.db_id}">{$vo.clothes}</option>
                 </eq>
             </volist>
-        </select>--><input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
+        </select><input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
         <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
         <hr>
         <div id="show" style="font-size: 18px">
@@ -204,7 +205,7 @@
 
         }
         //  var a={$Stime};
-        var maxN = eval("Math.max(" + stu.toString() + ")")+100;
+        var maxN = Math.ceil(eval("Math.max(" + stu.toString() + ")")*1.2);
         stu=stu.reverse();
         var data = [stu];
         var data_max = maxN; //Y轴最大刻度
@@ -225,7 +226,7 @@
 
     }
     //  var a={$Stime};
-    var maxN = eval("Math.max(" + stu.toString() + ")")+100;
+    var maxN =  Math.ceil(eval("Math.max(" + stu.toString() + ")")*1.2)+5;
     stu=stu.reverse();
     var data = [stu];
     var data_max = maxN; //Y轴最大刻度

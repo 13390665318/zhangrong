@@ -24,9 +24,10 @@ background: green;
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                            <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
                                     class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
+                                <option>..选服务器..</option>
+                                <option value="0">全服</option>
                                 <volist name="clostu" id="vo">
                                     <eq name="vo.db_id" value="$db_id">
                                         <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -34,12 +35,16 @@ background: green;
                                         <option value="{$vo.db_id}">{$vo.clothes}</option>
                                     </eq>
                                 </volist>
-                            </select>-->从<input class="btn btn-default"
-                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
-                                             id="start_time" value="{$Stime}">
-                            到<input class="btn btn-default"
-                                    onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time"
-                                    value="{$Etime}">
+                            </select>&nbsp&nbsp&nbsp<label>选择日志时间</label>&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                                                               onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                                                               id="start_time" value="{$Stime}">
+                            &nbsp&nbsp至&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                             id="end_time" value="{$Etime}">&nbsp&nbsp&nbsp
+                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                                <i class="fa fa-search"></i>搜索
+                            </button>
+                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button><font color="red">（导出最大数量不得超过2万条）</font>
                         </div>
                     </div>
                 </div>
@@ -49,17 +54,14 @@ background: green;
                         <div class="dataTables_length" id="dataTables-example_length">
                             <label>玩家ID:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_id" type="text" placeholder="玩家ID">
+                                    <input class="form-control" id="game_user_id" type="text" value="{$role_id}" placeholder="玩家ID">
                                 </div>
                             </label>
                             <label>角色名称:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_name" type="text" placeholder="角色名称">
+                                    <input class="form-control" id="game_user_name" type="text" value="{$role_name}" placeholder="角色名称">
                                 </div>
                             </label>
-                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
-                                <i class="fa fa-search"></i>搜索
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -70,33 +72,121 @@ background: green;
                         <table class="table table-striped  table-bordered table-hover dataTable " id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;" width="100%">
                             <thead>
                             <tr>
+                                <td width="10%">时间</td>
                                 <td >角色ID</td>
-                                <td width="5%">角色名称</td>
-                                <td width="5%">装备ID</td>
-                                <td width="5%">装备类型</td>
-                                <td width="5%">操作类型</td>
+                                <td >装备ID</td>
+                                <td >装备类型</td>
+                                <td >操作类型</td>
                                 <td >操作前属性</td>
                                 <td >操作后属性</td>
                                 <td >物品消耗信息</td>
-                                <td >物品剩余数量</td>
-                                <td width="6%">游戏币消耗</td>
-                                <td width="6%">游戏币剩余</td>
+                                <td >物品剩余</td>
                             </tr>
                             </thead>
                             <tbody id="ad">
-                            <volist name="equiplog" id="ko">
+                            <volist name="equiplog" id="ko" >
                                 <tr>
+                                    <td>{$ko.LogTime}</td>
                                     <td>{$ko.role_id}</td>
-                                    <td>{$ko.role_name}</td>
                                     <td>{$ko.equip_id}</td>
                                     <td>{$ko.equip_type}</td>
                                     <td>{$ko.equip_operation}</td>
-                                    <td>{$ko.preequip}</td>
-                                    <td>{$ko.laterequip}</td>
-                                    <td>{$ko.item_use}</td>
-                                    <td>{$ko.item_left}</td>
-                                    <td>{$ko.gold_use}</td>
-                                    <td>{$ko.gold_left}</td>
+                                    <!--操作前属性&操作后属性-->
+                                    <eq name="ko.equip_operation" value="装备强化">
+                                        <td>level:{$ko.equipInfo.Forge_level_before}</td>
+                                        <td>level:{$ko.equipInfo.Forge_level_after}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备进阶">
+                                        <td>{$ko.equipInfo.EquipA.goodDBId}
+                                            &nbsp{$ko.equipInfo.EquipB.goodDBId}
+                                            &nbsp{$ko.equipInfo.EquipC.goodDBId}
+                                        </td>
+                                        <td>{$ko.equipInfo.newEquip.goodDBId}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备附加">
+                                        <td>{$ko.equipInfo.AppendPropLev_before}
+                                        </td>
+                                        <td>{$ko.equipInfo.AppendPropLev_after}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备炼化">
+                                        <td><volist name="ko.equipInfo.BeforeAttribute" key="k" id="v">
+                                                ID:{$v.AttributeId}value:{$v.AttributeValue}<br>
+                                        </volist>
+                                        </td>
+                                        <td><volist name="ko.equipInfo.AfterAttribute" key="k" id="v">
+                                                ID:{$v.AttributeId}value:{$v.AttributeValue}<br>
+                                        </volist>
+                                        </td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备自动全部传承">
+                                        <td>ID:{$ko.equipInfo.leftEquip.goodDBId}&nbsp
+                                            level_before:{$ko.equipInfo.leftEquip.Forge_level_before}
+                                           PropLev_before:{$ko.equipInfo.leftEquip.AppendPropLev_before}<br>
+                                            ID:{$ko.equipInfo.rightEquip.goodDBId}&nbsp
+                                            level_before:{$ko.equipInfo.rightEquip.Forge_level_before}
+                                           PropLev_before:{$ko.equipInfo.rightEquip.AppendPropLev_before}
+                                        </td>
+                                        <td>ID:{$ko.equipInfo.leftEquip.goodDBId}&nbsp
+                                            level_after:{$ko.equipInfo.leftEquip.Forge_level_after}
+                                            PropLev_after:{$ko.equipInfo.leftEquip.AppendPropLev_after}<br>
+                                            ID:{$ko.equipInfo.rightEquip.goodDBId}&nbsp
+                                            level_after:{$ko.equipInfo.rightEquip.Forge_level_after}
+                                            PropLev_before:{$ko.equipInfo.rightEquip.AppendPropLev_after}
+                                        </td>
+                                    </eq>
+                                   <!--物品消耗-->
+                                    <eq name="ko.equip_operation" value="装备强化">
+                                    <td>物品ID:{$ko.consumeInfo.0.goodId}金钱类型:{$ko.consumeInfo.1.MoneyTypes} 数量:{$ko.consumeInfo.1.count}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备进阶">
+                                        <td><volist name="ko.consumeInfo" id="v">
+                                            ID:{$v.goodDBId} num:{$v.count}<br></volist>金钱类型:{$ko.consumeInfo.3.MoneyTypes} 数量:{$ko.consumeInfo.3.count} </td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备自动全部传承">
+                                        <td>
+                                          金钱类型:{$ko.consumeInfo.0.MoneyTypes} 数量:{$ko.consumeInfo.0.count} </td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备炼化">
+                                        <td>
+                                           ID:{$ko.consumeInfo.0.goodDBId} num:{$ko.consumeInfo.0.count} 金钱类型:{$ko.consumeInfo.1.MoneyTypes} 数量:{$ko.consumeInfo.1.count} </td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备附加">
+                                        <td>ID:{$ko.consumeInfo.0.goodDBId} num:{$ko.consumeInfo.0.count} 金钱类型:{$ko.consumeInfo.1.MoneyTypes} 数量:{$ko.consumeInfo.1.count}</td>
+                                    </eq>
+                                    <!--物品剩余-->
+                                    <eq name="ko.equip_operation" value="装备强化">
+                                        <td>ID:{$ko.goodDBId}金钱类型:{$ko.leftInfo.1.MoneyTypes} 数量:{$ko.consumeInfo.1.count}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备进阶">
+                                        <td><volist name="ko.leftInfo" id="v">
+                                            ID{$v.goodDBId}count:{$v.count}<br>
+                                        </volist>
+                                           金钱类型:{$ko.leftInfo.4.MoneyTypes} 数量:{$ko.consumeInfo.4.count}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备自动全部传承">
+                                        <td>金钱类型:{$ko.leftInfo.0.MoneyTypes} 数量:{$ko.consumeInfo.0.count}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备炼化">
+                                        <td>ID:{$ko.leftInfo.0.goodDBId} count:{$ko.leftInfo.0.count}金钱类型:{$ko.leftInfo.1.MoneyTypes} 数量:{$ko.consumeInfo.1.count}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备附加">
+                                        <td>ID:{$ko.consumeInfo.0.goodDBId} num:{$ko.consumeInfo.0.count} 金钱类型:{$ko.consumeInfo.1.MoneyTypes} 数量:{$ko.consumeInfo.1.count}</td>
+                                    </eq>
+                                    <!--<eq name="ko.equip_operation" value="装备强化">
+                                    <td>{$ko.leftInfo.1.count}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备进阶">
+                                        <td>{$ko.leftInfo.4.count}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备自动全部传承">
+                                        <td>{$ko.leftInfo.0.count}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备炼化">
+                                        <td>{$ko.leftInfo.1.count}</td>
+                                    </eq>
+                                    <eq name="ko.equip_operation" value="装备附加">
+                                        <td>{$ko.leftInfo.1.count}</td>
+                                    </eq>-->
                                 </tr>
                             </volist>
                             </tbody>
@@ -124,15 +214,13 @@ background: green;
 
 <script>
     function exl() {
-        var value = "{$value}"
-        var clothes = $("#clothes").val();
+        var clothes=$("#clothes").val();
         var start_time = $("#start_time").val();
         var end_time = $("#end_time").val();
         var game_user_id = $("#game_user_id").val();
         var game_user_name = $("#game_user_name").val();
-        var goods_name = $("#goods_name").val();
-        location.href = url + "index.php?m=Home&c=Prop&a=exl&value=" + value + "&db_id=" + clothes + "&start_time=" + start_time + "&end_time=" + end_time + "&game_user_id=" + game_user_id + "&game_user_name=" + game_user_name + "&goods_name=" + goods_name;
-
+        var goods_name = $("#type").val();
+            location.href = "index.php?m=Home&c=Equiplog&a=exl&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&db_id="+clothes;
     }
 </script>
 
@@ -181,7 +269,7 @@ background: green;
             alert("请选择游戏服务器");
             return
         }else{
-            location.href = "index.php?m=Home&c=Equiplog&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name;
+            location.href = "index.php?m=Home&c=Equiplog&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&db_id="+clothes;
         }
     }
 

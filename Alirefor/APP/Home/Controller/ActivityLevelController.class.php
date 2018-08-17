@@ -15,20 +15,20 @@ class ActivityLevelController extends BaseController
 {
     public function index()
     {
-        $game_id = 2;
-        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+        $clostu = D("db")->order("db_id desc")->select();
         $this->assign("clostu", $clostu);
 
         // 图标 默认 最新服
         if (isset($_GET["db_id"])) {
-            $db_id = I("get.db_id");
-            $_SESSION["db_id"] = $db_id;
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
         } else {
-            $db_id = $clostu[0]["db_id"];
-            $_SESSION["db_id"] = $db_id;
+            $db_id = $_SESSION['db_id'];
         }
-
-        $this->assign("db_id", $db_id);
+        if ($db_id != 0) {
+            $ru['db_id'] = $db_id;
+        }
+        
         if (isset($_GET["stime"])) {
             $stime = I("get.stime");
 
@@ -37,7 +37,6 @@ class ActivityLevelController extends BaseController
             $stime = date("Y-m-d", time());
         }
         $this->assign("stime", $stime);
-        $connection = db2($game_id, $db_id);
         // 开始 结束时间
         $start_time = date('Y-m-d 00:00:00', strtotime($stime));
         $end_time = date('Y-m-d 23:59:59', strtotime($stime));
@@ -46,13 +45,15 @@ class ActivityLevelController extends BaseController
         // $connection=db2($game_id,$db_id);
         //$sum=0;
         $model = M('sign');
+        $ru['_string']="start_time>='$start_time' and start_time<='$end_time'";
         // $arr=M('user')->join("sign as b on user.game_user_id =b.game_user_id ")->where("b.start_time>='$start_time' and b.start_time<='$end_time'")->order("user.level desc")->group("user.game_user_id")->field('user.level')->select();
-        $arr1 = $model->where("start_time>='$start_time' and start_time<='$end_time'")->order('start_time desc')->field('game_user_id,level,role_ChangeLife,start_time')->buildSql();
+        $arr1 = $model->where($ru)->order('start_time desc')->field('game_user_id,level,role_ChangeLife,start_time')->buildSql();
 
         $arr = $model->table($arr1 . 'a')->group('game_user_id')->select();
 
         // dump(M('user')->getLastSql());exit;
         // $sum=D("sign")->where("start_time>='$start_time' and start_time<='$end_time'")->field('game_user_id')->group("game_user_id")->select();
+        //遍历取100级
         for ($i = 100; $i>=0; $i--) {
             $level = $i;
             $stu = $level . ',' . $stu;
@@ -120,6 +121,7 @@ class ActivityLevelController extends BaseController
                 }
             }
         }
+        //以相反的顺序返回数组
 		$dataling=array_reverse($dataling,true);
         $datayi=array_reverse($datayi,true);
         $dataer=array_reverse($dataer,true);
@@ -131,6 +133,7 @@ class ActivityLevelController extends BaseController
         $databa=array_reverse($databa,true);
         $datajiu=array_reverse($datajiu,true);
 
+        //取键纸值
 		$number=array_keys($dataling);
 		$this->assign('number',$number);
         $this->assign('dataling',$dataling);
@@ -143,7 +146,7 @@ class ActivityLevelController extends BaseController
         $this->assign('dataqi',$dataqi);
         $this->assign('databa',$databa);
         $this->assign('datajiu',$datajiu);
-
+        //循环取每个等级的人数
         for ($i = 100; $i >= 0; $i--) {
             $level = $i;
 

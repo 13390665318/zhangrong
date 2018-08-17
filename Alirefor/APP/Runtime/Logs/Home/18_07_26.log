@@ -1,0 +1,1150 @@
+[ 2018-07-26T18:38:50+09:00 ] ::1 /index.php?m=Home&c=Zuan&a=index&start_time=2018-07-10+16%3A17%3A20&end_time=2018-07-26+18%3A17%3A20&game_user_id=&game_user_name=&db_id=1&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002025s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Zuan/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 1   [ RunTime:0.5177s ]
+SQL: SELECT * FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 40,20   [ RunTime:0.5331s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 177 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000742s ]
+
+[ 2018-07-26T18:38:53+09:00 ] ::1 /index.php?m=Home&c=Zuan&a=index&start_time=2018-07-10+16%3A17%3A20&end_time=2018-07-26+18%3A17%3A20&game_user_id=&game_user_name=&db_id=1&p=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002017s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Zuan/index' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 1   [ RunTime:0.5180s ]
+SQL: SELECT * FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 60,20   [ RunTime:0.5112s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 177 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009529s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009557s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000668s ]
+
+[ 2018-07-26T18:38:56+09:00 ] ::1 /index.php?m=Home&c=Zuan&a=index&start_time=2018-07-10+16%3A17%3A20&end_time=2018-07-26+18%3A17%3A20&game_user_id=&game_user_name=&db_id=1&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001863s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Zuan/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0102s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 1   [ RunTime:0.5338s ]
+SQL: SELECT * FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 0,20   [ RunTime:0.5121s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 177 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2018-07-26T18:45:46+09:00 ] ::1 /index.php?m=Home&c=Zuan&a=index&start_time=2018-07-10+16%3A17%3A20&end_time=2018-07-26+18%3A17%3A20&game_user_id=&game_user_name=&db_id=1&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002295s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Zuan/index' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 1   [ RunTime:0.5154s ]
+SQL: SELECT * FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 0,20   [ RunTime:0.5224s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 177 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 218 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 219 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 215 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 216 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 217 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012168s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2018-07-26T18:46:16+09:00 ] ::1 /index.php?m=Home&c=Zuan&a=index&start_time=2018-07-10+16%3A17%3A20&end_time=2018-07-26+18%3A17%3A20&game_user_id=&game_user_name=&db_id=1&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001905s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Zuan/index' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 1   [ RunTime:0.5236s ]
+SQL: SELECT * FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 0,20   [ RunTime:0.5108s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 177 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2018-07-26T18:46:22+09:00 ] ::1 /index.php?m=Home&c=Zuan&a=index&start_time=2018-07-10+16%3A17%3A20&end_time=2018-07-26+18%3A17%3A20&game_user_id=&game_user_name=&db_id=1&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001980s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Zuan/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 1   [ RunTime:0.5150s ]
+SQL: SELECT * FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 20,20   [ RunTime:0.5409s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 177 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009780s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2018-07-26T18:46:42+09:00 ] ::1 /index.php?m=Home&c=Zuan&a=index&start_time=2018-07-10+16%3A17%3A20&end_time=2018-07-26+18%3A17%3A20&game_user_id=&game_user_name=&db_id=1&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001858s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0017s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Zuan/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0102s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 1   [ RunTime:0.5404s ]
+SQL: SELECT * FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 40,20   [ RunTime:0.5811s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 177 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009954s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2018-07-26T18:52:34+09:00 ] ::1 /index.php?m=Home&c=Zuan&a=index&start_time=2018-07-10+16%3A17%3A20&end_time=2018-07-26+18%3A17%3A20&game_user_id=&game_user_name=&db_id=1&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002034s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `admin` WHERE ( user_name='admin' and password='nanjingcongyu719' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_type` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0319s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE (  status=1 and  id = 147 or  id = 146 or  id = 145 or  id = 144 or  id = 143 or  id = 142 or  id = 141 or  id = 140 or  id = 139 or  id = 138 or  id = 137 or  id = 136 or  id = 135 or  id = 134 or  id = 133 or  id = 132 or  id = 131 or  id = 130 or  id = 129 or  id = 128 or  id = 127 or  id = 126 or  id = 125 or  id = 124 or  id = 123 or  id = 122 or  id = 121 or  id = 120 or  id = 119 or  id = 118 or  id = 117 or  id = 116 or  id = 115 or  id = 114 or  id = 113 or  id = 112 or  id = 111 or  id = 110 or  id = 109 or  id = 108 or  id = 107 or  id = 106 or  id = 105 or  id = 104 or  id = 103 or  id = 102 or  id = 101 or  id = 100 or  id = 99 or  id = 98 or  id = 97 or  id = 96 or  id = 95 or  id = 94 or  id = 93 or  id = 92 or  id = 91 or  id = 90 or  id = 89 or  id = 88 or  id = 87 or  id = 86 or  id = 84 or  id = 83 or  id = 82 or  id = 81 or  id = 80 or  id = 79 or  id = 77 or  id = 76 or  id = 75 or  id = 74 or  id = 73 or  id = 72 or  id = 71 or  id = 70 or  id = 69 or  id = 68 or  id = 67 or  id = 66 or  id = 65 or  id = 64 or  id = 63 or  id = 62 or  id = 61 or  id = 60 or  id = 59 or  id = 58 or  id = 57 or  id = 56 or  id = 55 or  id = 54 or  id = 53 or  id = 52 or  id = 51 or  id = 50 or  id = 49 or  id = 46 or  id = 45 or  id = 44 or  id = 43 or  id = 42 or  id = 41 or  id = 40 or  id = 39 or  id = 38 or  id = 37 or  id = 36 or  id = 35 or  id = 34 or  id = 33 or  id = 32 or  id = 31 or  id = 30 or  id = 29 or  id = 28 or  id = 27 or  id = 26 or  id = 25 or  id = 24 or  id = 23 or  id = 22 or  id = 21 or  id = 20 or  id = 19 or  id = 18 or  id = 17 or  id = 16 or  id = 15 or  id = 14 or  id = 10 or  id = 9 or  id = 8 or  id = 7 or  id = 6 or  id = 5 or  id = 4 or  id = 3 or  id = 2 or  id = 1 or  id = 148 or  id = 149 or  id = 150 or  id = 151 or  id = 152 or  id = 153 or  id = 154 or  id = 155 or  id = 156 or  id = 157 or  id = 158 or  id = 159 or  id = 160 or  id = 161 or  id = 162 or  id = 163 or  id = 164 or  id = 165 or  id = 166 or  id = 167 or  id = 168 or  id = 169 or  id = 170 or  id = 171 or  id = 172 or  id = 173 or  id = 174 or  id = 175 or  id = 176 or  id = 177 or  id = 178 or  id = 179 or  id = 180 or  id = 181 or  id = 182 or  id = 183 or  id = 184 or  id = 185 or  id = 186 or  id = 187 or  id = 188 or  id = 194 or  id = 195 or  id = 196 or  id = 197 or  id = 198 or  id = 199 or  id = 200 or  id = 201 or  id = 202 or  id = 203 or  id = 204 or  id = 205 or  id = 206 or  id = 207 or  id = 208 or  id = 209 or  id = 210 or  id = 211 or  id = 212 or  id = 213 or  id = 214 or  id = 215 or  id = 216 or  id = 217 or  id = 218  ) ORDER BY id  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( type=-1 ) ORDER BY status asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `admin_auth_type` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE ( name='Zuan/index' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `db` ORDER BY db_id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `currency` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 1   [ RunTime:0.5255s ]
+SQL: SELECT * FROM `currency` WHERE `server` = 1 AND (  (`currency_get` LIKE '%MoneyTypes\":40%' OR `currency_get` LIKE '%MoneyTypes\":50%') OR (`currency_use` LIKE '%MoneyTypes\":40%' OR `currency_use` LIKE '%MoneyTypes\":50%') ) AND ( `LogTime` > '2018-07-10 16:17:20' AND `LogTime` < '2018-07-26 18:17:20'  ) LIMIT 40,20   [ RunTime:0.5146s ]
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 72 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 73 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 75 行.
+NOTIC: [8] Undefined offset: 0 E:\Alirefor\APP\Home\Controller\ZuanController.class.php 第 76 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined variable: role_id E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 172 行.
+NOTIC: [8] Undefined variable: role_name E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 177 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 212 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 214 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 209 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 210 行.
+NOTIC: [8] Undefined offset: 50 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 211 行.
+NOTIC: [8] Undefined offset: 40 E:\Alirefor\APP\Runtime\Cache\Home\17325cf2caa7a7ad03ef178396b6a333.php 第 213 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000717s ]
+

@@ -13,20 +13,30 @@
             平均在线人数趋势 <div style="clear: both;"></div>
         </div>
 
-       <!--<select style="margin-left: 0px; width: 10%;height: 1.5%" onchange="choice(1)" id="clothes" class="btn btn-default">
-            <option>...选择游戏服务器...</option>
-            <volist name="clostu" id="vo">
-                <eq name="vo.db_id" value="$db_id">
-                    <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
-                    <else/>
-                    <option value="{$vo.db_id}">{$vo.clothes}</option>
-                </eq>
-            </volist>
-        </select>-->
-        从<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
-        到<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="etime" value="{$etime}">
-        <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
-        <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="dataTables_length" id="dataTables-example_length">
+                    <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                            class="btn btn-default">
+                        <option>...选择游戏服务器...</option>
+                        <option value="0">全服</option>
+                        <volist name="clostu" id="vo">
+                            <eq name="vo.db_id" value="$db_id">
+                                <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                                <else/>
+                                <option value="{$vo.db_id}">{$vo.clothes}</option>
+                            </eq>
+                        </volist>
+                    </select>从<input class="btn btn-default"
+                                     onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"
+                                     id="stime" value="{$stime}">
+                    到<input class="btn btn-default"
+                            onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="etime"
+                            value="{$etime}">
+                    <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -80,7 +90,7 @@
 
     }
     //  var a={$Stime};
-    var maxN = eval("Math.max(" + stu.toString() + ")")+500;
+    var maxN = Math.ceil(eval("Math.max(" + stu.toString() + ")")*1.2);
     stu=stu.reverse();
     var data = [stu];
     var data_max = maxN; //Y轴最大刻度

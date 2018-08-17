@@ -20,16 +20,6 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes" class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
-                                <volist name="clostu" id="vo">
-                                    <eq name="vo.db_id" value="$db_id">
-                                        <option value="{$vo.db_id}" selected="selected">{$vo.game_name}</option>
-                                        <else/>
-                                        <option value="{$vo.db_id}">{$vo.clothes}</option>
-                                    </eq>
-                                </volist>
-                            </select>&nbsp&nbsp-->
                             <input class="form-control" id="roleid" type="text" placeholder="角色ID">
                             <button class="btn btn-default" id="search-operator-btn" type="submit"  onclick="Cuselect()"><i class="fa fa-search"></i>搜索</button><br><br>
                             <div><button class="btn btn-default" id="rid" onclick="role()" value="{$skills.0.rid}">角色首页</button></div>

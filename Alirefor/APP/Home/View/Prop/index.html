@@ -18,9 +18,10 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                            <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
                                     class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
+                                <option>..选服务器..</option>
+                                <option value="0">全服</option>
                                 <volist name="clostu" id="vo">
                                     <eq name="vo.db_id" value="$db_id">
                                         <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -28,12 +29,16 @@
                                         <option value="{$vo.db_id}">{$vo.clothes}</option>
                                     </eq>
                                 </volist>
-                            </select>-->从<input class="btn btn-default"
-                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
-                                             id="start_time" value="{$Stime}">
-                            到<input class="btn btn-default"
-                                    onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time"
-                                    value="{$Etime}">
+                            </select>&nbsp&nbsp&nbsp<label>选择日志时间</label>&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                                                               onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                                                               id="start_time" value="{$Stime}">
+                            &nbsp&nbsp至&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                             id="end_time" value="{$Etime}">
+                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                                <i class="fa fa-search"></i>搜索
+                            </button>
+                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button><font color="red">（导出最大数量不得超过2万条）</font>
                         </div>
                     </div>
                 </div>
@@ -42,18 +47,17 @@
                     <div class="col-sm-6" style="width: 70%;">
                         <div class="dataTables_length" id="dataTables-example_length">
                             <span><label>物品编号:</label>
-                                    <input class="form-control" id="type" type="text" placeholder="道具名称" size="10px">
+                                    <input class="form-control" id="type" type="text" value="{$prop}" placeholder="道具名称" size="10px">
                                 &nbsp&nbsp
                                   <label>玩家ID:</label>
-                                    <input class="form-control" id="game_user_id" type="text" placeholder="玩家ID" size="10px">
+                                    <input class="form-control" id="game_user_id" type="text" value="{$role_id}" placeholder="玩家ID" size="10px">
                                 &nbsp&nbsp
                             <label>角色名称:</label>
-                                    <input class="form-control" id="game_user_name" type="text" placeholder="角色名称" size="10px">
+                                    <input class="form-control" id="game_user_name" type="text"  value="{$role_name}" placeholder="角色名称" size="10px">
                                 &nbsp&nbsp
                              <label>原因:</label>
-                                    <input class="form-control" id="cause" type="text" placeholder="原因" size="10px">
+                                    <input class="form-control" id="cause" type="text" value="{$item_reason}" placeholder="原因" size="10px">
                                 &nbsp&nbsp
-                                <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="Cuselect()"><i class="fa fa-search"></i>搜索</button>
                             </span>
                         </div>
                     </div>
@@ -69,9 +73,8 @@
                                 <td width="10%">玩家名称</td>
                                 <td width="5%">玩家等级</td>
                                 <td width="15%">原因</td>
-                                <td width="10%">物品编号</td>
+                                <td width="10%">物品名称</td>
                                 <td width="10%">变化类型</td>
-
                                 <td width="10%">剩余</td>
                             </tr>
                             </thead>
@@ -81,12 +84,12 @@
                                     <td>{$ko.LogTime}</td>
                                     <td>{$ko.role_id}</td>
                                     <td>{$ko.role_name}</td>
-                                    <td>{$ko.role_level}</td>
+                                    <td>{$ko.role_ChangeLife}重{$ko.role_level}级</td>
                                     <td>{$ko.item_reason}</td>
-                                    <td>{$ko.prop}</td>
-                                    <td ><eq name="ko.change_type" value="0"><font color="red">消耗{$ko.use_num}个</font></td>
-                                   <else/><font color="green">获得{$ko.get_num}个</font></td></eq>
-                                    <td>{$ko.left_num}</td>
+                                    <td>{$ko.name}</td>
+                                    <td ><eq name="ko.change_type" value="0"><font color="red">消耗{$ko.item_use.0.count}个</font></td>
+                                   <else/><font color="green">获得{$ko.item_get.0.count}个</font></td></eq>
+                                    <td>{$ko.item_left.0.count}</td>
                                 </tr>
                             </volist>
                             </tbody>
@@ -129,12 +132,13 @@
         var value="{$value}"
         var clothes=$("#clothes").val();
         var start_time=$("#start_time").val();
+        console.log(start_time)
         var end_time=$("#end_time").val();
         var game_user_id=$("#game_user_id").val();
         var game_user_name=$("#game_user_name").val();
-        var goods_name=$("#goods_name").val();
-       location.href=url+"index.php?m=Home&c=Prop&a=exl&value="+value+"&db_id="+clothes+"&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&goods_name="+goods_name;
-
+        var goods_name=$("#type").val();
+        var cause=$("#cause").val();
+        location.href="index.php?m=Home&c=Prop&a=exl&value="+value+"&db_id="+clothes+"&start_time="+start_time+"&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&goods_name="+goods_name+"&cause="+cause;
     }
 </script>
 <script>

@@ -12,20 +12,26 @@
         <div class="panel-heading">
             活跃用户周趋势（从当天开始往前算，7天内有登录的用户为周活跃） <div style="clear: both;"></div>
         </div>
-
-        从<input type="text" class="btn btn-default" id="bclothes" value="0" style="width: 3%">区-<input class="btn btn-default" type="text" id="eclothes" value="0" style="width: 3%">区
-        从<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
-       <!--<div class="col-lg-10" style="width: 11%">
-            <div class="form-group">
-                <select id="maxOption2" class="selectpicker show-menu-arrow form-control" multiple >
-                    <volist name="qudao" id="vo">
-                        <option value="{$vo.cid}">{$vo.name}</option>
-                    </volist>
-                </select>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="dataTables_length" id="dataTables-example_length">
+                    <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                            class="btn btn-default">
+                        <option>...选择游戏服务器...</option>
+                        <option value="0">全服</option>
+                        <volist name="clostu" id="vo">
+                            <eq name="vo.db_id" value="$db_id">
+                                <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                                <else/>
+                                <option value="{$vo.db_id}">{$vo.clothes}</option>
+                            </eq>
+                        </volist>
+                    </select>从<input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
+                    <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
+                </div>
             </div>
-        </div>-->
+        </div>
 
-        <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="idselect()"><i class="fa fa-search"></i>搜索</button>
         <!--  <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button>-->
 
 
@@ -74,13 +80,13 @@
     var www_url="{$www_url}";
 
     function idselect() {
-        var bclothes=$("#bclothes").val();
+        var clothes=$("#clothes").val();
         var eclothes=$("#eclothes").val();
         var stime=$("#stime").val();
         var etime=$("#etime").val();
         var creator=$("#maxOption2").val();
 
-        location.href=www_url+"index.php?m=Home&c=TrendActivity&a=index2&bclothes="+bclothes+"&eclothes="+eclothes+"&stime="+stime+"&creator="+creator;
+        location.href=www_url+"index.php?m=Home&c=TrendActivity&a=index2&db_id="+clothes+"&stime="+stime;
 
     }
     function exl(){
@@ -103,7 +109,7 @@
         stu[i]=obj[i].num;
     }
     //  var a={$Stime};
-    var maxN = eval("Math.max(" + stu.toString() + ")")+5000;
+    var maxN = Math.ceil(eval("Math.max(" + stu.toString() + ")")*1.2);
     stu=stu.reverse();
     var data = [stu];
     var data_max = maxN; //Y轴最大刻度

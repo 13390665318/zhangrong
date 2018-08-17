@@ -6,7 +6,6 @@
  * Time: 上午 11:06
  */
 return array(
-
     'URL_MODEL' => 2,
     'DB_TYPE'               => 'mysql',     // 数据库类型
     'DB_HOST'               => '192.168.88.222', // 服务器地址

@@ -1,0 +1,24 @@
+[ 2018-08-01T09:36:03+08:00 ] ::1 /Public/ie10-viewport-bug-workaround.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+ERR: 无法加载模块:Public
+
+[ 2018-08-01T09:36:03+08:00 ] ::1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000050s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-08-01T20:05:39+08:00 ] ::1 /Public/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+ERR: 无法加载模块:Public
+
+[ 2018-08-01T20:38:48+08:00 ] ::1 /ueditor/php/upload/image/20180610/1528633400.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+ERR: 无法加载模块:Ueditor
+

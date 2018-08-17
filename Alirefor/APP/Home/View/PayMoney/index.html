@@ -16,9 +16,10 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="dataTables_length" id="dataTables-example_length">
-                    <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                    <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
                             class="btn btn-default">
                         <option>...选择游戏服务器...</option>
+                        <option value="0">全服</option>
                         <volist name="clostu" id="vo">
                             <eq name="vo.db_id" value="$db_id">
                                 <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -26,7 +27,7 @@
                                 <option value="{$vo.db_id}">{$vo.clothes}</option>
                             </eq>
                         </volist>
-                    </select>-->从<input class="btn btn-default"
+                    </select>从<input class="btn btn-default"
                                      onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"
                                      id="stime" value="{$stime}">
                     到<input class="btn btn-default"
@@ -94,13 +95,10 @@
     var www_url="{$www_url}";
 
     function idselect() {
-        var bclothes=$("#bclothes").val();
-        var eclothes=$("#eclothes").val();
+        var clothes=$("#clothes").val();
         var stime=$("#stime").val();
         var etime=$("#etime").val();
-     //   var creator=$("#maxOption2").val();
-
-        location.href=www_url+"index.php?m=Home&c=PayMoney&a=index&bclothes="+bclothes+"&eclothes="+eclothes+"&stime="+stime+"&etime="+etime;
+        location.href=www_url+"index.php?m=Home&c=PayMoney&a=index&db_id="+clothes+"&stime="+stime+"&etime="+etime;
 
     }
     function exl(){
@@ -123,7 +121,7 @@
 
     }
     //  var a={$Stime};
-    var maxN = eval("Math.max(" + stu.toString() + ")")+500;
+    var maxN = Math.ceil(eval("Math.max(" + stu.toString() + ")")*1.2);
     stu=stu.reverse();
     var data = [stu];
     var data_max = maxN; //Y轴最大刻度

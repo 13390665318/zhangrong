@@ -24,9 +24,10 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                            <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
                                     class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
+                                <option>..选服务器..</option>
+                                <option value="0">全服</option>
                                 <volist name="clostu" id="vo">
                                     <eq name="vo.db_id" value="$db_id">
                                         <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -34,12 +35,16 @@
                                         <option value="{$vo.db_id}">{$vo.clothes}</option>
                                     </eq>
                                 </volist>
-                            </select>-->从<input class="btn btn-default"
-                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
-                                             id="start_time" value="{$Stime}">
-                            到<input class="btn btn-default"
-                                    onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time"
-                                    value="{$Etime}">
+                            </select>&nbsp&nbsp&nbsp<label>选择日志时间</label>&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                                                               onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                                                               id="start_time" value="{$Stime}">
+                            &nbsp&nbsp至&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                             id="end_time" value="{$Etime}">&nbsp&nbsp&nbsp
+                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                                <i class="fa fa-search"></i>搜索
+                            </button>
+                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button><font color="red">（导出最大数量不得超过2万条）</font>
                         </div>
                     </div>
                 </div>
@@ -49,17 +54,15 @@
                         <div class="dataTables_length" id="dataTables-example_length">
                             <label>目标玩家ID:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_id" type="text" placeholder="玩家ID">
+                                    <input class="form-control" id="game_user_id" type="text" value="{$role_id}" placeholder="玩家ID">
                                 </div>
                             </label>
                             <label>目标角色名称:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_name" type="text" placeholder="角色名称">
+                                    <input class="form-control" id="game_user_name" type="text" value="{$role_name}" placeholder="角色名称">
                                 </div>
                             </label>
-                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
-                                <i class="fa fa-search"></i>搜索
-                            </button>
+
                         </div>
                     </div>
                 </div>
@@ -71,31 +74,66 @@
                                style="width: 100%;" width="100%">
                             <thead>
                             <tr>
+                                <td width="10%">时间</td>
                                 <td>帮派ID</td>
                                 <td>帮派名称</td>
                                 <td>操作类型</td>
                                 <td>操作人</td>
                                 <td>操作人名字</td>
+                                <td>操作人职位</td>
                                 <td>目标角色ID</td>
                                 <td>目标角色名称</td>
-                                <td>目标角色重生等级</td>
                                 <td>目标角色等级</td>
                                 <td>角色VIP等级</td>
+                                <td>目标原职位</td>
+                                <td>目标新职位</td>
                             </tr>
                             </thead>
                             <tbody id="ad">
                             <volist name="guide" id="ko">
                                 <tr>
+                                    <td>{$ko.LogTime}</td>
                                     <td>{$ko.union_id}</td>
                                     <td>{$ko.union_name}</td>
                                     <td>{$ko.union_membe_reasom}</td>
                                     <td>{$ko.role_id}</td>
                                     <td>{$ko.role_name}</td>
+                                    <td><if condition="$ko.role_zhiwu eq 0" >
+                                        成员
+                                        <elseif condition="$ko.role_zhiwu eq 1" />
+                                        帮主
+                                        <elseif condition="$ko.role_zhiwu eq 2" />
+                                        副帮主
+                                        <elseif condition="$ko.role_zhiwu eq 3" />
+                                        长老
+                                        <elseif condition="$ko.role_zhiwu eq -1" />
+                                        系统操作
+                                    </if>
+                                        </td>
                                     <td>{$ko.target_role_id}</td>
                                     <td>{$ko.target_role_name}</td>
-                                    <td>{$ko.role_ChangeLife}</td>
-                                    <td>{$ko.role_level}</td>
+                                    <td>{$ko.role_ChangeLife}重{$ko.role_level}级</td>
                                     <td>{$ko.vip}</td>
+                                    <td><if condition="$ko.target_role_currzhiwu eq 0" >
+                                        成员
+                                        <elseif condition="$ko.target_role_currzhiwu eq 1" />
+                                            帮主
+                                            <elseif condition="$ko.target_role_currzhiwu eq 2" />
+                                                副帮主
+                                                <elseif condition="$ko.target_role_currzhiwu eq 3" />
+                                                    长老
+                                                    <elseif condition="$ko.target_role_currzhiwu eq 4" />
+                                                        非本帮人员
+                                    </if></td>
+                                    <td><if condition="$ko.target_role_newzhiwu eq 0" >
+                                        帮主
+                                        <elseif condition="$ko.target_role_newzhiwu eq 2" />
+                                        副帮主
+                                        <elseif condition="$ko.target_role_newzhiwu eq 3" />
+                                        长老
+                                        <elseif condition="$ko.target_role_currzhiwu eq 4" />
+                                        非本帮人员
+                                    </if></td>
                                 </tr>
                             </volist>
                             </tbody>
@@ -114,20 +152,6 @@
 
 
 </div>
-
-<script>
-    function exl() {
-        var value = "{$value}"
-        var clothes = $("#clothes").val();
-        var start_time = $("#start_time").val();
-        var end_time = $("#end_time").val();
-        var game_user_id = $("#game_user_id").val();
-        var game_user_name = $("#game_user_name").val();
-        var goods_name = $("#goods_name").val();
-        location.href = url + "index.php?m=Home&c=Prop&a=exl&value=" + value + "&db_id=" + clothes + "&start_time=" + start_time + "&end_time=" + end_time + "&game_user_id=" + game_user_id + "&game_user_name=" + game_user_name + "&goods_name=" + goods_name;
-
-    }
-</script>
 
 
 
@@ -174,8 +198,18 @@
             alert("请选择游戏服务器");
             return
         }else{
-            location.href = "index.php?m=Home&c=Guide&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name;
+            location.href = "index.php?m=Home&c=Guide&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&db_id="+clothes;
         }
+    }
+    function exl() {
+        var clothes=$("#clothes").val();
+        var start_time = $("#start_time").val();
+        var end_time = $("#end_time").val();
+        var game_user_id = $("#game_user_id").val();
+        var game_user_name = $("#game_user_name").val();
+        var goods_name = $("#type").val();
+        location.href = "index.php?m=Home&c=Guide&a=exl&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&db_id="+clothes;
+
     }
 
 

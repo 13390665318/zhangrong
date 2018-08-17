@@ -13,32 +13,34 @@ class UnionController extends BaseController
 {
     public function index(){
 
-        $game_id = 2;
-        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+        $clostu = D("db")->order("db_id desc")->select();
         $this->assign("clostu", $clostu);
 
         // 图标 默认 最新服
         if (isset($_GET["db_id"])) {
-            $db_id = I("get.db_id");
-            $_SESSION["db_id"] = $db_id;
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
         } else {
-            $db_id = $clostu[0]["db_id"];
-            $_SESSION["db_id"] = $db_id;
+            $db_id = $_SESSION['db_id'];
         }
-        $nowtime = date("Y-m-d H:i:s", time());
-        $this->assign("db_id", $db_id);
-
+        if ($db_id != 0) {
+            $ru['server'] = $db_id;
+        }
 
         if (isset($_GET["start_time"]) && isset($_GET["end_time"])) {
             $stime = I("get.start_time");
             $etime = I("get.end_time");
+            $stime = date("Y-m-d H:i:s", strtotime($stime));
+            $etime = date("Y-m-d H:i:s", strtotime($etime));
         } else {
-            $stime = date("Y-m-01 00:00:00", time());
+            $stime = date("Y-m-d H:i:s", strtotime('-2hours'));
             $etime = date("Y-m-d H:i:s", time());
         }
 
-        $this->assign("Stime",$stime);
-        $this->assign("Etime",$etime);
+
+        //$stime1=date("Y-m-d", strtotime($stime));
+        $this->assign('Stime', $stime);
+        $this->assign('Etime', $etime);
 
         /*if($_GET['game_user_id']){
             $game_user_id=I('get.game_user_id');
@@ -52,10 +54,12 @@ class UnionController extends BaseController
         if($_GET['union_id']){
             $union_id=I('get.union_id');
             $ru['union_id']=$union_id;
+            $this->assign('union_id',$union_id);
         }
         if($_GET['union_name']){
             $union_name=I('get.union_name');
             $ru['union_name']=$union_name;
+            $this->assign('union_name',$union_name);
         }
         //dump($ru);exit;
         $ru['LogTime']=array(array('gt',$stime),array('lt',$etime));
@@ -74,88 +78,104 @@ class UnionController extends BaseController
     }
 
     public function exl(){
-
         header("Content-Type:text/html; charset=utf-8");
         Vendor('PHPExcel.PHPExcel');
-        $game_id = 1;
-       $db_id=I("get.db_id");
-       $time=I("get.time");
+        //判断获得时间
+        $clostu = D("db")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
 
-        $stime=$time." 00:00:00";
-        $etime=$time." 23:59:59";
-        $con["_string"]="regtime>='$stime' AND regtime<='$etime'  and lastlogintime < lastupdtime"; // 注册时间
-
-        if(isset($_GET["cesa"])){
-            $cesa=I("get.cesa");
-            if($cesa==24){
-                $day=1;
-            }else if($cesa==48){
-                $day=2;
-            }else{
-                $day=3;
-            }
-        }else{
-            $day=1;
+        // 图标 默认 最新服
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+        } else {
+            $db_id = $clostu[0]["db_id"];
         }
-        $endtime=date('Y-m-d H:i:s', strtotime ("+$day day", strtotime($time)));
-        $con["zhiyinid"]=array('lt',99900900);
-
-        $con["lastupdtime"]=array('lt',"$endtime");
-        $con=array_filter($con);
-        $connection=db($game_id,$db_id);
-        $Userbase = M('San_userbase','',$connection);
-        // 计算 总人数，流失总人数
-
-
-        $loss=$Userbase->where($con)->count();
-        $this->assign("loss",$loss);
-$stu = $Userbase->where($con)->distinct(true)->field('zhiyinid')->order("zhiyinid desc")->select();
-for($i=0;$i<count($stu);$i++){
-            $arr[$i]["zhiyinid"]=$stu[$i]["zhiyinid"];
-            // 等级所有人数
-
-            $con["zhiyinid"]=$stu[$i]["zhiyinid"];
-
-            //等级流失人数
-            $arr[$i]["loss"]=$Userbase->where($con)->count();
-            // 流失率
-            $arr[$i]["loss_num"]=round($arr[$i]["loss"]/$loss,4)*100;
+        if ($db_id != 0) {
+            $ru['server'] = $db_id;
+        }
+        $this->assign("db_id", $db_id);
+        if (isset($_GET["start_time"]) && isset($_GET["end_time"])) {
+            $stime = I("get.start_time");
+            $etime = I("get.end_time");
+            $stime=date("Y-m-d H:i:s", strtotime($stime));
+            $etime=date("Y-m-d H:i:s", strtotime($etime));
+        } else {
+            $stime = date("Y-m-d 00:00:00", time());
+            $etime = date("Y-m-d 23:59:59", time());
         }
 
 
-        $objPHPExcel=new \PHPExcel();
+        $stime1=date("Y-m-d", strtotime($stime));
+        $this->assign('Stime',$stime1);
+        $this->assign('Etime',$etime);
 
-        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A1','指引阶段');
-        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('B1','流失人数');
-        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('C1','流失率');
-        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('D1','注册时间');
+        if($_GET['union_id']){
+            $union_id=I('get.union_id');
+            $ru['union_id']=$union_id;
+        }
+        if($_GET['union_name']){
+            $union_name=I('get.union_name');
+            $ru['union_name']=$union_name;
+        }
+        //dump($ru);exit;
+        $ru['LogTime']=array(array('gt',$stime),array('lt',$etime));
+
+        $model=D('Union');
+        $count =$model->where($ru)->count();
+        if ($count > 20000) {
+            echo "<script>alert('最大导出不能超过两万条')
+            window.location.href='index.php?m=Home&c=Union&a=index';
+         </script>";
+            exit;
+        }
+        $guide = $model->where($ru)->select();
+        $objPHPExcel = new \PHPExcel();
+
+        //设置excel列名
+
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A1', '时间');
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('B1', '帮派ID');
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('C1', '帮派名称');
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('D1', '操作人');
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('E1', '操作人名字');
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('F1', '变化前等级');
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('G1', '变化后等级');
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue('G1', '帮会建筑');
 
 
         //把数据循环写入excel中
-        $i=1;
-        foreach($arr as $key => $value){
-            $key+=2;
-
-            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A'.$key,$value["zhiyinid"]);
-            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('B'.$key,$value['loss']);
-            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('C'.$key,$value['loss_num']);
-            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('D'.$key,$time);
+        $i = 1;
+        foreach ($guide as $key => $value) {
+            $key += 2;
+            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A' . $key, $value["LogTime"]);
+            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('B' . $key, $value['union_id']);
+            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('C' . $key, $value['union_name']);
+            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('D' . $key, $value['role_id']);
+            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('E' . $key, $value['role_name']);
+            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('F' . $key, $value['preunion_level']);
+            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('G' . $key, $value['laterunion_level']);
+            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('G' . $key, $value['build_type']);
 
         }
+        $objPHPExcel->getActiveSheet()->getColumnDimension('A')->setAutoSize(true);
+        $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setAutoSize(true);
+        $objPHPExcel->getActiveSheet()->getDefaultColumnDimension('C')->setWidth(10);
+        $objPHPExcel->getActiveSheet()->getDefaultColumnDimension('D')->setWidth(10);
+        $objPHPExcel->getActiveSheet()->getDefaultColumnDimension('E')->setWidth(10);
+        $objPHPExcel->getActiveSheet()->getDefaultColumnDimension('F')->setWidth(10);
+        $objPHPExcel->getActiveSheet()->getDefaultColumnDimension('G')->setWidth(12);
+
         //导出代码
-        $name=time();
+        $name='帮派变化日志'.$stime1;
         $objPHPExcel->getActiveSheet()->setTitle('User');
         $objPHPExcel->setActiveSheetIndex(0);
         ob_end_clean();//清除缓冲区,避免乱码
         header('Content-Type: application/vnd.ms-excel');
-        header('Content-Disposition: attachment;filename="'.$name.'.xls"');
+        header('Content-Disposition: attachment;filename="' . $name . '.xls"');
         header('Cache-Control: max-age=0');
         $objWriter = \PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
         $objWriter->save('php://output');
         exit;
-
-
-
 
     }
 

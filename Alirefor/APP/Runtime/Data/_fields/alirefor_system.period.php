@@ -1,0 +1,1 @@
+a:6:{i:0;s:7:"LogTime";i:1;s:5:"db_id";i:2;s:3:"num";i:3;s:6:"f_time";i:4;s:4:"time";s:5:"_type";a:5:{s:7:"LogTime";s:12:"varchar(225)";s:5:"db_id";s:12:"varchar(225)";s:3:"num";s:7:"int(11)";s:6:"f_time";s:12:"varchar(225)";s:4:"time";s:12:"varchar(225)";}}

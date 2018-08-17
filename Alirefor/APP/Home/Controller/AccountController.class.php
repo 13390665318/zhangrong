@@ -31,7 +31,7 @@ class AccountController extends BaseController
 
         }
         $this->assign("db_id",$db_id);
-   /*     $connection=db($game_id,$db_id);
+        $connection=db($game_id,$db_id);
         $Account = M('San_account','',$connection);
         $count      =$Account->count();// 查询满足要求的总记录数
         $Page       = new \Think\Page($count,20);// 实例化分页类 传入总记录数和每页显示的记录数(20)
@@ -39,7 +39,7 @@ class AccountController extends BaseController
         $this->assign("page",$show);// 赋值分页输出
         $arr=$Account->limit($Page->firstRow.','.$Page->listRows)->order("uid desc")->select();
 
-        $this->assign("arr",$arr);*/
+        $this->assign("arr",$arr);
         $this->display();
     }
 

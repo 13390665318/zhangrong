@@ -13,18 +13,21 @@ class TrendActivityController  extends BaseController
 {
     // 日活趋势
     public function index(){
-        $game_id = 1;
-        if(isset($_GET["bclothes"]) && isset($_GET["eclothes"])){
-            $bclothes=I("get.bclothes");
-            $eclothes=I("get.eclothes");
-            if( $bclothes==0 && $eclothes==0 ){
-                $db=D("db")->select();
-            }else{
-                $db=D("db")->where("game_id=$game_id and clothes_num>=$bclothes and clothes_num<=$eclothes ")->order("db_id asc")->select();
-            }
-        }else{
-            $db=D("db")->select();
+        $clostu = D("db")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
+
+        // 图标 默认 最新服
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
+        } else {
+            $db_id = $_SESSION['db_id'];
         }
+        if ($db_id != 0) {
+            $ru['db_id'] = $db_id;
+        }
+
+
         if(isset($_GET["stime"])&&isset($_GET["etime"])){
             $stime=I("get.stime");
             $etime=I("get.etime");
@@ -82,7 +85,7 @@ class TrendActivityController  extends BaseController
            // for($j=0;$j<count($db);$j++)
                // $db_id=$db[$j]["db_id"];
               //  $connection=db2($game_id,$db_id);
-                $sum=M('sign')->where($ru)->group('game_user_id')->select();
+                $sum=M('sign')->where($ru)->group('user_id')->select();
 
                 $data[$i]["num"]=$data[$i]["num"]+count($sum);
 
@@ -103,17 +106,18 @@ class TrendActivityController  extends BaseController
     }
 // 周活跃趋势  上月  上周  本周
     public function index2(){
-        $game_id = 1;
-        if(isset($_GET["bclothes"]) && isset($_GET["eclothes"])){
-            $bclothes=I("get.bclothes");
-            $eclothes=I("get.eclothes");
-            if( $bclothes==0 && $eclothes==0 ){
-                $db=D("db")->select();
-            }else{
-                $db=D("db")->where("game_id=$game_id and clothes_num>=$bclothes and clothes_num<=$eclothes ")->order("db_id asc")->select();
-            }
-        }else{
-            $db=D("db")->select();
+        $clostu = D("db")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
+
+        // 图标 默认 最新服
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
+        } else {
+            $db_id = $_SESSION['db_id'];
+        }
+        if ($db_id != 0) {
+            $ru['db_id'] = $db_id;
         }
         if(isset($_GET["stime"])){
             $stime=I("get.stime");
@@ -154,21 +158,18 @@ class TrendActivityController  extends BaseController
 
 
         $data[0]["time"]="本周";
-        $Strtime=date('Y-m-d 00:00:00', strtotime ("-0 day", strtotime($stime)));
-        $Endtime=date('Y-m-d 23:59:59', strtotime ("-6 day", strtotime($stime)));
+        $Strtime=date('Y-m-d 00:00:00', strtotime ("-6 day", strtotime($stime)));
+        $Endtime=date('Y-m-d 23:59:59', strtotime ("-0 day", strtotime($stime)));
 
         $user=0;
-        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
 
         $data[0]["num"]=0;
        // for($j=0;$j<count($db);$j++){
          //   $db_id=$db[$j]["db_id"];
          //   $connection=db2($game_id,$db_id);
-            $sum=M('sign')->where($ru)->field('game_user_id')->group("game_user_id")->select();
-
-            //  echo M('sign','',$connection)->getLastSql();exit;
+            $sum=M('sign')->where($ru)->field('user_id')->group("user_id")->select();
             $data[0]["num"]=$data[0]["num"]+count($sum);
-
             $user=$user+count($sum);
       //  }
 
@@ -177,28 +178,28 @@ class TrendActivityController  extends BaseController
         $sum=0;
 
         $data[1]["time"]="上周";
-        $Strtime=date('Y-m-d 00:00:00', strtotime ("-7 day", strtotime($stime)));
-        $Endtime=date('Y-m-d 23:59:59', strtotime ("-13 day", strtotime($stime)));
+        $Strtime=date('Y-m-d 00:00:00', strtotime ("-13 day", strtotime($stime)));
+        $Endtime=date('Y-m-d 23:59:59', strtotime ("-7 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
         $data[1]["num"]=0;
 
 
-            $sum=M('sign')->where($ru)->field('game_user_id')->group("game_user_id")->select();
+            $sum=M('sign')->where($ru)->field('user_id')->group("user_id")->select();
 
             $data[1]["num"]=$data[1]["num"]+count($sum);
             $user=$user+count($sum);
 
 
         $data[2]["time"]="上月同时";
-        $Strtime=date('Y-m-d 00:00:00', strtotime ("-30 day", strtotime($stime)));
-        $Endtime=date('Y-m-d 23:59:59', strtotime ("-36 day", strtotime($stime)));
+        $Strtime=date('Y-m-d 00:00:00', strtotime ("-36 day", strtotime($stime)));
+        $Endtime=date('Y-m-d 23:59:59', strtotime ("-30 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
         $data[2]["num"]=0;
 
 
-            $sum=M('sign')->where($ru)->field('game_user_id')->group("game_user_id")->select();
+            $sum=M('sign')->where($ru)->field('user_id')->group("user_id")->select();
             $data[2]["num"]=$data[2]["num"]+count($sum);
 
 
@@ -213,18 +214,20 @@ class TrendActivityController  extends BaseController
     }
     // 双周活趋势
     public function index3(){
-        $game_id = 1;
-        if(isset($_GET["bclothes"]) && isset($_GET["eclothes"])){
-            $bclothes=I("get.bclothes");
-            $eclothes=I("get.eclothes");
-            if( $bclothes==0 && $eclothes==0 ){
-                $db=D("db")->select();
-            }else{
-                $db=D("db")->where("game_id=$game_id and clothes_num>=$bclothes and clothes_num<=$eclothes ")->order("db_id asc")->select();
-            }
-        }else{
-            $db=D("db")->select();
+        $clostu = D("db")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
+
+        // 图标 默认 最新服
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
+        } else {
+            $db_id = $_SESSION['db_id'];
         }
+        if ($db_id != 0) {
+            $ru['db_id'] = $db_id;
+        }
+
         if(isset($_GET["stime"])){
             $stime=I("get.stime");
         }else{
@@ -239,7 +242,7 @@ class TrendActivityController  extends BaseController
         $qudao=$this->qudao3;
 	$this->assign("qudao",$qudao);
 
-        if(isset($_GET["creator"])){
+       /* if(isset($_GET["creator"])){
             $qu=I("get.creator");
             if($qu=='null'){
                 $rus=$this->qudao3;
@@ -253,26 +256,26 @@ class TrendActivityController  extends BaseController
         }else{
         //默认全渠道
             $rus=$this->qudao3;
-        }
-	        $where=null;
+        }*/
+	   /*     $where=null;
         for($i=0;$i<count($rus);$i++){
             $name=$rus[$i]["cid"];
             $where = "source = '$name' or "  .$where;
-        }
+        }*/
 
-        $con=substr($where,0,strlen($where)-3);
+        /*$con=substr($where,0,strlen($where)-3);*/
 
 
         $data[0]["time"]="本双周";
-        $Strtime=date('Y-m-d 00:00:00', strtotime ("-0 day", strtotime($stime)));
-        $Endtime=date('Y-m-d 23:59:59', strtotime ("-13 day", strtotime($stime)));
+        $Strtime=date('Y-m-d 00:00:00', strtotime ("-13 day", strtotime($stime)));
+        $Endtime=date('Y-m-d 23:59:59', strtotime ("-0 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
         $data[0]["num"]=0;
 
 
 
-            $sum=M('sign')->where($ru)->field('game_user_id')->group("game_user_id")->select();
+            $sum=M('sign')->where($ru)->field('user_id')->group("user_id")->select();
             $data[0]["num"]=$data[0]["num"]+count($sum);
             $user=$user+count($sum);
 
@@ -280,13 +283,14 @@ class TrendActivityController  extends BaseController
         $sum=0;
 
         $data[1]["time"]="上双周";
-        $Strtime=date('Y-m-d 00:00:00', strtotime ("-14 day", strtotime($stime)));
-        $Endtime=date('Y-m-d 23:59:59', strtotime ("-27 day", strtotime($stime)));
+        $Strtime=date('Y-m-d 00:00:00', strtotime ("-27 day", strtotime($stime)));
+        $Endtime=date('Y-m-d 23:59:59', strtotime ("-14 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
         $data[1]["num"]=0;
 
-            $sum=M('sign')->where($ru)->group("game_user_id")->field('game_user_id')->select();
+            $sum=M('sign')->where($ru)->group("user_id")->field('user_id')->select();
+
             $data[1]["num"]=$data[1]["num"]+count($sum);
 
             $user=$user+count($sum);;
@@ -296,15 +300,15 @@ class TrendActivityController  extends BaseController
         }
 
         $data[2]["time"]="上月双周";
-        $Strtime=date('Y-m-d 00:00:00', strtotime ("-30 day", strtotime($stime)));
-        $Endtime=date('Y-m-d 23:59:59', strtotime ("-33 day", strtotime($stime)));
+        $Strtime=date('Y-m-d 00:00:00', strtotime ("-43 day", strtotime($stime)));
+        $Endtime=date('Y-m-d 23:59:59', strtotime ("-30 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
         $data[2]["num"]=0;
 
 
 
-            $sum=M('sign')->where($ru)->group("game_user_id")->field('game_user_id')->select();
+            $sum=M('sign')->where($ru)->group("user_id")->field('user_id')->select();
             $data[2]["num"]=$data[2]["num"]+count($sum);;
 
             $user=$user+count($sum);
@@ -313,25 +317,26 @@ class TrendActivityController  extends BaseController
 
 
         $this->assign("data",$data);
-        $jsoBj=json_encode($data);
 
+        $jsoBj=json_encode($data);
         $this->assign("jsoBj",$jsoBj);
 
         $this->display();
     }
     //月活趋势
     public function index4(){
-        $game_id = 1;
-        if(isset($_GET["bclothes"]) && isset($_GET["eclothes"])){
-            $bclothes=I("get.bclothes");
-            $eclothes=I("get.eclothes");
-            if( $bclothes==0 && $eclothes==0 ){
-                $db=D("db")->select();
-            }else{
-                $db=D("db")->where("game_id=$game_id and clothes_num>=$bclothes and clothes_num<=$eclothes ")->order("db_id asc")->select();
-            }
-        }else{
-            $db=D("db")->select();
+        $clostu = D("db")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
+
+        // 图标 默认 最新服
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
+        } else {
+            $db_id = $_SESSION['db_id'];
+        }
+        if ($db_id != 0) {
+            $ru['db_id'] = $db_id;
         }
         if(isset($_GET["stime"])){
             $stime=I("get.stime");
@@ -369,12 +374,17 @@ class TrendActivityController  extends BaseController
 
 
         $data[0]["time"]="本月";
-        $Strtime=date('Y-m-d 00:00:00', strtotime ("-0 day", strtotime($stime)));
-        $Endtime=date('Y-m-d 23:59:59', strtotime ("-30 day", strtotime($stime)));
+        $Strtime=date('Y-m-d 00:00:00', strtotime ("-30 day", strtotime($stime)));
+        $Endtime=date('Y-m-d 23:59:59', strtotime ("-0 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
         $data[0]["num"]=0;
-        for($j=0;$j<count($db);$j++){
+        $sum=M('sign')->where($ru)->group("user_id")->field('user_id')->select();
+        //  echo M('sign','',$connection)->getLastSql();exit;
+        $data[0]["num"]=$data[0]["num"]+count($sum);
+
+        $user=$user+count($sum);
+        /*for($j=0;$j<count($db);$j++){
             $db_id=$db[$j]["db_id"];
             $connection=db2($game_id,$db_id);
             $sum=M('sign')->where($ru)->group("game_user_id")->field('game_user_id')->select();
@@ -382,52 +392,41 @@ class TrendActivityController  extends BaseController
             $data[0]["num"]=$data[0]["num"]+count($sum);
 
             $user=$user+count($sum);
-        }
+        }*/
         for($i=0;$i<count($data);$i++){
             $data[0]["nums"]=round($data[0]["num"]/$user,4)*100;
         }
         $sum=0;
 
         $data[1]["time"]="上月";
-        $Strtime=date('Y-m-d 00:00:00', strtotime ("-31 day", strtotime($stime)));
-        $Endtime=date('Y-m-d 23:59:59', strtotime ("-60 day", strtotime($stime)));
+        $Strtime=date('Y-m-d 00:00:00', strtotime ("-60 day", strtotime($stime)));
+        $Endtime=date('Y-m-d 23:59:59', strtotime ("-31 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
         $data[1]["num"]=0;
-        for($j=0;$j<count($db);$j++){
-            $db_id=$db[$j]["db_id"];
-            $connection=db2($game_id,$db_id);
-            $sum=M('sign')->where($ru)->group("game_user_id")->field('game_user_id')->select();
+
+            $sum=M('sign')->where($ru)->group("user_id")->field('user_id')->select();
+
             $data[1]["num"]=$data[1]["num"]+count($sum);
 
             $user=$user+count($sum);
-        }
+
         for($i=0;$i<count($data);$i++){
             $data[1]["nums"]=round($data[1]["num"]/$user,4)*100;
         }
 
         $data[2]["time"]="去年本月";
-        $Strtime=date('Y-m-d 00:00:00', strtotime ("-365 day", strtotime($stime)));
-        $Endtime=date('Y-m-d 23:59:59', strtotime ("-395 day", strtotime($stime)));
+        $Strtime=date('Y-m-d 00:00:00', strtotime ("-395 day", strtotime($stime)));
+        $Endtime=date('Y-m-d 23:59:59', strtotime ("-365 day", strtotime($stime)));
         $user=0;
-        $ru['_string']="start_time>='$Endtime' and start_time<='$Strtime'";
+        $ru['_string']="start_time>='$Strtime' and start_time<='$Endtime'";
         $data[2]["num"]=0;
-        for($j=0;$j<count($db);$j++){
-            $db_id=$db[$j]["db_id"];
-            $connection=db2($game_id,$db_id);
-            $sum=M('sign')->where($ru)->group("game_user_id")->field('game_user_id')->select();
+            $sum=M('sign')->where($ru)->group("user_id")->field('user_id')->select();
             $data[2]["num"]=$data[2]["num"]+count($sum);
-
             $user=$user+count($sum);
-        }
-
-
-
         $this->assign("data",$data);
         $jsoBj=json_encode($data);
         $this->assign("jsoBj",$jsoBj);
-
-
         $this->display();
     }
 }

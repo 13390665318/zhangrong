@@ -23,8 +23,8 @@ class ClothesController extends  BaseController
     }
     public function add(){
         if(isset($_POST["sub"])){
-
-            $arr=array();
+            $arr=I("post.");
+          /*  $arr=array();
            $arr["db_id"]=I("post.db_id");
 	 $arr["game_id"]=1;
             $game_id=1;
@@ -45,13 +45,20 @@ class ClothesController extends  BaseController
             $arr["redis_port"]=I("post.redis_port");
             $arr["db_port"]=I("post.db_port");
             $arr["status"]=I("post.status");
-            $arr["type"]=I("post.type");
-	$arr["iplist"]=$_POST["iplist"];
-            $arr["time"]=date("Y-m-d",time());
+            $arr["type"]=I("post.type");*/
+	       /* $arr["iplist"]=$_POST["iplist"];
+            $arr["time"]=date("Y-m-d",time());*/
             //创建数据库  创建 表
-            $db_name=$arr["localhost_db_name"];
-            $ru=D("db")->where("localhost_db_name='$db_name'")->find();
-            if($ru==null){
+            /*$db_name=$arr["localhost_db_name"];*/
+           // $ru=D("db")->where("localhost_db_name='$db_name'")->find();
+            $arr['game_db_name']="loong_user";
+            $ru=D("db")->add($arr);
+            $re=D("dbuser")->add($arr);
+            $arr['game_db_name']="loong_game";
+            $re2=D("dbuser")->add($arr);
+           if($ru&&$re&&$re2){
+               /*
+           }
                 $M = M();
                 $sql = "CREATE DATABASE $db_name default character set utf8";
 
@@ -135,8 +142,9 @@ class ClothesController extends  BaseController
                 }
                 // 新建表
 
-            }else{
-                $this->error("数据库名重复",U("Clothes/add"));
+           */$this->success("添加成功",U("Clothes/add"));
+           }else{
+                $this->error("添加失败",U("Clothes/add"));
             }
 
 

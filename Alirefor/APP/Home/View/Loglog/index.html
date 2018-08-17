@@ -24,9 +24,10 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                            <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
                                     class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
+                                <option>..选服务器..</option>
+                                <option value="0">全服</option>
                                 <volist name="clostu" id="vo">
                                     <eq name="vo.db_id" value="$db_id">
                                         <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -34,12 +35,16 @@
                                         <option value="{$vo.db_id}">{$vo.clothes}</option>
                                     </eq>
                                 </volist>
-                            </select>-->从<input class="btn btn-default"
-                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
-                                             id="start_time" value="{$Stime}">
-                            到<input class="btn btn-default"
-                                    onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time"
-                                    value="{$Etime}">
+                            </select>&nbsp&nbsp&nbsp<label>&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                                                 onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                                                 id="start_time" value="{$Stime}">
+                            &nbsp&nbsp至&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                             id="end_time" value="{$Etime}">&nbsp&nbsp&nbsp
+                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                                <i class="fa fa-search"></i>搜索
+                            </button>
+                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button><font color="red">（导出最大数量不得超过2万条）</font>
                         </div>
                     </div>
                 </div>
@@ -49,17 +54,14 @@
                         <div class="dataTables_length" id="dataTables-example_length">
                             <label>玩家ID:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_id" type="text" placeholder="玩家ID">
+                                    <input class="form-control" id="game_user_id" type="text" value="{$role_id}" placeholder="玩家ID">
                                 </div>
                             </label>
                             <label>角色名称:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_name" type="text" placeholder="角色名称">
+                                    <input class="form-control" id="game_user_name" type="text" value="{$role_name}" placeholder="角色名称">
                                 </div>
                             </label>
-                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
-                                <i class="fa fa-search"></i>搜索
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -71,37 +73,35 @@
                                style="width: 100%;" width="100%">
                             <thead>
                             <tr>
+                                <td width="6%">登录时间</td>
                                 <td width="5%">角色名</td>
                                 <td>ID</td>
-                                <td width="2%">IP</td>
-                                <td width="6%">创建时间</td>
-                                <td width="3%">转生</td>
-                                <td width="3%">等级</td>
+                                <td width="1%">IP</td>
+                                <td width="8%">创建时间</td>
+                                <td width="6%">转生等级</td>
                                 <td>剩余金币</td>
-                                <td>剩余免费金币</td>
-                                <td>剩余元宝</td>
-                                <td>剩余免费元宝</td>
-                                <td width="6%">登录时间</td>
+                                <td>剩余银币</td>
+                                <td>剩余钻石</td>
+                                <td>剩余红钻(绑钻)</td>
                                 <td width="6%">上次登出时间</td>
-                                <td width="35%">玩家信息</td>
+                                <td width="30%">玩家信息</td>
                             </tr>
                             </thead>
                             <tbody id="ad">
                             <volist name="loglog" id="ko">
                                 <tr>
+                                    <td>{$ko.login_time}</td>
                                     <td>{$ko.role_name}</td>
                                     <td>{$ko.role_id}</td>
                                     <td>{$ko.ip}</td>
                                     <td>{$ko.create_time}</td>
-                                    <td>{$ko.role_ChangeLife}</td>
-                                    <td>{$ko.role_level}</td>
+                                    <td>{$ko.role_ChangeLife}重{$ko.role_level}级</td>
                                     <td>{$ko.left_Money}</td>
                                     <td>{$ko.left_Bind_Money}</td>
                                     <td>{$ko.left_yuanbao}</td>
                                     <td>{$ko.left_free_yuanbao}</td>
-                                    <td>{$ko.login_time}</td>
                                     <td>{$ko.last_logout_time}</td>
-                                    <td width="30%">角色好友数:{$ko.player_message.FriendCount} 经验值:{$ko.player_message.CurExp} 战力:{$ko.player_message.CombatForce} 在线时长:{$ko.player_message.TotalOnlineSecs} PK值:{$ko.player_message.PKPoint} 帮贡:{$ko.player_message.BangGong}</td>
+                                    <td width="30%">角色好友数:{$ko.player_message.FriendCount} 经验值:{$ko.player_message.CurExp} 战力:{$ko.player_message.CombatForce} 在线时长:{$ko.player_message.TotalOnlineSecs}s PK值:{$ko.player_message.PKPoint} 帮贡:{$ko.player_message.BangGong}</td>
                                 </tr>
                             </volist>
                             </tbody>
@@ -122,17 +122,7 @@
 </div>
 
 <script>
-    function exl() {
-        var value = "{$value}"
-        var clothes = $("#clothes").val();
-        var start_time = $("#start_time").val();
-        var end_time = $("#end_time").val();
-        var game_user_id = $("#game_user_id").val();
-        var game_user_name = $("#game_user_name").val();
-        var goods_name = $("#goods_name").val();
-        location.href = url + "index.php?m=Home&c=Prop&a=exl&value=" + value + "&db_id=" + clothes + "&start_time=" + start_time + "&end_time=" + end_time + "&game_user_id=" + game_user_id + "&game_user_name=" + game_user_name + "&goods_name=" + goods_name;
 
-    }
 </script>
 
 
@@ -180,8 +170,16 @@
             alert("请选择游戏服务器");
             return
         }else{
-            location.href = "index.php?m=Home&c=Loglog&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name;
+            location.href = "index.php?m=Home&c=Loglog&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&db_id="+clothes;
         }
+    }
+    function exl(){
+        var clothes=$("#clothes").val();
+        var start_time = $("#start_time").val();
+        var end_time = $("#end_time").val();
+        var game_user_id = $("#game_user_id").val();
+        var game_user_name = $("#game_user_name").val();
+            location.href="index.php?m=Home&c=Loglog&a=exl&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&db_id="+clothes;
     }
 
 

@@ -13,25 +13,20 @@ class UserBackController extends BaseController
 {
     public function index(){
 
-       // var_dump($db_id);exit;
-        $game_id = 1;
-        $clostu=D("db")->where("game_id=$game_id")->order("db_id desc")->select();
 
+        $clostu=D("db")->order("db_id desc")->select();
         $this->assign("clostu",$clostu);
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
+        } else {
+            $db_id = $_SESSION['db_id'];
+        }
         // 图标 默认 最新服
-        if(isset($_GET["db_id"])){
-            $db_id=I("get.db_id");
-            $_SESSION["db_id"]=$db_id;
-        }else{
-            if(isset($_SESSION["db_id"])){
-                $db_id= $_SESSION["db_id"];
-            }else{
-                $db_id=$clostu[0]["db_id"];
-                $_SESSION["db_id"]=$db_id;
-            }
+        if($db_id!=0){
+            $ru['db_id']=$db_id;
         }
 
-        $this->assign("db_id",$db_id);
         if(isset($_GET["stime"])&&isset($_GET["etime"])){
             $stime=I("get.stime");
             $etime=I("get.etime");
@@ -58,7 +53,8 @@ class UserBackController extends BaseController
             $start_time=$arr[$i]["time1"];
             $end_time=$arr[$i]["time2"];
            $begin_time=date('Y-m-d 00:00:00', strtotime ("+7day", strtotime( $arr[$i]["time"])));
-           $stu = D('sign')->field('game_user_id')->where("start_time>='$start_time' and start_time<='$end_time'")->select();
+            $ru['_string']="start_time>='$start_time' and start_time<='$end_time'";
+           $stu = D('sign')->field('user_id')->where($ru)->select();
            $stu= array_unique($stu, SORT_REGULAR);
            $stu= array_values($stu);
            /* foreach ($stu as $k=>$value){
@@ -70,8 +66,8 @@ class UserBackController extends BaseController
             //判断是否是回流玩家
           $data[$i]["num"]=0;
             for($j=0;$j<count($stu);$j++){
-                $uid=$stu[$j]["game_user_id"];
-                $rus=D("sign")->where("game_user_id=$uid")->order("start_time desc")->limit(2)->select();
+                $uid=$stu[$j]["user_id"];
+                $rus=D("sign")->where("user_id=$uid")->order("start_time desc")->limit(2)->select();
                 if(count($rus)==2){
                     if (count_days($rus[0]["start_time"], $rus[1]["start_time"]) >= 7) {
                         //回流用户e

@@ -20,17 +20,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
-                                    class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
-                                <volist name="clostu" id="vo">
-                                    <eq name="vo.db_id" value="$db_id">
-                                        <option value="{$vo.db_id}" selected="selected">{$vo.game_name}</option>
-                                        <else/>
-                                        <option value="{$vo.db_id}">{$vo.clothes}</option>
-                                    </eq>
-                                </volist>
-                            </select>-->
+                            <include file="Public:selectdb" />
                             &nbsp角色ID&nbsp<input class="form-control" id="roleid" type="text" placeholder="角色ID">
                             &nbsp角色名称&nbsp<input class="form-control" id="rolename" type="text" placeholder="角色名称">
                             <button class="btn btn-default" id="search-operator-btn" type="submit" onclick="Cuselect()">
@@ -99,6 +89,7 @@
                                 <td>帮会名称</td>
                                 <td>帮会职务</td>
                                 <td>所在地图,坐标</td>
+                                <td>最后一次登录时间</td>
                             </tr>
                             </thead>
                             <tbody id="ad">
@@ -149,6 +140,7 @@
                                     </if>
                                     </td>
                                     <td>map:{$vo.position.0} X:{$vo.position.1} Y:{$vo.position.2} Z:{$vo.position.3}</td>
+                                    <td>{$vo.lasttime}</td>
 
                                     <!--       <td>{$vo.rname}</td>
                                            <td>
@@ -539,8 +531,13 @@
         var rolename = $("#rolename").val();
         var game_user_name = $("#game_user_name").val();
         var goods_name = $("#type").val();
-        location.href = "index.php?m=Home&c=Role&a=index&value=" + value + "&db_id=" + clothes + "&start_time=" + start_time + "&end_time=" + end_time + "&roleid=" + roleid + "&game_user_name=" + game_user_name + "&goods_name=" + goods_name + "&rolename=" + rolename;
-    }
+        if(clothes=="...选择游戏服务器...") {
+            alert("请选择游戏服务器");
+            return
+        }else{
+                location.href = "index.php?m=Home&c=Role&a=index&value=" + value + "&db_id=" + clothes + "&start_time=" + start_time + "&end_time=" + end_time + "&roleid=" + roleid + "&game_user_name=" + game_user_name + "&goods_name=" + goods_name + "&rolename=" + rolename;
+            }
+        }
 
     function Skill() {
         var roleid = $("#rid").val();

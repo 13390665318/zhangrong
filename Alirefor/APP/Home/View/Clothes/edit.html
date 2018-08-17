@@ -8,6 +8,7 @@
             <h1 class="page-header">系统管理</h1>
         </div>
     </div>
+    <a href="{:U('clothes/index')}"><button class="btn btn-primary" >返回</button></a>
     <div class="panel panel-default">
         <div class="panel-heading">
             区服新增 <div style="clear: both;"></div>
@@ -21,32 +22,31 @@
                         <input class ="sr" type="text" placeholder="区服id" name="db_id" id="db_id" value="{$arr.db_id}" />
                     </p>
                 </div>
-                <div class="lei">
+              <!--  <div class="lei">
                     <p>
                         <label><font>*</font>区号：</label>
                         <input class ="sr" type="text" placeholder="" name="clothes_num" value="{$arr.clothes_num}" id="clothes_num"/>
                     </p>
-                </div>
+                </div>-->
                 <div class="lei">
                     <p>
                         <label><font>*</font>区/服名称：</label>
                         <input class ="sr" type="text" placeholder="" name="clothes" value="{$arr.clothes}" id="clothes"/>
-
                     </p>
                 </div>
-                <div class="lei">
+               <!-- <div class="lei">
                     <p>
                         <label><font>*</font>服务器开启时间：</label>
                         <input class ="sr" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="start_time" value="{$arr.start_time}" name="start_time">
 
                     </p>
-                </div>
-                <div class="lei">
+                </div>-->
+               <!-- <div class="lei">
                     <p>
                         <label><font>*</font>本地数据库名称：</label>
                         <input class ="sr" type="text" placeholder="" name="localhost_db_name" value="{$arr.localhost_db_name}" readonly/>
                     </p>
-                </div>
+                </div>-->
                 <div class="lei">
                     <p>
                         <label><font>*</font>外接数据库名称：</label>
@@ -80,7 +80,7 @@
                         <input class ="sr" type="text" placeholder="" name="game_db_pwd" value="{$arr.game_db_pwd}" id="game_db_pwd"/>
                     </p>
                 </div>
-                <div class="lei">
+                <!--<div class="lei">
                     <p>
                         <label><font>*</font>IP：</label>
                         <input class ="sr" type="text" placeholder="" name="ip" value="{$arr.ip}" id="ip"/>
@@ -141,7 +141,7 @@
                         <label><font>*</font>IP白名单：</label>
                         <textarea name="iplist"placeholder="61.183.71.86,多个‘;’隔开 如：61.183.71.86;61.183.71.86" style="width:500px;height:150px;position: relative;">{$arr.iplist}</textarea>
                     </p>
-                </div>
+                </div>-->
 
               <!--  <input class="ztj" type="hidden" name="db_id" value="{$arr.db_id}"/>-->
                 <button type="submit" name ="sub"class="btn btn-primary" style="margin:20px auto;display: block;">确定</button>

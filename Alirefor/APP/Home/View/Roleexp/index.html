@@ -24,9 +24,10 @@ background: green;
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                            <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
                                     class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
+                                <option>..选服务器..</option>
+                                <option value="0">全服</option>
                                 <volist name="clostu" id="vo">
                                     <eq name="vo.db_id" value="$db_id">
                                         <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -34,12 +35,16 @@ background: green;
                                         <option value="{$vo.db_id}">{$vo.clothes}</option>
                                     </eq>
                                 </volist>
-                            </select>-->从<input class="btn btn-default"
-                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
-                                             id="start_time" value="{$Stime}">
-                            到<input class="btn btn-default"
-                                    onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time"
-                                    value="{$Etime}">
+                            </select>&nbsp&nbsp&nbsp<label>选择日志时间</label>&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                                                               onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                                                               id="start_time" value="{$Stime}">
+                            &nbsp&nbsp至&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                             id="end_time" value="{$Etime}">&nbsp&nbsp&nbsp
+                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                                <i class="fa fa-search"></i>搜索
+                            </button>
+                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button><font color="red">（导出最大数量不得超过2万条）</font>
                         </div>
                     </div>
                 </div>
@@ -49,17 +54,20 @@ background: green;
                         <div class="dataTables_length" id="dataTables-example_length">
                             <label>玩家ID:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_id" type="text" placeholder="玩家ID">
+                                    <input class="form-control" id="game_user_id" type="text" value="{$role_id}" placeholder="玩家ID">
                                 </div>
                             </label>
                             <label>角色名称:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_name" type="text" placeholder="角色名称">
+                                    <input class="form-control" id="game_user_name" type="text" value="{$role_name}" placeholder="角色名称">
                                 </div>
                             </label>
-                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
-                                <i class="fa fa-search"></i>搜索
-                            </button>
+                            &nbsp&nbsp&nbsp
+                            <label>显示升级日志
+                                <div class="form-group input-group">
+                                    <input type="checkbox" id="level" name="test" {$check} value="1" style="width: 30px;height: 20px;"  />
+                                </div>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -69,29 +77,28 @@ background: green;
                         <table class="table table-striped  table-bordered table-hover dataTable " id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;" width="100%">
                             <thead>
                             <tr>
-                                <td width="10%">角色ID</td>
-                                <td width="10%">角色名称</td>
-                                <td width="15%">途径</td>
-                                <td width="10%">获得经验值</td>
-                                <td width="10%">当前经验值</td>
-                                <td width="10%">经验获得前转生等级</td>
-                                <td width="10%">经验获得前角色等级</td>
-                                <td width="10%">经验获得后角色转生等级</td>
-                                <td width="10%">经验获得后角色等级</td>
+                                <td >时间</td>
+                                <td >角色ID</td>
+                                <td >角色名称</td>
+                                <td >途径</td>
+                                <td >获得经验值</td>
+                                <td >当前经验值</td>
+                                <td >经验获得前等级</td>
+                                <td >经验获得后等级</td>
                             </tr>
                             </thead>
                             <tbody id="ad">
                             <volist name="roleexp" id="ko">
                                 <tr>
+                                    <td>{$ko.LogTime}</td>
                                     <td>{$ko.role_id}</td>
                                     <td>{$ko.role_name}</td>
                                     <td>{$ko.exp_reason}</td>
                                     <td>{$ko.role_exp_get}</td>
                                     <td>{$ko.laterrole_exp}</td>
-                                    <td>{$ko.prerole_ChangeLife}</td>
-                                    <td>{$ko.prerole_level}</td>
-                                    <td>{$ko.laterrole_ChangeLife}</td>
-                                    <td>{$ko.laterrole_level}</td>
+                                    <td>{$ko.prerole_ChangeLife}重{$ko.prerole_level}级</td>
+                                    <td>{$ko.laterrole_ChangeLife}重{$ko.laterrole_level}级</td>
+
                                 </tr>
                             </volist>
                             </tbody>
@@ -150,12 +157,29 @@ background: green;
         var game_user_id = $("#game_user_id").val();
         var game_user_name = $("#game_user_name").val();
         var goods_name = $("#type").val();
+       if( $("input[type='checkbox']").is(':checked')){
+            var level=$("#level").val();
+        }
+
         if(clothes=="...选择游戏服务器..."){
             alert("请选择游戏服务器");
             return
         }else{
-            location.href = "index.php?m=Home&c=Roleexp&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name;
+            location.href = "index.php?m=Home&c=Roleexp&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&db_id="+clothes+"&level="+level;
         }
+    }
+    function exl() {
+        var clothes=$("#clothes").val();
+        var start_time = $("#start_time").val();
+        var end_time = $("#end_time").val();
+        var game_user_id = $("#game_user_id").val();
+        var game_user_name = $("#game_user_name").val();
+        var goods_name = $("#type").val();
+        if( $("input[type='checkbox']").is(':checked')){
+            var level=$("#level").val();
+        }
+        location.href = "index.php?m=Home&c=Roleexp&a=exl&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&db_id="+clothes+"&level="+level;
+
     }
 
 

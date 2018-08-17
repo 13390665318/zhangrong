@@ -5,9 +5,10 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">系统管理</h1>
+            <h1 class="page-header">区服新增</h1>
         </div>
     </div>
+    <a href="{:U('clothes/index')}"><button class="btn btn-primary" >返回</button></a>
     <div class="panel panel-default">
         <div class="panel-heading">
             区服新增 <div style="clear: both;"></div>
@@ -21,12 +22,12 @@
                         <input class ="sr" type="text" placeholder="区服id" name="db_id" id="db_id"/>
                     </p>
                 </div>
-                <div class="lei">
+               <!-- <div class="lei">
                     <p>
                         <label><font>*</font>区号：</label>
                         <input class ="sr" type="text" placeholder="不可重复" name="clothes_num" id="clothes_num"/>
                     </p>
-                </div>
+                </div>-->
                 <div class="lei">
                     <p>
                         <label><font>*</font>区/服名称：</label>
@@ -41,18 +42,18 @@
 
                     </p>
                 </div>
-                <div class="lei">
+               <!-- <div class="lei">
                     <p>
                         <label><font>*</font>本地数据库名称：</label>
                         <input class ="sr" type="text" placeholder="(命名之后不可修改)" name="localhost_db_name" id="localhost_db_name"/>
                     </p>
-                </div>
-                <div class="lei">
+                </div>-->
+               <!-- <div class="lei">
                     <p>
                         <label><font>*</font>外接数据库名称：</label>
                         <input class ="sr" type="text" placeholder="" name="game_db_name" id="game_db_name"/>
                     </p>
-                </div>
+                </div>-->
 
 
                 <div class="lei">
@@ -77,10 +78,10 @@
                 <div class="lei">
                     <p>
                         <label><font>*</font>外接数据库密码：</label>
-                        <input class ="sr" type="text" placeholder="" name="game_db_pwd" id="game_db_pwd"/>
+                        <input class ="sr" type="password" placeholder="" name="game_db_pwd" id="game_db_pwd"/>
                     </p>
                 </div>
-                <div class="lei">
+              <!--  <div class="lei">
                     <p>
                         <label><font>*</font>IP：</label>
                         <input class ="sr" type="text" placeholder="" name="ip" id="ip"/>
@@ -105,8 +106,8 @@
                         <input  type="radio"  name="type" value="0" checked="checked" style="width: 5%"/> 否
                         <input  type="radio"  name="type" value="1" style="width: 5%"/>是
                     </p>
-                </div>
-                <div class="lei">
+                </div>-->
+<!--                <div class="lei">
                     <p>
                         <label><font>*</font>redis连接地址：</label>
                         <input class ="sr" type="text" placeholder="" name="redis_ip"/>
@@ -130,13 +131,13 @@
                         <label><font>*</font>redis 密码：</label>
                         <input class ="sr" type="text" placeholder="" name="redis_psw" />
                     </p>
-                </div>
-<div class="lei">
+                </div>-->
+<!--<div class="lei">
                     <p>
                         <label><font>*</font>IP白名单：</label>
                         <textarea name="iplist"placeholder="61.183.71.86,多个‘;’隔开 如：61.183.71.86;61.183.71.86" style="width:500px;height:150px;position: relative;"></textarea>
                     </p>
-                </div>
+                </div>-->
 
                 <input class="ztj" type="hidden" name="pid" value="{$fid}"/>
                 <button type="submit" name ="sub"class="btn btn-primary" style="margin:20px auto;display: block;">确定</button>
@@ -167,22 +168,13 @@
         var db_port=$("#db_port").val();
         var status=$("#status").val();
 
-        if(clothes_num==null){
-            alert("区号不可为空");
-            return false;
-        }else if(clothes==""){
+         if(clothes==""){
             alert("服务器名称不可为空");
             return false;
         }else if(start_time==""){
-            alert("开服不可为空");
-            return false;
-        }else if(localhost_db_name==""){
-            alert("本地数据库不可为空");
-            return false;
-        }else if(game_db_name==""){
-            alert("外接数据库名称不可为空");
-            return false;
-        }else if(game_db_host==""){
+             alert("开服时间不可为空");
+             return false;
+         }else if(game_db_host==""){
             alert("外接数据库连接IP不可为空");
             return false;
         }else if(game_db_port==""){
@@ -193,15 +185,6 @@
             return false;
         }else if(game_db_pwd==""){
             alert("外接数据库密码不可为空");
-            return false;
-        }else if(ip==""){
-            alert("ip不可为空");
-            return false;
-        }else if(db_port==""){
-            alert("服务器端口不可为空");
-            return false;
-        }else if(status==""){
-            alert("服务器状态不可为空");
             return false;
         }else{
             return true;

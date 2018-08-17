@@ -14,12 +14,12 @@ class BaseController extends Controller
 
 //  菜单筛选
 
-
+		date_default_timezone_set("Asia/Seoul");
 // 登录判断
-
         if(isset($_SESSION["username"])){
-
+	
             $_SESSION["token"]="alibabawansui";
+			
 
 
             $username=$user_name=$_SESSION["username"];
@@ -27,6 +27,15 @@ class BaseController extends Controller
             $password=$_SESSION['password'];
             $ru=D("admin")->where("user_name='$user_name' and password='$password'")->find();
             $urls="http://127.0.0.1/Alirefor/";
+            if (isset($_GET["db_id"])) {
+                $db_id = I("db_id");
+                $_SESSION['db_id']=$db_id;
+            } else {
+                $db_id = $_SESSION['db_id'];
+            }
+
+
+            $this->assign("db_id", $db_id);
             $this->assign("urls",$urls);
             if($ru==null){
                 //  $this->redirect('Login/index');
@@ -70,10 +79,9 @@ class BaseController extends Controller
 
                 $con = substr($where, 0, strlen($where) - 3);
 
-                $redis = new \Redis();
-                $redis->connect('127.0.0.1', 6379);
 
-                    $Mune2 = D("admin_auth_rule")->where($con)->select();
+
+                    $Mune2 = D("admin_auth_rule")->where($con)->order('id')->select();
 
                 $Mune2 = array_filter($Mune2);
                 $Mune2 = array_values($Mune2);

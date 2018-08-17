@@ -1,0 +1,2300 @@
+[ 2018-07-27T10:24:53+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+ERR: Redis server went away
+
+[ 2018-07-27T10:25:36+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000739s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2018-07-27T10:25:37+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2018-07-27T10:25:38+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2018-07-27T10:25:38+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001265s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2018-07-27T10:25:39+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2018-07-27T10:25:39+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2018-07-27T10:25:40+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2018-07-27T10:25:40+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2018-07-27T10:25:41+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2018-07-27T10:25:41+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2018-07-27T10:25:42+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000728s ]
+
+[ 2018-07-27T10:25:43+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000636s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2018-07-27T10:25:45+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000759s ]
+
+[ 2018-07-27T10:25:45+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2018-07-27T10:25:46+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2018-07-27T10:25:46+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2018-07-27T10:25:47+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2018-07-27T10:25:47+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2018-07-27T10:25:48+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2018-07-27T10:25:48+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000657s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000701s ]
+
+[ 2018-07-27T10:25:49+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+
+[ 2018-07-27T10:56:26+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001083s ]
+SQL: SHOW COLUMNS FROM `yuanbaogain` [ RunTime:0.0117s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49') [ RunTime:0.0013s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `joinfuben` [ RunTime:0.0556s ]
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002006s ]
+
+[ 2018-07-27T10:56:50+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2018-07-27T10:56:50+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000770s ]
+
+[ 2018-07-27T10:56:51+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000657s ]
+
+[ 2018-07-27T10:56:51+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2018-07-27T10:56:52+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2018-07-27T10:56:52+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2018-07-27T10:56:53+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000608s ]
+
+[ 2018-07-27T10:56:53+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2018-07-27T10:56:53+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000776s ]
+
+[ 2018-07-27T10:56:54+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000698s ]
+
+[ 2018-07-27T10:56:54+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2018-07-27T10:56:55+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2018-07-27T10:56:55+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2018-07-27T10:56:55+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2018-07-27T10:56:56+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2018-07-27T10:56:56+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2018-07-27T10:56:57+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000624s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2018-07-27T10:56:57+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000606s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2018-07-27T10:56:58+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2018-07-27T10:56:58+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2018-07-27T10:56:59+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000999s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-26 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49') [ RunTime:0.0012s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2018-07-27T11:28:31+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000827s ]
+
+[ 2018-07-27T11:28:32+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2018-07-27T11:28:32+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000704s ]
+
+[ 2018-07-27T11:28:35+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000880s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2018-07-27T11:28:36+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001693s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001017s ]
+
+[ 2018-07-27T11:28:38+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001835s ]
+
+[ 2018-07-27T11:28:40+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001598s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002634s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-27 00:00:55','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:37294 ','基金钻石','1200','4347','14','2018-07-27 00:00:55'),('2018-07-27 00:03:12','YuanbaoGain','1','dfe940a98a8dbf9af3e5e358c1191256','0.9.867.893','4851','3_13925023','203584','어검','3','37','3','125.181.234.89:59489 ','基金钻石','600','1093','7183','2018-07-27 00:03:12'),('2018-07-27 00:19:09','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','基金钻石','1200','1634','2488','2018-07-27 00:19:09'),('2018-07-27 00:00:55','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:37294 ','基金钻石','1200','4347','14','2018-07-27 00:00:55'),('2018-07-27 00:03:12','YuanbaoGain','1','dfe940a98a8dbf9af3e5e358c1191256','0.9.867.893','4851','3_13925023','203584','어검','3','37','3','125.181.234.89:59489 ','基金钻石','600','1093','7183','2018-07-27 00:03:12'),('2018-07-27 00:19:09','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','基金钻石','1200','1634','2488','2018-07-27 00:19:09'),('2018-07-27 00:21:22','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','充值钻石','55','1491','2488','2018-07-27 00:21:22'),('2018-07-27 00:22:23','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','充值钻石','55','1546','2488','2018-07-27 00:22:23'),('2018-07-27 05:29:46','YuanbaoGain','1','7be25fb9076ca49b02c7afd56778174c','0.9.867.893','2451','3_14332341','200613','둥이아부지','4','56','6','182.209.145.11:50438 ','基金钻石','1200','1204','383','2018-07-27 05:29:46'),('2018-07-27 05:55:19','YuanbaoGain','1','8fca3a41d0e4425e8ac040c543b23ef5','0.9.867.893','5008','3_15092020','203775','냥아치','3','47','6','223.33.180.155:16447 ','基金钻石','900','1761','5599','2018-07-27 05:55:19'),('2018-07-27 06:26:41','YuanbaoGain','1','1a5b1bdf657a03704d9319d6cdb6f4d1','0.9.867.893','6187','3_15096715','205311','응가','0','7','1','119.197.171.116:52587 ','充值钻石','55','55','175','2018-07-27 06:26:41'),('2018-07-27 08:08:47','YuanbaoGain','1','1db9c9e9d468b51f36264d6ce849b13a','0.9.867.893','2035','3_15088085','200103','샤르티아','4','97','6','117.111.12.242:51435 ','充值钻石','55','131','5753','2018-07-27 08:08:47'),('2018-07-27 08:09:22','YuanbaoGain','1','1db9c9e9d468b51f36264d6ce849b13a','0.9.867.893','2035','3_15088085','200103','샤르티아','4','97','6','117.111.12.242:51435 ','充值钻石','55','186','5753','2018-07-27 08:09:22'),('2018-07-27 10:31:10','YuanbaoGain','1','10356e98f065551f18483848d64a6546','0.9.867.893','1956','3_15081038','200012','dotid','3','10','5','222.237.27.110:50592 ','基金钻石','600','62234','31790','2018-07-27 10:31:10') [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2018-07-27T11:28:41+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000885s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000950s ]
+
+[ 2018-07-27T11:49:45+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001878s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001190s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001271s ]
+
+[ 2018-07-27T11:49:45+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2018-07-27T11:49:49+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001220s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001203s ]
+
+[ 2018-07-27T11:49:51+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000969s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-27 11:19:39','YuanbaoGain','1','4bd05a71e7cc88c33301a6a19627ad34','0.9.867.893','1963','3_14115708','200019','바재','3','66','6','222.237.27.110:5054 ','基金钻石','1200','3064','8585','2018-07-27 11:19:39'),('2018-07-27 11:44:52','YuanbaoGain','1','c6b4b60d3f1f871f60c7db2a44af8a54','0.9.867.893','2250','3_15088215','200334','s권역s','4','18','3','122.46.109.251:36969 ','充值钻石','55','238','3646','2018-07-27 11:44:52'),('2018-07-27 00:00:55','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:37294 ','基金钻石','1200','4347','14','2018-07-27 00:00:55'),('2018-07-27 00:03:12','YuanbaoGain','1','dfe940a98a8dbf9af3e5e358c1191256','0.9.867.893','4851','3_13925023','203584','어검','3','37','3','125.181.234.89:59489 ','基金钻石','600','1093','7183','2018-07-27 00:03:12'),('2018-07-27 00:19:09','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','基金钻石','1200','1634','2488','2018-07-27 00:19:09'),('2018-07-27 00:21:22','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','充值钻石','55','1491','2488','2018-07-27 00:21:22'),('2018-07-27 00:22:23','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','充值钻石','55','1546','2488','2018-07-27 00:22:23'),('2018-07-27 00:00:55','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:37294 ','基金钻石','1200','4347','14','2018-07-27 00:00:55'),('2018-07-27 00:03:12','YuanbaoGain','1','dfe940a98a8dbf9af3e5e358c1191256','0.9.867.893','4851','3_13925023','203584','어검','3','37','3','125.181.234.89:59489 ','基金钻石','600','1093','7183','2018-07-27 00:03:12'),('2018-07-27 00:19:09','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','基金钻石','1200','1634','2488','2018-07-27 00:19:09'),('2018-07-27 00:21:22','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','充值钻石','55','1491','2488','2018-07-27 00:21:22'),('2018-07-27 00:22:23','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','充值钻石','55','1546','2488','2018-07-27 00:22:23'),('2018-07-27 05:29:46','YuanbaoGain','1','7be25fb9076ca49b02c7afd56778174c','0.9.867.893','2451','3_14332341','200613','둥이아부지','4','56','6','182.209.145.11:50438 ','基金钻石','1200','1204','383','2018-07-27 05:29:46'),('2018-07-27 05:55:19','YuanbaoGain','1','8fca3a41d0e4425e8ac040c543b23ef5','0.9.867.893','5008','3_15092020','203775','냥아치','3','47','6','223.33.180.155:16447 ','基金钻石','900','1761','5599','2018-07-27 05:55:19'),('2018-07-27 06:26:41','YuanbaoGain','1','1a5b1bdf657a03704d9319d6cdb6f4d1','0.9.867.893','6187','3_15096715','205311','응가','0','7','1','119.197.171.116:52587 ','充值钻石','55','55','175','2018-07-27 06:26:41'),('2018-07-27 08:08:47','YuanbaoGain','1','1db9c9e9d468b51f36264d6ce849b13a','0.9.867.893','2035','3_15088085','200103','샤르티아','4','97','6','117.111.12.242:51435 ','充值钻石','55','131','5753','2018-07-27 08:08:47'),('2018-07-27 08:09:22','YuanbaoGain','1','1db9c9e9d468b51f36264d6ce849b13a','0.9.867.893','2035','3_15088085','200103','샤르티아','4','97','6','117.111.12.242:51435 ','充值钻石','55','186','5753','2018-07-27 08:09:22') [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2018-07-27T11:49:52+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000883s ]
+
+[ 2018-07-27T11:49:53+08:00 ] 192.168.88.57 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000650s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000689s ]
+
+[ 2018-07-27T12:05:49+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2018-07-27T12:05:49+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2018-07-27T12:05:55+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000636s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2018-07-27T12:05:56+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2018-07-27T12:06:00+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2018-07-27T12:06:12+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2018-07-27T12:06:12+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-27 10:31:10','YuanbaoGain','1','10356e98f065551f18483848d64a6546','0.9.867.893','1956','3_15081038','200012','dotid','3','10','5','222.237.27.110:50592 ','基金钻石','600','62234','31790','2018-07-27 10:31:10'),('2018-07-27 11:19:39','YuanbaoGain','1','4bd05a71e7cc88c33301a6a19627ad34','0.9.867.893','1963','3_14115708','200019','바재','3','66','6','222.237.27.110:5054 ','基金钻石','1200','3064','8585','2018-07-27 11:19:39'),('2018-07-27 11:44:52','YuanbaoGain','1','c6b4b60d3f1f871f60c7db2a44af8a54','0.9.867.893','2250','3_15088215','200334','s권역s','4','18','3','122.46.109.251:36969 ','充值钻石','55','238','3646','2018-07-27 11:44:52'),('2018-07-27 00:00:55','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:37294 ','基金钻石','1200','4347','14','2018-07-27 00:00:55'),('2018-07-27 00:03:12','YuanbaoGain','1','dfe940a98a8dbf9af3e5e358c1191256','0.9.867.893','4851','3_13925023','203584','어검','3','37','3','125.181.234.89:59489 ','基金钻石','600','1093','7183','2018-07-27 00:03:12'),('2018-07-27 00:19:09','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','基金钻石','1200','1634','2488','2018-07-27 00:19:09'),('2018-07-27 00:21:22','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','充值钻石','55','1491','2488','2018-07-27 00:21:22'),('2018-07-27 00:22:23','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','5','4','7','223.39.138.106:42200 ','充值钻石','55','1546','2488','2018-07-27 00:22:23'),('2018-07-27 05:29:46','YuanbaoGain','1','7be25fb9076ca49b02c7afd56778174c','0.9.867.893','2451','3_14332341','200613','둥이아부지','4','56','6','182.209.145.11:50438 ','基金钻石','1200','1204','383','2018-07-27 05:29:46'),('2018-07-27 05:55:19','YuanbaoGain','1','8fca3a41d0e4425e8ac040c543b23ef5','0.9.867.893','5008','3_15092020','203775','냥아치','3','47','6','223.33.180.155:16447 ','基金钻石','900','1761','5599','2018-07-27 05:55:19'),('2018-07-27 06:26:41','YuanbaoGain','1','1a5b1bdf657a03704d9319d6cdb6f4d1','0.9.867.893','6187','3_15096715','205311','응가','0','7','1','119.197.171.116:52587 ','充值钻石','55','55','175','2018-07-27 06:26:41'),('2018-07-27 08:08:47','YuanbaoGain','1','1db9c9e9d468b51f36264d6ce849b13a','0.9.867.893','2035','3_15088085','200103','샤르티아','4','97','6','117.111.12.242:51435 ','充值钻石','55','131','5753','2018-07-27 08:08:47'),('2018-07-27 08:09:22','YuanbaoGain','1','1db9c9e9d468b51f36264d6ce849b13a','0.9.867.893','2035','3_15088085','200103','샤르티아','4','97','6','117.111.12.242:51435 ','充值钻石','55','186','5753','2018-07-27 08:09:22') [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2018-07-27T12:06:32+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000770s ]
+
+[ 2018-07-27T12:06:39+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2018-07-27T12:06:45+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2018-07-27T13:56:39+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000682s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2018-07-27T13:56:40+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2018-07-27T13:56:41+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2018-07-27T13:56:42+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2018-07-27T13:56:42+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2018-07-27T13:56:43+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000811s ]
+
+[ 2018-07-27T13:56:43+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2018-07-27T13:56:44+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2018-07-27T13:56:44+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2018-07-27T13:56:45+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2018-07-27T13:56:45+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000649s ]
+
+[ 2018-07-27T13:56:46+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000607s ]
+
+[ 2018-07-27T13:56:46+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2018-07-27T13:56:47+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2018-07-27T13:56:47+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-27 10:31:10','YuanbaoGain','1','10356e98f065551f18483848d64a6546','0.9.867.893','1956','3_15081038','200012','dotid','3','10','5','222.237.27.110:50592 ','基金钻石','600','62234','31790','2018-07-27 10:31:10'),('2018-07-27 11:19:39','YuanbaoGain','1','4bd05a71e7cc88c33301a6a19627ad34','0.9.867.893','1963','3_14115708','200019','바재','3','66','6','222.237.27.110:5054 ','基金钻石','1200','3064','8585','2018-07-27 11:19:39'),('2018-07-27 11:44:52','YuanbaoGain','1','c6b4b60d3f1f871f60c7db2a44af8a54','0.9.867.893','2250','3_15088215','200334','s권역s','4','18','3','122.46.109.251:36969 ','充值钻石','55','238','3646','2018-07-27 11:44:52'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49') [ RunTime:0.0016s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2018-07-27T13:56:47+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2018-07-27T13:56:48+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2018-07-27T13:56:48+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000749s ]
+
+[ 2018-07-27T13:56:49+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2018-07-27T13:56:49+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
+
+[ 2018-07-27T13:56:50+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2018-07-27T13:56:51+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2018-07-27T13:56:51+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2018-07-27T13:56:52+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000585s ]
+
+[ 2018-07-27T13:56:53+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2018-07-27T13:57:19+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2018-07-27T13:57:20+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2018-07-27T13:57:20+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2018-07-27T13:57:21+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2018-07-27T13:57:22+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2018-07-27T13:57:22+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000599s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2018-07-27T13:57:23+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2018-07-27T13:57:23+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000774s ]
+
+[ 2018-07-27T13:57:24+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000585s ]
+
+[ 2018-07-27T13:57:24+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2018-07-27T13:57:25+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49'),('2018-07-27 22:39:49','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','88','6','112.171.224.175:36765 ','基金钻石','1500','5647','11819','2018-07-26 22:39:49') [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2018-07-27T14:14:32+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2018-07-27T14:14:32+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2018-07-27T14:14:33+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-20 00:00:56','YuanbaoGain','1','8ce296c0df2766b9784f198907dff155','0.9.867.893','5582','3_15093822','204491','쟈객','2','59','3','218.209.97.162:57409 ','基金钻石','300','481','351','2018-07-20 00:00:56'),('2018-07-20 00:05:34','YuanbaoGain','1','c30191aa4ea9217aa996612a60650166','0.9.867.893','5010','3_15092033','203777','제인','2','61','1','223.62.10.199:37312 ','充值钻石','55','55','8705','2018-07-20 00:05:34'),('2018-07-20 00:06:39','YuanbaoGain','1','108ca2a202485e0b4b6b700f2141155a','0.9.867.893','5317','3_15092993','204164','이무기','3','40','7','175.223.27.84:22277 ','充值钻石','275','8027','27044','2018-07-20 00:06:39'),('2018-07-20 00:00:56','YuanbaoGain','1','8ce296c0df2766b9784f198907dff155','0.9.867.893','5582','3_15093822','204491','쟈객','2','59','3','218.209.97.162:57409 ','基金钻石','300','481','351','2018-07-20 00:00:56'),('2018-07-20 00:05:34','YuanbaoGain','1','c30191aa4ea9217aa996612a60650166','0.9.867.893','5010','3_15092033','203777','제인','2','61','1','223.62.10.199:37312 ','充值钻石','55','55','8705','2018-07-20 00:05:34'),('2018-07-20 00:06:39','YuanbaoGain','1','108ca2a202485e0b4b6b700f2141155a','0.9.867.893','5317','3_15092993','204164','이무기','3','40','7','175.223.27.84:22277 ','充值钻石','275','8027','27044','2018-07-20 00:06:39'),('2018-07-20 00:08:57','YuanbaoGain','1','4b96d23271d0d4ccd8769ea752e831e2','0.9.867.893','1956','3_15081038','200012','dotid','2','88','0','222.112.145.112:50284 ','提取邮件','10000','72226','11760','2018-07-20 00:08:57'),('2018-07-20 00:09:51','YuanbaoGain','1','42ea2b6feb3680fce68a3859531179e7','0.9.867.893','2323','3_15088254','200417','섭이','4','69','6','211.173.164.43:46588 ','充值钻石','55','1254','3612','2018-07-20 00:09:51'),('2018-07-20 00:10:16','YuanbaoGain','1','108ca2a202485e0b4b6b700f2141155a','0.9.867.893','5317','3_15092993','204164','이무기','3','40','7','175.223.27.84:44799 ','充值钻石','5500','13527','28144','2018-07-20 00:10:16'),('2018-07-20 00:10:26','YuanbaoGain','1','797098f1ab1347da11df652c213998fd','0.9.867.893','5768','3_15094563','204741','나댕나댕','0','29','1','221.155.110.180:58634 ','充值钻石','55','55','495','2018-07-20 00:10:26'),('2018-07-20 00:12:12','YuanbaoGain','1','108ca2a202485e0b4b6b700f2141155a','0.9.867.893','5317','3_15092993','204164','이무기','3','40','7','175.223.27.84:44799 ','充值钻石','55','13582','35405','2018-07-20 00:12:12'),('2018-07-20 00:12:32','YuanbaoGain','1','108ca2a202485e0b4b6b700f2141155a','0.9.867.893','5317','3_15092993','204164','이무기','3','40','7','175.223.27.84:44799 ','充值钻石','55','13637','35405','2018-07-20 00:12:32'),('2018-07-20 00:13:48','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','38','6','112.171.224.175:36030 ','充值钻石','55','864','419','2018-07-20 00:13:48'),('2018-07-20 00:13:58','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','4','58','7','223.33.180.52:59286 ','充值钻石','55','2233','79','2018-07-20 00:13:58'),('2018-07-20 00:14:28','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','38','6','112.171.224.175:36030 ','充值钻石','55','919','419','2018-07-20 00:14:28'),('2018-07-20 00:14:58','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','4','58','7','223.33.180.52:59286 ','充值钻石','55','2288','79','2018-07-20 00:14:58'),('2018-07-20 00:15:08','YuanbaoGain','1','75bdc5c7f82528bf323f2f18e58ead17','0.9.867.893','2536','3_15088375','200752','괴물','4','38','6','112.171.224.175:36030 ','充值钻石','55','974','419','2018-07-20 00:15:08'),('2018-07-20 00:15:49','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','4','58','7','223.33.180.52:59286 ','充值钻石','55','2343','79','2018-07-20 00:15:49'),('2018-07-20 00:17:04','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','4','58','7','223.33.180.52:59286 ','充值钻石','1650','3993','329','2018-07-20 00:17:04'),('2018-07-20 00:18:05','YuanbaoGain','1','a953c66d6f15a28a6be77ee7fdf35a9b','0.9.867.893','5771','3_15094571','204744','빵빵','0','24','1','124.50.193.66:42286 ','充值钻石','55','55','415','2018-07-20 00:18:05') [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000699s ]
+
+[ 2018-07-27T14:14:33+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000649s ]
+
+[ 2018-07-27T14:14:33+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2018-07-27T14:14:35+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2018-07-27T14:14:36+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2018-07-27T14:14:44+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2018-07-27T14:15:21+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2018-07-27T14:15:24+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-20 00:21:17','YuanbaoGain','1','56a4246852f50bebbcaa4e580ef68192','0.9.867.893','1946','3_14407862','200015','프리스트','4','42','7','221.147.251.166:38576 ','充值钻石','5500','10107','10035','2018-07-20 00:21:17'),('2018-07-20 00:00:56','YuanbaoGain','1','8ce296c0df2766b9784f198907dff155','0.9.867.893','5582','3_15093822','204491','쟈객','2','59','3','218.209.97.162:57409 ','基金钻石','300','481','351','2018-07-20 00:00:56'),('2018-07-20 00:05:34','YuanbaoGain','1','c30191aa4ea9217aa996612a60650166','0.9.867.893','5010','3_15092033','203777','제인','2','61','1','223.62.10.199:37312 ','充值钻石','55','55','8705','2018-07-20 00:05:34'),('2018-07-20 00:06:39','YuanbaoGain','1','108ca2a202485e0b4b6b700f2141155a','0.9.867.893','5317','3_15092993','204164','이무기','3','40','7','175.223.27.84:22277 ','充值钻石','275','8027','27044','2018-07-20 00:06:39'),('2018-07-20 00:37:14','YuanbaoGain','1','5abe2f952f3b9e0b75c2fba336e48158','0.9.867.893','2557','3_15088390','200684','수바라기','3','16','1','223.62.178.70:39656 ','充值钻石','55','94','5','2018-07-20 00:37:14'),('2018-07-20 00:38:20','YuanbaoGain','1','c30191aa4ea9217aa996612a60650166','0.9.867.893','5010','3_15092033','203777','제인','2','68','1','223.62.10.199:37312 ','充值钻石','55','110','8985','2018-07-20 00:38:20'),('2018-07-20 00:38:25','YuanbaoGain','1','5abe2f952f3b9e0b75c2fba336e48158','0.9.867.893','2557','3_15088390','200684','수바라기','3','16','1','223.62.178.70:39656 ','充值钻石','55','149','105','2018-07-20 00:38:25'),('2018-07-20 00:47:20','YuanbaoGain','1','cd3092e2b25660908fe12edc9a0122c8','0.9.867.893','5763','5763','204745','원OI','0','42','1','59.27.204.105:47274 ','充值钻石','55','55','875','2018-07-20 00:47:20'),('2018-07-20 00:51:02','YuanbaoGain','1','c30191aa4ea9217aa996612a60650166','0.9.867.893','5010','3_15092033','203777','제인','2','68','1','223.62.10.199:37312 ','充值钻石','55','165','9285','2018-07-20 00:51:02'),('2018-07-20 01:37:04','YuanbaoGain','1','714f459a6c6a299b77ee6d44c1596a5f','0.9.867.893','5774','3_14974399','204748','밤에쩌는언니','0','4','1','175.125.192.209:52202 ','充值钻石','55','55','275','2018-07-20 01:37:04'),('2018-07-20 05:09:18','YuanbaoGain','1','7be25fb9076ca49b02c7afd56778174c','0.9.867.893','2451','3_14332341','200613','둥이아부지','3','65','5','182.209.145.11:53152 ','充值钻石','2750','2758','4037','2018-07-20 05:09:18'),('2018-07-20 05:10:19','YuanbaoGain','1','7be25fb9076ca49b02c7afd56778174c','0.9.867.893','2451','3_14332341','200613','둥이아부지','3','65','5','182.209.145.11:53152 ','充值钻石','275','3033','4337','2018-07-20 05:10:19'),('2018-07-20 05:20:44','YuanbaoGain','1','a953c66d6f15a28a6be77ee7fdf35a9b','0.9.867.893','5771','3_15094571','204744','빵빵','2','32','1','117.111.1.182:65198 ','充值钻石','55','70','111','2018-07-20 05:20:44'),('2018-07-20 05:23:10','YuanbaoGain','1','7be25fb9076ca49b02c7afd56778174c','0.9.867.893','2451','3_14332341','200613','둥이아부지','3','66','5','182.209.145.11:53152 ','充值钻石','55','1288','9707','2018-07-20 05:23:10') [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2018-07-27T14:15:51+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2018-07-27T14:16:05+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2018-07-27T14:16:16+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000698s ]
+
+[ 2018-07-27T14:16:17+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2018-07-27T14:16:45+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2018-07-27T14:16:46+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2018-07-27T14:16:47+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000974s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2018-07-27T14:16:52+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001086s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2018-07-27T14:17:32+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-20 07:25:45','YuanbaoGain','1','387fba4013364876f0bf7176a070c2e2','0.9.867.893','2222','3_14385127','200301','로얄','4','59','7','223.33.180.52:59286 ','充值钻石','1650','1655','326','2018-07-20 07:25:45'),('2018-07-20 08:04:20','YuanbaoGain','1','8480723f388f07b3652c38fa304fdbf2','0.9.867.893','5041','3_15092131','203813','추장','3','6','3','211.36.131.72:39849 ','充值钻石','55','438','9882','2018-07-20 08:04:20'),('2018-07-20 08:33:49','YuanbaoGain','1','502b2ffd5c383dbc8add2bb7d040fdfc','0.9.867.893','5787','3_15094635','204765','원거리사수','0','4','1','211.48.142.139:50795 ','充值钻石','55','55','275','2018-07-20 08:33:49'),('2018-07-20 08:36:00','YuanbaoGain','1','ce9c4ea4f5ceb336b046d253ae7835ce','0.9.867.893','5788','3_15094636','204766','컨파이터','0','4','1','59.19.20.233:43372 ','充值钻石','55','55','275','2018-07-20 08:36:00'),('2018-07-20 08:37:06','YuanbaoGain','1','0025960397083afde43e824696eeb83c','0.9.867.893','4851','3_13925023','203584','어검','2','99','2','211.36.135.156:43793 ','充值钻石','550','555','1969','2018-07-20 08:37:06'),('2018-07-20 10:13:48','YuanbaoGain','1','1db9c9e9d468b51f36264d6ce849b13a','0.9.867.893','2035','3_15088085','200103','샤르티아','4','66','6','211.36.130.49:41362 ','充值钻石','55','274','34913','2018-07-20 10:13:48'),('2018-07-20 10:14:43','YuanbaoGain','1','1db9c9e9d468b51f36264d6ce849b13a','0.9.867.893','2035','3_15088085','200103','샤르티아','4','66','6','211.36.130.49:41362 ','充值钻石','55','329','34913','2018-07-20 10:14:43'),('2018-07-20 10:18:20','YuanbaoGain','1','4bd05a71e7cc88c33301a6a19627ad34','0.9.867.893','1963','3_14115708','200019','바재','3','50','6','222.237.27.110:2805 ','基金钻石','1200','7696','7025','2018-07-20 10:18:20'),('2018-07-20 10:24:38','YuanbaoGain','1','4e3164b8f37876c797214481a19a7469','0.9.867.893','4973','3_15091886','203730','닉넴','2','85','1','110.70.15.125:58912 ','充值钻石','55','55','9068','2018-07-20 10:24:38'),('2018-07-20 10:45:28','YuanbaoGain','1','20dd9009ce742f32aae16bd8d1956488','0.9.867.893','4196','3_15090207','202727','담덕','3','18','1','112.140.80.68:37051 ','充值钻石','55','275','883','2018-07-20 10:45:28'),('2018-07-20 12:43:11','YuanbaoGain','1','3e047c1a9cd6c0d64c99736ccdefac3b','0.9.867.893','4985','3_15091927','203745','샤미','2','100','1','112.170.149.186:37264 ','充值钻石','55','78','1120','2018-07-20 12:43:11'),('2018-07-20 12:43:47','YuanbaoGain','1','3e047c1a9cd6c0d64c99736ccdefac3b','0.9.867.893','4985','3_15091927','203745','샤미','2','100','2','112.170.149.186:37264 ','充值钻石','55','133','1120','2018-07-20 12:43:47') [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2018-07-27T14:17:41+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2018-07-27T14:17:49+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000633s ]
+
+[ 2018-07-27T14:18:33+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2018-07-27T14:18:48+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2018-07-27T14:19:20+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2018-07-27T14:19:22+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2018-07-27T14:19:29+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2018-07-27T14:19:31+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2018-07-27T14:20:02+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2018-07-27T14:20:04+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000694s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000747s ]
+
+[ 2018-07-27T14:20:22+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+SQL: INSERT INTO `yuanbaogain` (`LogTime`,`Operation`,`serverID`,`deviceID`,`ClientApp_ver`,`account_id`,`account_Name`,`role_id`,`role_name`,`role_ChangeLife`,`role_level`,`vip`,`ip`,`reason`,`Gain_yuanbao`,`left_yuanbao`,`left_free_yuanbao`,`gain_time`) VALUES ('2018-07-20 13:09:50','YuanbaoGain','1','3e047c1a9cd6c0d64c99736ccdefac3b','0.9.867.893','4985','3_15091927','203745','샤미','2','100','3','112.170.149.186:37264 ','充值钻石','550','83','1670','2018-07-20 13:09:50'),('2018-07-20 13:42:37','YuanbaoGain','1','ca69a8e37c63b701b03691bfd9e25180','0.9.867.893','2481','3_15088342','200590','격투왕','3','27','2','211.36.131.208:12043 ','充值钻石','55','65','242','2018-07-20 13:42:37'),('2018-07-20 16:16:26','YuanbaoGain','1','434a3ff2823abe8479746fa796cf838f','0.9.867.893','3833','3_14035691','202280','햇님햇님','2','19','1','116.123.174.95:39002 ','充值钻石','55','55','3745','2018-07-20 16:16:26'),('2018-07-20 17:00:13','YuanbaoGain','1','7be25fb9076ca49b02c7afd56778174c','0.9.867.893','2451','3_14332341','200613','둥이아부지','3','77','5','182.209.145.11:58196 ','充值钻石','2750','3596','2807','2018-07-20 17:00:13'),('2018-07-20 18:36:36','YuanbaoGain','1','4b96d23271d0d4ccd8769ea752e831e2','0.9.867.893','1956','3_15081038','200012','dotid','2','95','0','222.237.27.99:45372 ','基金钻石','300','69683','13030','2018-07-20 18:36:36'),('2018-07-20 18:42:53','YuanbaoGain','1','70ab47b80deed007a216d625e924b0ac','0.9.867.893','5816','3_15084745','204798','o마제o','0','99','2','122.37.81.217:59268 ','充值钻石','550','550','1810','2018-07-20 18:42:53'),('2018-07-20 19:09:47','YuanbaoGain','1','5c4cf53da3141cab28fe26616387d8ca','0.9.867.893','5821','3_15094779','204803','피묻은소화기','0','2','1','112.163.106.234:55878 ','充值钻石','55','55','55','2018-07-20 19:09:47'),('2018-07-20 19:15:30','YuanbaoGain','1','c700a9a8f3a1e6e92306c30208b92465','0.9.867.893','4257','4257','202812','튜백','2','98','1','58.125.210.12:42952 ','充值钻石','55','55','860','2018-07-20 19:15:30'),('2018-07-20 20:57:24','YuanbaoGain','1','fb9f8b33f38e2933189ca56c8a469f43','0.9.867.893','3678','3_15089298','202069','접근금지','2','100','1','223.62.172.163:49092 ','充值钻石','55','110','8671','2018-07-20 20:57:24'),('2018-07-20 21:06:14','YuanbaoGain','1','797098f1ab1347da11df652c213998fd','0.9.867.893','5768','3_15094563','204741','나댕나댕','0','53','2','221.155.110.180:55150 ','充值钻石','550','605','1595','2018-07-20 21:06:14'),('2018-07-20 22:08:59','YuanbaoGain','1','7da9ce4eca142f6f26734ae4d7576ea6','0.9.867.893','5834','3_15084214','204820','초Or','0','2','1','121.128.171.53:37212 ','充值钻石','55','55','255','2018-07-20 22:08:59') [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: usemoney E:\Alirefor\APP\Api\Controller\LogController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: Fashion E:\Alirefor\APP\Api\Controller\LogController.class.php 第 91 行.
+NOTIC: [8] Undefined variable: YuanbaoUse E:\Alirefor\APP\Api\Controller\LogController.class.php 第 93 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 95 行.
+NOTIC: [8] Undefined variable: JoinFuben E:\Alirefor\APP\Api\Controller\LogController.class.php 第 111 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 113 行.
+NOTIC: [8] Undefined variable: treasure E:\Alirefor\APP\Api\Controller\LogController.class.php 第 119 行.
+NOTIC: [8] Undefined variable: union E:\Alirefor\APP\Api\Controller\LogController.class.php 第 121 行.
+NOTIC: [8] Undefined variable: guide E:\Alirefor\APP\Api\Controller\LogController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: ItemBuylog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 131 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 134 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 139 行.
+NOTIC: [8] Undefined variable: logoutlog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 143 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 144 行.
+NOTIC: [8] Undefined variable: winglog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 153 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 155 行.
+NOTIC: [8] Undefined variable: equiplog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 163 行.
+NOTIC: [8] Undefined variable: mapchange E:\Alirefor\APP\Api\Controller\LogController.class.php 第 165 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 168 行.
+NOTIC: [8] Undefined variable: emaillog E:\Alirefor\APP\Api\Controller\LogController.class.php 第 172 行.
+NOTIC: [8] Undefined variable: roleexp E:\Alirefor\APP\Api\Controller\LogController.class.php 第 174 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 177 行.
+NOTIC: [8] Undefined variable: currency E:\Alirefor\APP\Api\Controller\LogController.class.php 第 188 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 195 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 205 行.
+NOTIC: [8] Undefined variable: backpack E:\Alirefor\APP\Api\Controller\LogController.class.php 第 206 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 210 行.
+NOTIC: [8] Undefined variable: Prepaid E:\Alirefor\APP\Api\Controller\LogController.class.php 第 226 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 229 行.
+NOTIC: [8] Undefined variable: CreateRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 242 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 250 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 262 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Model\LogModel.class.php 第 44 行.
+NOTIC: [8] Undefined variable: LoginRole E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 265 行.
+NOTIC: [8] Undefined variable: new_array E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given E:\Alirefor\APP\Api\Controller\LogController.class.php 第 269 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 270 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\Alirefor\APP\Api\Controller\LogController.class.php 第 278 行.
+NOTIC: [8] Undefined variable: linestatus E:\Alirefor\APP\Api\Controller\LogController.class.php 第 286 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2018-07-27T14:20:43+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2018-07-27T14:20:56+08:00 ] 192.168.88.188 /index.php?m=Api&c=Log&a=Log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+

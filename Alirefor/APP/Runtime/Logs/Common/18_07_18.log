@@ -1,0 +1,12 @@
+[ 2018-07-18T09:55:01+08:00 ] ::1 /Public/ie10-viewport-bug-workaround.js
+ERR: 无法加载模块:Public
+
+[ 2018-07-18T09:55:01+08:00 ] ::1 /Public/ie10-viewport-bug-workaround.js
+ERR: 无法加载模块:Public
+
+[ 2018-07-18T09:55:01+08:00 ] ::1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2018-07-18T10:26:35+08:00 ] 192.168.88.57 /favicon.ico
+ERR: 无法加载模块:Favicon
+

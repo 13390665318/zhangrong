@@ -34,7 +34,8 @@
                                         <option value="{$vo.db_id}">{$vo.clothes}</option>
                                     </eq>
                                 </volist>
-                            </select>--><input class="btn btn-default"
+                            </select>-->
+                            <include file="Public:selectdb"/><input class="btn btn-default"
                                              onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"
                                              id="start_time" value="{$Stime}" onclick="Cuselect">
                             <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
@@ -62,9 +63,9 @@
                             <tbody id="ad">
                             <volist name="fubencon" id="vo">
                                 <tr>
-                                    <td>{$vo.fuben_name}</td>
-                                    <td>{$vo.fbnum}</td>
-                                    <td>{$vo.lv}%</td>
+                                    <td>{$vo.korea_name}</td>
+                                    <td>{$vo.joinnum}</td>
+                                    <td>{$vo.joincom}%</td>
                                 </tr>
                             </volist>
                             </tbody>
@@ -143,7 +144,7 @@
             alert("请选择游戏服务器");
             return
         }else{
-            location.href = "index.php?m=Home&c=Fubencon&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name;
+            location.href = "index.php?m=Home&c=Fubencon&a=index&start_time="+start_time+ "&end_time="+end_time+"&db_id="+clothes+"&game_user_name="+game_user_name;
         }
     }
 

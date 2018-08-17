@@ -6,7 +6,15 @@
  * Time: 上午 11:06
  */
 return array(
+    'LANG_SWITCH_ON' => true,   // 开启语言包功能
 
+    'LANG_AUTO_DETECT' => true, // 自动侦测语言 开启多语言功能后有效
+
+    'LANG_LIST'        => 'zh-cn,zh-tw,en-us', // 允许切换的语言列表 用逗号分隔
+
+    'VAR_LANGUAGE'     => 'l', // 默认语言切换变量
+
+    'DEFAULT_LANG'     =>  'en-us', // 默认语言
   'URL_MODEL' => 0,
     'DB_TYPE'               => 'mysql',     // 数据库类型
     'DB_HOST'               => 'localhost', // 服务器地址
@@ -28,19 +36,10 @@ return array(
     'DB_SQL_BUILD_LENGTH'   => 20, // SQL缓存的队列长度
     'DB_SQL_LOG'            => false, // SQL执行日志记录
     'DB_PARAMS'             => array(\PDO::ATTR_CASE => \PDO::CASE_NATURAL),//不强制转换
-    'DB_CONFIG2' => 'mysql://sa:asdf1234!@192.168.88.20:3306/loong_user',
     'DATA_CACHE_TYPE'		=> 'Redis',
     'REDIS_HOST'            =>  '127.0.0.1',
     'REDIS_PORT'            =>  6379,
-    'cfg_smssid' => 'LTAIosqvNKPGAevl',
-    'cfg_smstoken' => 'YSTxo2psdFgHjJzqNF2EZT56NAq7t6',
-    'cfg_smsname' => '荣昕',
-    'ALI_SMS' => array(
-    'PRODUCT' => 'Dysmsapi',
-    'DOMAIN' => 'dysmsapi.aliyuncs.com',
-    'REGION' => 'cn-hangzhou',
-    'END_POINT_NAME' => 'cn-hangzhou',
-    ),
+
 
 
 

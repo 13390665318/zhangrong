@@ -15,8 +15,10 @@
 所选日期的注册用户，在第N天没登录的用户的等级分布） <div style="clear: both;"></div>
         </div>
 
-       <!-- <select style="margin-left: 0px; width: 10%;" onchange="choice(1)" id="clothes" class="btn btn-default">
+        <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                class="btn btn-default">
             <option>...选择游戏服务器...</option>
+            <option value="0">全服</option>
             <volist name="clostu" id="vo">
                 <eq name="vo.db_id" value="$db_id">
                     <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -24,7 +26,7 @@
                     <option value="{$vo.db_id}">{$vo.clothes}</option>
                 </eq>
             </volist>
-        </select>--><input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
+        </select><input class="btn btn-default" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="stime" value="{$stime}">
         <select style="margin-left: 0px; width: 10%;" class="btn btn-default" id="cesa" >
             <if condition="$cesa eq 24">
                 <option value="24" selected="selected">24小时内未登录</option>
@@ -240,7 +242,7 @@
 
     }
     //  var a={$Stime};
-    var maxN = eval("Math.max(" + stu.toString() + ")")+100;
+    var maxN = Math.ceil(eval("Math.max(" + stu.toString() + ")")*1.2)+5;
     stu=stu.reverse();
     var data = [stu];
     var data_max = maxN; //Y轴最大刻度

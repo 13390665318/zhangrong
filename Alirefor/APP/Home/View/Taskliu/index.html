@@ -35,6 +35,9 @@
                                     </eq>
                                 </volist>
                             </select>
+                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                                <i class="fa fa-search"></i>搜索
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -51,7 +54,6 @@
                                 <td>任务ID</td>
                                 <td>任务类型</td>
                                 <td>任务名称</td>
-                                <td>在做人数</td>
                                 <td>完成人数</td>
                                 <td>完成率</td>
                             </tr>
@@ -65,8 +67,7 @@
                                         <elseif condition="$vo.TaskClass eq 8"/>
                                         日常任务
                                     </if></td>
-                                    <td>{$vo.Title}</td>
-                                   <td>{$vo.dnum}</td>
+                                   <td>{$vo.Title}</td>
                                    <td>{$vo.num}</td>
                                    <td>{$vo.complete}%</td>
 
@@ -148,7 +149,7 @@
             alert("请选择游戏服务器");
             return
         }else{
-            location.href = "index.php?m=Home&c=Loglog&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name;
+            location.href = "index.php?m=Home&c=Taskliu&a=index&db_id="+clothes;
         }
     }
 

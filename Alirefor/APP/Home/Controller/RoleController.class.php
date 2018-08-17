@@ -20,20 +20,13 @@ class RoleController extends BaseController
     public function index()
     {
 
-        $game_id = 2;
-        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
-        $this->assign("clostu", $clostu);
+        $clostu=D("db")->order("id")->group('db_id')->select();
+        $this->assign("clostu",$clostu);
+
 
         // 图标 默认 最新服
-        if (isset($_GET["db_id"])) {
-            $db_id = I("get.db_id");
-            $_SESSION["db_id"] = $db_id;
-        } else {
-            $db_id = $clostu[0]["db_id"];
-            $_SESSION["db_id"] = $db_id;
-        }
+
         $nowtime = date("Y-m-d H:i:s", time());
-        $this->assign("db_id", $db_id);
         //获取传参角色id
        if ($_GET['roleid']) {
             $roleid = I('get.roleid');
@@ -42,8 +35,15 @@ class RoleController extends BaseController
         if ($_GET['rolename']){
             $rolename=I('get.rolename');
         }
-
-        $connection = db2($game_id, $db_id);//连接数据库
+        //判断是否选服
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+        } else {
+            $db_id=$clostu[0]['db_id'];
+        }
+        $this->assign('db_id',$db_id);
+        $game_id="loong_game";
+        $connection = db($game_id, $db_id);//连接数据库
         $model = M('t_roles', '', $connection);
         $record = $model->where("rid='$roleid'or rname='$rolename'")->select();//查询相关信息
         //$banghui=$model->field('bhname')->where("t_roles.rid='$roleid'or rname='$rolename'")->join('t_banghui as b on b.rid = t_roles.rid')->find();

@@ -24,9 +24,10 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                            <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
                                     class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
+                                <option>..选服务器..</option>
+                                <option value="0">全服</option>
                                 <volist name="clostu" id="vo">
                                     <eq name="vo.db_id" value="$db_id">
                                         <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -34,12 +35,16 @@
                                         <option value="{$vo.db_id}">{$vo.clothes}</option>
                                     </eq>
                                 </volist>
-                            </select>-->从<input class="btn btn-default"
-                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
-                                             id="start_time" value="{$Stime}">
-                            到<input class="btn btn-default"
-                                    onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time"
-                                    value="{$Etime}">
+                            </select>&nbsp&nbsp&nbsp<label>选择日志时间</label>&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                                                               onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                                                               id="start_time" value="{$Stime}">
+                            &nbsp&nbsp至&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                             id="end_time" value="{$Etime}">&nbsp&nbsp&nbsp
+                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                                <i class="fa fa-search"></i>搜索
+                            </button>
+                            <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button><font color="red">（导出最大数量不得超过2万条）</font>
                         </div>
                     </div>
                 </div>
@@ -49,26 +54,18 @@
                         <div class="dataTables_length" id="dataTables-example_length">
                             <label>玩家ID:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_id" type="text" placeholder="玩家ID">
+                                    <input class="form-control" id="game_user_id" type="text" value="{$role_id}" placeholder="玩家ID">
                                 </div>
                             </label>
                             <label>角色名称:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="game_user_name" type="text" placeholder="角色名称">
+                                    <input class="form-control" id="game_user_name" type="text" value="{$role_name}" placeholder="角色名称">
                                 </div>
                             </label>
-                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
-                                <i class="fa fa-search"></i>搜索
-                            </button>
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-default" id="huoqu" type="button" onclick="hide()" style="background-color:#66CCFF ">
-                   元宝获取
-                </button>
-                <button class="btn btn-default" id="xiaohao" type="button" onclick="show()">
-                    元宝消耗
-                </button>
+
                 <div class="huoqu">
                     <div class="row">
                         <div class="col-sm-12 table-responsive">
@@ -78,13 +75,15 @@
                                    style="width: 100%;" width="100%">
                                 <thead>
                                 <tr>
-                                    <td >操作时间</td>
+                                    <td width="10%">操作时间</td>
                                     <td>角色ID</td>
                                     <td>途径</td>
-                                    <td><font color="#ff4500">增加非绑元宝</font></td>
-                                    <td><font color="#ff4500">剩余非绑定元宝</font></td>
-                                    <td><font color="#00bfff">增加绑定元宝(绑定元宝)</font></td>
-                                    <td><font color="#00bfff">剩余绑定元宝(绑定元宝)</font></td>
+                                    <td><font color="#ff4500">增加非绑钻石</font></td>
+                                    <td><font color="#ff4500">消耗非绑钻石</font></td>
+                                    <td><font color="#ff4500">剩余非绑定钻石</font></td>
+                                    <td><font color="#00bfff">增加绑定钻石(绑定钻石)</font></td>
+                                    <td><font color="#00bfff">消耗绑定钻石(绑定钻石)</font></td>
+                                    <td><font color="#00bfff">剩余绑定钻石(绑定钻石)</font></td>
                                 </tr>
                                 </thead>
                                 <tbody id="ad">
@@ -94,8 +93,10 @@
                                         <td>{$ko.role_id}</td>
                                         <td>{$ko.currency_reason}</td>
                                         <td>{$ko.currency_get.40}</td>
+                                        <td>{$ko.currency_use.40}</td>
                                         <td>{$ko.currency_left.40}</td>
                                         <td>{$ko.currency_get.50}</td>
+                                        <td>{$ko.currency_use.50}</td>
                                         <td>{$ko.currency_left.50}</td>
                                     </tr>
                                 </volist>
@@ -107,45 +108,7 @@
                         <div class="b-page">{$page}</div>
                     </div>
                 </div>
-                <div class="xiaohao" style="display:none">
-                    <div class="row">
-                        <div class="col-sm-12 table-responsive">
 
-                            <table class="table table-striped  table-bordered table-hover dataTable "
-                                   id="dataTables-example" role="grid" aria-describedby="dataTables-example_info"
-                                   style="width: 100%;" width="100%">
-                                <thead>
-                                <tr>
-                                    <td >操作时间</td>
-                                    <td>角色ID</td>
-                                    <td>途径</td>
-                                    <td><font color="#ff4500">消耗非绑元宝</font></td>
-                                    <td><font color="#ff4500">剩余非绑定元宝</font></td>
-                                    <td><font color="#00bfff">消耗绑定元宝(绑定元宝)</font></td>
-                                    <td><font color="#00bfff">剩余绑定元宝(绑定元宝)</font></td>
-                                </tr>
-                                </thead>
-                                <tbody id="ad">
-                                <volist name="data2" id="ko">
-                                    <tr>
-                                        <td>{$ko.LogTime}</td>
-                                        <td>{$ko.role_id}</td>
-                                        <td>{$ko.currency_reason}</td>
-                                        <td>{$ko.currency_use.40}</td>
-                                        <td>{$ko.currency_left.40}</td>
-                                        <td>{$ko.currency_use.50}</td>
-
-                                        <td>{$ko.currency_left.50}</td>
-                                    </tr>
-                                </volist>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="b-page">{$page2}</div>
-                    </div>
-                </div>
 
             </div>
             <!-- /.table-responsive -->
@@ -159,15 +122,19 @@
 
 <script>
     function exl() {
-        var value = "{$value}"
-        var clothes = $("#clothes").val();
+        var css=$('.xiaohao').css("display");
+        var clothes=$("#clothes").val();
         var start_time = $("#start_time").val();
         var end_time = $("#end_time").val();
         var game_user_id = $("#game_user_id").val();
         var game_user_name = $("#game_user_name").val();
-        var goods_name = $("#goods_name").val();
-        location.href = url + "index.php?m=Home&c=Prop&a=exl&value=" + value + "&db_id=" + clothes + "&start_time=" + start_time + "&end_time=" + end_time + "&game_user_id=" + game_user_id + "&game_user_name=" + game_user_name + "&goods_name=" + goods_name;
-
+        var goods_name = $("#type").val();
+        if(clothes=="...选择游戏服务器..."){
+            alert("请选择游戏服务器");
+            return
+        }else{
+            location.href = "index.php?m=Home&c=Zuan&a=exl&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&css="+css+"&db_id="+clothes;
+        }
     }
 </script>
 
@@ -234,7 +201,7 @@
             alert("请选择游戏服务器");
             return
         }else{
-            location.href = "index.php?m=Home&c=Loglog&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name;
+            location.href = "index.php?m=Home&c=Zuan&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&db_id="+clothes;
         }
     }
 

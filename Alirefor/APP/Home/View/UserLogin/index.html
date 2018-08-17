@@ -27,7 +27,7 @@
                             </eq>
                         </volist>
                     </select>-->从<input class="btn btn-default"
-                                     onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"
+                                     onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
                                      id="stime" value="{$stime}">
                     到<input class="btn btn-default"
                             onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" id="etime"
@@ -129,7 +129,7 @@ var tmptxt=$(this).val();
 
     }
     //  var a={$Stime};
-    var maxN = eval("Math.max(" + stu.toString() + ")")+5000;
+    var maxN = Math.ceil(eval("Math.max(" + stu.toString() + ")")*1.2);
     stu=stu.reverse();
     var data = [stu];
     var data_max = maxN; //Y轴最大刻度

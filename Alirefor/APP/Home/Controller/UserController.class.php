@@ -48,6 +48,8 @@ class UserController extends BaseController
             $arr["auth"]=I("post.auth");
             $arr["role"]=1;
             $arr["status"]=1;
+            $arr["code4"]=1;
+            $arr["code5"]=1;
             $arr["time"]=date("Y-m-d H:i:s",time());
 
 

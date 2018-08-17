@@ -12,7 +12,7 @@ header ( "Content-type:text/html;charset=utf-8" );
 class MountController extends BaseController
 {
     public function index(){
-        $game_id = 2;
+        /*$game_id = 2;
         $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
         $this->assign("clostu", $clostu);
 
@@ -25,14 +25,16 @@ class MountController extends BaseController
             $_SESSION["db_id"] = $db_id;
         }
         $nowtime = date("Y-m-d H:i:s", time());
-        $this->assign("db_id", $db_id);
+        $this->assign("db_id", $db_id);*/
         //获取传参角色id
         if ($_GET['roleid']) {
             $roleid = I('get.roleid');
         }
         $this->assign('roleid',$roleid);
         //获取翅膀信息
-        $connection = db2($game_id, $db_id);
+        $game_id="loong_game";
+        $db_id=$_SESSION['db_id'];
+        $connection = db($game_id, $db_id);
         $model = M('t_goods', '', $connection);
         $mount=$model->where("rid='$roleid'and site=5000")->select();
         foreach ($mount as $k=>$value){

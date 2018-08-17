@@ -23,23 +23,27 @@
             <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="dataTables_length" id="dataTables-example_length">
-                            <!--<select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
-                                    class="btn btn-default">
-                                <option>...选择游戏服务器...</option>
-                                <volist name="clostu" id="vo">
-                                    <eq name="vo.db_id" value="$db_id">
-                                        <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
-                                        <else/>
-                                        <option value="{$vo.db_id}">{$vo.clothes}</option>
-                                    </eq>
-                                </volist>
-                            </select>-->从<input class="btn btn-default"
-                                             onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
-                                             id="start_time" value="{$Stime}">
-                            到&nbsp<input class="btn btn-default"
-                                    onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="end_time"
-                                    value="{$Etime}">
+                        <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                                class="btn btn-default">
+                            <option>..选服务器..</option>
+                            <option value="0">全服</option>
+                            <volist name="clostu" id="vo">
+                                <eq name="vo.db_id" value="$db_id">
+                                    <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
+                                    <else/>
+                                    <option value="{$vo.db_id}">{$vo.clothes}</option>
+                                </eq>
+                            </volist>
+                        </select>&nbsp&nbsp&nbsp<label>选择日志时间</label>&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                                                           onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                                                           id="start_time" value="{$Stime}">
+                        &nbsp&nbsp至&nbsp&nbsp&nbsp<input class="btn btn-default"
+                                                         onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"
+                                                         id="end_time" value="{$Etime}">&nbsp&nbsp&nbsp
+                        <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
+                            <i class="fa fa-search"></i>搜索
+                        </button>
+                        <button class="btn btn-default" id="search-operator-btn" type="button"  onclick="exl()">导出</button><font color="red">（导出最大数量不得超过2万条）</font>
                         </div>
                     </div>
                 </div>
@@ -49,12 +53,12 @@
                         <div class="dataTables_length" id="dataTables-example_length">
                             <label>帮派ID:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="union_id" type="text" placeholder="帮派ID">
+                                    <input class="form-control" id="union_id" type="text" value="{$union_id}" placeholder="帮派ID">
                                 </div>
                             </label>
                             <label>帮派名称:
                                 <div class="form-group input-group">
-                                    <input class="form-control" id="union_name" type="text" placeholder="帮派名称">
+                                    <input class="form-control" id="union_name" type="text" value="{$union_name}" placeholder="帮派名称">
                                 </div>
                             </label>
 
@@ -68,9 +72,7 @@
                                     <input class="form-control" id="game_user_name" type="text" placeholder="角色名称">
                                 </div>
                             </label>-->
-                            <button class="btn btn-default" id="search-operator-btn" type="button" onclick="Cuselect()">
-                                <i class="fa fa-search"></i>搜索
-                            </button>
+
                         </div>
                     </div>
                 </div>
@@ -82,6 +84,7 @@
                                style="width: 100%;" width="100%">
                             <thead>
                             <tr>
+                                <td width="10%">时间</td>
                                 <td>帮派ID</td>
                                 <td>帮派名称</td>
                                 <td>操作人</td>
@@ -95,6 +98,7 @@
                             <tbody id="ad">
                             <volist name="guide" id="ko">
                                 <tr>
+                                    <td>{$ko.LogTime}</td>
                                     <td>{$ko.union_id}</td>
                                     <td>{$ko.union_name}</td>
                                     <td>{$ko.role_id}</td>
@@ -123,15 +127,15 @@
 
 <script>
     function exl() {
-        var value = "{$value}"
-        var clothes = $("#clothes").val();
+        var clothes=$("#clothes").val();
         var start_time = $("#start_time").val();
         var end_time = $("#end_time").val();
         var game_user_id = $("#game_user_id").val();
         var game_user_name = $("#game_user_name").val();
-        var goods_name = $("#goods_name").val();
-        location.href = url + "index.php?m=Home&c=Prop&a=exl&value=" + value + "&db_id=" + clothes + "&start_time=" + start_time + "&end_time=" + end_time + "&game_user_id=" + game_user_id + "&game_user_name=" + game_user_name + "&goods_name=" + goods_name;
-
+        var goods_name = $("#type").val();
+        var union_id =$("#union_id").val();
+        var union_name =$("#union_name").val();
+        location.href = "index.php?m=Home&c=Union&a=exl&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&union_id="+union_id+"&union_name="+union_name+"&db_id="+clothes;
     }
 </script>
 
@@ -182,9 +186,10 @@
             alert("请选择游戏服务器");
             return
         }else{
-            location.href = "index.php?m=Home&c=Union&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&union_id="+union_id+"&union_name="+union_name;
+            location.href = "index.php?m=Home&c=Union&a=index&start_time="+start_time+ "&end_time="+end_time+"&game_user_id="+game_user_id+"&game_user_name="+game_user_name+"&union_id="+union_id+"&union_name="+union_name+"&db_id="+clothes;
         }
     }
+
 
 
 </script>

@@ -35,15 +35,18 @@ class GuildController extends BaseController
         $this->assign("db_id",$db_id);
         $connection=db($game_id,$db_id);
         $connection2=db2($game_id,$db_id);
-        if(isset($_GET["start_time"]) && isset($_GET["end_time"])){
-            $stime=I("get.start_time");
-            $etime=I("get.end_time");
-        }else{
-            $stime=date("Y-m-01 00:00:00",time());
-            $etime=date("Y-m-d H:i:s",time());
+        if (isset($_GET["start_time"]) && isset($_GET["end_time"])) {
+            $stime = I("get.start_time");
+            $stime=date("Y-m-d 00:00:00", strtotime($stime));
+            $etime=date("Y-m-d 23:59:59", strtotime($stime));
+        } else {
+            $stime = date("Y-m-d 00:00:00", time());
+            $etime = date("Y-m-d 23:59:59", time());
         }
-        $this->assign("stime",$stime);
-        $this->assign("etime",$etime);
+        $stime1=date("Y-m-d", strtotime($stime));
+        $this->assign('Stime',$stime1);
+        $this->assign('Etime',$etime);
+
         /*$Userbase = M('San_userbase','',$connection);
         $Account = M('San_account','',$connection);
         $User=M("User",'',$connection2);

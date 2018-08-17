@@ -73,26 +73,20 @@ class UserPayController extends BaseController
     }
    // N日付费率    活跃用户里的付费用户的占比
     public function index2(){
-        $game_id = 1;
-        $game_id = 1;
-        // 游戏区/服
-        $clostu=D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+
+        // 游戏区/服id =
+        $clostu=D("db")->order("db_id desc")->select();
         $this->assign("clostu",$clostu);
         // 图标 默认 最新服
-        if(isset($_GET["db_id"])){
-            $db_id=I("get.db_id");
-            $_SESSION["db_id"]=$db_id;
-        }else{
-            if(isset($_SESSION["db_id"])){
-
-                $db_id= $_SESSION["db_id"];
-            }else{
-                $db_id=$clostu[0]["db_id"];
-                $_SESSION["db_id"]=$db_id;
-            }
-
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
+        } else {
+            $db_id = $_SESSION['db_id'];
         }
-        $this->assign("db_id",$db_id);
+        if($db_id!=0){
+            $ru2['db_id']=$db_id;
+        }
         if(isset($_GET["stime"])&&isset($_GET["etime"])){
             $stime=I("get.stime");
             $etime=I("get.etime");
@@ -112,11 +106,11 @@ class UserPayController extends BaseController
             $Strtime=date('Y-m-d 00:00:00', strtotime ("-$i day", strtotime($etime)));
             $Endtime=date('Y-m-d 23:59:59', strtotime ("-$i day", strtotime($etime)));
             $ru2['_string']="start_time>='$Strtime' and start_time<='$Endtime'";//活跃用户
-            $sum2=D("sign")->where($ru2)->group('game_user_id')->select();
+            $sum2=D("sign")->where($ru2)->group('user_id')->select();
             $arr[$i]["snum"]=count($sum2);
             //付费用户
             $ru3["_string"]="pay_time>='$Strtime' and pay_time<='$Endtime'";//充值用户
-            $pay_user =D("pay")->where($ru3)->group('game_user_id')->select(); // 今日充值用户
+            $pay_user =D("pay")->where($ru3)->group('user_id')->select(); // 今日充值用户
         
             $arr[$i]["pnum"]=count($pay_user);
             // 付费率
@@ -135,26 +129,20 @@ class UserPayController extends BaseController
 
  // N日ARPPU  付费用户的平均付费金额
     public function index3(){
-        $game_id = 1;
-      //  $game_id = 1;
-        // 游戏区/服
-        $clostu=D("db")->where("game_id=$game_id")->order("db_id desc")->select();
-        $this->assign("clostu",$clostu);
+        $game_id = 2;
+        $clostu = D("db")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
+
         // 图标 默认 最新服
-        if(isset($_GET["db_id"])){
-            $db_id=I("get.db_id");
-            $_SESSION["db_id"]=$db_id;
-        }else{
-            if(isset($_SESSION["db_id"])){
-
-                $db_id= $_SESSION["db_id"];
-            }else{
-                $db_id=$clostu[0]["db_id"];
-                $_SESSION["db_id"]=$db_id;
-            }
-
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
+        } else {
+            $db_id = $_SESSION['db_id'];
         }
-        $this->assign("db_id",$db_id);
+        if($db_id!=0){
+            $ru3['db_id']=$db_id;
+        }
         if(isset($_GET["stime"])&&isset($_GET["etime"])){
             $stime=I("get.stime");
             $etime=I("get.etime");
@@ -175,12 +163,15 @@ class UserPayController extends BaseController
             $Endtime=date('Y-m-d 23:59:59', strtotime ("-$i day", strtotime($etime)));
             //付费用户
             $ru3["_string"]="pay_time>='$Strtime' and pay_time<='$Endtime' ";//充值用户
-            $pay_user =D("pay")->where($ru3)->group('game_user_id')->select(); // 今日充值用户
+            $pay_user =D("pay")->where($ru3)->group('user_id')->select(); // 充值账号
+            $payrole_user =D("pay")->where($ru3)->group('game_user_id')->select(); // 充值角色
             $arr[$i]["pnum"]=count($pay_user);
+            $arr[$i]["prnum"]=count($payrole_user);
             //付费金额
             $arr[$i]["money"]=D("pay")->where($ru3)->sum(pay_number); // 今日付费总金额
             // ARPPU
             $arr[$i]["num"]=round($arr[$i]["money"]/ $arr[$i]["pnum"],4);
+            $arr[$i]["numr"]=round($arr[$i]["money"]/ $arr[$i]["prnum"],4);
         }
 
         $Stime=substr($Stime,0,strlen($Stime)-1);
@@ -196,26 +187,21 @@ class UserPayController extends BaseController
 
  // N日ARPU 活跃用户的平均付费金额
     public function index4(){
-        $game_id = 1;
-        $game_id = 1;
-        // 游戏区/服
-        $clostu=D("db")->where("game_id=$game_id")->order("db_id desc")->select();
-        $this->assign("clostu",$clostu);
+        $game_id = 2;
+        $clostu = D("db")->order("db_id desc")->select();
+        $this->assign("clostu", $clostu);
+
         // 图标 默认 最新服
-        if(isset($_GET["db_id"])){
-            $db_id=I("get.db_id");
-            $_SESSION["db_id"]=$db_id;
-        }else{
-            if(isset($_SESSION["db_id"])){
-
-                $db_id= $_SESSION["db_id"];
-            }else{
-                $db_id=$clostu[0]["db_id"];
-                $_SESSION["db_id"]=$db_id;
-            }
-
+        if (isset($_GET["db_id"])) {
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
+        } else {
+            $db_id = $_SESSION['db_id'];
         }
-        $this->assign("db_id",$db_id);
+        if($db_id!=0){
+            $ru3['db_id']=$db_id;
+        }
+        // 图标 默认 最新服
         if(isset($_GET["stime"])&&isset($_GET["etime"])){
             $stime=I("get.stime");
             $etime=I("get.etime");
@@ -234,17 +220,17 @@ class UserPayController extends BaseController
 
             $Strtime=date('Y-m-d 00:00:00', strtotime ("-$i day", strtotime($etime)));
             $Endtime=date('Y-m-d 23:59:59', strtotime ("-$i day", strtotime($etime)));
-        //活跃用户
-            $ru2['_string']="start_time>='$Strtime' and start_time<='$Endtime'";//活跃用户
-            $sum2=D("sign")->where($ru2)->group('game_user_id')->select();
-            $arr[$i]["snum"]=count($sum2);
-
-            $ru3["_string"]="pay_time>='$Strtime' and pay_time<='$Endtime'";//充值用户
-
+            //付费用户
+            $ru3["_string"]="start_time>='$Strtime' and start_time<='$Endtime' ";//充值用户
+            $pay_user =D("sign")->where($ru3)->group('user_id')->select(); // 今日活跃账号
+            $role_user =D("sign")->where($ru3)->group('game_user_id')->select(); // 今日活跃账号
+            $arr[$i]["pnum"]=count($pay_user);//活跃账号数量
+            $arr[$i]["prnum"]=count($role_user);//活跃角色数量
             //付费金额
-            $arr[$i]["money"]=D("pay")->where($ru3)->sum(pay_number); // 今日付费总金额
-            // ARPPU
-            $arr[$i]["num"]=round($arr[$i]["money"]/ $arr[$i]["snum"],4);
+            $arr[$i]["money"]=D("pay")->where("LogTime>='$Strtime' and LogTime<='$Endtime'")->sum(pay_number); // 今日付费总金额
+            // ARPU
+            $arr[$i]["num"]=round($arr[$i]["money"]/ $arr[$i]["pnum"],4);//账号ARPU
+            $arr[$i]["rnum"]=round($arr[$i]["money"]/ $arr[$i]["prnum"],4);//角色ARPU
         }
 
         $Stime=substr($Stime,0,strlen($Stime)-1);

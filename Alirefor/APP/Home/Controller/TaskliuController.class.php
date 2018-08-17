@@ -14,21 +14,22 @@ class TaskliuController extends BaseController
 {
     public function index()
     {
+        $clostu = D("db")->order("db_id desc")->select();
 
-        $game_id = 2;
-        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
         $this->assign("clostu", $clostu);
 
         // 图标 默认 最新服
         if (isset($_GET["db_id"])) {
-            $db_id = I("get.db_id");
-            $_SESSION["db_id"] = $db_id;
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
         } else {
-            $db_id = $clostu[0]["db_id"];
-            $_SESSION["db_id"] = $db_id;
+            $db_id = $_SESSION['db_id'];
         }
-        $nowtime = date("Y-m-d H:i:s", time());
-        $this->assign("db_id", $db_id);
+        if ($db_id != 0) {
+            $ru['db_id'] = $db_id;
+        }
+
+
         //是否获取时间
         if (isset($_GET["start_time"]) && isset($_GET["end_time"])) {
             $stime = I("get.start_time");
@@ -39,10 +40,14 @@ class TaskliuController extends BaseController
         }
         $this->assign('Stime', $stime);
         $this->assign('Etime', $etime);
-        $connection = db2($game_id, $db_id);
+
+        $game_id="loong_game";
+        $connection = db($game_id, $db_id);
+
         $model = M('t_roles', '', $connection);
         $model2 = M('t_dailytasks', '', $connection);
         $users = $model->field('maintaskid')->order('maintaskid asc')->select();
+
         $date = date("Y-m-d");
         $daily = $model2->where("taskClass=8 and rectime='$date'")->select();
         //dump($daily);exit;
@@ -79,9 +84,6 @@ class TaskliuController extends BaseController
             foreach ($users as $j => $l) {
                 if ($task[$k]['ID'] <= $users[$j]['maintaskid']) {
                     $data[$k]['num']++;
-                }
-                if ($task[$k]['ID'] == $users[$j]['maintaskid']+1) {
-                    $data[$k]['dnum']++;
                 }
                 $data[$k]['ID'] = $task[$k]['ID'];
                 $data[$k]['TaskClass'] = $task[$k]['TaskClass'];

@@ -15,9 +15,10 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="dataTables_length" id="dataTables-example_length">
-                   <!-- <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
+                    <select style="margin-left: 0px; width: 15%;" onchange="choice(1)" id="clothes"
                             class="btn btn-default">
                         <option>...选择游戏服务器...</option>
+                        <option value="0">全服</option>
                         <volist name="clostu" id="vo">
                             <eq name="vo.db_id" value="$db_id">
                                 <option value="{$vo.db_id}" selected="selected">{$vo.clothes}</option>
@@ -25,7 +26,7 @@
                                 <option value="{$vo.db_id}">{$vo.clothes}</option>
                             </eq>
                         </volist>
-                    </select>-->从<input class="btn btn-default"
+                    </select>从<input class="btn btn-default"
                                      onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"
                                      id="stime" value="{$stime}">
                     到<input class="btn btn-default"
@@ -82,13 +83,13 @@
     var www_url="{$www_url}";
 
     function idselect() {
-        var bclothes=$("#bclothes").val();
+        var clothes=$("#clothes").val();
         var eclothes=$("#eclothes").val();
         var stime=$("#stime").val();
         var etime=$("#etime").val();
         //   var creator=$("#maxOption2").val();
 
-        location.href=www_url+"index.php?m=Home&c=PayMoney&a=index2&bclothes="+bclothes+"&eclothes="+eclothes+"&stime="+stime+"&etime="+etime;
+        location.href=www_url+"index.php?m=Home&c=PayMoney&a=index2&db_id="+clothes+"&eclothes="+eclothes+"&stime="+stime+"&etime="+etime;
 
     }
     function exl(){
@@ -111,16 +112,16 @@
 
     }
     //  var a={$Stime};
-    var maxN = eval("Math.max(" + stu.toString() + ")")+100000;
+    var maxN = Math.ceil(eval("Math.max(" + stu.toString() + ")")*1.2);
     stu=stu.reverse();
     var data = [stu];
     var data_max = maxN; //Y轴最大刻度
-    var line_title = ["支付金额","B"]; //曲线名称
+    var line_title = ["支付金钱","B"]; //曲线名称
     var y_label = "数量"; //Y轴标题
     var x_label = "时间"; //X轴标题
     var x = [{$Stime}]; //定义X轴刻度值
    // var title = "这是标题"; //统计图标标题
-    j.jqplot.diagram.base("chart1", data, line_title, "支付金额", x, x_label, y_label, data_max, 1);
+    j.jqplot.diagram.base("chart1", data, line_title, "支付金钱", x, x_label, y_label, data_max, 1);
     // 两分钟刷新
     setTimeout(function(){  //使用  setTimeout（）方法设定定时2000毫秒
         window.location.reload();//页面刷新

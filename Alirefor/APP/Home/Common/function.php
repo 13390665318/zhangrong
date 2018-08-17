@@ -25,7 +25,7 @@ function count_days($a,$b){
 
 // 返回数据库连接
 function db($game_id,$db_id){
-    $db=D("db")->where("game_id=$game_id and db_id=$db_id")->find();;
+    $db=D("dbuser")->where("db_id='$db_id' and game_db_name='$game_id'")->find();
     $connection = array(
         'db_type'  => "mysql",
         'db_user'  => $db["game_db_user"],

@@ -13,19 +13,20 @@ class NewCountController extends BaseController
 {
     public function index(){
         $game_id = 2;
-        $clostu = D("db")->where("game_id=$game_id")->order("db_id desc")->select();
+        $clostu = D("db")->order("db_id desc")->select();
         $this->assign("clostu", $clostu);
-
-        // 图标 默认 最新服
         if (isset($_GET["db_id"])) {
-            $db_id = I("get.db_id");
-            $_SESSION["db_id"] = $db_id;
+            $db_id = I("db_id");
+            $_SESSION['db_id']=$db_id;
         } else {
-            $db_id = $clostu[0]["db_id"];
-            $_SESSION["db_id"] = $db_id;
+            $db_id = $_SESSION['db_id'];
+        }
+        // 图标 默认 最新服
+        if($db_id!=0){
+            $string='and db_id='.$db_id;
         }
 
-        $this->assign("db_id", $db_id);
+       /* $this->assign("db_id", $db_id);*/
         if(isset($_GET["stime"])&&isset($_GET["etime"])){
             $stime=I("get.stime");
             $etime=I("get.etime");
@@ -79,13 +80,14 @@ class NewCountController extends BaseController
             $data[$i]["time"]=$arr[$i]["time"];
             $Strtime=$arr[$i]["time1"];
             $Endtime=$arr[$i]["time2"];
-            $ru['_string']=" register_time>='$Strtime' and register_time<='$Endtime'";
+            $wherestring=" register_time>='$Strtime' and register_time<='$Endtime'";
+            $wherestring=$wherestring.$string;
             $data[$i]["num"]=0;
           // for($j=0;$j<count($db);$j++){
            //     $db_id=$db[$j]["db_id"];
            //     $connection=db2($game_id,$db_id);
             //   $sum=M('user','',$connection)->where($ru)->count();
-            $sum=M('user')->where($ru)->count();
+            $sum=count(M('user')->group('game_id')->having($wherestring)->select());
             //  echo M('user','',$connection)->getLastSql();exit;
                $data[$i]["num"]=$data[$i]["num"]+$sum;
                $user=$user+$sum;

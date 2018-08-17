@@ -16,7 +16,7 @@
     <div class="now_time clearfix now_time1">
         <ul class="clearfix">
             <li>
-                <h2>今日新增用户</h2>
+                <h2>今日新增用户<!--{$Think.lang.public_success}--></h2>
                 <p>{$user}</p>
             </li>
             <li>
@@ -25,7 +25,9 @@
             </li>
            <li onclick="show()">
                 <h2>当前在线人数</h2>
-                <p>{$uonline}</p>
+               <p>{$uonline}<br><volist name="server" id="vo">
+                   <if condition="$vo.confirm eq '1'"> <else />服务器{$vo.db_id}异常  last:{$vo.nums.0.LogTime}<br></if>
+               </volist></p>
             </li>
             <li>
                 <h2>今日充值人数</h2>
@@ -162,10 +164,11 @@
               </div>
           </div>-->
         </div>
-        <div class="container"><button class="btn btn-primary btn2" type="button" style="position:relative;margin:0 auto;display:block;width:100px;text-align: center">展开</button></div>
+
 -->
     </div>
     <script>
+
         function online(){
             var obj=document.getElementsByName('test');
             var s=new Array();
@@ -276,7 +279,7 @@
 
         }
         //  var a={$Stime};
-        var maxN =5000;
+        var maxN =Math.ceil(eval("Math.max(" + stu.toString() + ")")*1.2);
         stu=stu.reverse();
         var data = [stu];
         var data_max = maxN; //Y轴最大刻度
@@ -297,7 +300,7 @@
 
         }
         //  var a={$Stime};
-        var maxN2 = eval("Math.max(" + stu2.toString() + ")")+10000;
+        var maxN2 = Math.ceil(eval("Math.max(" + stu2.toString() + ")")*1.2);
         stu2=stu2.reverse();
         var data2 = [stu2];
         var data_max2 = maxN2; //Y轴最大刻度
@@ -320,7 +323,8 @@
 
         }
 console.log(obj3 );
-        var maxN2 = eval("Math.max(" + stu3.toString() + ")")+5000;
+        var maxN2 = Math.ceil(eval("Math.max(" + stu3.toString() + ")")*1.2);
+
       //  stu3=stu3.reverse();
      //   rus3=rus3.reverse();
 
@@ -343,7 +347,7 @@ console.log(obj3 );
 
         }
         //  var a={$Stime};
-        var maxN4 = eval("Math.max(" + stu4.toString() + ")")+1000;
+        var maxN4 = Math.ceil(eval("Math.max(" + stu4.toString() + ")")*1.2);
         stu4=stu4.reverse();
         var data4 = [stu4];
         var data_max4 = maxN4; //Y轴最大刻度
@@ -364,7 +368,7 @@ console.log(obj3 );
 
         }
         //  var a={$Stime};
-        var maxN5 = eval("Math.max(" + stu5.toString() + ")")+10000;
+        var maxN5 = Math.ceil(eval("Math.max(" + stu5.toString() + ")")*1.2);
         stu5=stu5.reverse();
         var data5 = [stu5];
         var data_max5 = maxN5; //Y轴最大刻度
